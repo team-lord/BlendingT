@@ -92,11 +92,13 @@ public class Boss1 : MonoBehaviour {
 
     }
 
+    private void FixedUpdate() {
+        FixRotate();
+    }
+
     // Update is called once per frame
     void Update() {
-
-        FixRotate();
-
+        
         if (phase == 1 || phase == 3) {
             if (!isProgressingPattern) {
                 if (isMoving) {
@@ -112,7 +114,9 @@ public class Boss1 : MonoBehaviour {
             // 퍼즐모드. 보스는 체력을 서서히 회복함
         }
 
-        CheckPhase();
+        if (!isProgressingPattern) {
+            CheckPhase();
+        }
     }
 
     void FixRotate() {
@@ -186,9 +190,9 @@ public class Boss1 : MonoBehaviour {
     }
 
     void Pattern1() {
-        StartCoroutine(WaitPatternProgressing(pattern1DelayQ * (pattern1RepetitionQ-1)));
-        for (int i=0; i<pattern1RepetitionQ; i++) {
-            StartCoroutine(WaitPattern1(pattern1DelayQ * i));         
+        StartCoroutine(WaitPatternProgressing(pattern1DelayQ * (pattern1RepetitionQ - 1)));
+        for (int i = 0; i < pattern1RepetitionQ; i++) {
+            StartCoroutine(WaitPattern1(pattern1DelayQ * i));
         }
     }
 

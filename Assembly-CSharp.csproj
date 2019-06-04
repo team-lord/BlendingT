@@ -82,6 +82,8 @@
     <Compile Include="Assets\Scripts\Stage 1\PuzzleManager.cs" />
     <Compile Include="Assets\Scripts\Stage 1\PuzzleStartLever.cs" />
     <Compile Include="Assets\Scripts\Stage 1\SurpriseBox.cs" />
+    <Compile Include="Assets\Scripts\Stage 2\Boss2.cs" />
+    <Compile Include="Assets\Scripts\Stage 2\CenterBullet.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/User/Desktop/BlendingT/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

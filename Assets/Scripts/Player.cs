@@ -30,6 +30,8 @@ public class Player : MonoBehaviour {
     public bool isTumbling;
     public bool tumblePulse; // 보내야 할 곳: bullet5move, audienceManager 꼭 잊지 말자. 딱 1프레임만 보내고 꺼야함.
 
+    // 근접 공격
+
     // ...
 
     // Start is called before the first frame update
@@ -43,10 +45,12 @@ public class Player : MonoBehaviour {
         canFire = true;
     }
 
+    private void FixedUpdate() {
+        FixRotate();
+    }
+
     // Update is called once per frame
     void Update() {
-
-        FixRotate();
 
         if (isAlive) {
             Move();
