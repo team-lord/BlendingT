@@ -12,6 +12,7 @@ public class PuzzleManager : MonoBehaviour
 
     // Phonograph
     public int phonographNumber; // answer = 3
+    public bool isPhonographOn;
 
     // Fan
     public bool isMotorFanOn;
@@ -27,6 +28,7 @@ public class PuzzleManager : MonoBehaviour
         isBulbOn = false;
 
         phonographNumber = 0;
+        isPhonographOn = false;
 
         isMotorFanOn = false;
 

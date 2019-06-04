@@ -77,6 +77,8 @@
     <Compile Include="Assets\Scripts\Stage 1\Bullet5Move.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Club.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Laser.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\Phonograph.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\PhonographButton.cs" />
     <Compile Include="Assets\Scripts\Stage 1\PuzzleManager.cs" />
     <Compile Include="Assets\Scripts\Stage 1\PuzzleStartLever.cs" />
     <Compile Include="Assets\Scripts\Stage 1\SurpriseBox.cs" />
