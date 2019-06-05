@@ -72,9 +72,9 @@
     <Compile Include="Assets\Scripts\Stage 1\BoardLever.cs" />
     <Compile Include="Assets\Scripts\Stage 1\BoardNeedle.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Boss1.cs" />
-    <Compile Include="Assets\Scripts\Stage 1\Bullet2Move.cs" />
-    <Compile Include="Assets\Scripts\Stage 1\Bullet4Move.cs" />
-    <Compile Include="Assets\Scripts\Stage 1\Bullet5Move.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\Bullet2Move1.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\Bullet4Move1.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\Bullet5Move1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Club.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Laser.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Phonograph.cs" />
@@ -83,7 +83,11 @@
     <Compile Include="Assets\Scripts\Stage 1\PuzzleStartLever.cs" />
     <Compile Include="Assets\Scripts\Stage 1\SurpriseBox.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Boss2.cs" />
-    <Compile Include="Assets\Scripts\Stage 2\CenterBullet.cs" />
+    <Compile Include="Assets\Scripts\Stage 2\Bullet1ChildrenMove2.cs" />
+    <Compile Include="Assets\Scripts\Stage 2\Bullet1Move2.cs" />
+    <Compile Include="Assets\Scripts\Stage 2\Bullet3ChildrenMove2.cs" />
+    <Compile Include="Assets\Scripts\Stage 2\Bullet3Move2.cs" />
+    <Compile Include="Assets\Scripts\Wall.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/User/Desktop/BlendingT/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

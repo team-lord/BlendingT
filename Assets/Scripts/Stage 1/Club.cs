@@ -4,16 +4,13 @@ using UnityEngine;
 
 public class Club : MonoBehaviour
 {
-    // 수명
-    public float lifeQ;
-
     // GameObject
     private GameObject player;
     private GameObject boss;
 
     // Sweep
     private float sweepAngleVelocity;
-    private float sweepingTime;
+    private float sweepingTime; // lifeQ 역할
     private bool isClockwise;
     private bool isDetermined;
     public float delayQ;
@@ -24,8 +21,6 @@ public class Club : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(gameObject, lifeQ);
-
         player = GameObject.Find("Player");
         boss = GameObject.Find("Boss");
 
@@ -48,6 +43,7 @@ public class Club : MonoBehaviour
             time += Time.deltaTime;
             if (time > delayQ) {
                 isReady = true;
+                Destroy(gameObject, sweepingTime);
             }
         } else {
             Sweep(isClockwise);

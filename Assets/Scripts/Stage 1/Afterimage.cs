@@ -2,20 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Afterimage : MonoBehaviour
-{
+public class Afterimage : MonoBehaviour {
     public float moveSpeedQ;
-    public float lifeQ;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        Destroy(gameObject, lifeQ);
+    void Start() {
+
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         Move();
     }
 

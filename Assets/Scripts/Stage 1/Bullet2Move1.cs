@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet2Move : MonoBehaviour
+public class Bullet2Move1 : MonoBehaviour
 { 
     // 기타
     private GameObject player; // player 죽었을 때 처리
@@ -16,9 +16,6 @@ public class Bullet2Move : MonoBehaviour
     private bool rotateFirst;
     private Transform originalTransform;
     private float rotatingVelocity;
-
-    // 수명
-    public float lifeQ;
 
     // 페이즈
     private int phase;
@@ -34,8 +31,6 @@ public class Bullet2Move : MonoBehaviour
         boss = GameObject.Find("Boss");
         rotateFirst = true;
         
-        Destroy(gameObject, lifeQ);
-
         phase = 0;
         isTimerOn = true;
         time = 0;

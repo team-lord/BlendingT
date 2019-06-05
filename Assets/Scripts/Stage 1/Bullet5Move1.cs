@@ -2,14 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet5Move : MonoBehaviour
+public class Bullet5Move1 : MonoBehaviour
 {
     // 속도
     public float moveSpeedQ;
-
-    // 수명
-    public float lifeQ;
-
+    
     // 회전
     public float angleVelocityQ;
     public float delayQ;
@@ -22,7 +19,6 @@ public class Bullet5Move : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(gameObject, lifeQ);
 
         isClockwise = true; // 구르면 반대 방향이 됨.
         isRotating = false;

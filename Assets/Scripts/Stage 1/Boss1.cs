@@ -29,6 +29,8 @@ public class Boss1 : MonoBehaviour {
     public float patternDelayUpperLimitQ;
     public bool isProgressingPattern;
 
+    private int recentPattern;
+
     // 패턴 1
     public GameObject cardSpadeQ; // bullet0Q
     public GameObject cardDiamondQ;
@@ -90,6 +92,8 @@ public class Boss1 : MonoBehaviour {
 
         isProgressingPattern = false;
 
+        recentPattern = 0;
+
     }
 
     private void FixedUpdate() {
@@ -141,7 +145,13 @@ public class Boss1 : MonoBehaviour {
     
     void PatternByNumber() {
         isProgressingPattern = true; // 필요없는데 혹시 몰라서 씀
-        switch (Random.Range(1, 9)) {
+        int _number;
+
+        do {
+            _number = Random.Range(1, 9);
+        } while (_number == recentPattern);
+        
+        switch (_number) {
             case 1:
                 Pattern1();
                 break;
@@ -170,6 +180,8 @@ public class Boss1 : MonoBehaviour {
                 Debug.Log("Error");
                 break;
         }
+
+        recentPattern = _number;
     }
 
     void PatternEnd() { // 패턴이 끝나면 이 함수를 호출하고 몇초동안 isMoving을 true로 할건지 정함.
@@ -293,9 +305,9 @@ public class Boss1 : MonoBehaviour {
         yield return new WaitForSeconds(time);
         
         if (i % 2 == 0) {
-            bullet4Q.GetComponent<Bullet4Move>().isFollowing = true; // 짝수는 유도
+            bullet4Q.GetComponent<Bullet4Move1>().isFollowing = true; // 짝수는 유도
         } else {
-            bullet4Q.GetComponent<Bullet4Move>().isFollowing = false; // 홀수는 정직
+            bullet4Q.GetComponent<Bullet4Move1>().isFollowing = false; // 홀수는 정직
         } 
         Pattern4FireBullet();
     }
@@ -304,7 +316,7 @@ public class Boss1 : MonoBehaviour {
 
         Vector3 _direction = (player.transform.position - transform.position).normalized;
 
-        bullet4Q.GetComponent<Bullet4Move>().direction = _direction;
+        bullet4Q.GetComponent<Bullet4Move1>().direction = _direction;
 
         Instantiate(bullet4Q, transform.position, Quaternion.FromToRotation(Vector3.up, _direction));
 

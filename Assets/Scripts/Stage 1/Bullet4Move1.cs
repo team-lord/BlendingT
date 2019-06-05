@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet4Move : MonoBehaviour
+public class Bullet4Move1 : MonoBehaviour
 {
     // 속도
     public Vector3 direction;
     public float moveSpeedQ;
 
-    // 수명
+    // 수명 - 이 친구는 있어야 함
     public float lifeQ;
 
     // 유도

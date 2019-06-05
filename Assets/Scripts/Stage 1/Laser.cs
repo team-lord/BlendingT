@@ -6,10 +6,7 @@ public class Laser : MonoBehaviour
 {
     // 속도 
     public float moveSpeedQ; // very fast
-
-    // 수명
-    public float lifeQ;
-
+    
     // 진행
     public bool isGoing;
     public float delayQ; // 레이저가 날아온 후 잔상이 날아올때까지의 Delay
@@ -17,8 +14,6 @@ public class Laser : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() {
-        Destroy(gameObject, lifeQ);
-
         isGoing = true;
     }
 
@@ -41,7 +36,7 @@ public class Laser : MonoBehaviour
         }
 
         if (isGoing) {
-            if (collider.tag == "Wall") {
+            if (collider.tag == "Wall") { // Wall 앞에서 멈춰야함. Wall은 Laser를 destroy 할것임.
                 isGoing = false;
             }
             StartCoroutine(WaitAfterimage(delayQ));

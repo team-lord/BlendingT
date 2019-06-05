@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Boss2 : MonoBehaviour
-{
+public class Boss2 : MonoBehaviour {
     // 페이즈
     public int phase; // 1, 2, 3(필살기), 4, 5, 6(필살기), 7;
 
@@ -29,9 +28,10 @@ public class Boss2 : MonoBehaviour
     public bool isProgressingPattern;
     private int[][] patternArray = new int[7][];
 
+    private int recentPattern;
+
     // 탄알
     public GameObject bulletQ;
-    public GameObject bigBulletQ;
     public GameObject honeyBulletQ;
     public GameObject posionBulletQ;
     public GameObject bigPosionBulletQ;
@@ -39,17 +39,20 @@ public class Boss2 : MonoBehaviour
     public GameObject beeBulletBQ;
 
     // 패턴 1 : 육각형을 이루는 탄알들
-    public GameObject centerBulletQ;
-    public GameObject centerBulletQForged;
+    public GameObject bullet1Q;
+    public GameObject bullet1ForgedQ;
     public bool pattern1IsForged;
+    public int pattern1RepetitionQ;
+    public float pattern1DelayQ;
 
     // 패턴 2 : 빠르게 회전하며 독침형태의 탄을 전방위로 랜덤하게 난사
     public int pattern2RepetitionQ; // 12
-    public int pattern2DelayQ;
+    public float pattern2DelayQ;
     public bool pattern2IsForged;
 
     // 패턴 3 : 보스 주변 6방향으로 큰 탄알 발사 - 각 탄알이 6방향으로 쪼개짐
-    
+    public GameObject bullet3Q;
+    public float pattern3DelayQ; // 애니메이션 시간
 
     // 패턴 4 : 부채꼴 형태로 6개의 꿀탄알과 벌 탄알을 번갈아 빠르게 발사
     public int pattern4RepetitionQ;
@@ -87,9 +90,11 @@ public class Boss2 : MonoBehaviour
         // patternArray[2]=null, 필살기 1; 
         patternArray[3] = new int[] { 1, 2, 5, 3, 7, 6, 9, 4, 8, 10 }; // pattern1IsForged = true, pattern2IsForged = true; 
         patternArray[4] = new int[] { 1, 2, 5, 3, 7, 6, 9, 4, 8, 10 }; // pattern10IsForged = true; pattern5IsForged = true;
-        // patternArray[5]=null, 필살기 2;
-        // patternArray[6]=null, 특수
-        
+                                                                       // patternArray[5]=null, 필살기 2;
+                                                                       // patternArray[6]=null, 특수
+
+        recentPattern = 0;
+
     }
 
     private void FixedUpdate() {
@@ -154,7 +159,12 @@ public class Boss2 : MonoBehaviour
     }
 
     void PatternInArray() {
-        int _number = Random.Range(0, patternArray[phase - 1].Length);
+
+        int _number;
+        do {
+            _number = Random.Range(0, patternArray[phase - 1].Length);
+        } while (patternArray[phase - 1][_number] == recentPattern);
+
         switch (patternArray[phase - 1][_number]) {
             case 1:
                 Pattern1();
@@ -163,7 +173,11 @@ public class Boss2 : MonoBehaviour
                 Pattern2();
                 break;
             case 3:
-                Pattern3();
+                if (Pattern3IsPossible()) {
+                    Pattern3();
+                } else {
+                    PatternInArray();
+                }
                 break;
             case 4:
                 Pattern4();
@@ -192,9 +206,11 @@ public class Boss2 : MonoBehaviour
             case 12: // To be or not to be, that is the question...
                 break;
             default:
-                Debug.Log("Error");
+                PatternInArray(); // 아마 Pattern3에서 쓸 일이 있을 듯
                 break;
         }
+
+        recentPattern = patternArray[phase - 1][_number];
 
     }
 
@@ -216,17 +232,30 @@ public class Boss2 : MonoBehaviour
     }
 
     void Pattern1() {
-        StartCoroutine(WaitPatternProgressing(0));
-        DeterminePattern1Direction();
-        if (pattern1IsForged) {
-            Instantiate(centerBulletQForged, transform.position, Quaternion.LookRotation(Vector3.up, centerBulletQ.GetComponent<CenterBullet>().direction));
-        } else {
-            Instantiate(centerBulletQ, transform.position, Quaternion.LookRotation(Vector3.up, centerBulletQ.GetComponent<CenterBullet>().direction));
+        StartCoroutine(WaitPatternProgressing(pattern1DelayQ * (pattern1RepetitionQ - 1)));
+        for (int i = 0; i < pattern1RepetitionQ; i++) {
+            StartCoroutine(WaitPattern1(pattern1DelayQ * i));
         }
     }
 
+    IEnumerator WaitPattern1(float time) {
+        yield return new WaitForSeconds(time);
+        Pattern1FireBullet();
+    }
+
+    void Pattern1FireBullet() {
+        DeterminePattern1Direction();
+        if (pattern1IsForged) {
+            Instantiate(bullet1ForgedQ, transform.position, Quaternion.LookRotation(Vector3.up, bullet1Q.GetComponent<Bullet1Move2>().direction));
+        } else {
+            Instantiate(bullet1Q, transform.position, Quaternion.LookRotation(Vector3.up, bullet1Q.GetComponent<Bullet1Move2>().direction));
+        }
+    }
+    
+
     void DeterminePattern1Direction() {
-        centerBulletQ.GetComponent<CenterBullet>().direction = (player.transform.position - transform.position).normalized;
+        bullet1Q.GetComponent<Bullet1Move2>().direction = (player.transform.position - transform.position).normalized;
+        bullet1ForgedQ.GetComponent<Bullet1Move2>().direction = (player.transform.position - transform.position).normalized;
     }
 
     void Pattern2() {
@@ -258,9 +287,28 @@ public class Boss2 : MonoBehaviour
         Instantiate(posionBulletQ, transform.position, Quaternion.Euler(0, 0, degree));
     }
 
-    void Pattern3() {
-        // 보류 (은기의 난이도 선택)
+    bool Pattern3IsPossible() {
+        if (null == GameObject.FindGameObjectsWithTag("EnemyBulletMine")) {
+            return true;
+        } else {
+            return false;
+        }
     }
+
+    void Pattern3() {
+        
+        StartCoroutine(WaitPatternProgressing(pattern3DelayQ));
+        for(int i=0; i<6; i++) {
+            Pattern3FireBullet(60 * i);
+        }
+    }
+
+    void Pattern3FireBullet(int degree) {
+        Quaternion _rotation = Quaternion.Euler(0, 0, degree);
+
+        Instantiate(bullet3Q, transform.position, _rotation);
+    }
+
 
     void Pattern4() {
         isHoneyBullet = Random.value > 0.5f;
@@ -305,7 +353,9 @@ public class Boss2 : MonoBehaviour
         // TODO
         // 예측샷 때문에 보류
     }
-    void Pattern6() { }
+    void Pattern6() {
+           
+    }
     void Pattern7() { }
     void Pattern8() { }
     void Pattern9() { }
