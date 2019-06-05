@@ -15,6 +15,11 @@ public class Boss2 : MonoBehaviour {
     public int health;
     public bool isAlive;
 
+    public int phase2HealthQ; // 1 -> 2
+    public int phase3HealthQ; // 2 -> 3
+    public int phase5HealthQ; // 5 -> 6
+    public int phase6HealthQ; // 6 -> 7
+
     // 공격 및 이동
     public float fireDelayQ;
     public bool canFire;
@@ -27,7 +32,7 @@ public class Boss2 : MonoBehaviour {
     public float patternDelayLowerLimitQ;
     public float patternDelayUpperLimitQ;
     public bool isProgressingPattern;
-    private int[][] patternArray = new int[7][];
+    private int[] patternArray;
 
     private int recentPattern;
 
@@ -38,6 +43,9 @@ public class Boss2 : MonoBehaviour {
     public GameObject bigPosionBulletQ;
     public GameObject beeBulletAQ;
     public GameObject beeBulletBQ;
+
+    public GameObject beeAQ;
+    public GameObject beeBQ;
 
     // 패턴 1 : 육각형을 이루는 탄알들
     public GameObject bullet1Q;
@@ -69,15 +77,39 @@ public class Boss2 : MonoBehaviour {
     public GameObject bullet5SlowQ;
     private float pattern5SlowMoveSpeed;
 
+    // 패턴 9:
+    public float pattern9MinimumDistanceQ;
+    public float pattern9MaximumDistanceQ;
+    private int pattern9Index; // 0: Skip, 1: Fly, 2: Sweep
+
+    public float pattern9FlyDealyQ;
+
+    public float pattern9SweepAngleQ;
+    public float pattern9SweepingTimeQ;
+
     // 패턴 10:
     public bool pattern10IsForged;
+    public bool pattern10IsPossible; // start in phase 4
 
+    // 패턴 11
+    public bool pattern11IsPossible; // start in phase 4
+    public float pattern11DelayQ;
+    private float time;
 
+    // 필살기 1
+    public bool special1Start;
+    public bool special1End;
+
+    // 필살기 2
+    public bool special2Start;
+    public bool special2End;
+    
     // Start is called before the first frame update
     void Start() {
         phase = 1;
 
         player = GameObject.Find("Player");
+
         pattern1IsForged = false;
         pattern2IsForged = false;
         pattern5IsForged = false;
@@ -90,18 +122,23 @@ public class Boss2 : MonoBehaviour {
 
         isProgressingPattern = false;
 
-        patternArray[0] = new int[] { 1, 2, 5, 3, 7, 6, 9 };
-        patternArray[1] = new int[] { 1, 2, 5, 3, 7, 6, 9, 4, 8 };
-        // patternArray[2]=null, 필살기 1; 
-        patternArray[3] = new int[] { 1, 2, 5, 3, 7, 6, 9, 4, 8, 10 }; // pattern1IsForged = true, pattern2IsForged = true; 
-        patternArray[4] = new int[] { 1, 2, 5, 3, 7, 6, 9, 4, 8, 10 }; // pattern10IsForged = true; pattern5IsForged = true;
-                                                                       // patternArray[5]=null, 필살기 2;
-                                                                       // patternArray[6]=null, 특수
-
+        patternArray = new int[] { 1, 2, 5, 3, 7, 6, 9 };
+        
         recentPattern = 0;
 
         pattern5SlowMoveSpeed = bullet5SlowQ.GetComponent<Bullet5SlowMove2>().slowMoveSpeedQ;
 
+        pattern9Index = 0;
+
+        pattern10IsPossible = false; // phase 바꾸면서 바꾸기
+        pattern11IsPossible = false; // phase 바꾸면서 바꾸기
+
+        time = 0;
+
+        special1Start = false;
+        special1End = false;
+        special2Start = false;
+        special2End = false;
     }
 
     private void FixedUpdate() {
@@ -144,6 +181,10 @@ public class Boss2 : MonoBehaviour {
                 break;
         }
 
+        if (pattern11IsPossible) {
+            Pattern11();
+        }
+
         if (!isProgressingPattern) {
             CheckPhase();
         }
@@ -169,10 +210,10 @@ public class Boss2 : MonoBehaviour {
 
         int _number;
         do {
-            _number = Random.Range(0, patternArray[phase - 1].Length);
-        } while (patternArray[phase - 1][_number] == recentPattern);
+            _number = Random.Range(0, patternArray.Length);
+        } while (patternArray[_number] == recentPattern);
 
-        switch (patternArray[phase - 1][_number]) {
+        switch (patternArray[_number]) {
             case 1:
                 Pattern1();
                 break;
@@ -183,7 +224,7 @@ public class Boss2 : MonoBehaviour {
                 if (Pattern3IsPossible()) {
                     Pattern3();
                 } else {
-                    PatternInArray();
+                    PatternInArray(); // skip
                 }
                 break;
             case 4:
@@ -202,7 +243,12 @@ public class Boss2 : MonoBehaviour {
                 Pattern8();
                 break;
             case 9:
-                Pattern9();
+                int _index = Pattern9IsPossible();
+                if (_index == 0) { // sklp
+                    PatternInArray();
+                } else {
+                    Pattern9(_index);
+                }
                 break;
             case 10:
                 Pattern10();
@@ -217,7 +263,7 @@ public class Boss2 : MonoBehaviour {
                 break;
         }
 
-        recentPattern = patternArray[phase - 1][_number];
+        recentPattern = patternArray[_number];
 
     }
 
@@ -233,6 +279,9 @@ public class Boss2 : MonoBehaviour {
 
     IEnumerator WaitPatternProgressing(float time) {
         isProgressingPattern = true;
+        if (pattern10IsPossible) {
+            Pattern10();
+        }
         yield return new WaitForSeconds(time);
         PatternEnd();
         isProgressingPattern = false;
@@ -397,12 +446,114 @@ public class Boss2 : MonoBehaviour {
     }
     void Pattern7() { }
     void Pattern8() { }
-    void Pattern9() { }
-    void Pattern10() { }
-    void Pattern11() { }
+
+    void Pattern9(int index) {
+        if (index == 1) {
+            Pattern9Fly();
+        } else if (index == 2) {
+            Pattern9Sweep();
+            
+        }
+    }
+
+    int Pattern9IsPossible() { 
+        float _distance = (player.transform.position - transform.position).magnitude;
+        if(_distance < pattern9MinimumDistanceQ) {
+            return 2;
+        } else if (pattern9MaximumDistanceQ < _distance) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
+    void Pattern9Fly() {
+        // TODO
+    }
+
+    void Pattern9Sweep() {
+        // TODO
+    }
+
+    void Pattern10() {
+        Instantiate(beeAQ, transform.position, transform.rotation);
+        if (pattern10IsForged) {
+            Instantiate(beeBQ, transform.position, transform.rotation);
+        }
+    }
+
+    void Pattern11() {
+        time += Time.deltaTime;
+        if(time > pattern11DelayQ) {
+            Pattern11Fire();
+            time = 0;
+        }
+    }
+
+    void Pattern11Fire() {
+        Vector3 _direction = (player.transform.position - transform.position).normalized;
+
+        Instantiate(honeyBulletQ, transform.position, Quaternion.LookRotation(Vector3.up, _direction));
+    }
 
     void CheckPhase() {
         // TODO, 체력 및 상태에 따라서 phase 변경. isForged도 이넘이 변경
+        switch (phase) {
+            case 1:
+                if (health <= phase2HealthQ) {
+                    phase = 2;
+                    patternArray = new int[] { 1, 2, 5, 3, 7, 6, 9, 4, 8 };
+                }
+                break;
+            case 2:
+                if (health <= phase3HealthQ) {
+                    phase = 3;
+                    patternArray = null;
+                    special1Start = true;
+                }
+                break;
+            case 3:
+                if (special1End) {
+                    phase = 4;
+                    pattern10IsPossible = true;
+                    pattern11IsPossible = true;
+                    pattern1IsForged = true;
+                    pattern2IsForged = true;
+                    patternArray = new int[] { 1, 2, 5, 3, 7, 6, 9, 4, 8 };
+                }
+                break;
+            case 4:
+                if(health <= phase5HealthQ) {
+                    phase = 5;
+                    pattern5IsForged = true;
+                    pattern10IsForged = true;
+                    patternArray = new int[] { 1, 2, 5, 3, 7, 6, 9, 4, 8 };
+                }
+                break;
+            case 5:
+                if(health <= phase6HealthQ) {
+                    phase = 6;
+                    patternArray = null;
+                    special2Start = true;
+                }
+                break;
+            case 6:
+                if (special2End) {
+                    phase = 7;
+                }
+                break;
+            case 7: // 다음 Scene 호출
+                break;
+            default:
+                Debug.Log("Error");
+                break;
+        }
     }
+
+    /*
+    private void OnTriggerEnter2D(Collider2D collider) {
+        
+    }
+    */
 }
 

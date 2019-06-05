@@ -154,6 +154,8 @@ MonoBehaviour:
   bullet1Q: {fileID: 0}
   bullet1ForgedQ: {fileID: 0}
   pattern1IsForged: 0
+  pattern1RepetitionQ: 0
+  pattern1DelayQ: 0
   pattern2RepetitionQ: 12
   pattern2DelayQ: 0.2
   pattern2IsForged: 0
@@ -164,4 +166,10 @@ MonoBehaviour:
   pattern4DelayQ: 0
   pattern4AngleQ: 0
   pattern5IsForged: 0
+  bullet5FastQ: {fileID: 3098560070679883170, guid: 3606c16b27914374c81de878f47ce5c4,
+    type: 3}
+  bullet5MiddleQ: {fileID: 2098724159147459422, guid: 9906e3ee484b7ef47b7af90959defb7a,
+    type: 3}
+  bullet5SlowQ: {fileID: 4597443386962823759, guid: 9b4ed4226701b5a4193b506aa478ce16,
+    type: 3}
   pattern10IsForged: 0

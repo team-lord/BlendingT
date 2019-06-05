@@ -27,6 +27,7 @@ public class Player : MonoBehaviour {
     public bool canFire;
 
     // 구르기 -- 아직 연계 하나도 안했음
+    public bool canTumble;
     public float tumbleTimeQ;
     public float tumbleSpeedQ;
     public float tumbleDelayQ;
@@ -49,6 +50,8 @@ public class Player : MonoBehaviour {
 
         cursor = GameObject.Find("Cursor");
         canFire = true;
+
+        canTumble = false; // Scene Changer가 바꿀 것
     }
 
     private void FixedUpdate() {
@@ -68,6 +71,11 @@ public class Player : MonoBehaviour {
             if (canUseBlanket) {
                 if (Input.GetMouseButton(1)) {
                     FireBlanket();
+                }
+            }
+            if (canTumble) {
+                if (Input.GetKeyDown(KeyCode.Space)) {
+                    Tumble();
                 }
             }
         } else {
@@ -117,8 +125,12 @@ public class Player : MonoBehaviour {
         Instantiate(blanketQ, transform.position, transform.rotation);
     }
 
+    void Tumble() {
+        // TODO
+    }
+
     private void OnTriggerEnter2D(Collider2D collider) {
-        if (collider.tag == "EnemyBullet") {
+        if (collider.tag == "EnemyBullet" && !isTumbling) { // 구르고 있을 때는 무적 (collider를 끌까?)
             Destroy(collider);
             health--;
             CheckAlive();
