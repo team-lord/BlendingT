@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Boss2 : MonoBehaviour {
+
     // 페이즈
     public int phase; // 1, 2, 3(필살기), 4, 5, 6(필살기), 7;
 
@@ -63,6 +64,10 @@ public class Boss2 : MonoBehaviour {
 
     // 패턴 5:
     public bool pattern5IsForged;
+    public GameObject bullet5FastQ;
+    public GameObject bullet5MiddleQ;
+    public GameObject bullet5SlowQ;
+    private float pattern5SlowMoveSpeed;
 
     // 패턴 10:
     public bool pattern10IsForged;
@@ -94,6 +99,8 @@ public class Boss2 : MonoBehaviour {
                                                                        // patternArray[6]=null, 특수
 
         recentPattern = 0;
+
+        pattern5SlowMoveSpeed = bullet5SlowQ.GetComponent<Bullet5SlowMove2>().slowMoveSpeedQ;
 
     }
 
@@ -350,9 +357,41 @@ public class Boss2 : MonoBehaviour {
     }
 
     void Pattern5() {
-        // TODO
-        // 예측샷 때문에 보류
+        StartCoroutine(WaitPatternProgressing(0));
+
+        Pattern5Fire();
     }
+
+    void Pattern5Fire() {
+        Vector3 _directionSlow = player.transform.position - transform.position;
+        float _time = _directionSlow.magnitude / pattern5SlowMoveSpeed;
+        Vector3 _playerMovement =  Pattern5PlayerMovement();
+
+        Vector3 _directionFast = _directionSlow + _playerMovement;
+        Vector3 _directionMiddle = (_directionSlow + _directionFast) / 2;
+
+        Instantiate(bullet5SlowQ, transform.position, Quaternion.LookRotation(Vector3.up, _directionSlow.normalized));
+        Instantiate(bullet5MiddleQ, transform.position, Quaternion.LookRotation(Vector3.up, _directionMiddle.normalized));
+        Instantiate(bullet5FastQ, transform.position, Quaternion.LookRotation(Vector3.up, _directionFast.normalized));
+
+        if (pattern5IsForged) {
+
+            _directionFast = _directionSlow - _playerMovement;
+            _directionMiddle = (_directionSlow + _directionFast) / 2;
+
+            Instantiate(bullet5MiddleQ, transform.position, Quaternion.LookRotation(Vector3.up, _directionMiddle.normalized));
+            Instantiate(bullet5FastQ, transform.position, Quaternion.LookRotation(Vector3.up, _directionFast.normalized));
+        }
+    }
+
+    Vector3 Pattern5PlayerMovement() {
+        int _h = player.GetComponent<Player>().h;
+        int _v = player.GetComponent<Player>().v;
+        float _speed = player.GetComponent<Player>().moveSpeedQ;
+
+        return new Vector3(_h * _speed, _v * _speed, 0);
+    }
+
     void Pattern6() {
            
     }
@@ -366,3 +405,4 @@ public class Boss2 : MonoBehaviour {
         // TODO, 체력 및 상태에 따라서 phase 변경. isForged도 이넘이 변경
     }
 }
+

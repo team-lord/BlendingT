@@ -12,6 +12,9 @@ public class Player : MonoBehaviour {
     // 이동
     public float moveSpeedQ;
 
+    public int h;
+    public int v;
+
     // Blanket
     public GameObject blanketQ;
     public bool canUseBlanket;
@@ -38,6 +41,9 @@ public class Player : MonoBehaviour {
     void Start() {
         health = maxHealthQ;
         isAlive = true;
+
+        h = 0;
+        v = 0;
 
         canUseBlanket = false; // Scene Changer가 바꿀 것
 
@@ -74,10 +80,24 @@ public class Player : MonoBehaviour {
     }
 
     void Move() {
-        float h = Input.GetAxis("Horizontal") * Time.deltaTime;
-        transform.Translate(h * Vector3.right * moveSpeedQ, Space.World);
-        float v = Input.GetAxis("Vertical") * Time.deltaTime;
-        transform.Translate(v * Vector3.up * moveSpeedQ, Space.World);
+        // float h = Input.GetAxis("Horizontal");
+        if (Input.GetAxis("Horizontal") > 0) {
+            h = 1;
+        } else if (Input.GetAxis("Horizontal") < 0) {
+            h = -1;
+        } else {
+            h = 0;
+        }
+        transform.Translate(h * Vector3.right * moveSpeedQ * Time.deltaTime, Space.World);
+
+        if (Input.GetAxis("Vertical") > 0) {
+            v = 1;
+        } else if (Input.GetAxis("Vertical") < 0) {
+            v = -1;
+        } else {
+            v = 0;
+        }
+        transform.Translate(v * Vector3.up * moveSpeedQ * Time.deltaTime, Space.World);
     }
 
     void Fire() {
