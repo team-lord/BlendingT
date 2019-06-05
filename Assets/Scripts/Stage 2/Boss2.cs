@@ -80,10 +80,11 @@ public class Boss2 : MonoBehaviour {
     // 패턴 9:
     public float pattern9MinimumDistanceQ;
     public float pattern9MaximumDistanceQ;
-    private int pattern9Index; // 0: Skip, 1: Fly, 2: Sweep
 
-    public float pattern9FlyDealyQ;
-
+    public GameObject shadowQ;
+    private float pattern9FlyDealy1Q;
+    private float pattern9FlyDealy2Q;
+    
     public float pattern9SweepAngleQ;
     public float pattern9SweepingTimeQ;
 
@@ -127,8 +128,10 @@ public class Boss2 : MonoBehaviour {
         recentPattern = 0;
 
         pattern5SlowMoveSpeed = bullet5SlowQ.GetComponent<Bullet5SlowMove2>().slowMoveSpeedQ;
+        
+        pattern9FlyDealy1Q = shadowQ.GetComponent<Shadow>().delay1Q;
+        pattern9FlyDealy2Q = shadowQ.GetComponent<Shadow>().delay2Q;
 
-        pattern9Index = 0;
 
         pattern10IsPossible = false; // phase 바꾸면서 바꾸기
         pattern11IsPossible = false; // phase 바꾸면서 바꾸기
@@ -468,7 +471,29 @@ public class Boss2 : MonoBehaviour {
     }
 
     void Pattern9Fly() {
-        // TODO
+        StartCoroutine(WaitPatternProgressing(pattern9FlyDealy1Q + pattern9FlyDealy2Q));
+
+        Instantiate(shadowQ, player.transform.position, transform.rotation);
+    }
+
+    IEnumerator WaitPattern9Fly(float time) {
+
+        // 보스가 비행하며 맵에서 보이지 않는 애니메이션
+        yield return new WaitForSeconds(time);
+        // 보스가 떨어지는 애니메이션
+        Pattern9FlyFire();
+    }
+
+    void Pattern9FlyFire() {
+        for (int i = 0; i < 20; i++) {
+            Pattern9FlyFireBullet(18 * i);
+        }
+    }
+
+    void Pattern9FlyFireBullet(int degree) {
+        Quaternion _rotation = Quaternion.Euler(0, 0, degree);
+
+        Instantiate(bulletQ, transform.position, _rotation);
     }
 
     void Pattern9Sweep() {
