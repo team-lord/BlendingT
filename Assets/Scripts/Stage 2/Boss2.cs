@@ -111,14 +111,14 @@ public class Boss2 : MonoBehaviour {
 
     // 필살기 2
     public bool special2Start;
+    public bool special2Progress;
     public bool special2End;
 
-    public float special2DelayQ;
-    public GameObject bulletSpecial2Q;
-    public float special2MinimumRangeQ;
-    public float special2MaximumRangeQ;
+    public float special2MissileAimDelayQ;
+    public GameObject missileAimSpecial2Q; // MissileAim은 Shadow같은 역할이고, MissileAim이 Missile을 소환할 것임 (여기서 안함)
 
-
+    public GameObject towerSpecial2Q;
+    public int towerPhase; // 3 -> 2 -> 1. tower는 여기에 GetComponent
     
     // Start is called before the first frame update
     void Start() {
@@ -159,6 +159,7 @@ public class Boss2 : MonoBehaviour {
         special1Number = 0;
 
         special2Start = false;
+        special2Progress = false;
         special2End = false;
 
         
@@ -238,6 +239,11 @@ public class Boss2 : MonoBehaviour {
                 if (special2Start) {
                     Special2();
                 }
+
+                if (special2Progress) {
+                    Special2Progress();
+                }
+
                 if (!special2End) {
                     CheckSpecial2();
                 }
@@ -628,7 +634,15 @@ public class Boss2 : MonoBehaviour {
         // TODO
 
         // 보스가 비행하며 맵에서 보이지 않는 애니메이션
+        special2Progress = true;
+        time = 0;
+    }
 
+    void Special2Progress() {
+        if (time > special2MissileAimDelayQ) {
+            Instantiate(missileAimSpecial2Q, player.transform.position, transform.rotation);
+            time = 0;
+        }
     }
 
     void CheckSpecial2() {

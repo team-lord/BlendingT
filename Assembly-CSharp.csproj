@@ -91,6 +91,8 @@
     <Compile Include="Assets\Scripts\Stage 2\Bullet5MiddleMove2.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Bullet5SlowMove2.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Shadow.cs" />
+    <Compile Include="Assets\Scripts\Stage 2\Tower.cs" />
+    <Compile Include="Assets\Scripts\Stage 2\Towers.cs" />
     <Compile Include="Assets\Scripts\Wall.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/User/Desktop/BlendingT/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
