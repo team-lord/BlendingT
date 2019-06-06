@@ -32,7 +32,7 @@ public class Player : MonoBehaviour {
     public float tumbleSpeedQ;
     public float tumbleDelayQ;
     public bool isTumbling;
-    public bool tumblePulse; // 보내야 할 곳: bullet5move, audienceManager 꼭 잊지 말자. 딱 1프레임만 보내고 꺼야함.
+    public bool tumblePulse; // 보내야 할 곳: bullet5move1, audienceManager 꼭 잊지 말자. 딱 1프레임만 보내고 꺼야함.
 
     // 근접 공격
 

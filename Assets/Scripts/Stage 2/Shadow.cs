@@ -9,10 +9,12 @@ public class Shadow : MonoBehaviour {
     2안: 플레이어와 무관한 이동속도. 방향만 따라감
 
     이 스크립트는 1안 기준이며 수정될 수 있음
+
+    확인 - 1안으로 결정
     */
 
-    public float delay1Q; // 그림자가 이동하는 시간, 1
-    public float delay2Q; // 그림자가 멈추고 떨어질때까지 걸리는 시간, 0.5
+    public float delay1Q; // 그림자가 이동하는 시간, 0.5
+    public float delay2Q; // 그림자가 멈추고 떨어질때까지 걸리는 시간, 1
     private float time;
     private bool isFollowing;
 
@@ -61,22 +63,7 @@ public class Shadow : MonoBehaviour {
 
     void CheckDestroying() {
         if(time >= delay2Q) {
-            Fire();
             Destroy(gameObject);
         }
     }
-
-    void Fire() {
-        for(int i=0; i<20; i++) {
-            FireBullet(18 * i);
-        }
-    }
-
-    void FireBullet(int degree) {
-        Quaternion _rotation = Quaternion.Euler(0, 0, degree);
-
-        Instantiate(bulletQ, transform.position, _rotation);
-    }
-
-    
 }

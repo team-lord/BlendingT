@@ -101,9 +101,24 @@ public class Boss2 : MonoBehaviour {
     public bool special1Start;
     public bool special1End;
 
+    public float special1DelayQ; // 처음 떨어질때까지 걸리는 시간
+    public GameObject special1shadowQ; // pattern9shadow와는 다름. 스크립트도 달라야 함(크기 애니메이션만 복사)
+    public GameObject beeSpecial1Q; // 잡몹. 죽으면 그 자리에 꿀 생김
+    public int beeSpecial1NumberQ; // 잡몹 몇마리?
+    public float special1TimeLimitQ;
+    public int special1NumberQ; // 몇번 맞춰야 끝나는지?
+    private int special1Number;
+
     // 필살기 2
     public bool special2Start;
     public bool special2End;
+
+    public float special2DelayQ;
+    public GameObject bulletSpecial2Q;
+    public float special2MinimumRangeQ;
+    public float special2MaximumRangeQ;
+
+
     
     // Start is called before the first frame update
     void Start() {
@@ -140,8 +155,13 @@ public class Boss2 : MonoBehaviour {
 
         special1Start = false;
         special1End = false;
+
+        special1Number = 0;
+
         special2Start = false;
         special2End = false;
+
+        
     }
 
     private void FixedUpdate() {
@@ -154,6 +174,8 @@ public class Boss2 : MonoBehaviour {
 
     // Update is called once per frame
     void Update() { // 페이즈 별로 다름
+
+        time += Time.deltaTime;
         switch (phase) {
             case 1:
                 if (!isProgressingPattern) {
@@ -168,14 +190,57 @@ public class Boss2 : MonoBehaviour {
                 }
                 break;
             case 2:
+                if (!isProgressingPattern) {
+                    if (isMoving) {
+                        Move();
+                        if (canFire) {
+                            Fire();
+                        }
+                    } else {
+                        PatternInArray();
+                    }
+                }
                 break;
             case 3:
+                if (special1Start) {
+                    Special1();
+                }
+                if (special1End) {
+                    CheckSpecial1();
+                }
+                
                 break;
             case 4:
+                if (!isProgressingPattern) {
+                    if (isMoving) {
+                        Move();
+                        if (canFire) {
+                            Fire();
+                        }
+                    } else {
+                        PatternInArray();
+                    }
+                }
                 break;
             case 5:
+                if (!isProgressingPattern) {
+                    if (isMoving) {
+                        Move();
+                        if (canFire) {
+                            Fire();
+                        }
+                    } else {
+                        PatternInArray();
+                    }
+                }
                 break;
             case 6:
+                if (special2Start) {
+                    Special2();
+                }
+                if (!special2End) {
+                    CheckSpecial2();
+                }
                 break;
             case 7:
                 break;
@@ -493,7 +558,7 @@ public class Boss2 : MonoBehaviour {
     void Pattern9FlyFireBullet(int degree) {
         Quaternion _rotation = Quaternion.Euler(0, 0, degree);
 
-        Instantiate(bulletQ, transform.position, _rotation);
+        Instantiate(bulletQ, new Vector3 (transform.position.x, transform.position.y, 0), _rotation);
     }
 
     void Pattern9Sweep() {
@@ -508,7 +573,6 @@ public class Boss2 : MonoBehaviour {
     }
 
     void Pattern11() {
-        time += Time.deltaTime;
         if(time > pattern11DelayQ) {
             Pattern11Fire();
             time = 0;
@@ -519,6 +583,57 @@ public class Boss2 : MonoBehaviour {
         Vector3 _direction = (player.transform.position - transform.position).normalized;
 
         Instantiate(honeyBulletQ, transform.position, Quaternion.LookRotation(Vector3.up, _direction));
+    }
+
+    void Special1() {
+        special1Start = false;
+
+        // TODO
+        StartCoroutine(Special1Move(special1DelayQ));
+
+        Instantiate(special1shadowQ, new Vector3(0, 0, 0), transform.rotation); // 맵 중앙이 new Vector3(0,0,0)이 아닐 시 수정
+    }
+
+    IEnumerator Special1Move(float time) {
+        // 보스가 비행하며 맵에서 보이지 않는 애니메이션
+        yield return new WaitForSeconds(time);
+        // 보스가 떨어지는 애니메이션
+
+        for(int i=0; i< beeSpecial1NumberQ; i++) {
+            Instantiate(beeSpecial1Q, transform.position, transform.rotation); // 생성 위치는 한번 다시 생각해 볼 필요가 있다
+        }
+        
+        // 보스가 벌 탄알을 충전하는 애니메이션;
+    }
+    
+
+    void CheckSpecial1() {
+
+        if (special1Number >= special1NumberQ) {
+            // Success
+            special1End = true;
+        }
+
+        if (time > special1TimeLimitQ) {
+            // Fail
+            special1End = true;
+        }
+
+        // TODO
+    }
+
+    void Special2() {
+        special2Start = false;
+
+        // TODO
+
+        // 보스가 비행하며 맵에서 보이지 않는 애니메이션
+
+    }
+
+    void CheckSpecial2() {
+        // TODO
+
     }
 
     void CheckPhase() {
@@ -542,6 +657,7 @@ public class Boss2 : MonoBehaviour {
                     phase = 4;
                     pattern10IsPossible = true;
                     pattern11IsPossible = true;
+                    time = 0;
                     pattern1IsForged = true;
                     pattern2IsForged = true;
                     patternArray = new int[] { 1, 2, 5, 3, 7, 6, 9, 4, 8 };
@@ -560,6 +676,8 @@ public class Boss2 : MonoBehaviour {
                     phase = 6;
                     patternArray = null;
                     special2Start = true;
+                    pattern11IsPossible = false;
+                    time = 0;
                 }
                 break;
             case 6:
@@ -575,10 +693,17 @@ public class Boss2 : MonoBehaviour {
         }
     }
 
-    /*
+    
     private void OnTriggerEnter2D(Collider2D collider) {
-        
+        if(collider.tag == "PlayerBullet" && phase != 3 && phase !=6) {
+            Destroy(collider);
+            health--;
+        }
+        if(phase == 3 && collider.tag == "EnemyBulletHoney") { // 태그 기억할 것
+            special1Number++;
+            Destroy(collider);
+        }
     }
-    */
+    
 }
 
