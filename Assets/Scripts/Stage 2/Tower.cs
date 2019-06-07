@@ -7,12 +7,17 @@ public class Tower : MonoBehaviour
     public int maxHealthQ;
     public int health;
 
-    public bool isAttack;
-    private int number; // 3 -> 2 -> 1
+    public int indexQ; // 0, 1, 2
 
-    public int indexQ;
+    public bool isAttack;
 
     public GameObject laserQ;
+
+    private float time;
+
+    public Sprite TowerOnQ;
+    public Sprite TowerOff;
+    public Sprite TowerDestoryQ;
 
     // Start is called before the first frame update
     void Start()
@@ -20,21 +25,27 @@ public class Tower : MonoBehaviour
         health = maxHealthQ;
 
         isAttack = false;
-        number = 0;
 
+        time = 0;
+
+        TowerOff = GetComponent<SpriteRenderer>().sprite;
     }
 
     // Update is called once per frame
     void Update() {
 
         if (isAttack) {
-            switch (number) {
-                case 3:
+            time += Time.deltaTime;
 
+            switch (GetComponent<Towers>().number) {
+                case 3:
+                    // 레이저 3갈래
                     break;
                 case 2:
+                    // 레이저 4갈래
                     break;
                 case 1:
+                    // 레이저 4갈래 + 전방위 탄막
                     break;
                 default:
                     Debug.Log("Error");
@@ -48,7 +59,7 @@ public class Tower : MonoBehaviour
             if (collider.tag == "PlayerBullet") {
                 health--;
             }
-            if(collider.tag == "PlayerMelee") {
+            if (collider.tag == "PlayerMelee") {
                 // health -= 2;
             }
             CheckAlive();
@@ -57,8 +68,14 @@ public class Tower : MonoBehaviour
 
     void CheckAlive() {
         if(health <= 0) {
-            GetComponentInParent<Towers>().isDestroyed[indexQ] = true;
-            Destroy(gameObject);
+            GetComponentInParent<Towers>().status[indexQ] = 2;
+            GetComponentInParent<Towers>().number--;
+
+            GetComponentInParent<Towers>().isDestroyed = true;
+
+            time = 0;
+            // Destroy(gameObject);
+            GetComponent<SpriteRenderer>().sprite =TowerDestoryQ;
         }
     }
 }

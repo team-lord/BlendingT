@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Towers : MonoBehaviour {
-    public bool[] isDestroyed = new bool[3];
-    public int[] status = new int[3]; // 0: exist, 1: vulnerable, 2: destroyed
-    private int currentAttack;
+    public int[] status = new int[3]; // 0: exist, 1: isAttack, 2: destroyed
     public int number; // 3 -> 2 ->1
 
     public GameObject[] towersQ = new GameObject[3];
@@ -14,21 +12,25 @@ public class Towers : MonoBehaviour {
 
     private float time;
 
-    public float laserMinimumDelayQ;
-    public float laserMaximumDelayQ;
+    public float energyMinimumDelayQ;
+    public float energyMaximumDelayQ;
     private float delay;
     private bool isDelayDetermined;
+
+    public bool isDestroyed;
+
+    private GameObject boss;
 
     // Start is called before the first frame update
     void Start() {
         for (int i = 0; i < 3; i++) {
-            isDestroyed[i] = false;
             status[i] = 0;
         }
 
-        currentAttack = Random.Range(0, 3);
-        status[currentAttack] = 1;
-        towersQ[currentAttack].GetComponent<Tower>().isAttack = true;
+        int _first = Random.Range(0, 3);
+        status[_first] = 1;
+        towersQ[_first].GetComponent<Tower>().isAttack = true;
+        // sprite 바꾸기
 
         number = 3;
 
@@ -38,56 +40,113 @@ public class Towers : MonoBehaviour {
 
         delay = 0;
         isDelayDetermined = false;
+
+        isDestroyed = false;
+
+        boss = GameObject.Find("Boss");
     }
 
     // Update is called once per frame
     void Update() {
         time += Time.deltaTime;
 
-        CheckNumber();
+        CheckDestroyMoveEnergy();
+        CheckMoveEnergy();
+        
+        
+    }
 
+    void TowerOn(int index) {
+        status[index] = 1;
+        towersQ[index].GetComponent<Tower>().isAttack = true;
+        towersQ[index].GetComponent<SpriteRenderer>().sprite = towersQ[index].GetComponent<Tower>().TowerOnQ;
+    }
+
+    void TowerOff(int index) {
+        status[index] = 0;
+        towersQ[index].GetComponent<Tower>().isAttack = false;
+        towersQ[index].GetComponent<SpriteRenderer>().sprite = towersQ[index].GetComponent<Tower>().TowerOff;
     }
     
-    void CheckNumber() {
 
-        if (isDestroyed[currentAttack]) {
-            status[currentAttack] = 2;
-            for (int j = 0; j < 3; j++) {
-                if (status[j] != 2) {
-                    towersQ[j].GetComponent<Tower>().health = towerMaxHealth;
+    void CheckMoveEnergy() {
+        if (!isDelayDetermined) {
+            delay = Random.Range(energyMinimumDelayQ, energyMaximumDelayQ);
+            isDelayDetermined = true;
+        }
+        if(time > delay) {
+            MoveEnergy();
+            time = 0;
+            isDelayDetermined = false;
+        }
+    }
+
+    void MoveEnergy() {
+        if (number == 1) { // {2, 2, 1}
+            return;
+        } else if (number == 2) { // {2, 1, 0} -> {2, 0, 1}
+            for (int i = 0; i < 3; i++) {
+                if (status[i] == 0) {
+                    TowerOn(i);
+                } else if(status[i] == 1) {
+                    TowerOff(i);
+                }
+                   
+                
+            }
+        } else if (number == 3) { // {1, 0, 0} -> {0, 1, 0}
+            int[] _number = new int[2];
+            int _index = 0;
+            for (int i = 0; i < 3; i++) {
+                if (status[i] == 0) {
+                    _number[_index] = i;
+                    _index++;
+                } else if (status[i] == 1) {
+                    TowerOff(i);
                 }
             }
-            MoveLaser();
-        }
-
-    }
-
-    void ReadyMoveLaser() {
-        if (!isDelayDetermined) {
-            delay = Random.Range(laserMinimumDelayQ, laserMaximumDelayQ);
-            isDelayDetermined = true;
+            int _nextAttack = _number[Random.Range(0, 2)];
+            TowerOn(_nextAttack);
+            
         } else {
-            if (time > delay) {
-                MoveLaser();
-                time = 0;
-                isDelayDetermined = false;
-            }
+            Debug.Log("Error");
         }
     }
 
-    void MoveLaser() {
-        int _count = 0;
-        for(int i=0; i<3; i++) {
-            if (status[i] != 2) {
-                _count++;
+    void CheckDestroyMoveEnergy() {
+        if (isDestroyed) {
+            DestroyMoveEnergy();
+            isDestroyed = false;
+
+            isDelayDetermined = false;
+            time = 0;
+        }
+    }
+
+    void DestroyMoveEnergy() {
+        if(number == 0) { // {2, 2, 2}
+            boss.GetComponent<Boss2>().special2End = true;
+        } else if(number == 1) { // {2, 2, 0} -> {2, 2, 1}
+            for(int i=0; i<3; i++) {
+                if (status[i] == 0) {
+                    TowerOn(i);
+                    
+                    return;
+                }
             }
-        }
-        if(_count == 1) {
-            return;
-        }
+        } else if (number == 2) { // {2, 0, 0} -> {2, 1, 0}
+            int[] _number = new int[2];
+            int _index = 0;
+            for (int i = 0; i < 3; i++) {
+                if (status[i] == 0) {
+                    _number[_index] = i;
+                    _index++;
+                }
+            }
+            int _nextAttack = _number[Random.Range(0, 2)];
 
-        if(_count <= 0) {
-
+            TowerOn(_nextAttack);
+            
         }
     }
 }

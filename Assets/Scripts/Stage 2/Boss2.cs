@@ -118,8 +118,7 @@ public class Boss2 : MonoBehaviour {
     public GameObject missileAimSpecial2Q; // MissileAim은 Shadow같은 역할이고, MissileAim이 Missile을 소환할 것임 (여기서 안함)
 
     public GameObject towerSpecial2Q;
-    public int towerPhase; // 3 -> 2 -> 1. tower는 여기에 GetComponent
-    
+
     // Start is called before the first frame update
     void Start() {
         phase = 1;
