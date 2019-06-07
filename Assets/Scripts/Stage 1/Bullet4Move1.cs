@@ -26,6 +26,7 @@ public class Bullet4Move1 : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
+       
         if (!isFollowing) {
             Move();
         } else {
@@ -39,10 +40,8 @@ public class Bullet4Move1 : MonoBehaviour
     }
 
     void MoveFollow() {
-        Vector3 _newDirection = (direction * moveSpeedQ + (player.transform.position - transform.position).normalized * coefficientQ).normalized;
-        transform.rotation = Quaternion.FromToRotation(Vector3.up, _newDirection);
-
-        transform.Translate(Vector3.up * moveSpeedQ * Time.deltaTime, Space.Self);
+        // TODO
+        // 유도탄 날아가기
     }
 
     private void OnTriggerEnter2D(Collider2D collider) {

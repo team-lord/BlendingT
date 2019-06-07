@@ -36,6 +36,10 @@ public class Player : MonoBehaviour {
 
     // 근접 공격
 
+    // 피격시 무적 딜레이
+    public float invincibleDelayQ; // BulletHoney, BulletBeeB는 태그가 Enemybullet이 아니라서 거기서 신경 한번만 써주자.
+    public bool isInvicible;
+
     // ...
 
     // Start is called before the first frame update
@@ -52,6 +56,7 @@ public class Player : MonoBehaviour {
         canFire = true;
 
         canTumble = false; // Scene Changer가 바꿀 것
+        isInvicible = false;
     }
 
     private void FixedUpdate() {
@@ -130,14 +135,21 @@ public class Player : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D collider) {
-        if (collider.tag == "EnemyBullet" && !isTumbling) { // 구르고 있을 때는 무적 (collider를 끌까?)
+        if (collider.tag == "EnemyBullet" && !isTumbling && !isInvicible) { // 구르고 있을 때는 무적 (collider를 끌까?)
             Destroy(collider);
             health--;
             CheckAlive();
+            StartCoroutine(Invincible(invincibleDelayQ));
         }
     }
 
-    void CheckAlive() {
+    IEnumerator Invincible(float time) {
+        isInvicible = true;
+        yield return new WaitForSeconds(time);
+        isInvicible = false;
+    }
+
+    public void CheckAlive() {
         if (health <= 0) {
             isAlive = false;
             // TODO

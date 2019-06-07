@@ -316,8 +316,6 @@ public class Boss1 : MonoBehaviour {
 
         Vector3 _direction = (player.transform.position - transform.position).normalized;
 
-        bullet4Q.GetComponent<Bullet4Move1>().direction = _direction;
-
         Instantiate(bullet4Q, transform.position, Quaternion.FromToRotation(Vector3.up, _direction));
 
     }

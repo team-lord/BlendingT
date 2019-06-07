@@ -90,6 +90,12 @@
     <Compile Include="Assets\Scripts\Stage 2\Bullet5FastMove2.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Bullet5MiddleMove2.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Bullet5SlowMove2.cs" />
+    <Compile Include="Assets\Scripts\Stage 2\BulletBeeA.cs" />
+    <Compile Include="Assets\Scripts\Stage 2\BulletBeeB.cs" />
+    <Compile Include="Assets\Scripts\Stage 2\BulletHoney.cs" />
+    <Compile Include="Assets\Scripts\Stage 2\BulletHoneyExplosive.cs" />
+    <Compile Include="Assets\Scripts\Stage 2\HoneyFloor.cs" />
+    <Compile Include="Assets\Scripts\Stage 2\Player2.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Shadow.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Tower.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Towers.cs" />

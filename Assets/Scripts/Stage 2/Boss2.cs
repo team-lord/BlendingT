@@ -39,6 +39,7 @@ public class Boss2 : MonoBehaviour {
     // 탄알
     public GameObject bulletQ;
     public GameObject honeyBulletQ;
+
     public GameObject posionBulletQ;
     public GameObject bigPosionBulletQ;
     public GameObject beeBulletAQ;
@@ -91,6 +92,7 @@ public class Boss2 : MonoBehaviour {
     // 패턴 10:
     public bool pattern10IsForged;
     public bool pattern10IsPossible; // start in phase 4
+    public float pattern10Chance; // 0 ~ 1
 
     // 패턴 11
     public bool pattern11IsPossible; // start in phase 4
@@ -118,6 +120,12 @@ public class Boss2 : MonoBehaviour {
     public GameObject missileAimSpecial2Q; // MissileAim은 Shadow같은 역할이고, MissileAim이 Missile을 소환할 것임 (여기서 안함)
 
     public GameObject towerSpecial2Q;
+
+    // 7페이즈 : 이벤트씬
+    public float slowMoveSpeedQ;
+
+    // 꿀 바닥
+    public bool isHoneyAttached;
 
     // Start is called before the first frame update
     void Start() {
@@ -161,7 +169,7 @@ public class Boss2 : MonoBehaviour {
         special2Progress = false;
         special2End = false;
 
-        
+        isHoneyAttached = false;
     }
 
     private void FixedUpdate() {
@@ -208,7 +216,7 @@ public class Boss2 : MonoBehaviour {
                 if (special1End) {
                     CheckSpecial1();
                 }
-                
+
                 break;
             case 4:
                 if (!isProgressingPattern) {
@@ -242,12 +250,15 @@ public class Boss2 : MonoBehaviour {
                 if (special2Progress) {
                     Special2Progress();
                 }
-
-                if (!special2End) {
-                    CheckSpecial2();
-                }
                 break;
             case 7:
+
+                SlowMove();
+                /*
+                 Special3();
+                 
+                 */
+
                 break;
             default:
                 Debug.Log("Error");
@@ -258,8 +269,14 @@ public class Boss2 : MonoBehaviour {
             Pattern11();
         }
 
-        if (!isProgressingPattern) {
+        if (!isProgressingPattern || phase == 3 || phase == 6) {
             CheckPhase();
+        }
+
+        if (isHoneyAttached && phase != 3 && phase != 6 && phase != 7) {
+            Instantiate(beeBulletAQ, transform.position + Vector3.left, transform.rotation);
+            Instantiate(beeBulletAQ, transform.position + Vector3.right, transform.rotation);
+            isHoneyAttached = false;
         }
     }
 
@@ -323,14 +340,6 @@ public class Boss2 : MonoBehaviour {
                     Pattern9(_index);
                 }
                 break;
-            case 10:
-                Pattern10();
-                break;
-            case 11:
-                Pattern11();
-                break;
-            case 12: // To be or not to be, that is the question...
-                break;
             default:
                 PatternInArray(); // 아마 Pattern3에서 쓸 일이 있을 듯
                 break;
@@ -352,8 +361,10 @@ public class Boss2 : MonoBehaviour {
 
     IEnumerator WaitPatternProgressing(float time) {
         isProgressingPattern = true;
-        if (pattern10IsPossible) {
-            Pattern10();
+        if (pattern10IsPossible) { // 확률 계산 했음
+            if(Random.Range(0f, 1f) < pattern10Chance) {
+                Pattern10();
+            }
         }
         yield return new WaitForSeconds(time);
         PatternEnd();
@@ -575,6 +586,8 @@ public class Boss2 : MonoBehaviour {
         if (pattern10IsForged) {
             Instantiate(beeBQ, transform.position, transform.rotation);
         }
+        
+        // 잡몹을 소환했다는 이펙트
     }
 
     void Pattern11() {
@@ -605,7 +618,7 @@ public class Boss2 : MonoBehaviour {
         // 보스가 떨어지는 애니메이션
 
         for(int i=0; i< beeSpecial1NumberQ; i++) {
-            Instantiate(beeSpecial1Q, transform.position, transform.rotation); // 생성 위치는 한번 다시 생각해 볼 필요가 있다
+            Instantiate(beeSpecial1Q, transform.position, transform.rotation); // 생성 위치는 한번 다시 생각해 볼 필요가 있다. 겹칠 수도 있으므로
         }
         
         // 보스가 벌 탄알을 충전하는 애니메이션;
@@ -627,7 +640,7 @@ public class Boss2 : MonoBehaviour {
         // TODO
     }
 
-    void Special2() {
+    void Special2() { // 시작할 때 한번만 호출됨
         special2Start = false;
 
         // TODO
@@ -635,6 +648,8 @@ public class Boss2 : MonoBehaviour {
         // 보스가 비행하며 맵에서 보이지 않는 애니메이션
         special2Progress = true;
         time = 0;
+
+        Instantiate(towerSpecial2Q, new Vector3(0, 0, 0), transform.rotation); // 맵 중앙이 new Vector3(0,0,0)이 아닐 시 수정
     }
 
     void Special2Progress() {
@@ -644,9 +659,12 @@ public class Boss2 : MonoBehaviour {
         }
     }
 
-    void CheckSpecial2() {
-        // TODO
+    void Special3() {
+        
+    }
 
+    void SlowMove() {
+        transform.Translate(Vector3.up * slowMoveSpeedQ * Time.deltaTime);
     }
 
     void CheckPhase() {
@@ -696,9 +714,13 @@ public class Boss2 : MonoBehaviour {
             case 6:
                 if (special2End) {
                     phase = 7;
+
+                    transform.position = new Vector3(0, 0, 0); // 맵 중앙이 new Vector3(0, 0, 0)이 아닐 시 수정
+                    // 보스가 아래로 떨어지는 애니메이션
                 }
                 break;
-            case 7: // 다음 Scene 호출
+            case 7: 
+                // 다음 Scene 호출
                 break;
             default:
                 Debug.Log("Error");
@@ -712,6 +734,10 @@ public class Boss2 : MonoBehaviour {
             Destroy(collider);
             health--;
         }
+        if (collider.tag == "PlayerMelee" && phase != 3 && phase !=6) {
+            // health -= 2;
+        }
+        
         if(phase == 3 && collider.tag == "EnemyBulletHoney") { // 태그 기억할 것
             special1Number++;
             Destroy(collider);

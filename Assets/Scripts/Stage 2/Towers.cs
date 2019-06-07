@@ -125,7 +125,7 @@ public class Towers : MonoBehaviour {
 
     void DestroyMoveEnergy() {
         if(number == 0) { // {2, 2, 2}
-            boss.GetComponent<Boss2>().special2End = true;
+            boss.GetComponent<Boss2>().special2End = true; // 끝
         } else if(number == 1) { // {2, 2, 0} -> {2, 2, 1}
             for(int i=0; i<3; i++) {
                 if (status[i] == 0) {
