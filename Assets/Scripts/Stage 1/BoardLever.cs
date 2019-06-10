@@ -24,8 +24,8 @@ public class BoardLever : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collider) {
         if (isReady) {
             if (collider.tag == "PlayerMelee") {
-                GetComponentInParent<Board>().change[colorQ] = true;
-                StartCoroutine(Wait(delayQ));
+                
+                StartCoroutine(BoardPulse(delayQ));
                 if (GetComponent<SpriteRenderer>().flipX) {
                     GetComponent<SpriteRenderer>().flipX = false;
                 } else {
@@ -35,8 +35,10 @@ public class BoardLever : MonoBehaviour
         }
     }
 
-    IEnumerator Wait(float time) {
+    IEnumerator BoardPulse(float time) {
         isReady = false;
+        GetComponentInParent<Board>().change[colorQ] = true;
+        GetComponent<SpriteRenderer>().flipX = !GetComponent<SpriteRenderer>().flipX;
         yield return new WaitForSeconds(time);
         isReady = true;
     }

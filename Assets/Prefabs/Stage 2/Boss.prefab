@@ -71,15 +71,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: c53b895d80f0d0c48921524c0896bcb4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.92, y: 3.08}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &5660859026978208623
@@ -110,7 +110,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4235409278765724236}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -135,6 +135,10 @@ MonoBehaviour:
   maxHealthQ: 100
   health: 0
   isAlive: 0
+  phase2HealthQ: 0
+  phase3HealthQ: 0
+  phase5HealthQ: 0
+  phase6HealthQ: 0
   fireDelayQ: 0.2
   canFire: 0
   direction: {x: 0, y: 0, z: 0}
@@ -151,6 +155,8 @@ MonoBehaviour:
     type: 3}
   beeBulletAQ: {fileID: 0}
   beeBulletBQ: {fileID: 0}
+  beeAQ: {fileID: 0}
+  beeBQ: {fileID: 0}
   bullet1Q: {fileID: 0}
   bullet1ForgedQ: {fileID: 0}
   pattern1IsForged: 0
@@ -172,4 +178,29 @@ MonoBehaviour:
     type: 3}
   bullet5SlowQ: {fileID: 4597443386962823759, guid: 9b4ed4226701b5a4193b506aa478ce16,
     type: 3}
+  pattern9MinimumDistanceQ: 0
+  pattern9MaximumDistanceQ: 0
+  shadowQ: {fileID: 0}
+  pattern9SweepAngleQ: 0
+  pattern9SweepingTimeQ: 0
   pattern10IsForged: 0
+  pattern10IsPossible: 0
+  pattern10Chance: 0
+  pattern11IsPossible: 0
+  pattern11DelayQ: 0
+  special1Start: 0
+  special1End: 0
+  special1DelayQ: 0
+  special1shadowQ: {fileID: 0}
+  beeSpecial1Q: {fileID: 0}
+  beeSpecial1NumberQ: 0
+  special1TimeLimitQ: 0
+  special1NumberQ: 0
+  special2Start: 0
+  special2Progress: 0
+  special2End: 0
+  special2MissileAimDelayQ: 0
+  missileAimSpecial2Q: {fileID: 0}
+  towerSpecial2Q: {fileID: 0}
+  slowMoveSpeedQ: 0
+  isHoneyAttached: 0

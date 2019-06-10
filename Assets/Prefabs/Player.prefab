@@ -98,17 +98,22 @@ MonoBehaviour:
   health: 0
   isAlive: 0
   moveSpeedQ: 4
+  h: 0
+  v: 0
   blanketQ: {fileID: 0}
   canUseBlanket: 0
   direction: {x: 0, y: 0, z: 0}
-  bulletQ: {fileID: 0}
+  bulletQ: {fileID: 1383276255159794600, guid: 0eddcc8fe29fc5e4b8b4e8c756d138bf, type: 3}
   fireDelayQ: 0.2
   canFire: 0
+  canTumble: 0
   tumbleTimeQ: 1
   tumbleSpeedQ: 6
   tumbleDelayQ: 1.5
   isTumbling: 0
   tumblePulse: 0
+  invincibleDelayQ: 0
+  isInvicible: 0
 --- !u!58 &5665803375185897518
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -187,7 +187,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   change: 0
-  cooltimeQ: 0.8
   angularVelocityQ: 100
 --- !u!1 &1226715253214679473
 GameObject:
@@ -282,7 +281,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   change: 0
-  cooltimeQ: 0.8
   angularVelocityQ: 100
 --- !u!1 &1925955947961360211
 GameObject:
@@ -377,7 +375,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   change: 0
-  cooltimeQ: 0.8
   angularVelocityQ: 100
 --- !u!1 &2689390114979879528
 GameObject:
@@ -472,7 +469,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   change: 0
-  cooltimeQ: 0.8
   angularVelocityQ: 100
 --- !u!1 &3393505926991287925
 GameObject:
@@ -567,7 +563,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   change: 0
-  cooltimeQ: 0.8
   angularVelocityQ: 100
 --- !u!1 &4593664362971362870
 GameObject:
@@ -662,7 +657,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   change: 0
-  cooltimeQ: 0.8
   angularVelocityQ: 100
 --- !u!1 &5312322140380787372
 GameObject:
@@ -769,6 +763,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   change: 000000
+  delayQ: 1
   needleRed1Q: {fileID: 7678941294280686391}
   needleRed2Q: {fileID: 1226715253214679473}
   needleRed3Q: {fileID: 5542900613283956881}
@@ -871,7 +866,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   change: 0
-  cooltimeQ: 0.8
   angularVelocityQ: 100
 --- !u!1 &5771720523880844726
 GameObject:
@@ -966,7 +960,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   change: 0
-  cooltimeQ: 0.8
   angularVelocityQ: 100
 --- !u!1 &6387177497144118913
 GameObject:
@@ -1249,5 +1242,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   change: 0
-  cooltimeQ: 0.8
   angularVelocityQ: 100

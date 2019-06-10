@@ -9,7 +9,7 @@ public class PuzzleManager : MonoBehaviour
 
     // Bulb
     public bool isBulbOn;
-
+    
     // Phonograph
     public int phonographNumber; // answer = 3
     public bool isPhonographOn;
@@ -18,13 +18,13 @@ public class PuzzleManager : MonoBehaviour
     public bool isMotorFanOn;
 
     // PlankMachine
-    public int plankNumber; // 1: Rubber, 2: Wood, 3: Ice, answer = 20
+    public int plankNumber; // 1: Rubber, 2: Wood, 3: Ice, answer = 2
 
     public bool onPuzzle;
 
     // Start is called before the first frame update
     void Start()
-    {
+    { // 퍼즐 요소들이 보내주나?
         isBulbOn = false;
 
         phonographNumber = 0;
@@ -43,5 +43,7 @@ public class PuzzleManager : MonoBehaviour
         if (onPuzzle) {
             ballQ.GetComponent<Rigidbody2D>().gravityScale = 1;
         }
+
+        // 공이 당구대 앞을 통과하면 당구대의 공들의 gravityScale을 다 1로 바꿔줘야 합니다
     }
 }

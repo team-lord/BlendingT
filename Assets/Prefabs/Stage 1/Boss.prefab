@@ -135,14 +135,15 @@ MonoBehaviour:
   maxHealthQ: 100
   health: 0
   isAlive: 0
-  bullet0Q: {fileID: 0}
+  bullet0Q: {fileID: 8068288318438665347, guid: 3667c71da9d37144a9ca86d84298ad3f,
+    type: 3}
   fireDelayQ: 0.2
   canFire: 0
   direction: {x: 0, y: 0, z: 0}
   moveSpeedQ: 2
   isMoving: 0
-  patternDelayLowerLimitQ: 1
-  patternDelayUpperLimitQ: 2
+  patternDelayLowerLimitQ: 5
+  patternDelayUpperLimitQ: 8
   isProgressingPattern: 0
   cardSpadeQ: {fileID: 6120149061994362210, guid: 7896b77395c9680488e751791d1be6c5,
     type: 3}

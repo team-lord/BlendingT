@@ -6,6 +6,8 @@ public class Board : MonoBehaviour
 {
     public bool[] change = new bool[3];
 
+    public float delayQ; // == 1
+
     public GameObject needleRed1Q;
     public GameObject needleRed2Q;
     public GameObject needleRed3Q;
