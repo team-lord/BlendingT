@@ -80,12 +80,17 @@
     <Compile Include="Assets\Scripts\Stage 1\Club.cs" />
     <Compile Include="Assets\Scripts\Stage 1\GravityButton.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Laser.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\MotorFan.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Phonograph.cs" />
     <Compile Include="Assets\Scripts\Stage 1\PhonographButton.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\PlankMachine.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\PlankMachineButton.cs" />
     <Compile Include="Assets\Scripts\Stage 1\PuzzleManager.cs" />
     <Compile Include="Assets\Scripts\Stage 1\PuzzleStartLever.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Sunflower.cs" />
     <Compile Include="Assets\Scripts\Stage 1\SurpriseBox.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\SurpriseBoxChecker.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\SurpriseBoxManager.cs" />
     <Compile Include="Assets\Scripts\Stage 2\BeeA.cs" />
     <Compile Include="Assets\Scripts\Stage 2\BeeB.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Boss2.cs" />

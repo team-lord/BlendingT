@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6334450154669262399}
   - component: {fileID: 6404324313509314175}
+  - component: {fileID: 9110073113731635018}
   m_Layer: 0
   m_Name: Right Button
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1251918392048819526}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.6, y: -0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1880544767279497826}
@@ -80,6 +81,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &9110073113731635018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251918392048819526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68a95556c16c3554babba296f1b402cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isLeftQ: 0
+  onSpriteQ: {fileID: 4483535612335088851, guid: fa9055990328e794e837724923063eb1,
+    type: 3}
+  delayQ: 1
 --- !u!1 &3430231052850187892
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3153687206721595616}
   - component: {fileID: 4841978888235977177}
+  - component: {fileID: 7041157997613102426}
   m_Layer: 0
   m_Name: Left Button
   m_TagString: Untagged
@@ -105,7 +123,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3430231052850187892}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.6, y: -0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1880544767279497826}
@@ -160,6 +178,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7041157997613102426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3430231052850187892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68a95556c16c3554babba296f1b402cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isLeftQ: 1
+  onSpriteQ: {fileID: -3017027730360587449, guid: fa9055990328e794e837724923063eb1,
+    type: 3}
+  delayQ: 1
 --- !u!1 &8902334421353497404
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,6 +204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1880544767279497826}
   - component: {fileID: 3841163368599516109}
+  - component: {fileID: 342572507743770856}
   m_Layer: 0
   m_Name: PlankMachine
   m_TagString: Untagged
@@ -229,7 +264,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: d3580c1f0ff53e14d9ac20f44576fdca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -241,3 +276,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &342572507743770856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8902334421353497404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7b85a35fec702240950c6eb2d68e89c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayQ: 0
+  leftButtonQ: {fileID: 0}
+  rightButtonQ: {fileID: 0}

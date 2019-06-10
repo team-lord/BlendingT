@@ -427,7 +427,7 @@ public class Boss2 : MonoBehaviour {
         Instantiate(posionBulletQ, transform.position, Quaternion.Euler(0, 0, degree));
     }
 
-    bool Pattern3IsPossible() {
+    public bool Pattern3IsPossible() {
         if (null == GameObject.FindGameObjectsWithTag("EnemyBulletMine")) {
             return true;
         } else {

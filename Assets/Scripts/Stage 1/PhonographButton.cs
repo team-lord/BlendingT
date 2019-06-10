@@ -21,6 +21,10 @@ public class PhonographButton : MonoBehaviour
         
     }
 
+    public void TurnOn() {
+        GetComponent<SpriteRenderer>().sprite = onSpriteQ;
+    }
+
     public void TurnOff() {
         GetComponent<SpriteRenderer>().sprite = offSprite;
     }
@@ -28,14 +32,7 @@ public class PhonographButton : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collider) {
 
         if (collider.tag == "PlayerBullet") {
-            Change();
+            GetComponentInParent<Phonograph>().Change(numberQ);
         }
-    }
-
-    void Change() {
-        
-        GetComponentInParent<Phonograph>().Change(numberQ);
-        GetComponent<SpriteRenderer>().sprite = onSpriteQ;
-      
     }
 }

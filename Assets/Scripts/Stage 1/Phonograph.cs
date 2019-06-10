@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Phonograph : MonoBehaviour
 {
-    public bool isPhonographOn;
+    private bool isPhonographOn;
 
     public int currentNumber; // 0, 1, 2, -1:Off
 
@@ -17,6 +17,9 @@ public class Phonograph : MonoBehaviour
     private bool isReady;
     public float delayQ;
 
+    private float time;
+    public float animationDelayQ;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +31,8 @@ public class Phonograph : MonoBehaviour
         spriteNumber = 0;
 
         isReady = true;
+
+        time = 0;
     }
 
     // Update is called once per frame
@@ -42,14 +47,13 @@ public class Phonograph : MonoBehaviour
     public void Change(int number) {
         if (isReady) {
             StartCoroutine(WaitChange(delayQ));
-            if (currentNumber == number) {
+            if (currentNumber == number) { // 켜져 있는 버튼을 눌러 끄기
                 isPhonographOn = false;
-                puzzleManager.GetComponent<PuzzleManager>().isPhonographOn = false;
                 buttonsQ[currentNumber].GetComponent<PhonographButton>().TurnOff();
                 currentNumber = -1;
-            } else {
+            } else { // 다른 버튼을 눌러 버튼을 바꾸기
                 isPhonographOn = true;
-                puzzleManager.GetComponent<PuzzleManager>().isPhonographOn = true;
+                buttonsQ[number].GetComponent<PhonographButton>().TurnOn();
                 buttonsQ[currentNumber].GetComponent<PhonographButton>().TurnOff();
                 currentNumber = number;
             }
@@ -63,12 +67,24 @@ public class Phonograph : MonoBehaviour
     }
 
     void Dance() {
-        if(spriteNumber < 3) {
-            spriteNumber++;
-        } else {
-            spriteNumber = 0; // 3 -> 0
+        time += Time.deltaTime;
+        if (time > animationDelayQ) {
+            time = 0;
+            if (spriteNumber < 3) {
+                spriteNumber++;
+            } else {
+                spriteNumber = 0; // 3 -> 0
+            }
+            GetComponent<SpriteRenderer>().sprite = spritesQ[spriteNumber];
         }
-        GetComponent<SpriteRenderer>().sprite = spritesQ[spriteNumber];
-        // 애니메이션으로 들썩들썩 구현
+        
+    }
+
+    public int CurrentButton() {
+        if (isPhonographOn) {
+            return currentNumber;
+        } else {
+            return -1; // isPhonographOn = false;
+        }
     }
 }

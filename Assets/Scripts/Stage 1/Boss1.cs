@@ -45,13 +45,8 @@ public class Boss1 : MonoBehaviour {
     public float pattern2DelayQ;
 
     // 패턴 3
-    public GameObject surpriseBoxQ; // surpriseBox
-    public int maxSurpriseBoxQ;
-    public int currentSurpriseBox;
-    public bool canDuplicate;
-    public float minimumRangeQ;
-    public float maximumRangeQ;
-    public Vector2 location;
+    private bool pattern3IsPossible;
+    public GameObject surpriseBoxManagerQ;
 
     // 패턴 4
     public GameObject bullet4Q; // bullet4
@@ -93,6 +88,7 @@ public class Boss1 : MonoBehaviour {
         isProgressingPattern = false;
 
         recentPattern = 0;
+        pattern3IsPossible = true;
 
     }
 
@@ -159,7 +155,12 @@ public class Boss1 : MonoBehaviour {
                 Pattern2();
                 break;
             case 3:
-                Pattern3();
+                if (pattern3IsPossible) {
+                    Pattern3();
+                } else {
+                    PatternByNumber();
+                }
+                
                 break;
             case 4:
                 Pattern4();
@@ -272,26 +273,14 @@ public class Boss1 : MonoBehaviour {
 
         Instantiate(pigeonQ, transform.position, Quaternion.FromToRotation(Vector3.up, _newDirection));
     }
-
+    
     void Pattern3() {
-        if(currentSurpriseBox != 0) {
-            return;
-        }
-        StartCoroutine(WaitPatternProgressing(0));
-        DetermineBoxLocation();
-        Instantiate(surpriseBoxQ, location, Quaternion.Euler(new Vector3(0, 0, 0)));
+        pattern3IsPossible = false;
+        Instantiate(surpriseBoxManagerQ, transform.position + Vector3.down, transform.rotation);
     }
 
-    void DetermineBoxLocation() {
-        surpriseBoxQ.GetComponent<SpriteRenderer>().enabled = false;
-        do {
-            float _range = Random.Range(minimumRangeQ, maximumRangeQ);
-            float _theta = Random.Range(0, 2 * Mathf.PI);
-
-            location = _range * new Vector2(Mathf.Cos(_theta), Mathf.Sin(_theta));
-        } while (surpriseBoxQ.GetComponent<SurpriseBox>().collided);
-        surpriseBoxQ.GetComponent<SpriteRenderer>().enabled = true;
-
+    public void Pattern3IsPossible() {
+        pattern3IsPossible = true;
     }
 
     void Pattern4() {
