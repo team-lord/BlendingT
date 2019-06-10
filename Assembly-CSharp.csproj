@@ -83,6 +83,7 @@
     <Compile Include="Assets\Scripts\Stage 1\PuzzleStartLever.cs" />
     <Compile Include="Assets\Scripts\Stage 1\SurpriseBox.cs" />
     <Compile Include="Assets\Scripts\Stage 2\BeeA.cs" />
+    <Compile Include="Assets\Scripts\Stage 2\BeeB.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Boss2.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Bullet1ChildrenMove2.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Bullet1Move2.cs" />
