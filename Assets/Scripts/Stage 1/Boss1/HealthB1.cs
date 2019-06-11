@@ -57,7 +57,7 @@ public class HealthB1 : MonoBehaviour
         } else if(phase == 2) {
             if (phase2Health <= 0) {
                 phase2Health = 0;
-                // TODO - Event Scene
+                GetComponent<PhaseB1>().Phase3();
             }
         }
     }

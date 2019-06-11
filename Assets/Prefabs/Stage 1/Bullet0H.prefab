@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4191743422087627791}
   - component: {fileID: 1853219803472653389}
-  - component: {fileID: 5558629354563481544}
+  - component: {fileID: 1739808533082341690}
+  - component: {fileID: 320144388801491899}
   m_Layer: 0
-  m_Name: Bullet1H
+  m_Name: Bullet0H
   m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,7 +81,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5558629354563481544
+--- !u!114 &1739808533082341690
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,7 +90,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 2503989990424769565}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bfbe0ebd6d593c488770adbda34a9af, type: 3}
+  m_Script: {fileID: 11500000, guid: eeef2f15b9f5dcf4e8a7cd7bf309bbe3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0
+--- !u!114 &320144388801491899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2503989990424769565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5ebd19de8c612a42b5222369ea64bf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

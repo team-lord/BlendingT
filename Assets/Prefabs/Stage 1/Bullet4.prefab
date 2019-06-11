@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5335891473651188796}
   - component: {fileID: 4248013406845784433}
+  - component: {fileID: 2738113148948173560}
+  - component: {fileID: 7356526900830127417}
   m_Layer: 0
   m_Name: Bullet4
   m_TagString: EnemyBullet
@@ -79,3 +81,30 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2738113148948173560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436673565432355089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7a45d84762a99146b195870ffa103f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0
+  angleVelocity: 0
+  rotateDelay: 0
+--- !u!114 &7356526900830127417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436673565432355089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5ebd19de8c612a42b5222369ea64bf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

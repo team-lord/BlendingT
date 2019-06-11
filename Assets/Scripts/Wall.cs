@@ -19,7 +19,7 @@ public class Wall : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collider) {
-        if(collider.tag=="PlayerBullet" || collider.tag == "EnemyBullet") {
+        if(collider.tag=="PlayerBullet" || collider.tag == "EnemyBullet") { // 계속 추가해 나갑시다
             Destroy(collider);
         }
     }
