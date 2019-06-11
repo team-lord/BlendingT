@@ -163,14 +163,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3145a2808e60044b886a75d610f5122, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startButton: {fileID: 0}
   ballQ: {fileID: 4301548767625198739, guid: fba73c5404d66274db69888a393c7b44, type: 3}
   isBulbOn: 0
-  phonograph: {fileID: 0}
-  phonographNumber: 0
-  isPhonographOn: 0
+  phonograph: {fileID: 59844963129013750, guid: 1877ee456f45ba04a82432961c75758e,
+    type: 3}
   isMotorFanOn: 0
-  plankMachine: {fileID: 0}
+  plankMachine: {fileID: 8902334421353497404, guid: 6a077f10290e99a4d849951e6f14b3b5,
+    type: 3}
   plankNumber: 0
   onPuzzle: 0
 --- !u!1 &371707983

@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 508167600704448366}
   - component: {fileID: 4947190889212872899}
-  - component: {fileID: 1925373104326949124}
   m_Layer: 0
   m_Name: SurpriseBox
   m_TagString: SurpriseBox
@@ -28,8 +27,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 5303874445927881051}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -82,67 +80,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1925373104326949124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3999101307238757942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da77c9510f57b7d439fa9bc8bb5da461, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletQ: {fileID: 8068288318438665347, guid: 3667c71da9d37144a9ca86d84298ad3f, type: 3}
-  surpriseBoxManager: {fileID: 7716468029932794765, guid: b7411e90e3d86b644b9430a699eab438,
-    type: 3}
-  surpriseBoxChecker: {fileID: 8297104194898512550}
-  fireDelayQ: 0.4
-  maxHealthQ: 5
-  awakenTimeQ: 5
-  duplicatingTimeQ: 3
-  rangeQ: 5
---- !u!1 &8297104194898512550
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5303874445927881051}
-  - component: {fileID: 540282507782637825}
-  m_Layer: 0
-  m_Name: SurpriseBoxChecker
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5303874445927881051
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8297104194898512550}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 508167600704448366}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &540282507782637825
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8297104194898512550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e0c059ac868454598f8b8a869c8136, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
