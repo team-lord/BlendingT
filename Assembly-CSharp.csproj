@@ -66,37 +66,38 @@
     <Compile Include="Assets\Scripts\CameraMove.cs" />
     <Compile Include="Assets\Scripts\Cursor.cs" />
     <Compile Include="Assets\Scripts\DestroyByBlanket.cs" />
-    <Compile Include="Assets\Scripts\Old\Bullet2Move1.cs" />
-    <Compile Include="Assets\Scripts\Old\Player.cs" />
     <Compile Include="Assets\Scripts\Player\AttackFireP.cs" />
     <Compile Include="Assets\Scripts\Player\BlanketP.cs" />
     <Compile Include="Assets\Scripts\Player\HealthP.cs" />
     <Compile Include="Assets\Scripts\Player\MoveTumbleP.cs" />
-    <Compile Include="Assets\Scripts\Stage 1\Afterimage.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Board.cs" />
     <Compile Include="Assets\Scripts\Stage 1\BoardLever.cs" />
     <Compile Include="Assets\Scripts\Stage 1\BoardNeedle.cs" />
-    <Compile Include="Assets\Scripts\Stage 1\Boss1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Boss1\HealthB1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Boss1\MoveB1.cs" />
-    <Compile Include="Assets\Scripts\Stage 1\Boss1\Pattern0Maker1.cs" />
-    <Compile Include="Assets\Scripts\Stage 1\Boss1\Pattern1Maker1.cs" />
-    <Compile Include="Assets\Scripts\Stage 1\Boss1\Pattern2Maker1.cs" />
-    <Compile Include="Assets\Scripts\Stage 1\Boss1\Pattern3Maker.cs" />
-    <Compile Include="Assets\Scripts\Stage 1\Boss1\Pattern4Maker.cs" />
-    <Compile Include="Assets\Scripts\Stage 1\Boss1\Pattern5Maker.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Boss1\PatternB1.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\Boss1\PatternMakers\Pattern0Maker1.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\Boss1\PatternMakers\Pattern1Maker1.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\Boss1\PatternMakers\Pattern2Maker1.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\Boss1\PatternMakers\Pattern3Maker.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\Boss1\PatternMakers\Pattern4Maker.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\Boss1\PatternMakers\Pattern5Maker.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\Boss1\PatternMakers\Pattern6Maker.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\Boss1\PatternMakers\Pattern7Maker.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Boss1\PhaseB1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Boss1\PuzzleB1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Bulb.cs" />
     <Compile Include="Assets\Scripts\Stage 1\BulbLever.cs" />
-    <Compile Include="Assets\Scripts\Stage 1\Bullet5Move1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Bullets\Bullet0Move1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Bullets\Bullet1Move1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Bullets\Bullet3FollowMove1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Bullets\Bullet3Move1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Bullets\Bullet4Move1.cs" />
-    <Compile Include="Assets\Scripts\Stage 1\Club.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\Bullets\Bullet5EchoMove1.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\Bullets\Bullet5Move1.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\Bullets\Bullet6Move1.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\Bullets\Bullet6StickMove1.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\Bullets\BulletMove1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\GravityButton.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Laser.cs" />
     <Compile Include="Assets\Scripts\Stage 1\MotorFan.cs" />
@@ -129,25 +130,25 @@
     <Compile Include="Assets\Scripts\Stage 2\Towers.cs" />
     <Compile Include="Assets\Scripts\Wall.cs" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/이재상/Desktop/BlendingT/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/User/Desktop/BlendingT/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/이재상/Desktop/BlendingT/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/User/Desktop/BlendingT/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/이재상/Desktop/BlendingT/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/User/Desktop/BlendingT/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/이재상/Desktop/BlendingT/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/User/Desktop/BlendingT/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/이재상/Desktop/BlendingT/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/User/Desktop/BlendingT/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/이재상/Desktop/BlendingT/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/User/Desktop/BlendingT/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Users/이재상/Desktop/BlendingT/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>C:/Users/User/Desktop/BlendingT/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.4f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -333,13 +334,13 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.4f1/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/이재상/Desktop/BlendingT/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/User/Desktop/BlendingT/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/이재상/Desktop/BlendingT/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/User/Desktop/BlendingT/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/이재상/Desktop/BlendingT/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/User/Desktop/BlendingT/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.4f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

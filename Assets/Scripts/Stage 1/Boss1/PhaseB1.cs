@@ -33,4 +33,8 @@ public class PhaseB1 : MonoBehaviour
         GetComponent<PuzzleB1>().enabled = false;
         GetComponent<PatternB1>().PatternForge(); 
     }
+
+    public void Phase3() {
+        // TODO - 이벤트 씬
+    }
 }
