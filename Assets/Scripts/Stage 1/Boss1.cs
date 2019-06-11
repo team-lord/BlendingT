@@ -1,9 +1,10 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Boss1 : MonoBehaviour {
-
+    
     // 페이즈
     public int phase; // 1: 전투, 2: 퍼즐, 3: 전투
 

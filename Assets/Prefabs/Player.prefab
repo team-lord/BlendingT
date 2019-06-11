@@ -10,9 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1670161517945502503}
   - component: {fileID: 9102630325755508474}
-  - component: {fileID: 5428216403662839361}
   - component: {fileID: 5665803375185897518}
   - component: {fileID: 5017792400174739193}
+  - component: {fileID: 8635578474770150011}
+  - component: {fileID: 6690072444194126885}
+  - component: {fileID: 7976742175384873060}
+  - component: {fileID: 8184690626530226898}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -82,38 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5428216403662839361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2137840887892769801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d7d971ea74bd9149a9ee3309c492ade, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealthQ: 10
-  health: 0
-  isAlive: 0
-  moveSpeedQ: 4
-  h: 0
-  v: 0
-  blanketQ: {fileID: 0}
-  canUseBlanket: 0
-  direction: {x: 0, y: 0, z: 0}
-  bulletQ: {fileID: 1383276255159794600, guid: 0eddcc8fe29fc5e4b8b4e8c756d138bf, type: 3}
-  fireDelayQ: 0.2
-  canFire: 0
-  canTumble: 0
-  tumbleTimeQ: 1
-  tumbleSpeedQ: 6
-  tumbleDelayQ: 1.5
-  isTumbling: 0
-  tumblePulse: 0
-  invincibleDelayQ: 0
-  isInvicible: 0
 --- !u!58 &5665803375185897518
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -151,3 +122,63 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &8635578474770150011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137840887892769801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9703d861724a02b4492e6961959f9f9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleDelay: 0
+  sword: {fileID: 0}
+  attackDelay: 0
+  bullet: {fileID: 0}
+  fireDelay: 0
+--- !u!114 &6690072444194126885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137840887892769801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04dd8edb74b42be419e59637fc3c4619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 0
+  invincibleTime: 0
+--- !u!114 &7976742175384873060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137840887892769801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c184b539541dd345ae40f532b8198a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blanket: {fileID: 0}
+--- !u!114 &8184690626530226898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137840887892769801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fade240466dc2554d8fb7e835b319b9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0
+  tumbleTime: 0
+  tumbleSpeed: 0
+  tumbleDelay: 0

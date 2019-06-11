@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PuzzleManager : MonoBehaviour
 {
-    public GameObject startButton;
-
     // Main Ball
     public GameObject ballQ;
 
@@ -14,8 +12,8 @@ public class PuzzleManager : MonoBehaviour
 
     // Phonograph
     public GameObject phonograph;
-    public int phonographNumber; // answer = 2
-    public bool isPhonographOn;
+    private int phonographNumber; // answer = 2
+    private bool isPhonographOn;
 
     // Fan
     public bool isMotorFanOn;
@@ -54,13 +52,15 @@ public class PuzzleManager : MonoBehaviour
         // 아무튼 어떻게 할지 잘 모르겠음
     }
 
-    void Ready() {
+    public void Ready() {
 
         plankNumber = plankMachine.GetComponent<PlankMachine>().CurrentPlank(); // 요딴 식으로 합시다
         phonographNumber = phonograph.GetComponent<Phonograph>().CurrentButton();
         if(phonographNumber >= 0) { // -1 means isPhonographOn = false;
             isPhonographOn = true;
         }
+
+        onPuzzle = true;
 
     }
 }

@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BulletMove : MonoBehaviour {
-
-    // This is friendly BulletMove!
-
+    
     // 속도
-    public float moveSpeedQ;
+    public float moveSpeed;
 
     // Start is called before the first frame update
     void Start() {
@@ -20,7 +18,7 @@ public class BulletMove : MonoBehaviour {
     }
 
     void Move() {
-        transform.Translate(Vector3.up * moveSpeedQ * Time.deltaTime, Space.Self);
+        transform.Translate(Vector3.up * moveSpeed * Time.deltaTime, Space.Self);
     }
     
 }
