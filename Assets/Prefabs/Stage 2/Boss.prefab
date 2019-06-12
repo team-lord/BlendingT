@@ -12,7 +12,15 @@ GameObject:
   - component: {fileID: 3397415982242047855}
   - component: {fileID: 5660859026978208623}
   - component: {fileID: 9042872130895254101}
-  - component: {fileID: 7348112085257661920}
+  - component: {fileID: 5072788503666927563}
+  - component: {fileID: 1168176110234124655}
+  - component: {fileID: 5969921058991468797}
+  - component: {fileID: 1970104549925559450}
+  - component: {fileID: 8443668096482587045}
+  - component: {fileID: 1615748284076872091}
+  - component: {fileID: 7824404991978632012}
+  - component: {fileID: 712006566693851933}
+  - component: {fileID: 8622415816455705514}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -119,7 +127,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &7348112085257661920
+--- !u!114 &5072788503666927563
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -128,79 +136,138 @@ MonoBehaviour:
   m_GameObject: {fileID: 4235409278765724236}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7df029c3f4c00741b06d28d42f5662d, type: 3}
+  m_Script: {fileID: 11500000, guid: 63173854403634a459030efdc115da52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phase: 0
-  maxHealthQ: 100
-  health: 0
-  isAlive: 0
-  phase2HealthQ: 0
-  phase3HealthQ: 0
-  phase5HealthQ: 0
-  phase6HealthQ: 0
-  fireDelayQ: 0.2
-  canFire: 0
-  direction: {x: 0, y: 0, z: 0}
-  moveSpeedQ: 2
-  isMoving: 0
-  patternDelayLowerLimitQ: 5
-  patternDelayUpperLimitQ: 8
-  isProgressingPattern: 0
-  bulletQ: {fileID: 2146794848732731192, guid: 014ee998694fa4e428ee7d93db9d3b8e, type: 3}
-  honeyBulletQ: {fileID: 0}
-  posionBulletQ: {fileID: 1036792088225503814, guid: b6a9c42d458592246bb538641778b16e,
+  beebulletA: {fileID: 2295140247169437276, guid: 7e33ec7da12a04d46852325f2b24b167,
     type: 3}
-  bigPosionBulletQ: {fileID: 4311940562734982143, guid: 2606323e553c58444bbbd188141aa6d8,
+--- !u!114 &1168176110234124655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4235409278765724236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47c11e67963dc1c4e8e36dc041ba472f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  honeyBullet: {fileID: 6136551738744359377, guid: 8ad3550179d23da4ba5aa7a5fbabce67,
     type: 3}
-  beeBulletAQ: {fileID: 0}
-  beeBulletBQ: {fileID: 0}
-  beeAQ: {fileID: 0}
-  beeBQ: {fileID: 0}
-  bullet1Q: {fileID: 0}
-  bullet1ForgedQ: {fileID: 0}
-  pattern1IsForged: 0
-  pattern1RepetitionQ: 0
-  pattern1DelayQ: 0
-  pattern2RepetitionQ: 12
-  pattern2DelayQ: 0.2
-  pattern2IsForged: 0
-  bullet3Q: {fileID: 8463984705783618367, guid: 23bd24cc634476348ac886c5d57a845f,
+  delay: 0
+--- !u!114 &5969921058991468797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4235409278765724236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eba5d440b05b0b544b2cc7964540fefe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1970104549925559450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4235409278765724236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 147e0dbf5506b4e499c0e9e2548a2afa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  phaseMaxHealths: 00000000000000000000000000000000000000000000000000000000
+--- !u!114 &8443668096482587045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4235409278765724236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d97b8bed4e582243bfa1d6303601256, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beeA: {fileID: 5666408957358147321, guid: d20ec62f4ae02f943b2d8ad8d932beaa, type: 3}
+  beeB: {fileID: 8762629037833819937, guid: fcf92e897aa47564bbb28758205fb937, type: 3}
+  probability: 0
+--- !u!114 &1615748284076872091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4235409278765724236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1909e35b92c448443a64343e75cd6314, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0
+  changeDirectionDelay: 0
+--- !u!114 &7824404991978632012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4235409278765724236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b21a4f882b390a94c8b346c1a8658d44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patternDelay: 0
+  patternMakers:
+  - {fileID: 9033847356539146507, guid: c62e50400e7dad54cbfd3d60507e9936, type: 3}
+  - {fileID: 136905690142497512, guid: 7d0b1fde8cbc49e4d80c48f04a5da994, type: 3}
+  - {fileID: 3967432895975965984, guid: 6518ae800042dfa4088b635002148e90, type: 3}
+  - {fileID: 395996350039701723, guid: eabe76cce5b6b814390a3d4f071ad7c7, type: 3}
+  - {fileID: 5780832808269939850, guid: 65a18da08f9887741b44f8e7f7877997, type: 3}
+  - {fileID: 4754828447787212506, guid: 46ce23c03995729419ea125ef171ca68, type: 3}
+  - {fileID: 1366849618513934455, guid: 3b1af67b78e3ee4438b583c34bcea202, type: 3}
+  - {fileID: 4850480381285084224, guid: 290b9e4db8b7e2341abea0f47af77801, type: 3}
+  - {fileID: 3277570823926607876, guid: 23e84ccf2c35be04ea4460ad2d89dd0d, type: 3}
+  forgedPatternMakers:
+  - {fileID: 1089559165364943295, guid: d33493c5241642c48b7d04427fbdc2ef, type: 3}
+  - {fileID: 6868389731958174264, guid: 6b0e32fa671d7e041851a00ad55a5c24, type: 3}
+  - {fileID: 3967432895975965984, guid: 6518ae800042dfa4088b635002148e90, type: 3}
+  - {fileID: 395996350039701723, guid: eabe76cce5b6b814390a3d4f071ad7c7, type: 3}
+  - {fileID: 7553094215279441872, guid: 673439fd3d02c6142aecf9d6cb18f01f, type: 3}
+  - {fileID: 4754828447787212506, guid: 46ce23c03995729419ea125ef171ca68, type: 3}
+  - {fileID: 1366849618513934455, guid: 3b1af67b78e3ee4438b583c34bcea202, type: 3}
+  - {fileID: 4850480381285084224, guid: 290b9e4db8b7e2341abea0f47af77801, type: 3}
+  - {fileID: 3277570823926607876, guid: 23e84ccf2c35be04ea4460ad2d89dd0d, type: 3}
+--- !u!114 &712006566693851933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4235409278765724236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e095a101b2e449b46aaaca03ecb33726, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  special0Maker: {fileID: 6602233451319459334, guid: fa83a1becb3a7a047b928dfcef6fe476,
     type: 3}
-  pattern3DelayQ: 1
-  pattern4RepetitionQ: 0
-  pattern4DelayQ: 0
-  pattern4AngleQ: 0
-  pattern5IsForged: 0
-  bullet5FastQ: {fileID: 3098560070679883170, guid: 3606c16b27914374c81de878f47ce5c4,
+  special1Maker: {fileID: 8563687535591517425, guid: 324b265f3ad8d83448cb9c6936833ce0,
     type: 3}
-  bullet5MiddleQ: {fileID: 2098724159147459422, guid: 9906e3ee484b7ef47b7af90959defb7a,
-    type: 3}
-  bullet5SlowQ: {fileID: 4597443386962823759, guid: 9b4ed4226701b5a4193b506aa478ce16,
-    type: 3}
-  pattern9MinimumDistanceQ: 0
-  pattern9MaximumDistanceQ: 0
-  shadowQ: {fileID: 0}
-  pattern9SweepAngleQ: 0
-  pattern9SweepingTimeQ: 0
-  pattern10IsForged: 0
-  pattern10IsPossible: 0
-  pattern10Chance: 0
-  pattern11IsPossible: 0
-  pattern11DelayQ: 0
-  special1Start: 0
-  special1End: 0
-  special1DelayQ: 0
-  special1shadowQ: {fileID: 0}
-  beeSpecial1Q: {fileID: 0}
-  beeSpecial1NumberQ: 0
-  special1TimeLimitQ: 0
-  special1NumberQ: 0
-  special2Start: 0
-  special2Progress: 0
-  special2End: 0
-  special2MissileAimDelayQ: 0
-  missileAimSpecial2Q: {fileID: 0}
-  towerSpecial2Q: {fileID: 0}
-  slowMoveSpeedQ: 0
-  isHoneyAttached: 0
+--- !u!114 &8622415816455705514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4235409278765724236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05189af9f29e05b4c935f48c97f5421d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -261,7 +261,7 @@ PrefabInstance:
     - target: {fileID: 1670161517945502503, guid: b5a4ce52038e1be4c8dbccabd42ff661,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1670161517945502503, guid: b5a4ce52038e1be4c8dbccabd42ff661,
         type: 3}
@@ -312,6 +312,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 4235409278765724236, guid: 2eabab2a25314f64bb18ccb22141b941,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5434808925137406293, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -350,7 +355,7 @@ PrefabInstance:
     - target: {fileID: 5434808925137406293, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5434808925137406293, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}

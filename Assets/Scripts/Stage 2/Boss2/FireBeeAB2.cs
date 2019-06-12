@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FireBeeAB2 : MonoBehaviour
 {
-    public GameObject beeA;
+    public GameObject beebulletA;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +19,7 @@ public class FireBeeAB2 : MonoBehaviour
     }
 
     public void Fire() {
-        Instantiate(beeA, transform.position + 2 * Vector3.left, transform.rotation);
-        Instantiate(beeA, transform.position + 2 * Vector3.right, transform.rotation);
+        Instantiate(beebulletA, transform.position + 2 * Vector3.left, transform.rotation);
+        Instantiate(beebulletA, transform.position + 2 * Vector3.right, transform.rotation);
     }
 }

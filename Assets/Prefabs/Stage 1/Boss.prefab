@@ -151,7 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 0
   changeDirectionDelay: 0
-  bullet: {fileID: 0}
+  bullet: {fileID: 8068288318438665347, guid: 3667c71da9d37144a9ca86d84298ad3f, type: 3}
   fireDelay: 0
 --- !u!114 &2417884461210072600
 MonoBehaviour:
