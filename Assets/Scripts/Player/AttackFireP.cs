@@ -65,7 +65,6 @@ public class AttackFireP : MonoBehaviour {
         StartCoroutine(CanAttack());
         // TODO - 근접 공격
         Debug.Log("Attack");
-
     }
 
     IEnumerator CanAttack() {
@@ -77,7 +76,7 @@ public class AttackFireP : MonoBehaviour {
     void Fire() {
         StartCoroutine(CanFire());
         Vector3 _direction = (cursor.transform.position - transform.position).normalized;
-        Instantiate(bullet, transform.position, Quaternion.LookRotation(Vector3.up, _direction));
+        Instantiate(bullet, transform.position, Quaternion.FromToRotation(Vector3.up, _direction));
     }
 
     IEnumerator CanFire() {

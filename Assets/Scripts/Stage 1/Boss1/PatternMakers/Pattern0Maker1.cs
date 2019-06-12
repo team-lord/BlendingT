@@ -8,27 +8,29 @@ public class Pattern0Maker1 : MonoBehaviour
     private GameObject bullet;
 
     public int repetition;
+    private int count;
     public float delay;
     private float time;
 
     private GameObject player;
     private GameObject boss;
-    private int count;
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
+        count = 0;
         time = 0;
 
         player = GameObject.Find("Player");
         boss = GameObject.Find("Boss");
-        count = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+        time += Time.deltaTime;
+
         if (time > delay) {
+            // 카드 던지는 애니메이션 시작
             bullet = bullet0s[Random.Range(0, bullet0s.Length)];
             for(int i=0; i<5; i++) {
                 Fire(bullet, -40 + 20 * i);
@@ -46,7 +48,7 @@ public class Pattern0Maker1 : MonoBehaviour
         Quaternion _rotation = Quaternion.Euler(0, 0, degree);
         Vector3 _newDirection = _rotation * _direction;
 
-        Instantiate(bullet, transform.position, Quaternion.LookRotation(_newDirection));
+        Instantiate(bullet, transform.position, Quaternion.FromToRotation(Vector3.up, _newDirection));
     }
 
     void CheckDestroy() {

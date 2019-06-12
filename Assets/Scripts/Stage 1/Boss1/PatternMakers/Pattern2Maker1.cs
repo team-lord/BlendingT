@@ -26,7 +26,7 @@ public class Pattern2Maker1 : MonoBehaviour
 
         upLocation = new Vector3(0, triangleRange, 0);
         downLeftLocation = new Vector3(triangleRange * Mathf.Sqrt(3) / 2, -triangleRange / 2, 0);
-        downLeftLocation = new Vector3(-triangleRange * Mathf.Sqrt(3) / 2, -triangleRange / 2, 0);
+        downRightLocation = new Vector3(-triangleRange * Mathf.Sqrt(3) / 2, -triangleRange / 2, 0);
 
         Instantiate(surpriseBox, upLocation, transform.rotation);
         Instantiate(surpriseBox, downLeftLocation, transform.rotation);

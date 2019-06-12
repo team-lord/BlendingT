@@ -6,6 +6,7 @@ public class PatternB1 : MonoBehaviour
 {
     private bool isPatternForged;
 
+    private int previousPattern;
     private int currentPattern; // 중복 방지
 
     public float patternDelay;
@@ -19,7 +20,8 @@ public class PatternB1 : MonoBehaviour
     void Start() {
         isPatternForged = false;
 
-        currentPattern = 0;
+        previousPattern = -1;
+        currentPattern = -1;
 
         patternStart = true;
     }
@@ -27,7 +29,7 @@ public class PatternB1 : MonoBehaviour
     void Update() {
         if (patternStart) {
             patternStart = false;
-            GetComponent<MoveB1>().IsMove(false);
+            GetComponent<MoveFireB1>().IsMove(false);
 
             Pattern();
         }
@@ -38,6 +40,8 @@ public class PatternB1 : MonoBehaviour
         do {
             _number = Random.Range(0, patternMakers.Length); // patternMakers.Length == 8
         } while (_number == currentPattern);
+
+        previousPattern = currentPattern;
         currentPattern = _number;
 
         if (isPatternForged) {
@@ -52,7 +56,7 @@ public class PatternB1 : MonoBehaviour
     }
 
     IEnumerator PatternStart() {
-        GetComponent<MoveB1>().IsMove(true);
+        GetComponent<MoveFireB1>().IsMove(true);
         yield return new WaitForSeconds(patternDelay);
         patternStart = true;
     }
@@ -62,6 +66,7 @@ public class PatternB1 : MonoBehaviour
     }
 
     public void ForceStart() { // 강제로 패턴을 다시 시작할 때 호출 ex) surpriseBox가 아직 존재
+        currentPattern = previousPattern;
         patternStart = true;
     }
 }

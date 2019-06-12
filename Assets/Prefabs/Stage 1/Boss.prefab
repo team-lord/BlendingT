@@ -151,6 +151,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 0
   changeDirectionDelay: 0
+  bullet: {fileID: 0}
+  fireDelay: 0
 --- !u!114 &2417884461210072600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,14 +176,14 @@ MonoBehaviour:
   - {fileID: 2360191106094610139, guid: aa7e83132c3b3dd44ae04d57c35d23d5, type: 3}
   - {fileID: 1142934265401104276, guid: 4b0a00f22d123c140bf256aa96c0b8cc, type: 3}
   forgedPatternMakers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 3852813807863650065, guid: 9477356ba55910c43b750a3420f5662d, type: 3}
+  - {fileID: 4419252495558132050, guid: 221ec4aa870ccbc4892c780acfb082c1, type: 3}
+  - {fileID: 2903147420377588981, guid: be7dfadbf5431d54bb38a5a0831c499d, type: 3}
+  - {fileID: 4932995957393776970, guid: 24695a452d0f80a4fbdbc440d3276d5f, type: 3}
+  - {fileID: 6391563815568925281, guid: a67d8e25ff066e449b6443f193f59a76, type: 3}
+  - {fileID: 205734136711570355, guid: e19f1a39c351eeb44a050a47b92abda7, type: 3}
+  - {fileID: 558674744424315453, guid: 39d0ec09d3f58f640b709fcd11174837, type: 3}
+  - {fileID: 6730378527622950824, guid: 7b72d0ca1692a59449c6e05efaa05167, type: 3}
 --- !u!114 &3057610163071284322
 MonoBehaviour:
   m_ObjectHideFlags: 0

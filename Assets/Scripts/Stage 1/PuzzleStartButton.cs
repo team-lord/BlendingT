@@ -4,23 +4,18 @@ using UnityEngine;
 
 public class PuzzleStartButton : MonoBehaviour
 {
+    public GameObject puzzleBall;
+
     private GameObject player;
     private GameObject boss;
 
-    public Sprite buttonOnQ;
-    private GameObject puzzleManager;
-
-    private bool isReady;
+    public Sprite buttonOn;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("Player");
         boss = GameObject.Find("Boss");
-
-        puzzleManager = GameObject.Find("PuzzleManager");
-
-        isReady = true;
     }
 
     // Update is called once per frame
@@ -29,13 +24,11 @@ public class PuzzleStartButton : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collider) {
-        if (isReady) {
-            if (collider.tag == "PlayerBullet" || collider.tag == "PlayerMelee") {
-                GetComponent<SpriteRenderer>().sprite = buttonOnQ;
-                isReady = false;
-                puzzleManager.GetComponent<PuzzleManager>().Ready();
-            }
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.tag == "PlayerBullet" || collision.tag == "PlayerMelee") {
+            GetComponent<SpriteRenderer>().sprite = buttonOn;
+            // TODO - 쇠공이 나와서 굴러가기 시작
+            // puzzleManager.GetComponent<PuzzleManager>().Ready();
         }
     }
 }

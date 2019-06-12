@@ -25,15 +25,20 @@ public class Bulb : MonoBehaviour
         if(bulbPulse && !isBulbOn) {
             isBulbOn = true;
             bulbPulse = false;
-            puzzleManager.GetComponent<PuzzleManager>().isBulbOn = true;
             // 전구에 불 켜지는 애니메이션 or light처리
         } else if (bulbPulse && isBulbOn){
             isBulbOn = false;
             bulbPulse = false;
-            puzzleManager.GetComponent<PuzzleManager>().isBulbOn = false;
             // 전구에 불 꺼지는 애니메이션 or light처리
         }
+    }
 
+    public void BulbPulse() {
+        bulbPulse = true;
+    }
+
+    public bool IsBulbOn() {
+        return isBulbOn;
     }
         
 }

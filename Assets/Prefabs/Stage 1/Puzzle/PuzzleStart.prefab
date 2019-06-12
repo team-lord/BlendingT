@@ -94,7 +94,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e53e882b1c2ddc488fd67f2c6427069, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonOnQ: {fileID: -7082269095366752182, guid: 1e4057c202b7e354684f4613d4166ff8,
+  puzzleBall: {fileID: 4301548767625198739, guid: fba73c5404d66274db69888a393c7b44,
+    type: 3}
+  buttonOn: {fileID: -7082269095366752182, guid: 1e4057c202b7e354684f4613d4166ff8,
     type: 3}
 --- !u!58 &5777022415415009831
 CircleCollider2D:

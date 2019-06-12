@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Sunflower : MonoBehaviour
 {
-
     public bool bulbPulse;
     private bool isBulbOn;
 

@@ -23,17 +23,13 @@ public class HealthP : MonoBehaviour {
     void Update() {
 
     }
+    
+    public void Hit() {
+        if (!isInvincible) {
+            health--;
+            CheckAlive();
 
-    private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.tag == "EnemyBullet" || collision.tag == "Bullet41" ) { // 계속 추가해 나가세요
-            Destroy(collision);
-
-            if (!isInvincible) {
-                health--;
-                CheckAlive();
-
-                StartCoroutine(IsInvincible());
-            }
+            StartCoroutine(IsInvincible());
         }
     }
 

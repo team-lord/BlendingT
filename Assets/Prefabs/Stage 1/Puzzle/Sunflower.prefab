@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 7071525418397319878}
   - component: {fileID: 393128882503539010}
   m_Layer: 0
-  m_Name: SunFlower_0
+  m_Name: Flower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 7167178147126014056}
   - component: {fileID: 8053255989687975735}
   m_Layer: 0
-  m_Name: SunFlower_1
+  m_Name: Stem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 924470596421807478}
   - component: {fileID: 7842031490582286002}
   m_Layer: 0
-  m_Name: SunFlower_2
+  m_Name: Pot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
