@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveB2 : MonoBehaviour {
 
-    private Vector3 direction; // for animation
+    private Vector3 direction;
 
     public float moveSpeed;
     private bool isMove;
@@ -51,5 +51,10 @@ public class MoveB2 : MonoBehaviour {
     void ChangeDirection() {
         direction = (player.transform.position - transform.position).normalized;
         time = 0;
+    }
+
+    public Vector3 GiveDirection()
+    {
+        return direction;
     }
 }
