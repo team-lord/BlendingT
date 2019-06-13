@@ -23,7 +23,7 @@ public class MoveTumbleP : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        isTumbling = false;
     }
 
     void FixedUpdate() {
@@ -68,11 +68,7 @@ public class MoveTumbleP : MonoBehaviour
     }
 
     public void IsPattern41(bool _bool) {
-        if (_bool) {
-            isPattern41 = true;
-        } else {
-            isPattern41 = false;
-        }
+        isPattern41 = _bool;
     }
 
     IEnumerator CanTumble() {
