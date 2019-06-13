@@ -10,12 +10,14 @@ public class PuzzleStartButton : MonoBehaviour
     private GameObject boss;
 
     public Sprite buttonOn;
+    private Sprite buttonOff;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("Player");
         boss = GameObject.Find("Boss");
+
     }
 
     // Update is called once per frame
@@ -25,10 +27,10 @@ public class PuzzleStartButton : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.tag == "PlayerBullet" || collision.tag == "PlayerMelee") {
+        if (collision.tag == "PlayerMelee") {
             GetComponent<SpriteRenderer>().sprite = buttonOn;
             // TODO - 쇠공이 나와서 굴러가기 시작
-            // puzzleManager.GetComponent<PuzzleManager>().Ready();
+            boss.GetComponent<PuzzleB1>().TestPuzzle();
         }
     }
 }

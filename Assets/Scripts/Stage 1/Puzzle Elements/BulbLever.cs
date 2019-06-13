@@ -7,7 +7,7 @@ public class BulbLever : MonoBehaviour
     public GameObject bulb;
 
     private bool isReady;
-    public float delayQ;
+    public float delay;
 
     // Start is called before the first frame update
     void Start()
@@ -24,17 +24,17 @@ public class BulbLever : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collider) {
         if (isReady) {
             if (collider.tag == "PlayerMelee") {
-                StartCoroutine(BulbPulse(delayQ));
+                StartCoroutine(Wait());
+                GetComponent<SpriteRenderer>().flipX = !GetComponent<SpriteRenderer>().flipX;
+                bulb.GetComponent<Bulb>().IsReady();
             }
         }
         
     }
 
-    IEnumerator BulbPulse(float time) {
+    IEnumerator Wait() {
         isReady = false;
-        GetComponent<SpriteRenderer>().flipX = !GetComponent<SpriteRenderer>().flipX;
-        bulb.GetComponent<Bulb>().bulbPulse = true;
-        yield return new WaitForSeconds(time);
+        yield return new WaitForSeconds(delay);
         isReady = true;
     }
 }

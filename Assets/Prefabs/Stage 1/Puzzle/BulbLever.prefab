@@ -93,4 +93,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulb: {fileID: 108817233500654884, guid: b2290cd3c166da6448192d83dd388007, type: 3}
-  delayQ: 0.5
+  delay: 1

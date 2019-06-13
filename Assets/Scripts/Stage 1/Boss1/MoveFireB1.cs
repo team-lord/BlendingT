@@ -50,11 +50,7 @@ public class MoveFireB1 : MonoBehaviour {
     }
 
     public void IsMove(bool _bool) {
-        if (_bool) {
-            isMove = true;
-        } else {
-            isMove = false;
-        }
+        isMove = _bool;
     }
 
     void Move() {

@@ -92,8 +92,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a49f7364881c42e4ab054683efe9864a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorQ: 0
-  delayQ: 1
+  color: 0
+  delay: 1
 --- !u!1 &1144576607620645440
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,8 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 823ec372d4877c545a60714abe52adbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  change: 0
-  angularVelocityQ: 100
+  animator: {fileID: 0}
 --- !u!1 &1226715253214679473
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,8 +279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 823ec372d4877c545a60714abe52adbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  change: 0
-  angularVelocityQ: 100
+  animator: {fileID: 0}
 --- !u!1 &1925955947961360211
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,8 +372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 823ec372d4877c545a60714abe52adbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  change: 0
-  angularVelocityQ: 100
+  animator: {fileID: 0}
 --- !u!1 &2689390114979879528
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,8 +465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 823ec372d4877c545a60714abe52adbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  change: 0
-  angularVelocityQ: 100
+  animator: {fileID: 0}
 --- !u!1 &3393505926991287925
 GameObject:
   m_ObjectHideFlags: 0
@@ -562,8 +558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 823ec372d4877c545a60714abe52adbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  change: 0
-  angularVelocityQ: 100
+  animator: {fileID: 0}
 --- !u!1 &4593664362971362870
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,8 +651,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 823ec372d4877c545a60714abe52adbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  change: 0
-  angularVelocityQ: 100
+  animator: {fileID: 0}
 --- !u!1 &5312322140380787372
 GameObject:
   m_ObjectHideFlags: 0
@@ -738,7 +732,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: e021a6276d60d594cb3c8b8ea389f46f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -762,17 +756,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02390cb7d1da9174c96c23de5cf58478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  change: 000000
-  delayQ: 1
-  needleRed1Q: {fileID: 7678941294280686391}
-  needleRed2Q: {fileID: 1226715253214679473}
-  needleRed3Q: {fileID: 5542900613283956881}
-  needleGreen1Q: {fileID: 1925955947961360211}
-  needleGreen2Q: {fileID: 4593664362971362870}
-  needleGreen3Q: {fileID: 5771720523880844726}
-  needleBlue1Q: {fileID: 2689390114979879528}
-  needleBlue2Q: {fileID: 1144576607620645440}
-  needleBlue3Q: {fileID: 3393505926991287925}
+  needleReds:
+  - {fileID: 7678941294280686391}
+  - {fileID: 1226715253214679473}
+  - {fileID: 5542900613283956881}
+  needleGreens:
+  - {fileID: 1925955947961360211}
+  - {fileID: 4593664362971362870}
+  - {fileID: 5771720523880844726}
+  needleBlues:
+  - {fileID: 2689390114979879528}
+  - {fileID: 1144576607620645440}
+  - {fileID: 3393505926991287925}
 --- !u!1 &5542900613283956881
 GameObject:
   m_ObjectHideFlags: 0
@@ -865,8 +860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 823ec372d4877c545a60714abe52adbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  change: 0
-  angularVelocityQ: 100
+  animator: {fileID: 0}
 --- !u!1 &5771720523880844726
 GameObject:
   m_ObjectHideFlags: 0
@@ -959,8 +953,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 823ec372d4877c545a60714abe52adbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  change: 0
-  angularVelocityQ: 100
+  animator: {fileID: 0}
 --- !u!1 &6387177497144118913
 GameObject:
   m_ObjectHideFlags: 0
@@ -1053,8 +1046,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a49f7364881c42e4ab054683efe9864a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorQ: 2
-  delayQ: 1
+  color: 2
+  delay: 1
 --- !u!1 &6731680993875572280
 GameObject:
   m_ObjectHideFlags: 0
@@ -1147,8 +1140,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a49f7364881c42e4ab054683efe9864a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorQ: 1
-  delayQ: 1
+  color: 1
+  delay: 1
 --- !u!1 &7678941294280686391
 GameObject:
   m_ObjectHideFlags: 0
@@ -1241,5 +1234,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 823ec372d4877c545a60714abe52adbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  change: 0
-  angularVelocityQ: 100
+  animator: {fileID: 0}

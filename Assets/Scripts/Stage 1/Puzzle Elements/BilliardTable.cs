@@ -2,16 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GravityButton : MonoBehaviour
+public class BilliardTable : MonoBehaviour
 {
-    private bool isReady;
-
-    public GameObject[] balls = new GameObject[6];
+    public GameObject[] balls = new GameObject[7];
     
     // Start is called before the first frame update
     void Start()
     {
-        isReady = false;
+
     }
 
     // Update is called once per frame
@@ -20,9 +18,8 @@ public class GravityButton : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collider) {
-        if (isReady) {
-            isReady = false;
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.tag == "PuzzleBall") {
             foreach (GameObject ball in balls) {
                 ball.GetComponent<Rigidbody2D>().gravityScale = 1;
             }
