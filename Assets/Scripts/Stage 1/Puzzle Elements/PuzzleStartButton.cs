@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PuzzleStartButton : MonoBehaviour
 {
-    public GameObject puzzleBall;
+    private GameObject puzzleBall;
 
     private GameObject player;
     private GameObject boss;
@@ -15,6 +15,8 @@ public class PuzzleStartButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        puzzleBall = GameObject.Find("PuzzleBall");
+
         player = GameObject.Find("Player");
         boss = GameObject.Find("Boss");
 
