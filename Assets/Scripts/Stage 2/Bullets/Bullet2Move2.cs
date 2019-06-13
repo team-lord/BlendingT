@@ -17,6 +17,8 @@ public class Bullet2Move2 : MonoBehaviour {
     private float time;
     private float moveTime;
 
+    public float explodeRange;
+
     // Start is called before the first frame update
     void Start() {
         isMove = true;
@@ -26,6 +28,8 @@ public class Bullet2Move2 : MonoBehaviour {
         boss = GameObject.Find("Boss");
 
         time = 0;
+
+        GetComponent<CircleCollider2D>().radius = explodeRange;
     }
 
     // Update is called once per frame

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulbLever : MonoBehaviour
 {
-    public GameObject bulb;
+    private GameObject bulb;
 
     private bool isReady;
     public float delay;
@@ -12,6 +12,8 @@ public class BulbLever : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        bulb = GameObject.Find("Bulb");
+
         isReady = true;
     }
 

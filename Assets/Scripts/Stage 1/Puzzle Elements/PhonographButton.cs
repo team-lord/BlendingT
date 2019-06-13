@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PhonographButton : MonoBehaviour
 {
-    public int numberQ; // answer = 2; 0, 1, 2
+    public int number; // answer = 2; 0, 1, 2
     
-    public Sprite onSpriteQ;
+    public Sprite onSprite;
     private Sprite offSprite;
 
     // Start is called before the first frame update
@@ -22,7 +22,7 @@ public class PhonographButton : MonoBehaviour
     }
 
     public void TurnOn() {
-        GetComponent<SpriteRenderer>().sprite = onSpriteQ;
+        GetComponent<SpriteRenderer>().sprite = onSprite;
     }
 
     public void TurnOff() {
@@ -30,9 +30,8 @@ public class PhonographButton : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collider) {
-
         if (collider.tag == "PlayerBullet") {
-            GetComponentInParent<Phonograph>().Change(numberQ);
+            GetComponentInParent<Phonograph>().Change(number);
         }
     }
 }

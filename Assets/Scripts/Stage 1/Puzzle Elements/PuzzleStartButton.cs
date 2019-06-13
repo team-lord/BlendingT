@@ -20,6 +20,7 @@ public class PuzzleStartButton : MonoBehaviour
         player = GameObject.Find("Player");
         boss = GameObject.Find("Boss");
 
+        buttonOff = GetComponent<SpriteRenderer>().sprite;
     }
 
     // Update is called once per frame
@@ -31,8 +32,7 @@ public class PuzzleStartButton : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.tag == "PlayerMelee") {
             GetComponent<SpriteRenderer>().sprite = buttonOn;
-            // TODO - 쇠공이 나와서 굴러가기 시작
-            // boss.GetComponent<PuzzleB1>().TestPuzzle();
+            puzzleBall.GetComponent<PuzzleBallMove>().Direction(Vector3.right);
         }
     }
 }

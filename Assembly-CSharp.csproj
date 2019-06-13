@@ -87,6 +87,7 @@
     <Compile Include="Assets\Scripts\Stage 1\Boss1\PhaseB1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Boss1\PuzzleB1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Bullets\Bullet1Move1.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\Bullets\Bullet2Move1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Bullets\Bullet3Follow1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Bullets\Bullet4Move1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Bullets\Bullet6StickMove1.cs" />
@@ -97,6 +98,7 @@
     <Compile Include="Assets\Scripts\Stage 1\Puzzle Elements\BoardNeedle.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Puzzle Elements\Bulb.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Puzzle Elements\BulbLever.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\Puzzle Elements\Dolls.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Puzzle Elements\MotorFan.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Puzzle Elements\Phonograph.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Puzzle Elements\PhonographButton.cs" />
@@ -106,6 +108,8 @@
     <Compile Include="Assets\Scripts\Stage 1\Puzzle Elements\PuzzleStartButton.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Puzzle Elements\Sunflower.cs" />
     <Compile Include="Assets\Scripts\Stage 1\SurpriseBox.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\SurpriseBoxHealth.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\SurpriseBoxShield.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Boss2\FireBeeAB2.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Boss2\FireBulletB2.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Boss2\FlyB2.cs" />
@@ -130,9 +134,11 @@
     <Compile Include="Assets\Scripts\Stage 2\Boss2\SweepB2.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Bullets\BeeA2.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Bullets\BeeB2.cs" />
+    <Compile Include="Assets\Scripts\Stage 2\Bullets\BeeHealth2.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Bullets\Bullet2Move2.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Bullets\BulletBeeA2.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Bullets\BulletBeeB2.cs" />
+    <Compile Include="Assets\Scripts\Stage 2\Bullets\HoneyExplosiveBullet2.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Bullets\Shadow2.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Honey2.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Tower\Tower2.cs" />

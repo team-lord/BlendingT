@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class PlankMachineButton : MonoBehaviour
 {
-    public bool isLeftQ; // true = left, false = right;
+    public bool isLeft; // true = left, false = right;
 
-    public Sprite onSpriteQ;
+    public Sprite onSprite;
     private Sprite offSprite;
 
-    public float delayQ; // 버튼이 눌리는 시간
+    public float delay; // 버튼이 눌리는 시간
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +25,7 @@ public class PlankMachineButton : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider) {
         if (collider.tag == "PlayerBullet") {
-            if (isLeftQ) {
+            if (isLeft) {
                 GetComponentInParent<PlankMachine>().ChangePrevious();
             } else {
                 GetComponentInParent<PlankMachine>().ChangeNext();
@@ -33,13 +33,13 @@ public class PlankMachineButton : MonoBehaviour
         }
     }
 
-    public void ChangeSprite() {
-        StartCoroutine(WaitChangeSprite(delayQ));
+    public void Change() {
+        StartCoroutine(WaitChange());
     }
 
-    IEnumerator WaitChangeSprite(float time) {
-        GetComponent<SpriteRenderer>().sprite = onSpriteQ;
-        yield return new WaitForSeconds(time);
+    IEnumerator WaitChange() {
+        GetComponent<SpriteRenderer>().sprite = onSprite;
+        yield return new WaitForSeconds(delay);
         GetComponent<SpriteRenderer>().sprite = offSprite;
     }
 }

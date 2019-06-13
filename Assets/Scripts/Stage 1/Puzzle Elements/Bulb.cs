@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bulb : MonoBehaviour
 {
-    public GameObject sunflower;
+    private GameObject sunflower;
     
     private bool isBulbOn;
     private bool isReady;
@@ -12,6 +12,8 @@ public class Bulb : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        sunflower = GameObject.Find("Sunflower");
+
         isBulbOn = false;
         isReady = false;
     }

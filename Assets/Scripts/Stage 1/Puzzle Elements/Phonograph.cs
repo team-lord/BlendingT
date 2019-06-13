@@ -4,87 +4,55 @@ using UnityEngine;
 
 public class Phonograph : MonoBehaviour
 {
+    private GameObject dolls;
+
     private bool isPhonographOn;
 
-    public int currentNumber; // 0, 1, 2, -1:Off
-
-    private GameObject puzzleManager;
-    public GameObject[] buttonsQ = new GameObject[3];
-
-    public Sprite[] spritesQ = new Sprite[4];
-    private int spriteNumber; // 0 -> 1 -> 2 -> 3 -> 0
+    public int currentNumber; // 0, 1, 2, -1: Off
+    
+    public GameObject[] buttons = new GameObject[3];
 
     private bool isReady;
-    public float delayQ;
-
-    private float time;
-    public float animationDelayQ;
+    public float delay;
 
     // Start is called before the first frame update
     void Start()
     {
+        dolls = GameObject.Find("Dolls");
+
         isPhonographOn = false;
 
-        spritesQ[0] = GetComponent<SpriteRenderer>().sprite;
-        puzzleManager = GameObject.Find("PuzzleManager");
-
-        spriteNumber = 0;
-
         isReady = true;
-
-        time = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isPhonographOn) {
-            Dance();
-        }
-        
+
     }
 
     public void Change(int number) {
         if (isReady) {
-            StartCoroutine(WaitChange(delayQ));
+            StartCoroutine(Wait());
             if (currentNumber == number) { // 켜져 있는 버튼을 눌러 끄기
                 isPhonographOn = false;
-                buttonsQ[currentNumber].GetComponent<PhonographButton>().TurnOff();
+                // TODO - 애니메이션 종료
+                buttons[currentNumber].GetComponent<PhonographButton>().TurnOff();
                 currentNumber = -1;
             } else { // 다른 버튼을 눌러 버튼을 바꾸기
                 isPhonographOn = true;
-                buttonsQ[number].GetComponent<PhonographButton>().TurnOn();
-                buttonsQ[currentNumber].GetComponent<PhonographButton>().TurnOff();
+                // TODO - 들썩거리는 애니메이션 시작 (끝 없음. 계속 반복)
+                buttons[number].GetComponent<PhonographButton>().TurnOn();
+                buttons[currentNumber].GetComponent<PhonographButton>().TurnOff();
                 currentNumber = number;
             }
         }
     }
 
-    IEnumerator WaitChange(float time) {
+    IEnumerator Wait() {
         isReady = false;
-        yield return new WaitForSeconds(time);
+        yield return new WaitForSeconds(delay);
         isReady = true;
     }
-
-    void Dance() {
-        time += Time.deltaTime;
-        if (time > animationDelayQ) {
-            time = 0;
-            if (spriteNumber < 3) {
-                spriteNumber++;
-            } else {
-                spriteNumber = 0; // 3 -> 0
-            }
-            GetComponent<SpriteRenderer>().sprite = spritesQ[spriteNumber];
-        }
-        
-    }
-
-    public int CurrentButton() {
-        if (isPhonographOn) {
-            return currentNumber;
-        } else {
-            return -1; // isPhonographOn = false;
-        }
-    }
+       
 }

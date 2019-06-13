@@ -7,10 +7,10 @@ public class PlankMachine : MonoBehaviour
     private int currentPlank; // 0:Rubber, 1:Wood, 2:Ice
 
     private bool isReady;
-    public float delayQ;
+    public float delay;
 
-    public GameObject leftButtonQ;
-    public GameObject rightButtonQ;
+    public GameObject leftButton;
+    public GameObject rightButton;
 
     // Start is called before the first frame update
     void Start()
@@ -27,37 +27,33 @@ public class PlankMachine : MonoBehaviour
 
     public void ChangeNext() { // 0 -> 1 -> 2 -> 0
         if (isReady) {
-            StartCoroutine(Change(delayQ));
+            StartCoroutine(IsReady());
             if(currentPlank < 2) {
                 currentPlank++;
             } else {
                 currentPlank = 0;
             }
-            // 다음 판 불러오는 애니메이션
-            rightButtonQ.GetComponent<PlankMachineButton>().ChangeSprite();
+            // TODO - 다음 판 불러오는 애니메이션 시작
+            rightButton.GetComponent<PlankMachineButton>().Change();
         }
     }
 
     public void ChangePrevious() { // 2 -> 1 -> 0 -> 2
         if (isReady) {
-            StartCoroutine(Change(delayQ));
+            StartCoroutine(IsReady());
             if(currentPlank > 0) {
                 currentPlank--;
             } else {
                 currentPlank = 2;
             }
-            // 이전 판 불러오는 애니메이션
-            leftButtonQ.GetComponent<PlankMachineButton>().ChangeSprite();
+            // TODO - 이전 판 불러오는 애니메이션 시작
+            leftButton.GetComponent<PlankMachineButton>().Change();
         }
     }
 
-    IEnumerator Change(float time) {
+    IEnumerator IsReady() {
         isReady = false;
-        yield return new WaitForSeconds(time);
+        yield return new WaitForSeconds(delay);
         isReady = true;
-    }
-
-    public int CurrentPlank() {
-        return currentPlank;
     }
 }

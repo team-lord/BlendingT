@@ -27,4 +27,8 @@ public class PuzzleBallMove : MonoBehaviour
         direction = _direction;
         direction.Normalize();
     }
+
+    public void SpeedIncrease(float _float) {
+        moveSpeed += _float;
+    }
 }

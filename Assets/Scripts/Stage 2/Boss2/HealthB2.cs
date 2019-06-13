@@ -67,6 +67,8 @@ public class HealthB2 : MonoBehaviour {
         } else if (phase == 6) {
             // TODO - 이벤트 씬. 피격시 사망. 시간이 흐를시 자비.
         }
+
+        Destroy(collision);
     }
 
     void CheckAlive() {

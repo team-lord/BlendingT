@@ -7,14 +7,8 @@ public class MotorFan : MonoBehaviour
     private bool isMotorFanOn;
 
     private bool isReady;
-    public float delayQ;
 
-    public Sprite[] sprites = new Sprite[4];
-
-    private float time;
-    public float onOffDelayQ;
-    public float animationDelayQ;
-    private bool isUp;
+    public float delay;
 
     // Start is called before the first frame update
     void Start()
@@ -22,71 +16,30 @@ public class MotorFan : MonoBehaviour
         isMotorFanOn = false;
 
         isReady = true;
-
-        sprites[0] = GetComponent<SpriteRenderer>().sprite;
-        time = 0;
-        isUp = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isMotorFanOn) {
-            Dance();
-        }
+
     }
 
-    void TurnOn() {
-        StartCoroutine(AnimationTurnOn(onOffDelayQ));
-    }
-
-    IEnumerator AnimationTurnOn(float time) {
-        GetComponent<SpriteRenderer>().sprite = sprites[1];
-        yield return new WaitForSeconds(time);
-        GetComponent<SpriteRenderer>().sprite = sprites[2];
-        isMotorFanOn = true; // 끝나고 해야 Dance()랑 안겹침
-        isUp = true;
-        time = 0;
-    }
-
-    void TurnOff() {
-        StartCoroutine(AnimationTurnOff(onOffDelayQ));
-    }
-
-    IEnumerator AnimationTurnOff(float time) {
-        isMotorFanOn = false; // 시작하자마자 해야 Dance()랑 안겹침
-        GetComponent<SpriteRenderer>().sprite = sprites[1];
-        yield return new WaitForSeconds(time);
-        GetComponent<SpriteRenderer>().sprite = sprites[0];
-    }
-
-    void Dance() {
-        time += Time.deltaTime;
-        if(time > animationDelayQ) {
-            time = 0;
-            if (isUp) {
-                GetComponent<SpriteRenderer>().sprite = sprites[3];
-                isUp = false;
-            } else {
-                GetComponent<SpriteRenderer>().sprite = sprites[2];
-                isUp = true;
-            }
-        }
+    IEnumerator Wait() {
+        isReady = false;
+        yield return new WaitForSeconds(delay);
+        isReady = true;
     }
 
     private void OnTriggerEnter2D(Collider2D collider) {
         if (isReady) {
             if(collider.tag == "PlayerBullet") {
-                if (isMotorFanOn) {
-                    TurnOff();
+                StartCoroutine(Wait());
+                if (!isMotorFanOn) {
+                    // TODO - 들썩 거리는 애니메이션 시작 (끝 없음. 계속 반복)
                 } else {
-                    TurnOn();
+                    // TODO - 애니메이션 종료
                 }
             }
         }
-    }
-
-    public bool MotorFanOn() {
-        return isMotorFanOn;
     }
 }
