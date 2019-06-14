@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 3057610163071284322}
   - component: {fileID: 3307093643530316898}
   m_Layer: 0
-  m_Name: Boss1
+  m_Name: Boss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfad1dbc677373e47a5a86e150cc70d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1
+  moveSpeed: 0
   changeDirectionDelay: 0
   bullet: {fileID: 8068288318438665347, guid: 3667c71da9d37144a9ca86d84298ad3f, type: 3}
   fireDelay: 0
