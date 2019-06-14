@@ -24,9 +24,8 @@ public class Bulb : MonoBehaviour
             isReady = false;
             if (isBulbOn) {
                 // TODO - 전구가 꺼지는 애니메이션 시작
-                // 꺼지면 
             } else {
-                // TODO - 전구가 켜지는 애니메이션
+                // TODO - 전구가 켜지는 애니메이션 시작
             }
             sunflower.GetComponent<Sunflower>().IsReady();
             isBulbOn = !isBulbOn;
