@@ -14,11 +14,16 @@ public class MoveB2 : MonoBehaviour {
 
     private GameObject player;
 
+    private Animator bossIdle;
+    private Vector2 playerDirection;
+
     // Start is called before the first frame update
     void Start() {
         isMove = false;
 
         player = GameObject.Find("Player");
+
+        bossIdle = GetComponent<Animator>();
     }
 
     void FixedUpdate() {
@@ -38,6 +43,7 @@ public class MoveB2 : MonoBehaviour {
             }
             Move();
         }
+        IdleBossDirection();
     }
 
     public void IsMove(bool _bool) {
@@ -56,5 +62,24 @@ public class MoveB2 : MonoBehaviour {
     public Vector3 GiveDirection()
     {
         return direction;
+    }
+
+    void IdleBossDirection()
+    {
+        playerDirection = (player.transform.position - transform.position).normalized;
+
+        if (playerDirection.x > 0)
+            bossIdle.SetFloat("directionToPlayerX", 1);
+        else if (playerDirection.x < 0)
+            bossIdle.SetFloat("directionToPlayerX", -1);
+        else if (playerDirection.x == 0)
+            bossIdle.SetFloat("directionToPlayerX", 0);
+
+        if (playerDirection.y > 0)
+            bossIdle.SetFloat("directionToPlayerY", 1);
+        else if (playerDirection.y < 0)
+            bossIdle.SetFloat("directionToPlayerY", -1);
+        else if (playerDirection.y == 0)
+            bossIdle.SetFloat("directionToPlayerY", 0);
     }
 }
