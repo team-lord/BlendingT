@@ -8,6 +8,7 @@ TagManager:
   - EnemyBulletMine
   - PlayerBullet
   - SurpriseBox
+  - PlayerBulletHoney
   layers:
   - Default
   - TransparentFX

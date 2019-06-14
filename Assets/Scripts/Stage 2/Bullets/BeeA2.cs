@@ -19,6 +19,8 @@ public class BeeA2 : MonoBehaviour
 
     public float phase2Delay;
 
+    // 움직이는 것 아직 구현 안 되어있음
+
     // Start is called before the first frame update
     void Start()
     {

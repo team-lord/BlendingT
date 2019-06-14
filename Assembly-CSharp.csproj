@@ -153,6 +153,8 @@
     <Compile Include="Assets\Scripts\Stage 2\Bullets\HoneyExplosiveBullet2.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Bullets\Shadow2.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Honey2.cs" />
+    <Compile Include="Assets\Scripts\Stage 2\Special0Bee2.cs" />
+    <Compile Include="Assets\Scripts\Stage 2\Special0Honey2.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Tower\Tower2.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Tower\Towers2.cs" />
     <Reference Include="Unity.Timeline.Editor">
