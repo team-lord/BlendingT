@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Dolls : MonoBehaviour
 {
-    private bool isPhonogrpahOn;
-
     public Sprite[] sprites = new Sprite[3]; // 애니메이션이 끝나면 sprite 바꾸기
 
     private Sprite offSprite;
@@ -18,8 +16,6 @@ public class Dolls : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        isPhonogrpahOn = false;
-
         offSprite = GetComponent<SpriteRenderer>().sprite;
 
         isReady = false;

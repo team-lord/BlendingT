@@ -17,7 +17,7 @@ public class ForgedPattern4Maker2 : MonoBehaviour {
         player = GameObject.Find("Player");
         boss = GameObject.Find("Boss");
 
-        playerMovement = player.GetComponent<MoveTumbleP>().MoveDirection();
+        playerMovement = player.GetComponent<MoveTumbleP2>().MoveDirection();
         Vector3 _direction = player.transform.position - transform.position;
         time = _direction.magnitude / bullet4s[0].GetComponent<BulletMove>().moveSpeed;
 
@@ -30,8 +30,6 @@ public class ForgedPattern4Maker2 : MonoBehaviour {
         for (int i = 0; i < 5; i++) {
             Fire(i);
         }
-
-        CheckDestroy();
     }
 
     void Fire(int i) {
@@ -40,7 +38,7 @@ public class ForgedPattern4Maker2 : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-
+        CheckDestroy();
     }
 
     void CheckDestroy() {

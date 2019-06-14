@@ -26,7 +26,7 @@ public class BulbLever : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collider) {
         if (isReady) {
             if (collider.tag == "PlayerMelee") {
-                StartCoroutine(Wait());
+                StartCoroutine(IsReady());
                 GetComponent<SpriteRenderer>().flipX = !GetComponent<SpriteRenderer>().flipX;
                 bulb.GetComponent<Bulb>().IsReady();
             }
@@ -34,7 +34,7 @@ public class BulbLever : MonoBehaviour
         
     }
 
-    IEnumerator Wait() {
+    IEnumerator IsReady() {
         isReady = false;
         yield return new WaitForSeconds(delay);
         isReady = true;

@@ -6,9 +6,7 @@ public class Phonograph : MonoBehaviour
 {
     private GameObject dolls;
 
-    private bool isPhonographOn;
-
-    public int currentNumber; // 0, 1, 2, -1: Off
+    private int currentNumber; // 0, 1, 2, 3: Off
     
     public GameObject[] buttons = new GameObject[3];
 
@@ -20,7 +18,7 @@ public class Phonograph : MonoBehaviour
     {
         dolls = GameObject.Find("Dolls");
 
-        isPhonographOn = false;
+        currentNumber = 3;
 
         isReady = true;
     }
@@ -33,23 +31,26 @@ public class Phonograph : MonoBehaviour
 
     public void Change(int number) {
         if (isReady) {
-            StartCoroutine(Wait());
+            StartCoroutine(IsReady());
             if (currentNumber == number) { // 켜져 있는 버튼을 눌러 끄기
-                isPhonographOn = false;
                 // TODO - 애니메이션 종료
                 buttons[currentNumber].GetComponent<PhonographButton>().TurnOff();
-                currentNumber = -1;
+                currentNumber = 3;
             } else { // 다른 버튼을 눌러 버튼을 바꾸기
-                isPhonographOn = true;
                 // TODO - 들썩거리는 애니메이션 시작 (끝 없음. 계속 반복)
                 buttons[number].GetComponent<PhonographButton>().TurnOn();
-                buttons[currentNumber].GetComponent<PhonographButton>().TurnOff();
+                if(currentNumber < 3) {
+                    buttons[currentNumber].GetComponent<PhonographButton>().TurnOff();
+                }
                 currentNumber = number;
             }
+
+            dolls.GetComponent<Dolls>().TargetDoll(number);
+
         }
     }
 
-    IEnumerator Wait() {
+    IEnumerator IsReady() {
         isReady = false;
         yield return new WaitForSeconds(delay);
         isReady = true;

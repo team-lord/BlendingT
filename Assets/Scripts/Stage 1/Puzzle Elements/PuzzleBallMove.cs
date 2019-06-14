@@ -6,9 +6,13 @@ public class PuzzleBallMove : MonoBehaviour {
     private Vector3 direction;
     public float moveSpeed;
 
+    private GameObject audienceManager;
+
     // Start is called before the first frame update
     void Start() {
         direction = Vector3.right;
+
+        audienceManager = GameObject.Find("AudienceManager");
     }
 
     // Update is called once per frame
@@ -27,6 +31,10 @@ public class PuzzleBallMove : MonoBehaviour {
 
     public void SpeedIncrease(float _float) {
         moveSpeed += _float;
+    }
+
+    void PuzzleComplete() {
+        audienceManager.GetComponent<AudienceManager>().PuzzleComplete();
     }
     
 }

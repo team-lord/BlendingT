@@ -25,15 +25,9 @@ public class Pattern4Maker1 : MonoBehaviour
         player = GameObject.Find("Player");
         boss = GameObject.Find("Boss");
 
-        StartCoroutine(IsPattern41());        
+        player.GetComponent<MoveTumbleP1>().Pattern4Start(patternTime);
 
         time = 0;
-    }
-
-    IEnumerator IsPattern41() {
-        player.GetComponent<MoveTumbleP>().IsPattern41(true);
-        yield return new WaitForSeconds(patternTime);
-        player.GetComponent<MoveTumbleP>().IsPattern41(false);
     }
 
     // Update is called once per frame

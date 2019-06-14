@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class BeeB2 : MonoBehaviour
 {
-
     private int phase;
     private bool isLethal;
 
-    private float phaseDelay;
+    public float phaseDelay;
     private float phaseTime;
     private float time;
     private GameObject player;
@@ -55,7 +54,7 @@ public class BeeB2 : MonoBehaviour
                     break;
                 case 1:
                     if (time > phase1Delay) {
-                        Vector3 _playerDirection = player.GetComponent<MoveTumbleP>().MoveDirection();
+                        Vector3 _playerDirection = player.GetComponent<MoveTumbleP2>().MoveDirection();
                         Vector3 _direction = player.transform.position - transform.position;
                         Instantiate(bullet, transform.position, Quaternion.FromToRotation(Vector3.up, (_direction - 2 * _playerDirection).normalized));
                         Instantiate(bullet, transform.position, Quaternion.FromToRotation(Vector3.up, (_direction - _playerDirection).normalized));

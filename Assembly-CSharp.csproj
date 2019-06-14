@@ -62,18 +62,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\AudienceManager.cs" />
     <Compile Include="Assets\Scripts\BulletMove.cs" />
     <Compile Include="Assets\Scripts\CameraMove.cs" />
     <Compile Include="Assets\Scripts\Cursor.cs" />
-    <Compile Include="Assets\Scripts\DestroyByBlanket.cs" />
-    <Compile Include="Assets\Scripts\DestroyByBlanketPatternMaker.cs" />
-    <Compile Include="Assets\Scripts\DestroyByPlayer.cs" />
-    <Compile Include="Assets\Scripts\DestroyByWall.cs" />
-    <Compile Include="Assets\Scripts\Player\AttackFireP.cs" />
-    <Compile Include="Assets\Scripts\Player\BlanketP.cs" />
-    <Compile Include="Assets\Scripts\Player\HealthP.cs" />
-    <Compile Include="Assets\Scripts\Player\MoveTumbleP.cs" />
+    <Compile Include="Assets\Scripts\DBBlanket.cs" />
+    <Compile Include="Assets\Scripts\DBBlanketP1.cs" />
+    <Compile Include="Assets\Scripts\DBBlanketP2.cs" />
+    <Compile Include="Assets\Scripts\DBPlayer1.cs" />
+    <Compile Include="Assets\Scripts\DBPlayer2.cs" />
+    <Compile Include="Assets\Scripts\DBWall.cs" />
+    <Compile Include="Assets\Scripts\Player\AttackFireP1.cs" />
+    <Compile Include="Assets\Scripts\Player\AttackFireP2.cs" />
+    <Compile Include="Assets\Scripts\Player\BlanketP1.cs" />
+    <Compile Include="Assets\Scripts\Player\BlanketP2.cs" />
+    <Compile Include="Assets\Scripts\Player\HealthP1.cs" />
+    <Compile Include="Assets\Scripts\Player\HealthP2.cs" />
+    <Compile Include="Assets\Scripts\Player\MoveTumbleP1.cs" />
+    <Compile Include="Assets\Scripts\Player\MoveTumbleP2.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\AudienceGraph.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\AudienceManager.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Boss1\HealthB1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Boss1\MoveFireB1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Boss1\PatternB1.cs" />
@@ -85,6 +92,7 @@
     <Compile Include="Assets\Scripts\Stage 1\Boss1\PatternMakers\Pattern5Maker1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Boss1\PatternMakers\Pattern6Maker1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Boss1\PatternMakers\Pattern7Maker1.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\Boss1\PatternMakers\PatternBeautifulCheck1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Boss1\PhaseB1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Boss1\PuzzleB1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Bullets\Bullet1Move1.cs" />
@@ -100,6 +108,8 @@
     <Compile Include="Assets\Scripts\Stage 1\Puzzle Elements\Bulb.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Puzzle Elements\BulbLever.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Puzzle Elements\Dolls.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\Puzzle Elements\FakeLever.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\Puzzle Elements\FakeLevers.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Puzzle Elements\MotorFan.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Puzzle Elements\Phonograph.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Puzzle Elements\PhonographButton.cs" />
@@ -111,6 +121,7 @@
     <Compile Include="Assets\Scripts\Stage 1\SurpriseBox.cs" />
     <Compile Include="Assets\Scripts\Stage 1\SurpriseBoxHealth.cs" />
     <Compile Include="Assets\Scripts\Stage 1\SurpriseBoxShield.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\Wall1.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Boss2\FireBeeAB2.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Boss2\FireBulletB2.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Boss2\FlyB2.cs" />

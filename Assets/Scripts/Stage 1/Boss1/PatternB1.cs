@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PatternB1 : MonoBehaviour
 {
+    private bool isPatternPhase;
+
     private bool isPatternForged;
 
     private int previousPattern;
@@ -18,6 +20,8 @@ public class PatternB1 : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() {
+        isPatternPhase = true;
+
         isPatternForged = false;
 
         previousPattern = -1;
@@ -27,12 +31,20 @@ public class PatternB1 : MonoBehaviour
     }
     // Update is called once per frame
     void Update() {
-        if (patternStart) {
-            patternStart = false;
-            GetComponent<MoveFireB1>().IsMove(false);
+        if (isPatternPhase) {
 
-            Pattern();
+            if (patternStart) {
+                patternStart = false;
+                GetComponent<MoveFireB1>().IsMove(false);
+
+                Pattern();
+            }
         }
+
+    }
+
+    public void IsPatternPhase(bool _bool) {
+        isPatternPhase = _bool;
     }
 
     void Pattern() {
@@ -52,11 +64,11 @@ public class PatternB1 : MonoBehaviour
     }
 
     public void PatternEnd() { // patternMaker가 이 함수를 호출
+        GetComponent<MoveFireB1>().IsMove(true);
         StartCoroutine(PatternStart());
     }
 
     IEnumerator PatternStart() {
-        GetComponent<MoveFireB1>().IsMove(true);
         yield return new WaitForSeconds(patternDelay);
         patternStart = true;
     }
