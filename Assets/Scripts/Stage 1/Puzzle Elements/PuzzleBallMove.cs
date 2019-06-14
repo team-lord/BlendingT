@@ -2,17 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PuzzleBallMove : MonoBehaviour {
+public class PuzzleBallMove : MonoBehaviour
+{
     private Vector3 direction;
     public float moveSpeed;
 
     // Start is called before the first frame update
-    void Start() {
+    void Start()
+    {
         direction = Vector3.right;
     }
 
     // Update is called once per frame
-    void Update() {
+    void Update()
+    {
         Move();
     }
 
@@ -28,5 +31,4 @@ public class PuzzleBallMove : MonoBehaviour {
     public void SpeedIncrease(float _float) {
         moveSpeed += _float;
     }
-    
 }
