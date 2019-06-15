@@ -17,8 +17,9 @@ GameObject:
   - component: {fileID: 2417884461210072600}
   - component: {fileID: 3057610163071284322}
   - component: {fileID: 3307093643530316898}
+  - component: {fileID: 2730859361184018976}
   m_Layer: 0
-  m_Name: Boss
+  m_Name: Boss1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,16 +75,17 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: -5882412405233583818, guid: 334a2e68a082e854b85977a8d7bb00d5,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 3.96, y: 3.96}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &3966418244489354947
@@ -149,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfad1dbc677373e47a5a86e150cc70d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0
+  moveSpeed: 2
   changeDirectionDelay: 0
   bullet: {fileID: 8068288318438665347, guid: 3667c71da9d37144a9ca86d84298ad3f, type: 3}
   fireDelay: 0
@@ -208,3 +210,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef1d2272e0a861a43b7ca992b971d47a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deductionDelay: 0
+--- !u!95 &2730859361184018976
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4890725650529264774}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 758f2aafb26c2874eb43536e01fadcfd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
