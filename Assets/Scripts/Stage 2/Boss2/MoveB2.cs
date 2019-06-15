@@ -14,11 +14,16 @@ public class MoveB2 : MonoBehaviour {
 
     private GameObject player;
 
+    public Animator bossAnimator;
+    private Vector3 directionToPlayer;
+
     // Start is called before the first frame update
     void Start() {
         isMove = false;
 
         player = GameObject.Find("Player");
+
+        bossAnimator = GetComponent<Animator>();
     }
 
     void FixedUpdate() {
@@ -38,6 +43,7 @@ public class MoveB2 : MonoBehaviour {
             }
             Move();
         }
+        LookPlayer();
     }
 
     public void IsMove(bool _bool) {
@@ -56,5 +62,12 @@ public class MoveB2 : MonoBehaviour {
     public Vector3 GiveDirection()
     {
         return direction;
+    }
+
+    void LookPlayer()
+    {
+        directionToPlayer = (player.transform.position - transform.position).normalized;
+        bossAnimator.SetFloat("directionToPlayerX", directionToPlayer.x);
+        bossAnimator.SetFloat("directionToPlayerY", directionToPlayer.y);
     }
 }
