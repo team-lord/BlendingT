@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6334450154669262399}
   - component: {fileID: 6404324313509314175}
   - component: {fileID: 9110073113731635018}
+  - component: {fileID: 2047718036900650509}
   m_Layer: 0
   m_Name: Right Button
   m_TagString: Untagged
@@ -97,6 +98,38 @@ MonoBehaviour:
   onSprite: {fileID: 4483535612335088851, guid: fa9055990328e794e837724923063eb1,
     type: 3}
   delay: 0.5
+--- !u!60 &2047718036900650509
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251918392048819526}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 1}
+    oldSize: {x: 0.56, y: 0.56}
+    newSize: {x: 0.56, y: 0.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.28, y: -0.12}
+      - {x: -0.28, y: -0.44}
+      - {x: 0, y: -0.44}
+      - {x: 0, y: -0.56}
+      - {x: 0.28, y: -0.28}
+      - {x: 0, y: 0}
+      - {x: 0, y: -0.12}
 --- !u!1 &3430231052850187892
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,6 +141,7 @@ GameObject:
   - component: {fileID: 3153687206721595616}
   - component: {fileID: 4841978888235977177}
   - component: {fileID: 7041157997613102426}
+  - component: {fileID: 9196323211626617506}
   m_Layer: 0
   m_Name: Left Button
   m_TagString: Untagged
@@ -194,6 +228,38 @@ MonoBehaviour:
   onSprite: {fileID: -3017027730360587449, guid: fa9055990328e794e837724923063eb1,
     type: 3}
   delay: 0.5
+--- !u!60 &9196323211626617506
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3430231052850187892}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 1}
+    oldSize: {x: 0.56, y: 0.56}
+    newSize: {x: 0.56, y: 0.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.28, y: -0.12}
+      - {x: 0.28, y: -0.44}
+      - {x: 0, y: -0.44}
+      - {x: 0, y: -0.56}
+      - {x: -0.28, y: -0.28}
+      - {x: 0, y: 0}
+      - {x: 0, y: -0.12}
 --- !u!1 &8902334421353497404
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,6 +271,7 @@ GameObject:
   - component: {fileID: 1880544767279497826}
   - component: {fileID: 3841163368599516109}
   - component: {fileID: 342572507743770856}
+  - component: {fileID: 4537585730146662725}
   m_Layer: 0
   m_Name: PlankMachine1
   m_TagString: Untagged
@@ -291,3 +358,28 @@ MonoBehaviour:
   delay: 0
   leftButton: {fileID: 3430231052850187892}
   rightButton: {fileID: 1251918392048819526}
+--- !u!68 &4537585730146662725
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8902334421353497404}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -2.2, y: -1.08}
+  - {x: -1.2, y: -1.08}
+  - {x: -1.2, y: -0.1}
+  - {x: 1.2, y: -0.1}
+  - {x: 1.2, y: -1.08}
+  - {x: 2.2, y: -1.08}
+  - {x: 2.2, y: 1.08}
+  - {x: -2.2, y: 1.08}
+  - {x: -2.2, y: -1.08}

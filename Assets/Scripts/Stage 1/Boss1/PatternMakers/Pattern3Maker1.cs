@@ -6,7 +6,6 @@ public class Pattern3Maker1 : MonoBehaviour
 {
     public GameObject bullet3;
     public GameObject bullet3Follow;
-    private GameObject bullet;
 
     public int repetition;
     private int count;
@@ -19,8 +18,6 @@ public class Pattern3Maker1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        bullet = bullet3;
-
         count = 0;
         time = 0;
 
@@ -34,29 +31,25 @@ public class Pattern3Maker1 : MonoBehaviour
     {
         time += Time.deltaTime;
         if (time > delay) {
-            Fire(count);
+            FireBullet();
 
             time = 0;
             count++;
-            ChangeBullet();
             CheckDestroy();
         }
     }
 
-    void Fire(int count) {
+    void FireBullet() {
         Vector3 _direction = (player.transform.position - transform.position).normalized;
-
-        Instantiate(bullet, transform.position, Quaternion.FromToRotation(Vector3.up, _direction));
-    }
-
-    void ChangeBullet() {
-        if(count % 2 == 0) {
-            bullet = bullet3;
+        if (count % 2 == 0) {
+            Instantiate(bullet3, transform.position, Quaternion.FromToRotation(Vector3.up, _direction));
         } else {
-            bullet = bullet3Follow;
+            bullet3Follow.GetComponent<Bullet3FollowMove1>().Direction(_direction);
+            Instantiate(bullet3Follow, transform.position, transform.rotation);
         }
+       
     }
-
+    
     void CheckDestroy() {
         if (count >= repetition) {
             boss.GetComponent<PatternB1>().PatternEnd();

@@ -11,10 +11,13 @@ public class PuzzleB1 : MonoBehaviour
     private float time;
     public float deductionDelay;
 
+    private bool isReady;
+
     // Start is called before the first frame update
     void Start()
     {
         isPuzzlePhase = false;
+        isReady = true;
 
         audienceManager = GameObject.Find("AudienceManager");
         time = 0;
@@ -25,6 +28,10 @@ public class PuzzleB1 : MonoBehaviour
     void Update()
     {
         if (isPuzzlePhase) {
+            if (isReady) {
+                isReady = false;
+                GameObject.Find("Puzzle").transform.Translate(new Vector3(-200, 0, 0));
+            }
             time += Time.deltaTime;
             if(time > deductionDelay) {
                 time = 0;

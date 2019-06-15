@@ -8,11 +8,18 @@ public class PuzzleBallMove : MonoBehaviour {
 
     private GameObject audienceManager;
 
+    private GameObject billiardTable;
+    private GameObject phonograph;
+    private GameObject motorFan;
+
     // Start is called before the first frame update
     void Start() {
-        direction = Vector3.right;
+        direction = Vector3.zero;
 
         audienceManager = GameObject.Find("AudienceManager");
+        billiardTable = GameObject.Find("BilliardTable");
+        phonograph = GameObject.Find("Phonograph");
+        motorFan = GameObject.Find("motorFan");
     }
 
     // Update is called once per frame
@@ -37,4 +44,7 @@ public class PuzzleBallMove : MonoBehaviour {
         audienceManager.GetComponent<AudienceManager>().PuzzleComplete();
     }
     
+    public void Initialize() {
+        billiardTable.GetComponent<BilliardTable>().Initialize();
+    }
 }

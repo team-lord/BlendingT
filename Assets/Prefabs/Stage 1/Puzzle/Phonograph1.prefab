@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 5625720502163853747}
   - component: {fileID: 3246538745720757403}
   - component: {fileID: 8172126022787382770}
+  - component: {fileID: 1511529226458217407}
   m_Layer: 0
-  m_Name: Phonograph
+  m_Name: Phonograph1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,18 +97,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86e3358418bcb1e4faab533252dcb2f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentNumber: 0
-  buttonsQ:
+  buttons:
   - {fileID: 2702122615729480531}
   - {fileID: 4111350104668733193}
   - {fileID: 560174787398831309}
-  spritesQ:
-  - {fileID: 3631617845197884948, guid: 3136849fa8d7521458854900c7bc78b0, type: 3}
-  - {fileID: -5955566976492312846, guid: 3136849fa8d7521458854900c7bc78b0, type: 3}
-  - {fileID: 1738821245069373457, guid: 3136849fa8d7521458854900c7bc78b0, type: 3}
-  - {fileID: -8748168837573469719, guid: 3136849fa8d7521458854900c7bc78b0, type: 3}
-  delayQ: 1
-  animationDelayQ: 0
+  delay: 1
+--- !u!68 &1511529226458217407
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59844963129013750}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.86, y: -0.98}
+  - {x: -0.86, y: -0.46}
+  - {x: -0.62, y: -0.22}
+  - {x: -0.74, y: -0.06}
+  - {x: -0.74, y: 0.22}
+  - {x: -0.5, y: 0.46}
+  - {x: -0.5, y: 0.98}
+  - {x: 0.22, y: 0.98}
+  - {x: 0.22, y: -0.14}
+  - {x: 0.86, y: -0.18}
+  - {x: 0.86, y: -0.7}
+  - {x: 0.58, y: -0.98}
 --- !u!1 &560174787398831309
 GameObject:
   m_ObjectHideFlags: 0
@@ -119,6 +141,7 @@ GameObject:
   - component: {fileID: 8554378159599533749}
   - component: {fileID: 4835425881163194738}
   - component: {fileID: 2324613531376515237}
+  - component: {fileID: 4762997863125491978}
   m_Layer: 0
   m_Name: Phonograph Button (2)
   m_TagString: Untagged
@@ -201,9 +224,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6564048f18a51d54baa07baf7ceff659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberQ: 0
-  onSpriteQ: {fileID: 6905314410298040709, guid: 3136849fa8d7521458854900c7bc78b0,
+  number: 2
+  onSprite: {fileID: 6905314410298040709, guid: 3136849fa8d7521458854900c7bc78b0,
     type: 3}
+--- !u!61 &4762997863125491978
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560174787398831309}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.32, y: 0.32}
+  m_EdgeRadius: 0
 --- !u!1 &2702122615729480531
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,6 +264,7 @@ GameObject:
   - component: {fileID: 7119305366825062853}
   - component: {fileID: 3960357409418602978}
   - component: {fileID: 3779619408347215543}
+  - component: {fileID: 4493413026534643673}
   m_Layer: 0
   m_Name: Phonograph Button
   m_TagString: Untagged
@@ -297,9 +347,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6564048f18a51d54baa07baf7ceff659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberQ: 0
-  onSpriteQ: {fileID: 6905314410298040709, guid: 3136849fa8d7521458854900c7bc78b0,
+  number: 0
+  onSprite: {fileID: 6905314410298040709, guid: 3136849fa8d7521458854900c7bc78b0,
     type: 3}
+--- !u!61 &4493413026534643673
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2702122615729480531}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.32, y: 0.32}
+  m_EdgeRadius: 0
 --- !u!1 &4111350104668733193
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,6 +387,7 @@ GameObject:
   - component: {fileID: 2157364232717937190}
   - component: {fileID: 3176386457414929179}
   - component: {fileID: 4436214637801247584}
+  - component: {fileID: 4694433001266869123}
   m_Layer: 0
   m_Name: Phonograph Button (1)
   m_TagString: Untagged
@@ -393,6 +470,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6564048f18a51d54baa07baf7ceff659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberQ: 0
-  onSpriteQ: {fileID: 6905314410298040709, guid: 3136849fa8d7521458854900c7bc78b0,
+  number: 1
+  onSprite: {fileID: 6905314410298040709, guid: 3136849fa8d7521458854900c7bc78b0,
     type: 3}
+--- !u!61 &4694433001266869123
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4111350104668733193}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.32, y: 0.32}
+  m_EdgeRadius: 0

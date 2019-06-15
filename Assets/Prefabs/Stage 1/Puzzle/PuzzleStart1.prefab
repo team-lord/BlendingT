@@ -122,6 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1007964341957597679}
   - component: {fileID: 4992310256971785208}
+  - component: {fileID: 735652449617387884}
   m_Layer: 0
   m_Name: PuzzleStart1
   m_TagString: Untagged
@@ -193,3 +194,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!68 &735652449617387884
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8896662439588990294}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.7, y: -0.7}
+  - {x: -0.7, y: 0.54}
+  - {x: -0.54, y: 0.7}
+  - {x: 0.7, y: 0.7}
+  - {x: 0.7, y: -0.54}
+  - {x: 0.5, y: -0.7}
+  - {x: 0.5, y: 0.5}
+  - {x: -0.7, y: 0.5}

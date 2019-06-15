@@ -152,9 +152,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2
-  changeDirectionDelay: 0
+  changeDirectionDelay: 1
   bullet: {fileID: 8068288318438665347, guid: 3667c71da9d37144a9ca86d84298ad3f, type: 3}
-  fireDelay: 0
+  fireDelay: 1
 --- !u!114 &2417884461210072600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ef3e177e9a88ef4a856e798bec329c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patternDelay: 0
+  patternDelay: 6
   patternMakers:
   - {fileID: 4697248865810734466, guid: 40fe96c192c789e4d844568655a60ccd, type: 3}
   - {fileID: 6691130526585087248, guid: 5032877057d730140a95a3f3335ecccf, type: 3}
@@ -210,7 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef1d2272e0a861a43b7ca992b971d47a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deductionDelay: 0
+  deductionDelay: 1
 --- !u!95 &2730859361184018976
 Animator:
   serializedVersion: 3

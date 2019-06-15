@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 5062189097805256219}
   - component: {fileID: 7303650779900145746}
   - component: {fileID: -6228235104833669387}
+  - component: {fileID: 3896690247369252338}
   m_Layer: 0
-  m_Name: Bulb
+  m_Name: Bulb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -93,6 +94,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90152b808a90bde4fb77dca40d42c187, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sunflower: {fileID: 148489445964661682, guid: d0062580ae3bbb4428c547a61ad6b799,
-    type: 3}
-  bulbPulse: 0
+--- !u!58 &3896690247369252338
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108817233500654884}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.08}
+  serializedVersion: 2
+  m_Radius: 0.42

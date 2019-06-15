@@ -98,7 +98,7 @@
     <Compile Include="Assets\Scripts\Stage 1\Bullets\Bullet0Accelerate1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Bullets\Bullet1Move1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Bullets\Bullet2Move1.cs" />
-    <Compile Include="Assets\Scripts\Stage 1\Bullets\Bullet3Follow1.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\Bullets\Bullet3FollowMove1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Bullets\Bullet4Move1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Bullets\Bullet6StickMove1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Bullets\PuzzleFail1Move.cs" />
@@ -114,6 +114,8 @@
     <Compile Include="Assets\Scripts\Stage 1\Puzzle Elements\Lever1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Puzzle Elements\Levers1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Puzzle Elements\MotorFan.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\Puzzle Elements\MotorFan1.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\Puzzle Elements\MotorFanButton1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Puzzle Elements\Phonograph.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Puzzle Elements\PhonographButton.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Puzzle Elements\PlankMachine.cs" />
