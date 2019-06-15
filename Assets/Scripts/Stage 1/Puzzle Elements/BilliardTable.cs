@@ -17,12 +17,19 @@ public class BilliardTable : MonoBehaviour
     {
         
     }
-
-    private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.tag == "PuzzleBall") {
-            foreach (GameObject ball in balls) {
-                ball.GetComponent<Rigidbody2D>().gravityScale = 1;
-            }
+   
+    public void MoveGravity(int index) {
+        switch (index) {
+            case 0: // Up
+                break;
+            case 1: // Down
+                break;
+            case 2: // Left
+                break;
+            case 3: // Right
+                break;
         }
+
     }
+
 }
