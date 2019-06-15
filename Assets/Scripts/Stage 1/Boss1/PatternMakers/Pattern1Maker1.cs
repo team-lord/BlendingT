@@ -25,6 +25,7 @@ public class Pattern1Maker1 : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        time += Time.deltaTime;
         if (time > delay) {
             for(int i=0; i<18; i++) {
                 Fire(20 * i);

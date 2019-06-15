@@ -52,9 +52,13 @@ public class Bullet1Move1 : MonoBehaviour {
                 } // 멈춰있음
                 break;
             case 2:
+                time += Time.deltaTime;
+
                 Rotate();
                 break;
             case 3:
+                time += Time.deltaTime;
+
                 FastMove();
                 break;
             default:
@@ -73,7 +77,7 @@ public class Bullet1Move1 : MonoBehaviour {
     }
 
     void Rotate() {
-        float _z = transform.rotation.z;
+        float _z = transform.rotation.eulerAngles.z;
         _z += rotatingVelocity;
         if (_z > 360) {
             _z -= 360;

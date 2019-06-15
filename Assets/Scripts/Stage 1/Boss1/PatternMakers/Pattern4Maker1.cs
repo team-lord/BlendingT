@@ -32,9 +32,10 @@ public class Pattern4Maker1 : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
+        time += Time.deltaTime;
         if (time > delay) {
-            for(int i=0; i<12; i++) {
-                Fire(30 * i);
+            for(int i=0; i<36; i++) {
+                Fire(10 * i);
             }            
 
             time = 0;

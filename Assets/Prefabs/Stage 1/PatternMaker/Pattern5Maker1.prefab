@@ -57,6 +57,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laser: {fileID: 1177575367284845280, guid: 1d2dc4cba11243b4096f0ab036148901, type: 3}
-  delay: 0
+  delay: 0.5
   echo: {fileID: 6286786225540415485, guid: ed56b2e287b726145b62d7bb372b0f46, type: 3}
-  echoDelay: 0
+  echoDelay: 3

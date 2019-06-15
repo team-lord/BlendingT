@@ -32,7 +32,6 @@ public class PatternB1 : MonoBehaviour
     // Update is called once per frame
     void Update() {
         if (isPatternPhase) {
-
             if (patternStart) {
                 patternStart = false;
                 GetComponent<MoveFireB1>().IsMove(false);
@@ -48,6 +47,7 @@ public class PatternB1 : MonoBehaviour
     }
 
     void Pattern() {
+        /*
         int _number;
         do {
             _number = Random.Range(0, patternMakers.Length); // patternMakers.Length == 8
@@ -61,6 +61,9 @@ public class PatternB1 : MonoBehaviour
         } else {
             Instantiate(patternMakers[_number], transform.position, transform.rotation);
         }
+        */
+        Instantiate(patternMakers[1], transform.position, transform.rotation);
+
     }
 
     public void PatternEnd() { // patternMaker가 이 함수를 호출

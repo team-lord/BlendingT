@@ -31,9 +31,10 @@ public class Pattern0Maker1 : MonoBehaviour
 
         if (time > delay) {
             // 카드 던지는 애니메이션 시작
-            bullet = bullet0s[Random.Range(0, bullet0s.Length)];
-            for(int i=0; i<5; i++) {
-                Fire(bullet, -40 + 20 * i);
+            for(int i=0; i<9; i++) {
+                bullet = bullet0s[Random.Range(0, bullet0s.Length)];
+
+                Fire(bullet, -40 + 10 * i);
             }
 
             time = 0;

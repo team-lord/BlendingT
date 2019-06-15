@@ -23,13 +23,19 @@ public class MoveFireB1 : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-        isMove = false;
+        isMove = true;
 
         player = GameObject.Find("Player");
+
+        direction = Vector3.down;
+        ChangeDirection();
+
+        time = 0;
 
         canFire = true;
 
         bossAnimator = GetComponent<Animator>();
+        bossAnimator.SetBool("isBossMove", true);
     }
 
     void FixedUpdate() {

@@ -59,5 +59,5 @@ MonoBehaviour:
   bullet3: {fileID: 8391520748549412198, guid: 6f8190f72f7a1e54d8013ce1aa8cfdd7, type: 3}
   bullet3Follow: {fileID: 561628072747199281, guid: b0768e1ac6166234fb16d617df4934b9,
     type: 3}
-  repetition: 0
-  delay: 0
+  repetition: 6
+  delay: 1
