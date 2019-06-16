@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8172192510867629031}
   - component: {fileID: 6620545033715040948}
   - component: {fileID: 7309890641780480031}
+  - component: {fileID: -5530046292350451568}
   m_Layer: 0
   m_Name: Bullet4Middle2
   m_TagString: EnemyBullet
@@ -132,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bfbe0ebd6d593c488770adbda34a9af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0
+  moveSpeed: 5
 --- !u!60 &7309890641780480031
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -166,3 +167,24 @@ PolygonCollider2D:
       - {x: -0.3, y: -0.26}
       - {x: -0.3, y: -0.16}
       - {x: 0, y: 0.42}
+--- !u!50 &-5530046292350451568
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3920993706846342187}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

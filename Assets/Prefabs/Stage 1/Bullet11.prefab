@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1081145178274760722}
   - component: {fileID: 1178172314911150382}
   - component: {fileID: 8962721807599918081}
+  - component: {fileID: -8986700158710487721}
   m_Layer: 0
   m_Name: Bullet11
   m_TagString: EnemyBullet
@@ -178,3 +179,24 @@ PolygonCollider2D:
       - {x: 0.038881823, y: -0.0028314274}
       - {x: 0.11716603, y: 0.0035836697}
       - {x: 0.12701654, y: 0.0011117309}
+--- !u!50 &-8986700158710487721
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661813102041417958}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

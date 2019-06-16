@@ -38,14 +38,6 @@ public class MoveFireB1 : MonoBehaviour {
         bossAnimator.SetBool("isBossMove", true);
     }
 
-    void FixedUpdate() {
-        FixRotate();
-    }
-
-    void FixRotate() {
-        transform.rotation = Quaternion.Euler(Vector3.zero);
-    }
-
     // Update is called once per frame
     void Update() {
         if (isMove) {

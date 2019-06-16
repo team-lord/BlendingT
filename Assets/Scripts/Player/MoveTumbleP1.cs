@@ -31,10 +31,6 @@ public class MoveTumbleP1 : MonoBehaviour
         audienceManager = GameObject.Find("AudienceManager");
     }
 
-    void FixedUpdate() {
-        FixRotate();    
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -51,10 +47,7 @@ public class MoveTumbleP1 : MonoBehaviour
         } else {
             Move();
         }
-    }
-    void FixRotate() {
-        transform.rotation = Quaternion.Euler(Vector3.zero);
-    }    
+    } 
 
     void StartTumble() {
         StartCoroutine(CanTumble());

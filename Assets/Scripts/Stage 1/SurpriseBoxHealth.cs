@@ -27,7 +27,7 @@ public class SurpriseBoxHealth : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        Debug.Log("Collider");
+
         if (isVulnerable) {
             if (collision.tag == "PlayerBullet") {
                 health--;

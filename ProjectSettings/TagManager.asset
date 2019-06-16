@@ -10,6 +10,7 @@ TagManager:
   - SurpriseBox
   - PlayerBulletHoney
   - PuzzleBall
+  - Wall
   layers:
   - Default
   - TransparentFX

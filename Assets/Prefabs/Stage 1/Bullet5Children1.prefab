@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8057221197230965461}
   - component: {fileID: 263751978243100800}
   - component: {fileID: 2791830549313424456}
+  - component: {fileID: -7614950517144073447}
   m_Layer: 0
   m_Name: Bullet5Children1
   m_TagString: EnemyBullet
@@ -174,3 +175,24 @@ PolygonCollider2D:
       - {x: 0.038881823, y: -0.0028314274}
       - {x: 0.11716603, y: 0.0035836697}
       - {x: 0.12701654, y: 0.0011117309}
+--- !u!50 &-7614950517144073447
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3499055637882267563}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3777490392127726451}
   - component: {fileID: 1148310751429308639}
   - component: {fileID: 7962137850144345226}
+  - component: {fileID: 2046669100203131732}
   m_Layer: 0
   m_Name: Bullet3Bee2
   m_TagString: EnemyBullet
@@ -97,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bfbe0ebd6d593c488770adbda34a9af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0
+  moveSpeed: 5
 --- !u!114 &4812217777513652104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,3 +169,24 @@ PolygonCollider2D:
       - {x: 0.16, y: -0.16}
       - {x: 0.16, y: 0.16}
       - {x: 0.04, y: 0.28}
+--- !u!50 &2046669100203131732
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842941778165274136}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
