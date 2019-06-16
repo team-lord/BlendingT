@@ -71,6 +71,7 @@ public class AudienceManager : MonoBehaviour
     }
 
     public void PlayerHit() {
+        isBeautiful = false;
         // 관객들의 환호성
         if (score <= 300) {
             score += playerHitScore;
@@ -89,7 +90,7 @@ public class AudienceManager : MonoBehaviour
     void BeautifulPattern() {
         // 관객들의 환호성
         if (score <= 300) {
-            score += beautifulPatternScore; // TODO // 여기서 처리
+            score += beautifulPatternScore; // TODO - 여기서 처리
             CorrectionExciting();
             ScoreChange();
         }
@@ -104,6 +105,8 @@ public class AudienceManager : MonoBehaviour
     }
 
     public void Blanket() {
+        isBeautiful = false;
+
         score -= blanketScore;
         CorrectionRubbish();
         ScoreChange();
