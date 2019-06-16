@@ -30,8 +30,11 @@ public class PhonographButton : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collider) {
+        Debug.Log("Collide");
+
         if (collider.tag == "PlayerBullet") {
             GetComponentInParent<Phonograph>().Change(number);
+            Destroy(collider);
         }
     }
 }
