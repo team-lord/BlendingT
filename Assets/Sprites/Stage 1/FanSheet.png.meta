@@ -99,18 +99,18 @@ TextureImporter:
       name: FanSheet_0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 4
         y: 276
         width: 164
         height: 264
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebe06f3e4e2c10a4e938b543a6869616
+      spriteID: a5a39de5253fbb240aa84761fd3055c8
       internalID: -4448605211294387195
       vertices: []
       indices: 
@@ -124,14 +124,14 @@ TextureImporter:
         y: 276
         width: 164
         height: 264
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae14fd27864c67d4eb13c8a3920395c2
+      spriteID: 8b07af0073a391842bd99e152cea4d89
       internalID: 3843624885620619783
       vertices: []
       indices: 
@@ -145,14 +145,14 @@ TextureImporter:
         y: 4
         width: 164
         height: 264
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02094b1a9c314d4479d3788b7f4d0366
+      spriteID: b8d97e014edc93342b494963bf5ebd60
       internalID: 3986523140440906500
       vertices: []
       indices: 
@@ -163,17 +163,17 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 176
-        y: 5
+        y: 4
         width: 164
         height: 260
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3dfc6c7f97609a8409d09e9f7537cf41
+      spriteID: 5a699f8e9bfa1bd44b357e110d4beffb
       internalID: -5278567353500394713
       vertices: []
       indices: 

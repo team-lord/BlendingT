@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8653516514392669457}
   - component: {fileID: 987200227482732634}
   - component: {fileID: 2222084159919348984}
+  - component: {fileID: 2613141952814026275}
   m_Layer: 0
   m_Name: Sunflower1
   m_TagString: Untagged
@@ -47,6 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6c10dfb6fb0997478c013239eacd732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isReady: 0
 --- !u!60 &2222084159919348984
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -78,6 +80,25 @@ PolygonCollider2D:
       - {x: -0.3, y: -0.4}
       - {x: -0.18, y: -0.68}
       - {x: 0.18, y: -0.68}
+--- !u!95 &2613141952814026275
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148489445964661682}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: af128c3ba194b9f4b94d77f7b28f3bf1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1475737453360618891
 GameObject:
   m_ObjectHideFlags: 0

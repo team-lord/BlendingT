@@ -12,11 +12,18 @@ public class PlankMachine : MonoBehaviour
     public GameObject leftButton;
     public GameObject rightButton;
 
+    Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
         currentPlank = 0;
         isReady = true;
+
+        animator = GetComponent<Animator>();
+
+        animator.SetFloat("Current", 0);
+        animator.SetFloat("Trash", 0);
     }
 
     // Update is called once per frame
@@ -26,14 +33,21 @@ public class PlankMachine : MonoBehaviour
     }
 
     public void ChangeNext() { // 0 -> 1 -> 2 -> 0
+
         if (isReady) {
             StartCoroutine(IsReady());
+            animator.SetFloat("Go", currentPlank);
+            animator.SetFloat("Back", 7);
+            animator.SetTrigger("On");
+
             if(currentPlank < 2) {
                 currentPlank++;
             } else {
                 currentPlank = 0;
             }
-            // TODO - 다음 판 불러오는 애니메이션 시작
+
+            animator.SetFloat("Current", currentPlank);
+
             rightButton.GetComponent<PlankMachineButton>().Change();
         }
     }
@@ -41,12 +55,18 @@ public class PlankMachine : MonoBehaviour
     public void ChangePrevious() { // 2 -> 1 -> 0 -> 2
         if (isReady) {
             StartCoroutine(IsReady());
-            if(currentPlank > 0) {
+            animator.SetFloat("Go", 7);
+            animator.SetFloat("Back", currentPlank);
+            animator.SetTrigger("On");
+
+            if (currentPlank > 0) {
                 currentPlank--;
             } else {
                 currentPlank = 2;
             }
-            // TODO - 이전 판 불러오는 애니메이션 시작
+
+            animator.SetFloat("Current", currentPlank);
+
             leftButton.GetComponent<PlankMachineButton>().Change();
         }
     }

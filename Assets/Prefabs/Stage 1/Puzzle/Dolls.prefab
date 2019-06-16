@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8636011390572224396}
   - component: {fileID: 5817123067595627723}
   - component: {fileID: 8142354842412300662}
+  - component: {fileID: 4001007914435229730}
+  - component: {fileID: 49648257283150933}
   m_Layer: 0
   m_Name: Dolls
   m_TagString: Untagged
@@ -107,3 +109,38 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.68, y: 1.24}
   m_EdgeRadius: 0
+--- !u!114 &4001007914435229730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6846757487524393200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 344ae63e9478bd64ca6994b2207415df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -5767859178632322494, guid: b60a017b33d77bf4d910c9213e0aa314, type: 3}
+  - {fileID: -6890155019251181214, guid: d80a8ca5fa6e34a468b804943b9d0751, type: 3}
+  - {fileID: -584976646960553334, guid: e6e1d34b494887b4db77f1436c2d91b8, type: 3}
+--- !u!95 &49648257283150933
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6846757487524393200}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e651170cc3f899c40b744f1e1018188b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
