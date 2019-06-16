@@ -831,6 +831,7 @@ GameObject:
   - component: {fileID: 3733784756526979420}
   - component: {fileID: 4762239323716453608}
   - component: {fileID: 928781485998131171}
+  - component: {fileID: 3281250758702399965}
   m_Layer: 0
   m_Name: BilliardsTable1
   m_TagString: Untagged
@@ -929,6 +930,27 @@ MonoBehaviour:
   - {fileID: 2249245937988932229}
   - {fileID: 9166095672426032712}
   - {fileID: 1338023756266453898}
+--- !u!50 &3281250758702399965
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9057839575522085438}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &9166095672426032712
 GameObject:
   m_ObjectHideFlags: 0

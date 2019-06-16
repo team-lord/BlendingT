@@ -9,6 +9,7 @@ TagManager:
   - PlayerBullet
   - SurpriseBox
   - PlayerBulletHoney
+  - PuzzleBall
   layers:
   - Default
   - TransparentFX

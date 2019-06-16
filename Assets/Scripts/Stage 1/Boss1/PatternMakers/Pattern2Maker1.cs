@@ -19,9 +19,10 @@ public class Pattern2Maker1 : MonoBehaviour
     {
         boss = GameObject.Find("Boss");
 
-        if (GameObject.FindGameObjectsWithTag("SurpriseBox") != null){
+        if (GameObject.FindGameObjectsWithTag("SurpriseBox").Length != 0){
             boss.GetComponent<PatternB1>().ForceStart();
             Destroy(gameObject);
+            return;
         }
 
         upLocation = new Vector3(0, triangleRange, 0);

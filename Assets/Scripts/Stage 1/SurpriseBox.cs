@@ -20,13 +20,12 @@ public class SurpriseBox : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         time += Time.deltaTime;
 
-        if(time > delay) {
+        if (time > delay) {
             time = 0;
-            for(int i=0; i<6; i++) {
+            for (int i = 0; i < 6; i++) {
                 Fire(60 * i);
             }
         }

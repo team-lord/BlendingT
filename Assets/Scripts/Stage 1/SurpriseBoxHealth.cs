@@ -27,6 +27,7 @@ public class SurpriseBoxHealth : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
+        Debug.Log("Collider");
         if (isVulnerable) {
             if (collision.tag == "PlayerBullet") {
                 health--;
@@ -35,7 +36,6 @@ public class SurpriseBoxHealth : MonoBehaviour
                 CheckAlive();
             } else if (collision.tag == "PlayerMelee") {
                 // health -= 2;
-                Destroy(collision);
 
                 CheckAlive();
             }

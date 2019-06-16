@@ -30,7 +30,7 @@ public class PuzzleB1 : MonoBehaviour
         if (isPuzzlePhase) {
             if (isReady) {
                 isReady = false;
-                GameObject.Find("Puzzle").transform.Translate(new Vector3(-200, 0, 0));
+                GameObject.Find("Puzzle").transform.Translate(new Vector3(-60, 0, 0));
             }
             time += Time.deltaTime;
             if(time > deductionDelay) {

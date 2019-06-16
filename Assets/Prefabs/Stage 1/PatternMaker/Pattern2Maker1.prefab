@@ -58,4 +58,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   surpriseBox: {fileID: 3999101307238757942, guid: 10ae58c1d79851c46b8aae99903ab998,
     type: 3}
-  triangleRange: 3
+  triangleRange: 6

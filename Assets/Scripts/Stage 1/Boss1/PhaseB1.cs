@@ -20,7 +20,7 @@ public class PhaseB1 : MonoBehaviour
     public void Phase1() {
         // TODO - 보스가 폴짝 뒤며 사라짐
         // TODO - Puzzle Elements가 나타남
-        GetComponent<MoveFireB1>().IsMove(false); // 이딴식 안됨!!! TODO - 고치기
+        GetComponent<MoveFireB1>().IsMove(false);
         GetComponent<PatternB1>().IsPatternPhase(false);
         GetComponent<PuzzleB1>().IsPuzzlePhase(true);
     }

@@ -109,7 +109,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2137840887892769801}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -134,11 +134,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9703d861724a02b4492e6961959f9f9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toggleDelay: 0
+  toggleDelay: 1
   sword: {fileID: 0}
   attackDelay: 0
   bullet: {fileID: 1383276255159794600, guid: 0eddcc8fe29fc5e4b8b4e8c756d138bf, type: 3}
-  fireDelay: 0
+  fireDelay: 0.2
 --- !u!114 &6690072444194126885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  invincibleTime: 0
+  invincibleTime: 2
 --- !u!114 &7976742175384873060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,6 +179,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  tumbleTime: 0
-  tumbleSpeed: 0
-  tumbleDelay: 0
+  tumbleTime: 1
+  tumbleSpeed: 8
+  tumbleDelay: 0.5

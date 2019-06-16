@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6936711143919553631}
   - component: {fileID: 6495889037418767862}
   - component: {fileID: 7096057194857769923}
+  - component: {fileID: 514212650560640633}
   m_Layer: 0
   m_Name: ArrowDown
   m_TagString: Untagged
@@ -100,6 +101,22 @@ MonoBehaviour:
   onSprite: {fileID: -8004427484958124244, guid: 340a5e7230fdbda4ea9ce4020c6c427a,
     type: 3}
   delay: 1
+--- !u!58 &514212650560640633
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194882323212582605}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.28
 --- !u!1 &559082936731452466
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,6 +229,7 @@ GameObject:
   - component: {fileID: 1858291496002784998}
   - component: {fileID: 2847079326356361411}
   - component: {fileID: 6566259575453456903}
+  - component: {fileID: 8822233017595052293}
   m_Layer: 0
   m_Name: ArrowRight
   m_TagString: Untagged
@@ -300,6 +318,22 @@ MonoBehaviour:
   onSprite: {fileID: 1587837283604449361, guid: 340a5e7230fdbda4ea9ce4020c6c427a,
     type: 3}
   delay: 1
+--- !u!58 &8822233017595052293
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073730232368083019}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.28
 --- !u!1 &2055422985065473675
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,6 +346,7 @@ GameObject:
   - component: {fileID: 6422188059702186226}
   - component: {fileID: 3839093416347201346}
   - component: {fileID: 7717102185434096074}
+  - component: {fileID: 875692651133034883}
   m_Layer: 0
   m_Name: ArrowUp
   m_TagString: Untagged
@@ -400,6 +435,22 @@ MonoBehaviour:
   onSprite: {fileID: 7925533404174946130, guid: 340a5e7230fdbda4ea9ce4020c6c427a,
     type: 3}
   delay: 1
+--- !u!58 &875692651133034883
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2055422985065473675}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.28
 --- !u!1 &4073284137331393718
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,6 +463,7 @@ GameObject:
   - component: {fileID: 3582972371704708286}
   - component: {fileID: 9136616757584435539}
   - component: {fileID: 2777652078930825464}
+  - component: {fileID: 6021557699270968666}
   m_Layer: 0
   m_Name: ArrowLeft
   m_TagString: Untagged
@@ -500,6 +552,22 @@ MonoBehaviour:
   onSprite: {fileID: 7082676724022807615, guid: 340a5e7230fdbda4ea9ce4020c6c427a,
     type: 3}
   delay: 1
+--- !u!58 &6021557699270968666
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4073284137331393718}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.28
 --- !u!1 &4618893930725026389
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6498536070729616075}
   - component: {fileID: 1029379190423402456}
   - component: {fileID: 2717620923666554824}
+  - component: {fileID: 2996542198336270678}
   m_Layer: 0
   m_Name: LeverMagentaRedA
   m_TagString: Untagged
@@ -121,6 +122,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.48, y: 0.4}
   m_EdgeRadius: 0
+--- !u!50 &2996542198336270678
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45725420521082171}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1144576607620645440
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,6 +155,7 @@ GameObject:
   - component: {fileID: 3516555216112936269}
   - component: {fileID: 3086159803444585051}
   - component: {fileID: 9216878764698873763}
+  - component: {fileID: 7669177581239168748}
   m_Layer: 0
   m_Name: NeedleBlue (1)
   m_TagString: Untagged
@@ -235,6 +258,27 @@ EdgeCollider2D:
   - {x: 0.48, y: 0.48}
   - {x: 0.4, y: 0.48}
   - {x: 0.04, y: 0.12}
+--- !u!50 &7669177581239168748
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144576607620645440}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1226715253214679473
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,6 +291,7 @@ GameObject:
   - component: {fileID: 8572853070498858117}
   - component: {fileID: 1142649930894536523}
   - component: {fileID: 4539497876174900500}
+  - component: {fileID: 5818169531994789117}
   m_Layer: 0
   m_Name: NeedleRed (1)
   m_TagString: Untagged
@@ -349,6 +394,27 @@ EdgeCollider2D:
   - {x: 0.48, y: 0.48}
   - {x: 0.4, y: 0.48}
   - {x: 0.04, y: 0.12}
+--- !u!50 &5818169531994789117
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226715253214679473}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1925955947961360211
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,6 +427,7 @@ GameObject:
   - component: {fileID: 2131577843592221991}
   - component: {fileID: 3831039509107400416}
   - component: {fileID: 1031919847356995878}
+  - component: {fileID: 1046094577208775492}
   m_Layer: 0
   m_Name: NeedleGreen
   m_TagString: Untagged
@@ -463,6 +530,27 @@ EdgeCollider2D:
   - {x: 0.48, y: 0.48}
   - {x: 0.4, y: 0.48}
   - {x: 0.04, y: 0.12}
+--- !u!50 &1046094577208775492
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925955947961360211}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2689390114979879528
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,6 +563,7 @@ GameObject:
   - component: {fileID: 6549559486161384776}
   - component: {fileID: 5307064334569013870}
   - component: {fileID: 1176450439803977696}
+  - component: {fileID: 818485125072075566}
   m_Layer: 0
   m_Name: NeedleBlue
   m_TagString: Untagged
@@ -577,6 +666,27 @@ EdgeCollider2D:
   - {x: 0.48, y: 0.48}
   - {x: 0.4, y: 0.48}
   - {x: 0.04, y: 0.12}
+--- !u!50 &818485125072075566
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2689390114979879528}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &3049729510433924196
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,6 +704,7 @@ GameObject:
   - component: {fileID: 8588003276704507571}
   - component: {fileID: 1657401535071281244}
   - component: {fileID: 7041751370826789807}
+  - component: {fileID: 2939282097766935917}
   m_Layer: 0
   m_Name: Collider
   m_TagString: Untagged
@@ -837,6 +948,27 @@ EdgeCollider2D:
   - {x: 0.2, y: -1.8}
   - {x: 1.16, y: -2.44}
   - {x: 1.16, y: -3.48}
+--- !u!50 &2939282097766935917
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3049729510433924196}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &3393505926991287925
 GameObject:
   m_ObjectHideFlags: 0
@@ -849,6 +981,7 @@ GameObject:
   - component: {fileID: 6674689970837957365}
   - component: {fileID: 6574694957079808439}
   - component: {fileID: 7385314584137127076}
+  - component: {fileID: 1455349613409749511}
   m_Layer: 0
   m_Name: NeedleBlue (2)
   m_TagString: Untagged
@@ -951,6 +1084,27 @@ EdgeCollider2D:
   - {x: 0.48, y: 0.48}
   - {x: 0.4, y: 0.48}
   - {x: 0.04, y: 0.12}
+--- !u!50 &1455349613409749511
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3393505926991287925}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &4593664362971362870
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,6 +1117,7 @@ GameObject:
   - component: {fileID: 7730513371452764525}
   - component: {fileID: 1989703486636034856}
   - component: {fileID: 7849622949364491577}
+  - component: {fileID: 5818078325186241435}
   m_Layer: 0
   m_Name: NeedleGreen (1)
   m_TagString: Untagged
@@ -1065,6 +1220,27 @@ EdgeCollider2D:
   - {x: 0.48, y: 0.48}
   - {x: 0.4, y: 0.48}
   - {x: 0.04, y: 0.12}
+--- !u!50 &5818078325186241435
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4593664362971362870}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &5312322140380787372
 GameObject:
   m_ObjectHideFlags: 0
@@ -1194,6 +1370,7 @@ GameObject:
   - component: {fileID: 4824048917262724961}
   - component: {fileID: 666769071404779963}
   - component: {fileID: 6123863052175066251}
+  - component: {fileID: 3900053638762600381}
   m_Layer: 0
   m_Name: NeedleRed (2)
   m_TagString: Untagged
@@ -1296,6 +1473,27 @@ EdgeCollider2D:
   - {x: 0.48, y: 0.48}
   - {x: 0.4, y: 0.48}
   - {x: 0.04, y: 0.12}
+--- !u!50 &3900053638762600381
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5542900613283956881}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &5771720523880844726
 GameObject:
   m_ObjectHideFlags: 0
@@ -1308,6 +1506,7 @@ GameObject:
   - component: {fileID: 6660991149446802541}
   - component: {fileID: 2016598448824301828}
   - component: {fileID: 3362935460415402810}
+  - component: {fileID: 7403391485801230945}
   m_Layer: 0
   m_Name: NeedleGreen (2)
   m_TagString: Untagged
@@ -1410,6 +1609,27 @@ EdgeCollider2D:
   - {x: 0.48, y: 0.48}
   - {x: 0.4, y: 0.48}
   - {x: 0.04, y: 0.12}
+--- !u!50 &7403391485801230945
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5771720523880844726}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &6387177497144118913
 GameObject:
   m_ObjectHideFlags: 0
@@ -1422,6 +1642,7 @@ GameObject:
   - component: {fileID: 6555329136498653190}
   - component: {fileID: 4748806353316854436}
   - component: {fileID: 4723219731995787375}
+  - component: {fileID: 6359937305618896023}
   m_Layer: 0
   m_Name: LeverMagentaBlueA
   m_TagString: Untagged
@@ -1531,6 +1752,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.48, y: 0.4}
   m_EdgeRadius: 0
+--- !u!50 &6359937305618896023
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6387177497144118913}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &6731680993875572280
 GameObject:
   m_ObjectHideFlags: 0
@@ -1543,6 +1785,7 @@ GameObject:
   - component: {fileID: 5802547962218554622}
   - component: {fileID: 683280342880065145}
   - component: {fileID: 2180359757530903385}
+  - component: {fileID: 8207636962564867634}
   m_Layer: 0
   m_Name: LeverMagentaGreenA
   m_TagString: Untagged
@@ -1652,6 +1895,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.48, y: 0.4}
   m_EdgeRadius: 0
+--- !u!50 &8207636962564867634
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6731680993875572280}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &7678941294280686391
 GameObject:
   m_ObjectHideFlags: 0
@@ -1664,6 +1928,7 @@ GameObject:
   - component: {fileID: 7559423149919509860}
   - component: {fileID: 7848686033333627247}
   - component: {fileID: 8360760261511741902}
+  - component: {fileID: 8590869026372076603}
   m_Layer: 0
   m_Name: NeedleRed
   m_TagString: Untagged
@@ -1766,3 +2031,24 @@ EdgeCollider2D:
   - {x: 0.48, y: 0.48}
   - {x: 0.4, y: 0.48}
   - {x: 0.04, y: 0.12}
+--- !u!50 &8590869026372076603
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7678941294280686391}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
