@@ -447,7 +447,7 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 2
+  m_EdgeRadius: 0.1
   m_Points:
   - {x: -24.7, y: 19.8}
   - {x: -24.7, y: -19.8}
@@ -916,6 +916,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2195929922367935886, guid: 4f4a99dd2337e0e48af8710eb3917a96,
+        type: 3}
+      propertyPath: m_EdgeRadius
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1805833670125795600, guid: 4f4a99dd2337e0e48af8710eb3917a96,
+        type: 3}
+      propertyPath: m_EdgeRadius
+      value: 0.01
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2029105029467874616, guid: 4f4a99dd2337e0e48af8710eb3917a96, type: 3}

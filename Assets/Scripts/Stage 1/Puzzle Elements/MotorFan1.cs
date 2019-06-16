@@ -16,10 +16,6 @@ public class MotorFan1 : MonoBehaviour
         isMotorFanOn = false;
 
         animator = GetComponent<Animator>();
-
-        StartCoroutine(WaitChange(10f));
-        StartCoroutine(WaitChange(15f));
-        StartCoroutine(WaitChange(20f));
     }
 
     // Update is called once per frame

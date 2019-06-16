@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Pattern7Maker1 : MonoBehaviour {
-    public GameObject[] miniBosses = new GameObject[4];
+    public GameObject[] waveMakers = new GameObject[4];
     public GameObject wave;
 
     private GameObject player;
@@ -12,12 +12,15 @@ public class Pattern7Maker1 : MonoBehaviour {
     private float time;
     public float delay;
 
+    private bool isReady;
+
     // Start is called before the first frame update
     void Start() {
         player = GameObject.Find("Player");
         boss = GameObject.Find("Boss");
 
         time = 0;
+        isReady = true;
 
         transform.position = player.transform.position;
 
@@ -26,18 +29,28 @@ public class Pattern7Maker1 : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        time += Time.deltaTime;
-        if (time > delay) {
-            foreach (GameObject miniBoss in miniBosses) {
-                Instantiate(wave, miniBoss.transform.position, Quaternion.identity);
-                Destroy(miniBoss);
+        if (isReady) {
+            time += Time.deltaTime;
+            if (time > delay) {
+                isReady = false;
+                foreach (GameObject waveMaker in waveMakers) {
+                    Instantiate(wave, waveMaker.transform.position, Quaternion.identity);
+                }
+                CheckAlive();
             }
-            CheckAlive();
         }
+        
+    }
+
+    IEnumerator WaitDestroy() {
+        yield return new WaitForSeconds(1f);
+        foreach (GameObject waveMaker in waveMakers) {
+            Destroy(gameObject);
+        }
+        boss.GetComponent<PatternB1>().PatternEnd();
     }
 
     void CheckAlive() {
-        Destroy(gameObject);
-        boss.GetComponent<PatternB1>().PatternEnd();
+        StartCoroutine(WaitDestroy());
     }
 }

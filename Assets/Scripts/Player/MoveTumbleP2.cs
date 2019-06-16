@@ -21,10 +21,6 @@ public class MoveTumbleP2 : MonoBehaviour {
 
     }
 
-    void FixedUpdate() {
-        FixRotate();
-    }
-
     // Update is called once per frame
     void Update() {
         if (Input.GetKeyDown(KeyCode.Space)) {
@@ -34,15 +30,15 @@ public class MoveTumbleP2 : MonoBehaviour {
                 }
             }
         }
+        
+    }
 
+    void FixedUpdate() {
         if (isTumbling) {
             Tumble();
         } else {
             Move();
         }
-    }
-    void FixRotate() {
-        transform.rotation = Quaternion.Euler(Vector3.zero);
     }
 
     void StartTumble() {

@@ -6,6 +6,8 @@ public class Pattern1Maker1 : MonoBehaviour {
 
     public GameObject bullet1;
 
+    public int number;
+
     public int repetition;
     public float delay;
     private float time;
@@ -27,8 +29,8 @@ public class Pattern1Maker1 : MonoBehaviour {
     {
         time += Time.deltaTime;
         if (time > delay) {
-            for(int i=0; i<18; i++) {
-                Fire(20 * i);
+            for(int i=0; i<number; i++) {
+                Fire(360 / number * i);
             }
             time = 0;
             count++;

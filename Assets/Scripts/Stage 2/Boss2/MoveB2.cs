@@ -13,9 +13,10 @@ public class MoveB2 : MonoBehaviour {
     public float changeDirectionDelay;
 
     private GameObject player;
-
-    public Animator bossAnimator;
+      
     private Vector3 directionToPlayer;
+
+    Animator animator;
 
     // Start is called before the first frame update
     void Start() {
@@ -23,19 +24,11 @@ public class MoveB2 : MonoBehaviour {
 
         player = GameObject.Find("Player");
 
-        bossAnimator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
     }
-
-    void FixedUpdate() {
-        FixRotate();
-    }
-
-    void FixRotate() {
-        transform.rotation = Quaternion.Euler(Vector3.zero);
-    }
-
+    
     // Update is called once per frame
-    void Update() {
+    void FixedUpdate() {
         if (isMove) {
             time += Time.deltaTime;
             if (time > changeDirectionDelay) {
@@ -67,7 +60,7 @@ public class MoveB2 : MonoBehaviour {
     void LookPlayer()
     {
         directionToPlayer = (player.transform.position - transform.position).normalized;
-        bossAnimator.SetFloat("directionToPlayerX", directionToPlayer.x);
-        bossAnimator.SetFloat("directionToPlayerY", directionToPlayer.y);
+        animator.SetFloat("directionToPlayerX", directionToPlayer.x);
+        animator.SetFloat("directionToPlayerY", directionToPlayer.y);
     }
 }

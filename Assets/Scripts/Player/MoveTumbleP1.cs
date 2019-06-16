@@ -42,12 +42,16 @@ public class MoveTumbleP1 : MonoBehaviour
             }            
         }
 
+        
+    }
+
+    void FixedUpdate() {
         if (isTumbling) {
             Tumble();
         } else {
             Move();
         }
-    } 
+    }
 
     void StartTumble() {
         StartCoroutine(CanTumble());

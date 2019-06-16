@@ -18,9 +18,10 @@ public class MoveFireB1 : MonoBehaviour {
     private bool canFire;
     public float fireDelay;
 
-    Animator bossAnimator;
     private Vector3 directionToPlayer;
 
+    Animator animator;
+    
     // Start is called before the first frame update
     void Start() {
         isMove = true;
@@ -34,12 +35,12 @@ public class MoveFireB1 : MonoBehaviour {
 
         canFire = true;
 
-        bossAnimator = GetComponent<Animator>();
-        bossAnimator.SetBool("isBossMove", true);
+        animator = GetComponent<Animator>();
+        animator.SetBool("isBossMove", true);
     }
 
     // Update is called once per frame
-    void Update() {
+    void FixedUpdate() {
         if (isMove) {
             time += Time.deltaTime;
             if (time > changeDirectionDelay) {
@@ -55,7 +56,7 @@ public class MoveFireB1 : MonoBehaviour {
 
     public void IsMove(bool _bool) {
         isMove = _bool;
-        bossAnimator.SetBool("isBossMove", _bool);
+        animator.SetBool("isBossMove", _bool);
     }
 
     void Move() {
@@ -83,7 +84,7 @@ public class MoveFireB1 : MonoBehaviour {
     void LookPlayer()
     {
         directionToPlayer = (player.transform.position - transform.position).normalized;
-        bossAnimator.SetFloat("directionToPlayerX", directionToPlayer.x);
-        bossAnimator.SetFloat("directionToPlayerY", directionToPlayer.y);
+        animator.SetFloat("directionToPlayerX", directionToPlayer.x);
+        animator.SetFloat("directionToPlayerY", directionToPlayer.y);
     }
 }

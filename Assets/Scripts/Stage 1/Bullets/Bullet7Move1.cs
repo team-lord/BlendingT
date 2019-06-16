@@ -18,11 +18,11 @@ public class Bullet7Move1 : MonoBehaviour {
     void Update() {
         time += Time.deltaTime;
         
-        scale = 12 * Mathf.Pow(time - 0.5f, 3) - 2 * time + 1.5f;
+        scale = 24 * Mathf.Pow(time / 2 - 0.5f, 3) - 2 * time + 3;
 
         transform.localScale = new Vector3(scale, scale, 0);
 
-        if(time > 1f) {
+        if(time > 2f) {
             Destroy(gameObject);
         }
     }

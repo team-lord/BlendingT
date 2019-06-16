@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8701137376315168324}
   m_Layer: 0
   m_Name: Balls_3
-  m_TagString: Untagged
+  m_TagString: PuzzleBall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1235127477408690519}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.48, z: 0}
+  m_LocalPosition: {x: 0, y: -1.54, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children: []
   m_Father: {fileID: 3733784756526979420}
@@ -110,7 +110,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.05
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 6796830147514056974}
   m_Layer: 0
   m_Name: Balls_6
-  m_TagString: Untagged
+  m_TagString: PuzzleBall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -146,7 +146,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1338023756266453898}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.205, y: -1.84, z: 0}
+  m_LocalPosition: {x: 0.17, y: -1.84, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children: []
   m_Father: {fileID: 3733784756526979420}
@@ -229,7 +229,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.05
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -252,7 +252,7 @@ GameObject:
   - component: {fileID: 956836824042034832}
   m_Layer: 0
   m_Name: Ball
-  m_TagString: Untagged
+  m_TagString: PuzzleBall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -348,7 +348,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.05
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -371,7 +371,7 @@ GameObject:
   - component: {fileID: 67724117901543001}
   m_Layer: 0
   m_Name: Balls_4
-  m_TagString: Untagged
+  m_TagString: PuzzleBall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -384,7 +384,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2249245937988932229}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.2, z: 0}
+  m_LocalPosition: {x: 0, y: -2.14, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children: []
   m_Father: {fileID: 3733784756526979420}
@@ -466,7 +466,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.05
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -475,6 +475,91 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &2302689083527537986
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1638805390111403283}
+  - component: {fileID: 5328606556186252293}
+  - component: {fileID: 5590865677170133434}
+  - component: {fileID: 3183512286997420990}
+  m_Layer: 0
+  m_Name: Hole
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1638805390111403283
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2302689083527537986}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3733784756526979420}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &5328606556186252293
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2302689083527537986}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.58, y: -3.33}
+  serializedVersion: 2
+  m_Radius: 0.1
+--- !u!50 &5590865677170133434
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2302689083527537986}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &3183512286997420990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2302689083527537986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 545b9100904645e48bcaa7dd4eaee082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzleBall: {fileID: 4301548767625198739, guid: fba73c5404d66274db69888a393c7b44,
+    type: 3}
+  locationOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &4167835571978164270
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,7 +574,7 @@ GameObject:
   - component: {fileID: 5002087683699016480}
   m_Layer: 0
   m_Name: Balls_2
-  m_TagString: Untagged
+  m_TagString: PuzzleBall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -502,7 +587,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4167835571978164270}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.41, y: -2.2, z: 0}
+  m_LocalPosition: {x: -0.34, y: -2.14, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children: []
   m_Father: {fileID: 3733784756526979420}
@@ -585,7 +670,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.05
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -607,7 +692,7 @@ GameObject:
   - component: {fileID: 2818758813744597278}
   - component: {fileID: 4299345908163286195}
   m_Layer: 0
-  m_Name: InnerCollider
+  m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -640,14 +725,17 @@ EdgeCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0, y: -0.01}
+  m_EdgeRadius: 0.1
   m_Points:
-  - {x: -1.16, y: -3.1}
-  - {x: 1.36, y: -3.1}
-  - {x: 1.36, y: 2.34}
-  - {x: -1.36, y: 2.34}
-  - {x: -1.36, y: -2.9}
+  - {x: -1.44, y: -3.56}
+  - {x: -1.1, y: -3.2}
+  - {x: 1.46, y: -3.2}
+  - {x: 1.46, y: 2.44}
+  - {x: -1.46, y: 2.44}
+  - {x: -1.46, y: -2.84}
+  - {x: -1.8, y: -3.2}
+  - {x: -1.8, y: -3.2}
 --- !u!68 &2818758813744597278
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -661,17 +749,17 @@ EdgeCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0, y: -0.01}
+  m_EdgeRadius: 0.1
   m_Points:
-  - {x: 1.96, y: 2.94}
-  - {x: 1.96, y: -3.7}
-  - {x: -1.96, y: -3.7}
-  - {x: -1.96, y: 2.94}
-  - {x: -1.8, y: 3.7}
-  - {x: 1.08, y: 3.7}
-  - {x: 1.08, y: 2.94}
-  - {x: 1.96, y: 2.94}
+  - {x: 1.86, y: 2.84}
+  - {x: 1.86, y: -3.6}
+  - {x: -1.86, y: -3.6}
+  - {x: -1.86, y: 2.84}
+  - {x: -1.7, y: 3.6}
+  - {x: 0.98, y: 3.6}
+  - {x: 0.98, y: 2.84}
+  - {x: 1.86, y: 2.84}
 --- !u!50 &4299345908163286195
 Rigidbody2D:
   serializedVersion: 4
@@ -707,7 +795,7 @@ GameObject:
   - component: {fileID: 6411702876797994858}
   m_Layer: 0
   m_Name: Balls_1
-  m_TagString: Untagged
+  m_TagString: PuzzleBall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -720,7 +808,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7109907134625922879}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.41, y: -2.2, z: 0}
+  m_LocalPosition: {x: 0.34, y: -2.14, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children: []
   m_Father: {fileID: 3733784756526979420}
@@ -803,7 +891,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.05
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -823,7 +911,6 @@ GameObject:
   - component: {fileID: 3733784756526979420}
   - component: {fileID: 4762239323716453608}
   - component: {fileID: 928781485998131171}
-  - component: {fileID: 3281250758702399965}
   m_Layer: 0
   m_Name: BilliardsTable1
   m_TagString: Untagged
@@ -850,6 +937,7 @@ Transform:
   - {fileID: 3797540121268517541}
   - {fileID: 819456322476733284}
   - {fileID: 551439607238600364}
+  - {fileID: 1638805390111403283}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -890,7 +978,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 261077db96384494cbcb35598554c93e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a4ad5a3a31af3174691d765643db288e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -921,27 +1009,6 @@ MonoBehaviour:
   - {fileID: 2249245937988932229}
   - {fileID: 9166095672426032712}
   - {fileID: 1338023756266453898}
---- !u!50 &3281250758702399965
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9057839575522085438}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &9166095672426032712
 GameObject:
   m_ObjectHideFlags: 0
@@ -956,7 +1023,7 @@ GameObject:
   - component: {fileID: 1085448920929398091}
   m_Layer: 0
   m_Name: Balls_5
-  m_TagString: Untagged
+  m_TagString: PuzzleBall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -969,7 +1036,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9166095672426032712}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.205, y: -1.84, z: 0}
+  m_LocalPosition: {x: -0.17, y: -1.84, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children: []
   m_Father: {fileID: 3733784756526979420}
@@ -1052,7 +1119,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.05
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0

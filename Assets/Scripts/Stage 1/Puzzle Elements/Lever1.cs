@@ -35,7 +35,7 @@ public class Lever1 : MonoBehaviour
                 if (isReady) {
                     StartCoroutine(IsReady());
                     GetComponent<SpriteRenderer>().flipX = !GetComponent<SpriteRenderer>().flipX;
-                    GameObject.Find("Bulb").GetComponent<Bulb>().IsReady();
+                    GameObject.Find("Bulb").GetComponent<Bulb1>().IsReady();
                 }
             } else {
                 GetComponent<SpriteRenderer>().flipX = !GetComponent<SpriteRenderer>().flipX;
