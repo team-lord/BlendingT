@@ -156,8 +156,9 @@ GameObject:
   - component: {fileID: 3086159803444585051}
   - component: {fileID: 7669177581239168748}
   - component: {fileID: 3633530974205939260}
+  - component: {fileID: 1653977424064961474}
   m_Layer: 0
-  m_Name: NeedleBlue (1)
+  m_Name: NeedleBlueDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -288,6 +289,25 @@ PolygonCollider2D:
       - {x: 0.48, y: 0.48}
       - {x: 0.4, y: 0.48}
       - {x: 0.04, y: 0.12}
+--- !u!95 &1653977424064961474
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144576607620645440}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ac5ce5d67f151b94db73ddc85d719a72, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1226715253214679473
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,8 +321,9 @@ GameObject:
   - component: {fileID: 1142649930894536523}
   - component: {fileID: 5818169531994789117}
   - component: {fileID: 5536752991552416496}
+  - component: {fileID: 3758494485301928235}
   m_Layer: 0
-  m_Name: NeedleRed (1)
+  m_Name: NeedleRedDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -433,6 +454,25 @@ PolygonCollider2D:
       - {x: 0.48, y: 0.48}
       - {x: 0.4, y: 0.48}
       - {x: 0.04, y: 0.12}
+--- !u!95 &3758494485301928235
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226715253214679473}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 40a2c78d4d0743d4eb9c248d2400550d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1925955947961360211
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,8 +486,9 @@ GameObject:
   - component: {fileID: 3831039509107400416}
   - component: {fileID: 1046094577208775492}
   - component: {fileID: 2419812265218032580}
+  - component: {fileID: 4121521393877316465}
   m_Layer: 0
-  m_Name: NeedleGreen
+  m_Name: NeedleGreenUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -578,6 +619,25 @@ PolygonCollider2D:
       - {x: 0.48, y: 0.48}
       - {x: 0.4, y: 0.48}
       - {x: 0.04, y: 0.12}
+--- !u!95 &4121521393877316465
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925955947961360211}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a36143dbe4029ad4f878332f9d3f8691, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2689390114979879528
 GameObject:
   m_ObjectHideFlags: 0
@@ -591,8 +651,9 @@ GameObject:
   - component: {fileID: 5307064334569013870}
   - component: {fileID: 818485125072075566}
   - component: {fileID: 5953904984106809064}
+  - component: {fileID: 3012717141737641241}
   m_Layer: 0
-  m_Name: NeedleBlue
+  m_Name: NeedleBlueUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -723,6 +784,25 @@ PolygonCollider2D:
       - {x: 0.48, y: 0.48}
       - {x: 0.4, y: 0.48}
       - {x: 0.04, y: 0.12}
+--- !u!95 &3012717141737641241
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2689390114979879528}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3faf83518324ceb4c88bdab1bfb87ad3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3049729510433924196
 GameObject:
   m_ObjectHideFlags: 0
@@ -1048,8 +1128,9 @@ GameObject:
   - component: {fileID: 6574694957079808439}
   - component: {fileID: 1455349613409749511}
   - component: {fileID: 3547857519122327834}
+  - component: {fileID: 5184037617136341892}
   m_Layer: 0
-  m_Name: NeedleBlue (2)
+  m_Name: NeedleBlueDown(1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1180,6 +1261,25 @@ PolygonCollider2D:
       - {x: 0.48, y: 0.48}
       - {x: 0.4, y: 0.48}
       - {x: 0.04, y: 0.12}
+--- !u!95 &5184037617136341892
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3393505926991287925}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ac5ce5d67f151b94db73ddc85d719a72, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4593664362971362870
 GameObject:
   m_ObjectHideFlags: 0
@@ -1193,8 +1293,9 @@ GameObject:
   - component: {fileID: 1989703486636034856}
   - component: {fileID: 5818078325186241435}
   - component: {fileID: 1211037180831050081}
+  - component: {fileID: 9201907244725277665}
   m_Layer: 0
-  m_Name: NeedleGreen (1)
+  m_Name: NeedleGreenUp(1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1325,6 +1426,25 @@ PolygonCollider2D:
       - {x: 0.48, y: 0.48}
       - {x: 0.4, y: 0.48}
       - {x: 0.04, y: 0.12}
+--- !u!95 &9201907244725277665
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4593664362971362870}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a36143dbe4029ad4f878332f9d3f8691, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5312322140380787372
 GameObject:
   m_ObjectHideFlags: 0
@@ -1455,8 +1575,9 @@ GameObject:
   - component: {fileID: 666769071404779963}
   - component: {fileID: 3900053638762600381}
   - component: {fileID: 1656961963991525183}
+  - component: {fileID: 7429016400924469581}
   m_Layer: 0
-  m_Name: NeedleRed (2)
+  m_Name: NeedleRedUp(1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1587,6 +1708,25 @@ PolygonCollider2D:
       - {x: 0.48, y: 0.48}
       - {x: 0.4, y: 0.48}
       - {x: 0.04, y: 0.12}
+--- !u!95 &7429016400924469581
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5542900613283956881}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: edc2448cb2f8ff941b47010e0d4d8727, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5771720523880844726
 GameObject:
   m_ObjectHideFlags: 0
@@ -1600,8 +1740,9 @@ GameObject:
   - component: {fileID: 2016598448824301828}
   - component: {fileID: 7403391485801230945}
   - component: {fileID: 4835895581237864025}
+  - component: {fileID: 8330753937048199307}
   m_Layer: 0
-  m_Name: NeedleGreen (2)
+  m_Name: NeedleGreenUp(2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1732,6 +1873,25 @@ PolygonCollider2D:
       - {x: 0.48, y: 0.48}
       - {x: 0.4, y: 0.48}
       - {x: 0.04, y: 0.12}
+--- !u!95 &8330753937048199307
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5771720523880844726}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a36143dbe4029ad4f878332f9d3f8691, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6387177497144118913
 GameObject:
   m_ObjectHideFlags: 0
@@ -2031,8 +2191,9 @@ GameObject:
   - component: {fileID: 7848686033333627247}
   - component: {fileID: 8590869026372076603}
   - component: {fileID: 7391466940546105576}
+  - component: {fileID: 7558679049244637427}
   m_Layer: 0
-  m_Name: NeedleRed
+  m_Name: NeedleRedUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2163,3 +2324,22 @@ PolygonCollider2D:
       - {x: 0.48, y: 0.48}
       - {x: 0.4, y: 0.48}
       - {x: 0.04, y: 0.12}
+--- !u!95 &7558679049244637427
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7678941294280686391}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: edc2448cb2f8ff941b47010e0d4d8727, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
