@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -6228235104833669387}
   - component: {fileID: 3896690247369252338}
   - component: {fileID: 2635179054788427852}
+  - component: {fileID: 4218339625754264155}
   m_Layer: 0
   m_Name: Bulb1
   m_TagString: Untagged
@@ -132,3 +133,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &4218339625754264155
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108817233500654884}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 65cbe22810dab834b8c9baec378a934f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
