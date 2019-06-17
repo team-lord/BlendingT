@@ -61,7 +61,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: On
+    m_ConditionEvent: on
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6594427789376039515}
@@ -117,7 +117,7 @@ BlendTree:
     m_CycleOffset: 0
     m_DirectBlendParameter: Current
     m_Mirror: 0
-  m_BlendParameter: Current
+  m_BlendParameter: current
   m_BlendParameterY: Trash
   m_MinThreshold: 0
   m_MaxThreshold: 3
@@ -175,19 +175,19 @@ AnimatorController:
   m_Name: Dolls
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: On
+  - m_Name: on
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: Current
+  - m_Name: current
     m_Type: 1
     m_DefaultFloat: 3
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: Next
+  - m_Name: next
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -246,7 +246,7 @@ BlendTree:
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
     m_Mirror: 0
-  m_BlendParameter: Next
+  m_BlendParameter: next
   m_BlendParameterY: Target
   m_MinThreshold: 0
   m_MaxThreshold: 3

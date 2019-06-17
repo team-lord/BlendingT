@@ -22,8 +22,8 @@ public class PlankMachine1 : MonoBehaviour
 
         animator = GetComponent<Animator>();
 
-        animator.SetFloat("Current", 0);
-        animator.SetFloat("Trash", 0);
+        animator.SetFloat("current", 0);
+        animator.SetFloat("trash", 0);
     }
 
     // Update is called once per frame
@@ -36,9 +36,9 @@ public class PlankMachine1 : MonoBehaviour
 
         if (isReady) {
             StartCoroutine(IsReady());
-            animator.SetFloat("Go", currentPlank);
-            animator.SetFloat("Back", 7);
-            animator.SetTrigger("On");
+            animator.SetFloat("go", currentPlank);
+            animator.SetFloat("back", 7);
+            animator.SetTrigger("on");
 
             if(currentPlank < 2) {
                 currentPlank++;
@@ -46,7 +46,7 @@ public class PlankMachine1 : MonoBehaviour
                 currentPlank = 0;
             }
 
-            animator.SetFloat("Current", currentPlank);
+            animator.SetFloat("current", currentPlank);
 
             rightButton.GetComponent<PlankMachineButton1>().Change();
         }
@@ -55,9 +55,9 @@ public class PlankMachine1 : MonoBehaviour
     public void ChangePrevious() { // 2 -> 1 -> 0 -> 2
         if (isReady) {
             StartCoroutine(IsReady());
-            animator.SetFloat("Go", 7);
-            animator.SetFloat("Back", currentPlank);
-            animator.SetTrigger("On");
+            animator.SetFloat("go", 7);
+            animator.SetFloat("back", currentPlank);
+            animator.SetTrigger("on");
 
             if (currentPlank > 0) {
                 currentPlank--;
@@ -65,7 +65,7 @@ public class PlankMachine1 : MonoBehaviour
                 currentPlank = 2;
             }
 
-            animator.SetFloat("Current", currentPlank);
+            animator.SetFloat("current", currentPlank);
 
             leftButton.GetComponent<PlankMachineButton1>().Change();
         }

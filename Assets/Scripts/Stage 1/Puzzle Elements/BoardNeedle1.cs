@@ -26,7 +26,7 @@ public class BoardNeedle1 : MonoBehaviour
         isReady = true;
 
         // TODO - 애니메이션 시작
-        animator.SetTrigger("Change");
+        animator.SetTrigger("change");
         // 20 -> 70, 70 -> 20, 200 -> 250, 250 -> 200 확인할 것  
     }
 }

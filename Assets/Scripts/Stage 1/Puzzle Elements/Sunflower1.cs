@@ -24,7 +24,7 @@ public class Sunflower1 : MonoBehaviour
     void Update() {
         if (isReady) {
             isReady = false;
-            animator.SetTrigger("Change");
+            animator.SetTrigger("change");
             isBulbOn = !isBulbOn;
         }
     }

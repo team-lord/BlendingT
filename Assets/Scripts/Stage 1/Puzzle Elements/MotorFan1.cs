@@ -27,13 +27,13 @@ public class MotorFan1 : MonoBehaviour
     public void Change() {
         isMotorFanOn = !isMotorFanOn;
         // animator에서 isMotorFanOn을 받아가세요
-        animator.SetTrigger("Change");
+        animator.SetTrigger("change");
     }
 
     IEnumerator WaitChange(float time)
     {
         yield return new WaitForSeconds(time);
-        animator.SetTrigger("Change");
+        animator.SetTrigger("change");
 
     }
 }
