@@ -9,6 +9,8 @@ public class Bulb1 : MonoBehaviour
     private bool isBulbOn;
     private bool isReady;
 
+    Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +18,8 @@ public class Bulb1 : MonoBehaviour
 
         isBulbOn = false;
         isReady = false;
+
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -24,8 +28,10 @@ public class Bulb1 : MonoBehaviour
             isReady = false;
             if (isBulbOn) {
                 // TODO - 전구가 꺼지는 애니메이션 시작
+                animator.SetTrigger("Change");
             } else {
                 // TODO - 전구가 켜지는 애니메이션 시작
+                animator.SetTrigger("Change");
             }
             sunflower.GetComponent<Sunflower1>().IsReady();
             isBulbOn = !isBulbOn;
