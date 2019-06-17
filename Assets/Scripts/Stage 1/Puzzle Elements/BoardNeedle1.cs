@@ -6,10 +6,13 @@ public class BoardNeedle1 : MonoBehaviour
 {
     private bool isReady;
 
+    Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
         isReady = false;
+        animator = GetComponent<Animator>();
     }
     
     // Update is called once per frame
@@ -23,7 +26,7 @@ public class BoardNeedle1 : MonoBehaviour
         isReady = true;
 
         // TODO - 애니메이션 시작
-        
+        animator.SetTrigger("Change");
         // 20 -> 70, 70 -> 20, 200 -> 250, 250 -> 200 확인할 것  
     }
 }
