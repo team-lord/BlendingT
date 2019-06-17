@@ -6,8 +6,6 @@ public class BoardNeedle1 : MonoBehaviour
 {
     private bool isReady;
 
-    // public Animator animator;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -17,10 +15,7 @@ public class BoardNeedle1 : MonoBehaviour
     // Update is called once per frame
     void Update() {
         if (isReady) {            
-            //if (animator.GetCurrentAnimatorStateInfo(0).IsName("Rotate")) {
-                // TODO - 애니메이션 끝
-
-            //}            
+                   
         }
     }
 
