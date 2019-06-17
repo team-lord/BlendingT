@@ -20,9 +20,12 @@ public class Bullet2Move1 : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         time += Time.deltaTime;
+        
         location.x = range * Mathf.Cos(time) * Mathf.Sin(3 * time);
         location.y = range * Mathf.Sin(time) * Mathf.Sin(3 * time);
-        
-        transform.position = position + location;
+
+        location = transform.rotation * location;
+
+        transform.localPosition = position + location;
     }
 }

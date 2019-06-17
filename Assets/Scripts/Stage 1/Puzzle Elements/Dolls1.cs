@@ -19,8 +19,8 @@ public class Dolls1 : MonoBehaviour
 
         animator = GetComponent<Animator>();
 
-        animator.SetInteger("Current", 3);
-        animator.SetInteger("Next", 0);
+        animator.SetFloat("Current", 3);
+        animator.SetFloat("Next", 0);
 
         foreach(Collider2D collider in colliders) {
             collider.enabled = false;
@@ -37,9 +37,9 @@ public class Dolls1 : MonoBehaviour
     public void Change(int number) {
         colliders[currentDoll].enabled = false;
 
-        animator.SetInteger("Next", number);
+        animator.SetFloat("Next", number);
         animator.SetTrigger("On");
-        animator.SetInteger("Current", number);
+        animator.SetFloat("Current", number);
 
         currentDoll = number;
 

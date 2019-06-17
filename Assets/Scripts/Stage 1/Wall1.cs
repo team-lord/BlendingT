@@ -18,7 +18,7 @@ public class Wall1 : MonoBehaviour
         audienceManager = GameObject.Find("AudienceManager");
         player = GameObject.Find("Player");
 
-        isReady = false;
+        isReady = true;
     }
 
     // Update is called once per frame
@@ -27,12 +27,12 @@ public class Wall1 : MonoBehaviour
         
     }
 
-    private void OnTriggerStay2D(Collider2D collision) {
+    private void OnTriggerEnter2D(Collider2D collision) {
         if (isReady) {
             if (collision.tag == "Player") {
                 StartCoroutine(IsReady());
                 audienceManager.GetComponent<AudienceManager>().WallHit();
-                player.transform.Translate(normalVector); // 밀쳐내기
+                player.transform.Translate(3 * normalVector); // 밀쳐내기
             }
         }        
     }
