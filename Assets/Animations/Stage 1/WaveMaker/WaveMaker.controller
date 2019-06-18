@@ -9,7 +9,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Change
+    m_ConditionEvent: change
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -7936365705303890175}
@@ -88,7 +88,7 @@ AnimatorController:
   m_Name: WaveMaker
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Change
+  - m_Name: change
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9218671777789932057}
   - component: {fileID: 5755305424827529036}
   - component: {fileID: 5451269396129347099}
+  - component: {fileID: 6508090361342634627}
   m_Layer: 0
   m_Name: WaveMaker
   m_TagString: Untagged
@@ -100,3 +101,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6508090361342634627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7273432052288956788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a8a1564ff1d564e847b764418edc5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
