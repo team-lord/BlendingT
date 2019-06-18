@@ -23,13 +23,13 @@ public class PhonographButton1 : MonoBehaviour {
 
     // Sprite 바꾸기
 
-    private void OnTriggerEnter2D(Collider2D collider) {
-        if (collider.tag == "PlayerBullet") {
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.tag == "PlayerBullet") {
             if (isReady) {
                 StartCoroutine(IsReady());
                 GetComponentInParent<Phonograph1>().Change();
             }
-            Destroy(collider);
+            Destroy(collision.gameObject);
         }
     }
 

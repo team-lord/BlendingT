@@ -65,8 +65,7 @@ MonoBehaviour:
   - {fileID: 5153328193131271368}
   - {fileID: 119284943337642333}
   - {fileID: 3258276053507938698}
-  wave: {fileID: 8546486842732258597, guid: ec534a112d6871c4fa0d22bafc208b74, type: 3}
-  delay: 2
+  life: 2
 --- !u!1001 &656283785318956561
 PrefabInstance:
   m_ObjectHideFlags: 0

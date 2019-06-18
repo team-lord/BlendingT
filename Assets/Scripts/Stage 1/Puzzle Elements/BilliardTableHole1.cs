@@ -25,10 +25,9 @@ public class BilliardTableHole1 : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
         if (isReady) {
             if (collision.tag == "PuzzleBall") {
-                Debug.Log("sth");
                 isReady = false;
-                Destroy(collision);
-                Instantiate(puzzleBall, transform.position + exitHole.transform.position, Quaternion.identity);
+                Destroy(collision.gameObject);
+                Instantiate(puzzleBall, transform.position + exitHole.transform.localPosition, Quaternion.identity);
             }
         }
     }

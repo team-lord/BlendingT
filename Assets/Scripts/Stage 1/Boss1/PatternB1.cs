@@ -19,10 +19,6 @@ public class PatternB1 : MonoBehaviour
 
     public GameObject[] patternMakers = new GameObject[8];
     public GameObject[] forgedPatternMakers = new GameObject[8];
-<<<<<<< HEAD
-    
-=======
->>>>>>> b3f35ca213ed877c068218fa13fc2a5c109a6625
 
     // Start is called before the first frame update
     void Start() {
