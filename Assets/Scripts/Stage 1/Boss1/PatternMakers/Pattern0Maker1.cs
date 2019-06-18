@@ -15,6 +15,9 @@ public class Pattern0Maker1 : MonoBehaviour
     private GameObject player;
     private GameObject boss;
 
+    Animator animator;
+    private Vector3 playerDirection;
+
     // Start is called before the first frame update
     void Start() {
         count = 0;
@@ -22,14 +25,20 @@ public class Pattern0Maker1 : MonoBehaviour
 
         player = GameObject.Find("Player");
         boss = GameObject.Find("Boss");
+
+        animator = boss.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
         time += Time.deltaTime;
+        playerDirection = (player.transform.position - transform.position).normalized;
+        animator.SetFloat("cardDirectionX", playerDirection.x);
+        animator.SetFloat("cardDirectionY", playerDirection.y);
 
         if (time > delay) {
+            animator.SetTrigger("cardFire");
             // 카드 던지는 애니메이션 시작
             for(int i=0; i<9; i++) {
                 bullet = bullet0s[Random.Range(0, bullet0s.Length)];

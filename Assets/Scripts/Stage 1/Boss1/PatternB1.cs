@@ -62,7 +62,7 @@ public class PatternB1 : MonoBehaviour
             Instantiate(patternMakers[_number], transform.position, transform.rotation);
         }
         */
-        Instantiate(patternMakers[7], transform.position, transform.rotation);
+        Instantiate(patternMakers[0], transform.position, transform.rotation);
 
     }
 

@@ -61,5 +61,5 @@ MonoBehaviour:
   - {fileID: 5477130880716519818, guid: 0c5b5e376b87f1342be325288efafa73, type: 3}
   - {fileID: 2503989990424769565, guid: ada5d21e7a47eb645a4d92ed464b3bb8, type: 3}
   - {fileID: 2506924035302172235, guid: c80736c60cb257d4db9d5b9a8e8a9672, type: 3}
-  repetition: 5
+  repetition: 8
   delay: 0.4
