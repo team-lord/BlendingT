@@ -559,7 +559,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puzzleBall: {fileID: 4301548767625198739, guid: fba73c5404d66274db69888a393c7b44,
     type: 3}
-  locationOffset: {x: 1.54, y: -1.1, z: 0}
+  exitHole: {fileID: 4809397233999543334}
 --- !u!1 &4167835571978164270
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,7 +689,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3679840038025116242}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: ExitHole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -703,7 +703,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4809397233999543334}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.54, y: -3.34, z: 0}
+  m_LocalPosition: {x: 0, y: -4.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3733784756526979420}
