@@ -6,7 +6,7 @@ public class BilliardTableHole1 : MonoBehaviour
 {
     public GameObject puzzleBall;
 
-    public Vector3 locationOffset;
+    public GameObject exitHole;
 
     private bool isReady;
 
@@ -25,9 +25,10 @@ public class BilliardTableHole1 : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
         if (isReady) {
             if (collision.tag == "PuzzleBall") {
+                Debug.Log("sth");
                 isReady = false;
                 Destroy(collision);
-                Instantiate(puzzleBall, transform.position + locationOffset, Quaternion.identity);
+                Instantiate(puzzleBall, transform.position + exitHole.transform.position, Quaternion.identity);
             }
         }
     }
