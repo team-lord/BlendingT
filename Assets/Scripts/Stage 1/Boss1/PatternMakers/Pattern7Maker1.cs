@@ -37,6 +37,7 @@ public class Pattern7Maker1 : MonoBehaviour {
             if (time > delay) {
                 isReady = false;
                 foreach (GameObject waveMaker in waveMakers) {
+                    waveMaker.GetComponent<WaveMaker1>().Fire();
                     Instantiate(wave, waveMaker.transform.position, Quaternion.identity);
                 }
                 CheckAlive();
