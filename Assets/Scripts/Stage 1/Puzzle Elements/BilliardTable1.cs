@@ -15,10 +15,7 @@ public class BilliardTable1 : MonoBehaviour
             originalPosition[i] = balls[i].transform.position;
         }
 
-        StartCoroutine(MoveStart(5, 0));
-        StartCoroutine(MoveStart(10, 1));
-        StartCoroutine(MoveStart(15, 2));
-        StartCoroutine(MoveStart(20, 3));
+        StartCoroutine(MoveStart(5, 1));
     }
 
     // Update is called once per frame
@@ -36,22 +33,22 @@ public class BilliardTable1 : MonoBehaviour
         switch (index) {
             case 0: // Up
                 foreach(GameObject ball in balls) {
-                    ball.GetComponent<Rigidbody2D>().AddForce(20 * Vector2.up);
+                    ball.GetComponent<Rigidbody2D>().AddForce(15 * Vector2.up);
                 }
                 break;
             case 1: // Down
                 foreach (GameObject ball in balls) {
-                    ball.GetComponent<Rigidbody2D>().AddForce(20 * Vector2.down);
+                    ball.GetComponent<Rigidbody2D>().AddForce(15 * Vector2.down);
                 }
                 break;
             case 2: // Left
                 foreach (GameObject ball in balls) {
-                    ball.GetComponent<Rigidbody2D>().AddForce(20 * Vector2.left);
+                    ball.GetComponent<Rigidbody2D>().AddForce(15 * Vector2.left);
                 }
                 break;
             case 3: // Right
                 foreach (GameObject ball in balls) {
-                    ball.GetComponent<Rigidbody2D>().AddForce(20 * Vector2.right);
+                    ball.GetComponent<Rigidbody2D>().AddForce(15 * Vector2.right);
                 }
                 break;
         }

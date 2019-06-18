@@ -24,12 +24,12 @@ public class PhonographButton1 : MonoBehaviour {
     // Sprite 바꾸기
 
     private void OnTriggerEnter2D(Collider2D collider) {
-        if (isReady) {
-            if (collider.tag == "PlayerBullet") {
+        if (collider.tag == "PlayerBullet") {
+            if (isReady) {
                 StartCoroutine(IsReady());
                 GetComponentInParent<Phonograph1>().Change();
-                Destroy(collider);
             }
+            Destroy(collider);
         }
     }
 

@@ -518,7 +518,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -1.58, y: -3.33}
@@ -559,7 +559,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puzzleBall: {fileID: 4301548767625198739, guid: fba73c5404d66274db69888a393c7b44,
     type: 3}
-  locationOffset: {x: 0, y: 0, z: 0}
+  locationOffset: {x: 1.54, y: -1.1, z: 0}
 --- !u!1 &4167835571978164270
 GameObject:
   m_ObjectHideFlags: 0
@@ -679,6 +679,36 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &4809397233999543334
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3679840038025116242}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3679840038025116242
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4809397233999543334}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.54, y: -3.34, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3733784756526979420}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6654171987048271566
 GameObject:
   m_ObjectHideFlags: 0
@@ -728,14 +758,13 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: -0.01}
   m_EdgeRadius: 0.1
   m_Points:
-  - {x: -1.44, y: -3.56}
-  - {x: -1.1, y: -3.2}
+  - {x: -1.44, y: -3.6}
+  - {x: -1.04, y: -3.2}
   - {x: 1.46, y: -3.2}
   - {x: 1.46, y: 2.44}
   - {x: -1.46, y: 2.44}
-  - {x: -1.46, y: -2.84}
-  - {x: -1.8, y: -3.2}
-  - {x: -1.8, y: -3.2}
+  - {x: -1.4600004, y: -2.78}
+  - {x: -1.86, y: -3.18}
 --- !u!68 &2818758813744597278
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -938,6 +967,7 @@ Transform:
   - {fileID: 819456322476733284}
   - {fileID: 551439607238600364}
   - {fileID: 1638805390111403283}
+  - {fileID: 3679840038025116242}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

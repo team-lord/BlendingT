@@ -24,6 +24,7 @@ public class Phonograph1 : MonoBehaviour
     }
 
     public void Change() {
+
         if(currentNumber < 3) {
             currentNumber++;
         } else {
