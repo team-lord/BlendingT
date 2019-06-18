@@ -15,6 +15,8 @@ public class PatternB1 : MonoBehaviour
 
     private bool patternStart;
 
+    public int debugPattern;
+
     public GameObject[] patternMakers = new GameObject[8];
     public GameObject[] forgedPatternMakers = new GameObject[8];
 
@@ -62,7 +64,7 @@ public class PatternB1 : MonoBehaviour
             Instantiate(patternMakers[_number], transform.position, transform.rotation);
         }
         */
-        Instantiate(patternMakers[0], transform.position, transform.rotation);
+        Instantiate(patternMakers[debugPattern], transform.position, transform.rotation);
 
     }
 
