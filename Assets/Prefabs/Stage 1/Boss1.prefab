@@ -168,6 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patternDelay: 6
+  debugPattern: 2
   patternMakers:
   - {fileID: 4697248865810734466, guid: 40fe96c192c789e4d844568655a60ccd, type: 3}
   - {fileID: 6691130526585087248, guid: 5032877057d730140a95a3f3335ecccf, type: 3}

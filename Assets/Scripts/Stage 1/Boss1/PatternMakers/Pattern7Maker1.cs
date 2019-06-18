@@ -13,16 +13,19 @@ public class Pattern7Maker1 : MonoBehaviour {
     public float delay;
 
     private bool isReady;
+    
 
     // Start is called before the first frame update
     void Start() {
         player = GameObject.Find("Player");
         boss = GameObject.Find("Boss");
 
+
         time = 0;
         isReady = true;
 
         transform.position = player.transform.position;
+        
 
         // 7번 패턴임을 알려주는 효과음
     }

@@ -11,11 +11,14 @@ public class SurpriseBox : MonoBehaviour
     public float delay;
     private float time;
 
+    Animator animator;
+
+
     // Start is called before the first frame update
     void Start()
     {
         time = 0;
-
+        animator = GetComponent<Animator>();
         // TODO - 등장 애니메이션 시작
     }
 
@@ -25,6 +28,7 @@ public class SurpriseBox : MonoBehaviour
 
         if (time > delay) {
             time = 0;
+            animator.SetTrigger("attack");
             for (int i = 0; i < 6; i++) {
                 Fire(60 * i);
             }

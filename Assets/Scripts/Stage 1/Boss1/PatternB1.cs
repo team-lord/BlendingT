@@ -15,6 +15,8 @@ public class PatternB1 : MonoBehaviour
 
     private bool patternStart;
 
+    public int debugPattern;
+
     public GameObject[] patternMakers = new GameObject[8];
     public GameObject[] forgedPatternMakers = new GameObject[8];
 
