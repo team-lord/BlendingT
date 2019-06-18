@@ -7,15 +7,14 @@ public class Dolls1 : MonoBehaviour
     public Collider2D[] colliders = new Collider2D[4];
 
     private int currentDoll;
-    private int targetDoll;
 
     Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
 
         currentDoll = 3;
-        targetDoll = 3;
 
         animator = GetComponent<Animator>();
 
