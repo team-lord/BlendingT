@@ -11,6 +11,7 @@ TagManager:
   - PlayerBulletHoney
   - PuzzleBall
   - Wall
+  - EnemyBeeB
   layers:
   - Default
   - TransparentFX

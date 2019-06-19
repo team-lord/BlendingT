@@ -22,11 +22,15 @@ public class Honey2 : MonoBehaviour
         if(collision.tag == "Player") {
             boss.GetComponent<FireBeeAB2>().Fire();
 
+            /*
             GameObject[] _beeBs = GameObject.FindGameObjectsWithTag("EnemyBeeB");
-            foreach(GameObject _beeB in _beeBs) {
-                _beeB.GetComponent<BulletBeeB2>().Turn();
+            Debug.Log(_beeBs.Length);
+            
+            for(int i=0; i<_beeBs.Length; i++) {
+                _beeBs[i].GetComponent<BulletBeeB2>().Turn();
             }
-
+            */
+            
             Destroy(gameObject);
             // 플레이어 꿀 맞은 스프라이트
         }

@@ -76,4 +76,8 @@ public class PlankMachine1 : MonoBehaviour
         yield return new WaitForSeconds(delay);
         isReady = true;
     }
+
+    public int CurrentPlank() {
+        return currentPlank;
+    }
 }

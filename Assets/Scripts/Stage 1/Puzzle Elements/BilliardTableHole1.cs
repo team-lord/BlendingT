@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class BilliardTableHole1 : MonoBehaviour
 {
-    public GameObject puzzleBall;
-
-    public GameObject exitHole;
+    private GameObject puzzleBall;
 
     private bool isReady;
 
     // Start is called before the first frame update
     void Start()
     {
+        puzzleBall = GameObject.Find("2ndPuzzleBall");
         isReady = true;
     }
 
@@ -27,7 +26,7 @@ public class BilliardTableHole1 : MonoBehaviour
             if (collision.tag == "PuzzleBall") {
                 isReady = false;
                 Destroy(collision.gameObject);
-                Instantiate(puzzleBall, transform.position + exitHole.transform.localPosition, Quaternion.identity);
+                puzzleBall.GetComponent<Rigidbody2D>().gravityScale = 1;
             }
         }
     }

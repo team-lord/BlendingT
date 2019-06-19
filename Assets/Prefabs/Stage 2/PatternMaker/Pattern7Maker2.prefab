@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4850480381285084225}
+  - component: {fileID: 7753757401466857073}
   - component: {fileID: -5007668048012196739}
   m_Layer: 0
   m_Name: Pattern7Maker2
@@ -31,6 +32,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7753757401466857073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4850480381285084224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f37e6eea2b96369459727a15572a1a26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &-5007668048012196739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47,4 +60,4 @@ MonoBehaviour:
     type: 3}
   beeBBullets: {fileID: 155747722636719367, guid: f5e041880778edb499b7cf2c37cfbc5f,
     type: 3}
-  range: 25
+  range: 20

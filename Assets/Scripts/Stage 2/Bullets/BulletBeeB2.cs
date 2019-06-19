@@ -15,10 +15,11 @@ public class BulletBeeB2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+            
     }
 
     public void Turn() {
+        Debug.Log("Turn");
         Vector3 _newDirection = (player.transform.position + RandomVector() - transform.position).normalized;
 
         transform.rotation = Quaternion.Euler(Vector3.zero);
@@ -31,3 +32,4 @@ public class BulletBeeB2 : MonoBehaviour
         return new Vector3(_x, _y);
     }
 }
+;

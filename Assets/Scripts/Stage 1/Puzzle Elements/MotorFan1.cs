@@ -26,7 +26,6 @@ public class MotorFan1 : MonoBehaviour
 
     public void Change() {
         isMotorFanOn = !isMotorFanOn;
-        // animator에서 isMotorFanOn을 받아가세요
         animator.SetTrigger("change");
     }
 
@@ -34,6 +33,9 @@ public class MotorFan1 : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         animator.SetTrigger("change");
+    }
 
+    public bool IsMotorFanOn() {
+        return isMotorFanOn;
     }
 }

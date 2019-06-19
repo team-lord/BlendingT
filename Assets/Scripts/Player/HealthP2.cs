@@ -12,15 +12,11 @@ public class HealthP2 : MonoBehaviour {
     public float invincibleTime;
     private bool isInvincible;
 
-    private GameObject audienceManager;
-
     // Start is called before the first frame update
     void Start() {
         health = maxHealth;
 
         isInvincible = false;
-
-        audienceManager = GameObject.Find("AudienceManager");
     }
 
     // Update is called once per frame
@@ -31,7 +27,6 @@ public class HealthP2 : MonoBehaviour {
     public void Hit() {
         if (!isInvincible) {
             health--;
-            audienceManager.GetComponent<AudienceManager>().PlayerHit();
             CheckAlive();
 
             StartCoroutine(IsInvincible());

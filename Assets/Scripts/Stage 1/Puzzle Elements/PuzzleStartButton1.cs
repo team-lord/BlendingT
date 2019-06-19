@@ -32,7 +32,7 @@ public class PuzzleStartButton1 : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.tag == "PlayerMelee") {
             GetComponent<SpriteRenderer>().sprite = buttonOn;
-            puzzleBall.GetComponent<PuzzleBallMove1>().Direction(Vector3.right);
+            puzzleBall.GetComponent<Rigidbody2D>().AddForce(100 * Vector2.right);
         }
     }
 }

@@ -17,7 +17,7 @@ public class DBPlayer2 : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.tag == "Player") {
-            player.GetComponent<HealthP1>().Hit();
+            player.GetComponent<HealthP2>().Hit();
             StartCoroutine(Destroy());
         }
     }

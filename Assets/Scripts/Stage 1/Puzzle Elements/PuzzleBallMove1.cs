@@ -3,41 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PuzzleBallMove1 : MonoBehaviour {
-    private Vector3 direction;
-    public float moveSpeed;
+
+    private Vector3 localPosition;
 
     private GameObject audienceManager;
-
     private GameObject billiardTable;
     private GameObject phonograph;
     private GameObject motorFan;
 
     // Start is called before the first frame update
     void Start() {
-        direction = Vector3.zero;
-
+        localPosition = transform.localPosition;
+        
         audienceManager = GameObject.Find("AudienceManager");
         billiardTable = GameObject.Find("BilliardTable");
         phonograph = GameObject.Find("Phonograph");
-        motorFan = GameObject.Find("motorFan");
+        motorFan = GameObject.Find("MotorFan");
     }
 
     // Update is called once per frame
     void Update() {
-        Move();
-    }
 
-    void Move() {
-        transform.Translate(direction * moveSpeed * Time.deltaTime);
-    }
-
-    public void Direction(Vector3 _direction) {
-        direction = _direction;
-        direction.Normalize();
-    }
-
-    public void SpeedIncrease(float _float) {
-        moveSpeed += _float;
     }
 
     void PuzzleComplete() {
@@ -46,5 +32,16 @@ public class PuzzleBallMove1 : MonoBehaviour {
     
     public void Initialize() {
         billiardTable.GetComponent<BilliardTable1>().Initialize();
+        transform.localPosition = localPosition;
+    }
+
+    public void PuzzleFail() {
+        // 반짝거리는 애니메이션 시작
+        StartCoroutine(WaitPuzzleFail());
+    }
+
+    IEnumerator WaitPuzzleFail() {
+        yield return new WaitForSeconds(1f);
+        Initialize();
     }
 }
