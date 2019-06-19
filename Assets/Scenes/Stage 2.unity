@@ -378,6 +378,11 @@ PrefabInstance:
       propertyPath: debugPattern
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3397415982242047855, guid: 2eabab2a25314f64bb18ccb22141b941,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2eabab2a25314f64bb18ccb22141b941, type: 3}
 --- !u!1001 &400394961
