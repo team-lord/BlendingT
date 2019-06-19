@@ -8,6 +8,7 @@ public class PatternB2 : MonoBehaviour
     private int currentPattern; // 중복 방지
 
     public float patternDelay;
+    public int debugPattern;
 
     private bool patternStart;
 
@@ -17,6 +18,7 @@ public class PatternB2 : MonoBehaviour
     private int[] patternArray;
 
     private bool patternPhase;
+
 
     // Start is called before the first frame update
     void Start() {
@@ -43,7 +45,7 @@ public class PatternB2 : MonoBehaviour
     }
 
     void Pattern() {
-        int _number;
+        /*int _number;
 
         do {
             _number = Random.Range(0, patternArray.Length);
@@ -54,7 +56,8 @@ public class PatternB2 : MonoBehaviour
 
         GetComponent<MakeBeeB2>().MakeBee();
         Instantiate(patternMakers[currentPattern], transform.position, transform.rotation);
-        
+        */
+        Instantiate(patternMakers[debugPattern], transform.position, transform.rotation);
     }
 
     public void PatternEnd() { // patternMaker가 이 함수를 호출
