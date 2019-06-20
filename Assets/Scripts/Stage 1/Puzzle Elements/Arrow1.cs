@@ -32,7 +32,6 @@ public class Arrow1 : MonoBehaviour
 
     public void TurnOn() {
         StartCoroutine(Sprite());
-        billiardTable.GetComponent<BilliardTable1>().MoveGravity(index);
     }
 
     IEnumerator Sprite() {

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PuzzleBallMove1 : MonoBehaviour {
 
-    private Vector3 localPosition;
+    private GameObject[] puzzleBall = new GameObject [2];
+    private Vector3[] localPosition = new Vector3 [2];
 
     private GameObject puzzleButton;
     private GameObject audienceManager;
@@ -14,9 +15,14 @@ public class PuzzleBallMove1 : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-        localPosition = transform.localPosition;
 
-        puzzleButton = GameObject.Find("puzzleButton");
+        puzzleBall[0] = GameObject.Find("PuzzleBall");
+        puzzleBall[1] = GameObject.Find("2ndPuzzleBall");
+
+        localPosition[0] = puzzleBall[0].transform.localPosition;
+        localPosition[1] = puzzleBall[1].transform.localPosition;
+
+        puzzleButton = GameObject.Find("PuzzleButton");
         audienceManager = GameObject.Find("AudienceManager");
         billiardTable = GameObject.Find("BilliardTable");
         phonograph = GameObject.Find("Phonograph");
@@ -35,7 +41,12 @@ public class PuzzleBallMove1 : MonoBehaviour {
     public void Initialize() {
         billiardTable.GetComponent<BilliardTable1>().Initialize();
         puzzleButton.GetComponent<PuzzleStartButton1>().Initialize();
-        transform.localPosition = localPosition;
+        for(int i=0; i<2; i++) {
+            puzzleBall[i].transform.localPosition = localPosition[i];
+            puzzleBall[i].transform.rotation = Quaternion.identity;
+            puzzleBall[i].GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+            puzzleBall[i].GetComponent<Rigidbody2D>().angularVelocity = 0;
+        }        
     }
 
     public void PuzzleFail() {

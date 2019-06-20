@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Arrows1 : MonoBehaviour
 {
+    private GameObject billiardTable;
+
     public GameObject[] arrowUp = new GameObject[2];
     public GameObject[] arrowDown = new GameObject[2];
     public GameObject[] arrowLeft = new GameObject[2];
@@ -12,7 +14,7 @@ public class Arrows1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        billiardTable = GameObject.Find("BilliardTable");
     }
 
     // Update is called once per frame
@@ -47,7 +49,6 @@ public class Arrows1 : MonoBehaviour
                 Debug.Log("Error");
                 break;
         }
-
-        
+        billiardTable.GetComponent<BilliardTable1>().MoveGravity(index);
     }
 }

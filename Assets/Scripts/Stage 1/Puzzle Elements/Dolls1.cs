@@ -44,4 +44,5 @@ public class Dolls1 : MonoBehaviour
 
         colliders[currentDoll].enabled = true;
     }
+
 }

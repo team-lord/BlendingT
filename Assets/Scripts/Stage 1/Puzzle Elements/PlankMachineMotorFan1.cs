@@ -46,7 +46,7 @@ public class PlankMachineMotorFan1 : MonoBehaviour
                     puzzleBall.GetComponent<Rigidbody2D>().AddForce(150 * Vector3.left);
                     break;
                 case 2:
-                    puzzleBall.GetComponent<Rigidbody2D>().AddForce(300 * Vector3.left);
+                    puzzleBall.GetComponent<Rigidbody2D>().AddForce(360 * Vector3.left);
                     break;
                 default:
                     Debug.Log("Error");
