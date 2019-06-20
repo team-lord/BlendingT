@@ -44,8 +44,7 @@ public class Pattern3Maker1 : MonoBehaviour
         if (count % 2 == 0) {
             Instantiate(bullet3, transform.position, Quaternion.FromToRotation(Vector3.up, _direction));
         } else {
-            bullet3Follow.GetComponent<Bullet3FollowMove1>().Direction(_direction);
-            Instantiate(bullet3Follow, transform.position, transform.rotation);
+            Instantiate(bullet3Follow, transform.position, Quaternion.FromToRotation(Vector3.up, _direction));
         }
        
     }

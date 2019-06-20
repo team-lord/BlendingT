@@ -22,7 +22,7 @@ public class Special0Honey2 : MonoBehaviour
         if(collision.tag == "PlayerBullet") {
             Instantiate(playerBulletHoney, collision.transform.position, collision.transform.rotation);
             Destroy(gameObject);
-            Destroy(collision);
+            Destroy(collision.gameObject);
         }
     }
 }
