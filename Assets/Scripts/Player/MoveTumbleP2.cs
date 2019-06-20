@@ -25,7 +25,7 @@ public class MoveTumbleP2 : MonoBehaviour {
     void Update() {
         if (Input.GetKeyDown(KeyCode.Space)) {
             if (canTumble) {
-                if (h != 0 && v != 0) {
+                if (h != 0 || v != 0) {
                     StartTumble();
                 }
             }

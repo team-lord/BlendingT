@@ -30,7 +30,8 @@ public class Lever1 : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if(collision.tag == "PlayerMelee") {
+        if(collision.tag == "PlayerBullet") { // if(collision.tag == "PlayerMelee") {
+            Debug.Log("Collide " + number);
             if (isReal) {
                 if (isReady) {
                     StartCoroutine(IsReady());
@@ -38,8 +39,8 @@ public class Lever1 : MonoBehaviour
                     GameObject.Find("Bulb").GetComponent<Bulb1>().IsReady();
                 }
             } else {
+                Debug.Log("change");
                 GetComponent<SpriteRenderer>().flipX = !GetComponent<SpriteRenderer>().flipX;
-                GetComponentInParent<Levers1>().Change(number);
             }
         }
     }

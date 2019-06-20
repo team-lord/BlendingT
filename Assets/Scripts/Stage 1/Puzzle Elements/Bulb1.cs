@@ -28,10 +28,10 @@ public class Bulb1 : MonoBehaviour
             isReady = false;
             if (isBulbOn) {
                 // TODO - 전구가 꺼지는 애니메이션 시작
-                animator.SetTrigger("Change");
+                animator.SetTrigger("change");
             } else {
                 // TODO - 전구가 켜지는 애니메이션 시작
-                animator.SetTrigger("Change");
+                animator.SetTrigger("change");
             }
             sunflower.GetComponent<Sunflower1>().IsReady();
             isBulbOn = !isBulbOn;

@@ -6,6 +6,8 @@ public class PuzzleStartButton1 : MonoBehaviour
 {
     private GameObject puzzleBall;
 
+    private bool isReady;
+
     private GameObject player;
     private GameObject boss;
 
@@ -16,6 +18,8 @@ public class PuzzleStartButton1 : MonoBehaviour
     void Start()
     {
         puzzleBall = GameObject.Find("PuzzleBall");
+
+        isReady = true;
 
         player = GameObject.Find("Player");
         boss = GameObject.Find("Boss");
@@ -30,9 +34,17 @@ public class PuzzleStartButton1 : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.tag == "PlayerMelee") {
-            GetComponent<SpriteRenderer>().sprite = buttonOn;
-            puzzleBall.GetComponent<Rigidbody2D>().AddForce(100 * Vector2.right);
-        }
+        if (isReady) {
+            if (collision.tag == "PlayerBullet") { //if (collision.tag == "PlayerMelee") {
+                isReady = false;
+                GetComponent<SpriteRenderer>().sprite = buttonOn;
+                puzzleBall.GetComponent<Rigidbody2D>().AddForce(200 * Vector2.right);
+            }
+        }        
+    }
+
+    public void Initialize() {
+        isReady = true;
+        GetComponent<SpriteRenderer>().sprite = buttonOff;
     }
 }

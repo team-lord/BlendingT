@@ -6,6 +6,7 @@ public class PuzzleBallMove1 : MonoBehaviour {
 
     private Vector3 localPosition;
 
+    private GameObject puzzleButton;
     private GameObject audienceManager;
     private GameObject billiardTable;
     private GameObject phonograph;
@@ -14,7 +15,8 @@ public class PuzzleBallMove1 : MonoBehaviour {
     // Start is called before the first frame update
     void Start() {
         localPosition = transform.localPosition;
-        
+
+        puzzleButton = GameObject.Find("puzzleButton");
         audienceManager = GameObject.Find("AudienceManager");
         billiardTable = GameObject.Find("BilliardTable");
         phonograph = GameObject.Find("Phonograph");
@@ -32,6 +34,7 @@ public class PuzzleBallMove1 : MonoBehaviour {
     
     public void Initialize() {
         billiardTable.GetComponent<BilliardTable1>().Initialize();
+        puzzleButton.GetComponent<PuzzleStartButton1>().Initialize();
         transform.localPosition = localPosition;
     }
 

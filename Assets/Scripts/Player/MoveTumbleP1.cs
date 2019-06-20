@@ -36,13 +36,11 @@ public class MoveTumbleP1 : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space)) {
             if (canTumble) {
-                if (h != 0 && v != 0) {
+                if (h != 0 || v != 0) {
                     StartTumble();
                 }
             }            
-        }
-
-        
+        }        
     }
 
     void FixedUpdate() {
