@@ -11,7 +11,7 @@ public class PatternBeautifulCheck1 : MonoBehaviour
     {
         audienceManager = GameObject.Find("AudienceManager");
 
-        audienceManager.GetComponent<AudienceManager>().PatternStart();
+        audienceManager.GetComponent<AudienceManager1>().PatternStart();
     }
 
     // Update is called once per frame

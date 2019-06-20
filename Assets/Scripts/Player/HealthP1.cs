@@ -31,7 +31,7 @@ public class HealthP1 : MonoBehaviour {
     public void Hit() {
         if (!isInvincible) {
             health--;
-            audienceManager.GetComponent<AudienceManager>().PlayerHit();
+            audienceManager.GetComponent<AudienceManager1>().PlayerHit();
             CheckAlive();
 
             StartCoroutine(IsInvincible());

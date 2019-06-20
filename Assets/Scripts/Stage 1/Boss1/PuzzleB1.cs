@@ -35,7 +35,7 @@ public class PuzzleB1 : MonoBehaviour
             time += Time.deltaTime;
             if(time > deductionDelay) {
                 time = 0;
-                audienceManager.GetComponent<AudienceManager>().PuzzlePhase();
+                audienceManager.GetComponent<AudienceManager1>().PuzzlePhase();
             }
         }
     }

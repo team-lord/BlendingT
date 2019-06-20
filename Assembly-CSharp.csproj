@@ -79,8 +79,9 @@
     <Compile Include="Assets\Scripts\Player\HealthP2.cs" />
     <Compile Include="Assets\Scripts\Player\MoveTumbleP1.cs" />
     <Compile Include="Assets\Scripts\Player\MoveTumbleP2.cs" />
-    <Compile Include="Assets\Scripts\Stage 1\AudienceGraph.cs" />
-    <Compile Include="Assets\Scripts\Stage 1\AudienceManager.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\Audience1.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\AudienceGraph1.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\AudienceManager1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Boss1\HealthB1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Boss1\MoveFireB1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Boss1\PatternB1.cs" />
@@ -103,6 +104,7 @@
     <Compile Include="Assets\Scripts\Stage 1\Bullets\Bullet6StickMove1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Bullets\Bullet7Move1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Bullets\PuzzleFail1Move.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\Curtain1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Laser.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Puzzle Elements\Arrow1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Puzzle Elements\Arrows1.cs" />

@@ -35,7 +35,7 @@ public class PuzzleBallMove1 : MonoBehaviour {
     }
 
     void PuzzleComplete() {
-        audienceManager.GetComponent<AudienceManager>().PuzzleComplete();
+        audienceManager.GetComponent<AudienceManager1>().PuzzleComplete();
     }
     
     public void Initialize() {

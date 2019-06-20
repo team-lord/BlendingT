@@ -56,7 +56,7 @@ public class MoveTumbleP1 : MonoBehaviour
         StartCoroutine(IsTumbling());
 
         // AudienceManager에게 굴렀다는 신호 보내기
-        audienceManager.GetComponent<AudienceManager>().Tumble();
+        audienceManager.GetComponent<AudienceManager1>().Tumble();
         
         if (isPattern4) {
             GameObject[] bullet4s = GameObject.FindGameObjectsWithTag("Bullet41");

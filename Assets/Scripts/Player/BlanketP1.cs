@@ -23,7 +23,7 @@ public class BlanketP1 : MonoBehaviour
         if (Input.GetMouseButton(1)) { // 우클릭
             if (canBlanket) {
                 UseBlanket();
-                audienceManager.GetComponent<AudienceManager>().Blanket();
+                audienceManager.GetComponent<AudienceManager1>().Blanket();
             }
         }
     }

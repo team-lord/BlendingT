@@ -29,7 +29,7 @@ public class PuzzleBlanket1 : MonoBehaviour
             // Destroy(collision.gameObject);
             // 이후 PuzzleBall Destroy.
 
-            GameObject.Find("AudienceManager").GetComponent<AudienceManager>().PuzzleComplete();
+            GameObject.Find("AudienceManager").GetComponent<AudienceManager1>().PuzzleComplete();
 
             GameObject.Find("Boss").GetComponent<PhaseB1>().Phase2();
 

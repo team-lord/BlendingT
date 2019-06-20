@@ -31,7 +31,7 @@ public class Wall1 : MonoBehaviour
         if (isReady) {
             if (collision.tag == "Player") {
                 StartCoroutine(IsReady());
-                audienceManager.GetComponent<AudienceManager>().WallHit();
+                audienceManager.GetComponent<AudienceManager1>().WallHit();
                 player.transform.Translate(3 * normalVector); // 밀쳐내기
             }
         }        

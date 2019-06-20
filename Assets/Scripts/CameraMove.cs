@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraMove : MonoBehaviour {
 
-    public float cameraZQ;
+    public float cameraZ;
     private GameObject player;
 
     // Start is called before the first frame update
@@ -14,6 +14,6 @@ public class CameraMove : MonoBehaviour {
 
     // Update is called once per frame
     void LateUpdate() { // LateUpdate 한번 써봤음
-        Camera.main.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, cameraZQ);
+        Camera.main.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, cameraZ);
     }
 }
