@@ -57,5 +57,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet0: {fileID: 1305693011559715936, guid: d28dc32df05bcd14882138ebb593ed16, type: 3}
-  repetition: 0
-  delay: 0
+  repetition: 3
+  delay: 1
