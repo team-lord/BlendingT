@@ -41,7 +41,7 @@ public class AudienceManager1 : MonoBehaviour
         player = GameObject.Find("Player");
         boss = GameObject.Find("Boss");
 
-        audience = GameObject.Find("audience");
+        audience = GameObject.Find("Audience");
 
         audienceGraph = GameObject.Find("AudienceGraph");
 

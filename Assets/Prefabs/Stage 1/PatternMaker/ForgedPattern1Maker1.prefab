@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9075500542235233518}
-  - component: {fileID: -5845851192372294403}
+  - component: {fileID: 1501958346648773265}
   - component: {fileID: -1685693429284319914}
   m_Layer: 0
   m_Name: ForgedPattern1Maker1
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-5845851192372294403
+--- !u!114 &1501958346648773265
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,7 +41,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4419252495558132050}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f37e6eea2b96369459727a15572a1a26, type: 3}
+  m_Script: {fileID: 11500000, guid: 691b227dfbe90194a880d47556a40ea1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &-1685693429284319914
