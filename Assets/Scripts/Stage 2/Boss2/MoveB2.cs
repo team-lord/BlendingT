@@ -20,7 +20,7 @@ public class MoveB2 : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-        isMove = false;
+        isMove = true;
 
         player = GameObject.Find("Player");
 

@@ -210,8 +210,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1909e35b92c448443a64343e75cd6314, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0
-  changeDirectionDelay: 0
+  moveSpeed: 3
+  changeDirectionDelay: 1
 --- !u!114 &7824404991978632012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patternDelay: 5
-  debugPattern: 2
+  debugPattern: 0
   patternMakers:
   - {fileID: 9033847356539146507, guid: c62e50400e7dad54cbfd3d60507e9936, type: 3}
   - {fileID: 136905690142497512, guid: 7d0b1fde8cbc49e4d80c48f04a5da994, type: 3}

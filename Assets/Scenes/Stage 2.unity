@@ -286,7 +286,7 @@ PrefabInstance:
     - target: {fileID: 7824404991978632012, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
       propertyPath: debugPattern
-      value: 7
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7824404991978632012, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
@@ -307,6 +307,16 @@ PrefabInstance:
     - target: {fileID: 1168176110234124655, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1168176110234124655, guid: 2eabab2a25314f64bb18ccb22141b941,
+        type: 3}
+      propertyPath: delay
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1970104549925559450, guid: 2eabab2a25314f64bb18ccb22141b941,
+        type: 3}
+      propertyPath: phaseMaxHealths.Array.data[0]
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
