@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 8112515240116702555}
   - component: {fileID: 6885606351687896950}
   - component: {fileID: 3450498237897783235}
+  - component: {fileID: 8895421325374382826}
   m_Layer: 0
-  m_Name: BeeB2
+  m_Name: TrashmobHoney
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,6 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbf8068a4b8bb1e49bf1412e588bcb1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  phaseDelay: 0
   bullet: {fileID: 6136551738744359377, guid: 8ad3550179d23da4ba5aa7a5fbabce67, type: 3}
   phase0Delay: 0
   phase1Delay: 0
@@ -114,3 +116,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &8895421325374382826
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8762629037833819937}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 42b410479b5bbd04498a4dc54b2680d8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -195,8 +195,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d97b8bed4e582243bfa1d6303601256, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  beeA: {fileID: 5666408957358147321, guid: d20ec62f4ae02f943b2d8ad8d932beaa, type: 3}
-  beeB: {fileID: 8762629037833819937, guid: fcf92e897aa47564bbb28758205fb937, type: 3}
+  trashmobNormal: {fileID: 5666408957358147321, guid: d20ec62f4ae02f943b2d8ad8d932beaa,
+    type: 3}
+  trashmobHoney: {fileID: 8762629037833819937, guid: fcf92e897aa47564bbb28758205fb937,
+    type: 3}
   probability: 0
 --- !u!114 &1615748284076872091
 MonoBehaviour:
