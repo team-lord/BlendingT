@@ -120,7 +120,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4235409278765724236}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   honeyBullet: {fileID: 6136551738744359377, guid: 8ad3550179d23da4ba5aa7a5fbabce67,
     type: 3}
-  delay: 0
+  delay: 1
 --- !u!114 &5969921058991468797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 147e0dbf5506b4e499c0e9e2548a2afa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phaseMaxHealths: 00000000000000000000000000000000000000000000000000000000
+  phaseMaxHealths: 02000000020000000200000002000000020000000200000002000000
 --- !u!114 &8443668096482587045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,7 +197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   beeA: {fileID: 5666408957358147321, guid: d20ec62f4ae02f943b2d8ad8d932beaa, type: 3}
   beeB: {fileID: 8762629037833819937, guid: fcf92e897aa47564bbb28758205fb937, type: 3}
-  probability: 0
+  probability: 0.2
 --- !u!114 &1615748284076872091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,8 +210,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1909e35b92c448443a64343e75cd6314, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0
-  changeDirectionDelay: 0
+  moveSpeed: 3
+  changeDirectionDelay: 1
 --- !u!114 &7824404991978632012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patternDelay: 5
-  debugPattern: 2
+  debugPattern: 1
   patternMakers:
   - {fileID: 9033847356539146507, guid: c62e50400e7dad54cbfd3d60507e9936, type: 3}
   - {fileID: 136905690142497512, guid: 7d0b1fde8cbc49e4d80c48f04a5da994, type: 3}

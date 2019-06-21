@@ -286,12 +286,17 @@ PrefabInstance:
     - target: {fileID: 7824404991978632012, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
       propertyPath: debugPattern
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7824404991978632012, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7824404991978632012, guid: 2eabab2a25314f64bb18ccb22141b941,
+        type: 3}
+      propertyPath: patternDelay
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3397415982242047855, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
@@ -304,10 +309,30 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -1638321742997542311, guid: e308c89e00f42e049b312ebf694bed96,
         type: 3}
+    - target: {fileID: 3397415982242047855, guid: 2eabab2a25314f64bb18ccb22141b941,
+        type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1168176110234124655, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1615748284076872091, guid: 2eabab2a25314f64bb18ccb22141b941,
+        type: 3}
+      propertyPath: changeDirectionDelay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1615748284076872091, guid: 2eabab2a25314f64bb18ccb22141b941,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1587857003630832383, guid: 2eabab2a25314f64bb18ccb22141b941,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2eabab2a25314f64bb18ccb22141b941, type: 3}
