@@ -60,7 +60,7 @@ public class Pattern8Maker2 : MonoBehaviour
             boss.GetComponent<SweepB2>().Sweep();
             isSweep = true;
         } else if (maximumRange < _length) {
-            boss.GetComponent<FlyB2>().Fly();
+            boss.GetComponent<JumpB2>().Jump();
             isSweep = false;
         } else {
             CheckForceDestroy();

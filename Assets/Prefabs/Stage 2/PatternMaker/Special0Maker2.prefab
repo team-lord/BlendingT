@@ -45,6 +45,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bee: {fileID: 6772576837044684264, guid: de07a1d66b414054b95b9a130eeb27be, type: 3}
   fallDelay: 0
-  timeLimit: 0
+  timeLimit: 60
   special0FailBullets: {fileID: 1718667202295222301, guid: 2a5931ed4ab8157448a307c7110f24f0,
     type: 3}

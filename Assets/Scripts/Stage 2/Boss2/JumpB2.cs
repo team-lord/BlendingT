@@ -2,16 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FlyB2 : MonoBehaviour
+public class JumpB2 : MonoBehaviour
 {
     // 애니메이션 전용
 
-    private bool isFly;
+    private bool isJump;
+
+    Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
-        isFly = false;
+        isJump = false;
     }
 
     // Update is called once per frame
@@ -20,16 +22,20 @@ public class FlyB2 : MonoBehaviour
         
     }
 
-    public void Fly() {
-        isFly = true;
+    public void Jump() {
+        isJump = true;
         // TODO - 날기
+
+        animator.SetTrigger("jump");
     }
 
     public void Fall() {
-        if (!isFly) {
-            Debug.Log("Boss is not flying");
+        if (!isJump) {
             return;
         }
+        transform.position = Vector3.zero;
+
         // TODO - 떨어지기
+        animator.SetTrigger("fall");
     }
 }
