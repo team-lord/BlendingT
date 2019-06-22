@@ -22,6 +22,8 @@ public class MoveTumbleP1 : MonoBehaviour
 
     private GameObject audienceManager;
 
+    Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +31,7 @@ public class MoveTumbleP1 : MonoBehaviour
         canTumble = true;
         isTumbling = false;
         audienceManager = GameObject.Find("AudienceManager");
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -38,6 +41,7 @@ public class MoveTumbleP1 : MonoBehaviour
             if (canTumble) {
                 if (h != 0 || v != 0) {
                     StartTumble();
+                    animator.SetTrigger("startTumble");
                 }
             }            
         }        
@@ -111,8 +115,21 @@ public class MoveTumbleP1 : MonoBehaviour
         } else {
             v = 0;
         }
+        animator.SetFloat("currentMoveDirectionX", h);
+        animator.SetFloat("currentMoveDirectionY", v);
 
         Correction();
+
+        if (h == 0 && v == 0)
+        {
+            animator.SetBool("isMove", false);
+        }
+        else
+        {
+            animator.SetBool("isMove", true);
+            animator.SetFloat("lastMoveDirectionX", h);
+            animator.SetFloat("lastMoveDirectionY", v);
+        }
 
         transform.Translate(h * Vector3.right * moveSpeed * Time.deltaTime, Space.World);
         transform.Translate(v * Vector3.up * moveSpeed * Time.deltaTime, Space.World);

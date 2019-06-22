@@ -28,7 +28,7 @@ public class MoveTumbleP2 : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Space)) {
             if (canTumble) {
                 if (h != 0 || v != 0) {
-                    animator.SetTrigger("startRoll");
+                    animator.SetTrigger("startTumble");
                     StartTumble();
                 }
             }
