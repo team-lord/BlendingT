@@ -23,8 +23,7 @@ public class MoveTumbleP1 : MonoBehaviour
 
     Animator animator;
 
-    GameObject cursor;
-    Vector3 cursorDirection;
+    private GameObject cursor;
 
     // Start is called before the first frame update
     void Start()
@@ -147,8 +146,8 @@ public class MoveTumbleP1 : MonoBehaviour
 
     void SetCursorDirection()
     {
-        cursorDirection = (cursor.transform.position - transform.position).normalized;
-        animator.SetFloat("cursorDirectionX", cursorDirection.x);
-        animator.SetFloat("cursorDirectionY", cursorDirection.y);
+        Vector2 _direction = (cursor.transform.position - transform.position).normalized;
+        animator.SetFloat("cursorDirectionX", _direction.x);
+        animator.SetFloat("cursorDirectionY", _direction.y);
     }
 }

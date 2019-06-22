@@ -77,6 +77,7 @@
     <Compile Include="Assets\Scripts\Player\BlanketP2.cs" />
     <Compile Include="Assets\Scripts\Player\HealthP1.cs" />
     <Compile Include="Assets\Scripts\Player\HealthP2.cs" />
+    <Compile Include="Assets\Scripts\Player\MeleeAttackP.cs" />
     <Compile Include="Assets\Scripts\Player\MoveTumbleP1.cs" />
     <Compile Include="Assets\Scripts\Player\MoveTumbleP2.cs" />
     <Compile Include="Assets\Scripts\Player\PushBAudienceP1.cs" />

@@ -17,6 +17,8 @@ public class Special0Bee2 : MonoBehaviour
     public GameObject honey;
 
     public GameObject bullet;
+    
+    // Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +31,9 @@ public class Special0Bee2 : MonoBehaviour
 
         player = GameObject.Find("Player");
 
+        // animator = GetComponent<Animator>();
+
+        // 계속 날개를 움직이는(Loop) 상태가 Default State
     }
 
     // Update is called once per frame
