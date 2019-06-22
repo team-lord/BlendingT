@@ -12,6 +12,7 @@ TagManager:
   - PuzzleBall
   - Wall
   - EnemyBeeB
+  - Blanket
   layers:
   - Default
   - TransparentFX

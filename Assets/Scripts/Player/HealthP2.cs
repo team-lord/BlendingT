@@ -27,10 +27,16 @@ public class HealthP2 : MonoBehaviour {
     public void Hit() {
         if (!isInvincible) {
             health--;
+            ChangeHeart();
+            
             CheckAlive();
 
             StartCoroutine(IsInvincible());
         }
+    }
+
+    void ChangeHeart() {
+        // TODO - UI의 하트와 연결       
     }
 
     void CheckAlive() {

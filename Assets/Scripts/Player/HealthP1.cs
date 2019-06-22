@@ -32,10 +32,16 @@ public class HealthP1 : MonoBehaviour {
         if (!isInvincible) {
             health--;
             audienceManager.GetComponent<AudienceManager1>().PlayerHit();
+            ChangeHeart();
+
             CheckAlive();
 
             StartCoroutine(IsInvincible());
         }
+    }
+
+    void ChangeHeart() {
+        // TODO - UI의 하트와 연결       
     }
 
     void CheckAlive() {
