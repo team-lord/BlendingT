@@ -16,11 +16,9 @@ public class MoveTumbleP2 : MonoBehaviour {
     public float tumbleDelay;
     private bool isTumbling;
 
-    Animator animator;
-
     // Start is called before the first frame update
     void Start() {
-        animator = GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -28,7 +26,6 @@ public class MoveTumbleP2 : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Space)) {
             if (canTumble) {
                 if (h != 0 || v != 0) {
-                    animator.SetTrigger("startRoll");
                     StartTumble();
                 }
             }
@@ -82,21 +79,8 @@ public class MoveTumbleP2 : MonoBehaviour {
         } else {
             v = 0;
         }
-        animator.SetFloat("currentMoveDirectionX", h);
-        animator.SetFloat("currentMoveDirectionY", v);
 
         Correction();
-        
-        if( h==0 && v==0 )
-        {
-            animator.SetBool("isMove", false);
-        }
-        else
-        {
-            animator.SetBool("isMove", true);
-            animator.SetFloat("lastMoveDirectionX", h);
-            animator.SetFloat("lastMoveDirectionY", v);
-        }
 
         transform.Translate(h * Vector3.right * moveSpeed * Time.deltaTime, Space.World);
         transform.Translate(v * Vector3.up * moveSpeed * Time.deltaTime, Space.World);

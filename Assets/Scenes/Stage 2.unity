@@ -218,10 +218,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4235409278765724236, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
       propertyPath: m_Name
@@ -338,15 +334,15 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1587857003630832383, guid: 2eabab2a25314f64bb18ccb22141b941,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1970104549925559450, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
       propertyPath: phaseMaxHealths.Array.data[0]
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1970104549925559450, guid: 2eabab2a25314f64bb18ccb22141b941,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8443668096482587045, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
@@ -364,41 +360,6 @@ PrefabInstance:
         type: 3}
       propertyPath: probability
       value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8443668096482587045, guid: 2eabab2a25314f64bb18ccb22141b941,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5072788503666927563, guid: 2eabab2a25314f64bb18ccb22141b941,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5969921058991468797, guid: 2eabab2a25314f64bb18ccb22141b941,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 712006566693851933, guid: 2eabab2a25314f64bb18ccb22141b941,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8622415816455705514, guid: 2eabab2a25314f64bb18ccb22141b941,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3890790402877634227, guid: 2eabab2a25314f64bb18ccb22141b941,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3890790402877634227, guid: 2eabab2a25314f64bb18ccb22141b941,
-        type: 3}
-      propertyPath: m_UpdateMode
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2eabab2a25314f64bb18ccb22141b941, type: 3}

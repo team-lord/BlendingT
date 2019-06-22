@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 7824404991978632012}
   - component: {fileID: 712006566693851933}
   - component: {fileID: 8622415816455705514}
-  - component: {fileID: 3890790402877634227}
+  - component: {fileID: 1587857003630832383}
   m_Layer: 0
   m_Name: Boss2
   m_TagString: Untagged
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b21a4f882b390a94c8b346c1a8658d44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patternDelay: 10
+  patternDelay: 5
   debugPattern: 1
   patternMakers:
   - {fileID: 9033847356539146507, guid: c62e50400e7dad54cbfd3d60507e9936, type: 3}
@@ -276,7 +276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05189af9f29e05b4c935f48c97f5421d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &3890790402877634227
+--- !u!95 &1587857003630832383
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
