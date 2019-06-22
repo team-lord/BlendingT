@@ -10,15 +10,11 @@ public class Bullet4Move1 : MonoBehaviour
     public float rotateDelay;
 
     private bool isRotate;
-    private bool isClockwise;
-
     private float time;
 
     // Start is called before the first frame update
     void Start()
     {
-        isClockwise = true;
-
         isRotate = false;
 
         time = 0;
@@ -47,16 +43,6 @@ public class Bullet4Move1 : MonoBehaviour
     }
 
     void Rotate() {
-        if (isClockwise) {
-            transform.Translate(Vector3.right * angleVelocity * Time.deltaTime, Space.Self);
-        } else {
-            transform.Translate(Vector3.left * angleVelocity * Time.deltaTime, Space.Self);
-        }
-    }
-
-    public void IsClockWise() {
-        isClockwise = !isClockwise;
-
-        // 무언가 바뀌었다는 효과음
+        transform.Translate(Vector3.right * angleVelocity * Time.deltaTime, Space.Self);
     }
 }

@@ -46,4 +46,8 @@ public class HealthP2 : MonoBehaviour {
         yield return new WaitForSeconds(invincibleTime);
         isInvincible = false;
     }
+
+    public void IsInvincible(bool _bool) {
+        isInvincible = _bool;
+    }
 }

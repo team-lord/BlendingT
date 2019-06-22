@@ -24,9 +24,7 @@ public class Pattern4Maker1 : MonoBehaviour
 
         player = GameObject.Find("Player");
         boss = GameObject.Find("Boss");
-
-        player.GetComponent<MoveTumbleP1>().Pattern4Start(patternTime);
-
+        
         time = 0;
     }
 

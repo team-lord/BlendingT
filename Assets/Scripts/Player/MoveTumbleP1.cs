@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MoveTumbleP1 : MonoBehaviour
 {
+    private bool canMoveTumble;
+
     // 이동
     public float moveSpeed;
 
@@ -17,9 +19,6 @@ public class MoveTumbleP1 : MonoBehaviour
     public float tumbleDelay;
     private bool isTumbling;
 
-    // 패턴 4
-    private bool isPattern4;
-
     private GameObject audienceManager;
 
     Animator animator;
@@ -27,59 +26,60 @@ public class MoveTumbleP1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        isPattern4 = false;
+        canMoveTumble = true;
+
         canTumble = true;
         isTumbling = false;
         audienceManager = GameObject.Find("AudienceManager");
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9f236c6c2684fecc76f4d7636be47c5f4eac047e
         animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
+<<<<<<< HEAD
         if (Input.GetKeyDown(KeyCode.Space)) {
             if (canTumble) {
                 if (h != 0 || v != 0) {
                     StartTumble();
                     animator.SetTrigger("startTumble");
+=======
+        if (canMoveTumble) {
+            if (Input.GetKeyDown(KeyCode.Space)) {
+                if (canTumble) {
+                    if (h != 0 || v != 0) {
+                        StartTumble();
+                    }
+>>>>>>> 9f236c6c2684fecc76f4d7636be47c5f4eac047e
                 }
-            }            
-        }        
+            }
+        }              
     }
 
     void FixedUpdate() {
-        if (isTumbling) {
-            Tumble();
-        } else {
-            Move();
-        }
+        if (canMoveTumble) {
+            if (isTumbling) {
+                Tumble();
+            } else {
+                Move();
+            }
+        }        
+    }
+
+    public void CanMoveTumble(bool _bool) {
+        canMoveTumble = _bool;
     }
 
     void StartTumble() {
         StartCoroutine(CanTumble());
         StartCoroutine(IsTumbling());
-
-        // AudienceManager에게 굴렀다는 신호 보내기
+        
         audienceManager.GetComponent<AudienceManager1>().Tumble();
         
-        if (isPattern4) {
-            GameObject[] bullet4s = GameObject.FindGameObjectsWithTag("Bullet41");
-            if(bullet4s != null) {
-                foreach(GameObject bullet4 in bullet4s) {
-                    bullet4.GetComponent<Bullet4Move1>().IsClockWise();
-                }
-            }
-        }
-    }
-
-    public void Pattern4Start(float time) {
-        StartCoroutine(IsPattern4(time));
-    }
-
-    IEnumerator IsPattern4(float time) {
-        isPattern4 = true;
-        yield return new WaitForSeconds(time);
-        isPattern4 = false;
     }
 
     IEnumerator CanTumble() {
@@ -90,8 +90,12 @@ public class MoveTumbleP1 : MonoBehaviour
 
     IEnumerator IsTumbling() {
         isTumbling = true;
+        GetComponent<AttackFireP1>().CanAttackFire(false);
+        GetComponent<HealthP1>().IsInvincible(true);
         yield return new WaitForSeconds(tumbleTime);
         isTumbling = false;
+        GetComponent<AttackFireP1>().CanAttackFire(true);
+        GetComponent<HealthP1>().IsInvincible(false);
     }
 
     void Tumble() {
