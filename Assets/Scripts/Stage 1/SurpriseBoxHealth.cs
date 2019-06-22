@@ -31,7 +31,7 @@ public class SurpriseBoxHealth : MonoBehaviour
         if (isVulnerable) {
             if (collision.tag == "PlayerBullet") {
                 health--;
-                Destroy(collision);
+                Destroy(collision.gameObject);
 
                 CheckAlive();
             } else if (collision.tag == "PlayerMelee") {
@@ -44,11 +44,12 @@ public class SurpriseBoxHealth : MonoBehaviour
     }
 
     void CheckAlive() {
-        if(health <= 0) {
+        if (health <= 0) {
             Explode();
             Destroy(gameObject);
+        } else {
+            Instantiate(shield, transform.position, transform.rotation);
         }
-        Instantiate(shield, transform.position, transform.rotation);
         StartCoroutine(IsVulnerable());
     }
 

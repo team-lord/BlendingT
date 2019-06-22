@@ -79,7 +79,9 @@
     <Compile Include="Assets\Scripts\Player\HealthP2.cs" />
     <Compile Include="Assets\Scripts\Player\MoveTumbleP1.cs" />
     <Compile Include="Assets\Scripts\Player\MoveTumbleP2.cs" />
+    <Compile Include="Assets\Scripts\Player\PushBAudienceP1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Audience1.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\AudienceBulletMove1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\AudienceGraph1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\AudienceManager1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Boss1\HealthB1.cs" />

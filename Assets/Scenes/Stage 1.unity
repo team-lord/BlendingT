@@ -1292,11 +1292,35 @@ PrefabInstance:
       propertyPath: normalVector.x
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 505440990913474087, guid: bec35230094f7c147ae523d16f786edd,
+        type: 3}
+      propertyPath: audienceBullet
+      value: 
+      objectReference: {fileID: 3634051992245543457, guid: fcd265119b7bde844b57f0dc5d116025,
+        type: 3}
     - target: {fileID: 505440991179366189, guid: bec35230094f7c147ae523d16f786edd,
         type: 3}
       propertyPath: normalVector.x
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 505440991179366189, guid: bec35230094f7c147ae523d16f786edd,
+        type: 3}
+      propertyPath: audienceBullet
+      value: 
+      objectReference: {fileID: 3634051992245543457, guid: fcd265119b7bde844b57f0dc5d116025,
+        type: 3}
+    - target: {fileID: 505440991759128266, guid: bec35230094f7c147ae523d16f786edd,
+        type: 3}
+      propertyPath: audienceBullet
+      value: 
+      objectReference: {fileID: 3634051992245543457, guid: fcd265119b7bde844b57f0dc5d116025,
+        type: 3}
+    - target: {fileID: 505440991815283889, guid: bec35230094f7c147ae523d16f786edd,
+        type: 3}
+      propertyPath: audienceBullet
+      value: 
+      objectReference: {fileID: 3634051992245543457, guid: fcd265119b7bde844b57f0dc5d116025,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bec35230094f7c147ae523d16f786edd, type: 3}
 --- !u!1001 &632562990148507565
@@ -1425,6 +1449,21 @@ PrefabInstance:
         type: 3}
       propertyPath: attackTime
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6746503237710295253, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: tumbleTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6746503237710295253, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: pushedTime
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6746503237710295253, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: pushedSpeed
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5a4ce52038e1be4c8dbccabd42ff661, type: 3}
@@ -1824,7 +1863,7 @@ PrefabInstance:
     - target: {fileID: 2417884461210072600, guid: dd70ce451ff8a35439816dd1ea4f6f0a,
         type: 3}
       propertyPath: debugPattern
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3307093643530316898, guid: dd70ce451ff8a35439816dd1ea4f6f0a,
         type: 3}

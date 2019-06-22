@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Wall1 : MonoBehaviour
@@ -11,6 +10,8 @@ public class Wall1 : MonoBehaviour
     public float pushDelay;
 
     public Vector3 normalVector;
+
+    public GameObject audienceBullet;
 
     // Start is called before the first frame update
     void Start()
@@ -32,7 +33,8 @@ public class Wall1 : MonoBehaviour
             if (collision.tag == "Player") {
                 StartCoroutine(IsReady());
                 audienceManager.GetComponent<AudienceManager1>().WallHit();
-                player.transform.Translate(3 * normalVector); // 밀쳐내기
+                Instantiate(audienceBullet, player.transform.position - 1.5f * normalVector, Quaternion.FromToRotation(Vector3.up, normalVector));
+                player.GetComponent<PushBAudienceP1>().PushStart(normalVector);
             }
         }        
     }

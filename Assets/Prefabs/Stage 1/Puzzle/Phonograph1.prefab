@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3246538745720757403}
   - component: {fileID: 8172126022787382770}
   - component: {fileID: 1511529226458217407}
+  - component: {fileID: 1649489006772042064}
   m_Layer: 0
   m_Name: Phonograph1
   m_TagString: Untagged
@@ -123,6 +124,27 @@ EdgeCollider2D:
   - {x: 0.86, y: -0.18}
   - {x: 0.86, y: -0.7}
   - {x: 0.58, y: -0.98}
+--- !u!50 &1649489006772042064
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59844963129013750}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &4111350104668733193
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,7 +157,6 @@ GameObject:
   - component: {fileID: 3176386457414929179}
   - component: {fileID: 4436214637801247584}
   - component: {fileID: 4694433001266869123}
-  - component: {fileID: 1532166524520627243}
   m_Layer: 0
   m_Name: Phonograph Button
   m_TagString: Untagged
@@ -247,24 +268,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.32}
   m_EdgeRadius: 0
---- !u!50 &1532166524520627243
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4111350104668733193}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
