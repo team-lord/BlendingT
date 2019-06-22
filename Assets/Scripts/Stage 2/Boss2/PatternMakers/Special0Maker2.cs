@@ -24,7 +24,7 @@ public class Special0Maker2 : MonoBehaviour
         isReady = false;
         time = 0;
 
-        boss.GetComponent<FlyB2>().Fly();
+        boss.GetComponent<JumpB2>().Jump();
     }
 
     // Update is called once per frame
@@ -35,7 +35,7 @@ public class Special0Maker2 : MonoBehaviour
         if (!isReady) {
             if (time > fallDelay) {
                 boss.transform.position = Vector3.zero;
-                boss.GetComponent<FlyB2>().Fall();
+                boss.GetComponent<JumpB2>().Fall();
                 
                 isReady = true;
             }
