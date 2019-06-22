@@ -23,6 +23,9 @@ public class MoveTumbleP1 : MonoBehaviour
 
     Animator animator;
 
+    GameObject cursor;
+    Vector3 cursorDirection;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,33 +34,26 @@ public class MoveTumbleP1 : MonoBehaviour
         canTumble = true;
         isTumbling = false;
         audienceManager = GameObject.Find("AudienceManager");
-<<<<<<< HEAD
-=======
-
->>>>>>> 9f236c6c2684fecc76f4d7636be47c5f4eac047e
         animator = GetComponent<Animator>();
+
+        cursor = GameObject.Find("Cursor");
     }
 
     // Update is called once per frame
     void Update()
-    {
-<<<<<<< HEAD
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            if (canTumble) {
-                if (h != 0 || v != 0) {
-                    StartTumble();
-                    animator.SetTrigger("startTumble");
-=======
+    { 
         if (canMoveTumble) {
             if (Input.GetKeyDown(KeyCode.Space)) {
                 if (canTumble) {
                     if (h != 0 || v != 0) {
                         StartTumble();
+                    animator.SetTrigger("startTumble");
+
                     }
->>>>>>> 9f236c6c2684fecc76f4d7636be47c5f4eac047e
                 }
             }
-        }              
+        }
+        SetCursorDirection();
     }
 
     void FixedUpdate() {
@@ -119,8 +115,7 @@ public class MoveTumbleP1 : MonoBehaviour
         } else {
             v = 0;
         }
-        animator.SetFloat("currentMoveDirectionX", h);
-        animator.SetFloat("currentMoveDirectionY", v);
+        
 
         Correction();
 
@@ -148,5 +143,12 @@ public class MoveTumbleP1 : MonoBehaviour
 
     public Vector3 MoveDirection() { // 플레이어의 이동을 예측하는 패턴에서 호출
         return new Vector3(h, v, 0);
+    }
+
+    void SetCursorDirection()
+    {
+        cursorDirection = (cursor.transform.position - transform.position).normalized;
+        animator.SetFloat("cursorDirectionX", cursorDirection.x);
+        animator.SetFloat("cursorDirectionY", cursorDirection.y);
     }
 }

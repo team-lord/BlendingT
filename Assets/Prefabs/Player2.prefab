@@ -137,7 +137,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggleDelay: 1
-  sword: {fileID: 0}
+  meleeAttack: {fileID: 0}
+  attackTime: 0
   attackDelay: 0
   bullet: {fileID: 1383276255159794600, guid: 0eddcc8fe29fc5e4b8b4e8c756d138bf, type: 3}
   fireDelay: 0.2
@@ -181,9 +182,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  tumbleTime: 1
-  tumbleSpeed: 8
-  tumbleDelay: 0.5
+  tumbleTime: 0.7
+  tumbleSpeed: 5
+  tumbleDelay: 0.3
 --- !u!95 &6817982065807789045
 Animator:
   serializedVersion: 3
