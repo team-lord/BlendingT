@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  tumbleTime: 0.7
+  tumbleTime: 0.25
   tumbleSpeed: 5
   tumbleDelay: 0.3
 --- !u!95 &6817982065807789045
