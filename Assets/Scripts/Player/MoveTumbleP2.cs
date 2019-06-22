@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MoveTumbleP2 : MonoBehaviour {
+
+    private bool canMoveTumble;
+
     // 이동
     public float moveSpeed;
 
@@ -20,28 +23,40 @@ public class MoveTumbleP2 : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
+        canMoveTumble = true;
+
+        canTumble = true;
+        isTumbling = false;
+
         animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update() {
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            if (canTumble) {
-                if (h != 0 || v != 0) {
-                    animator.SetTrigger("startRoll");
-                    StartTumble();
+        if (canMoveTumble) {
+            if (Input.GetKeyDown(KeyCode.Space)) {
+                if (canTumble) {
+                    if (h != 0 || v != 0) {
+                        animator.SetTrigger("startRoll");
+                        StartTumble();
+                    }
                 }
             }
-        }
-        
+        }     
     }
 
     void FixedUpdate() {
-        if (isTumbling) {
-            Tumble();
-        } else {
-            Move();
+        if (canMoveTumble) {
+            if (isTumbling) {
+                Tumble();
+            } else {
+                Move();
+            }
         }
+    }
+
+    public void CanMoveTumble(bool _bool) {
+        canMoveTumble = _bool;
     }
 
     void StartTumble() {
@@ -57,8 +72,12 @@ public class MoveTumbleP2 : MonoBehaviour {
 
     IEnumerator IsTumbling() {
         isTumbling = true;
+        GetComponent<AttackFireP2>().CanAttackFire(false);
+        GetComponent<HealthP2>().IsInvincible(true);
         yield return new WaitForSeconds(tumbleTime);
         isTumbling = false;
+        GetComponent<HealthP2>().IsInvincible(false);
+        GetComponent<AttackFireP2>().CanAttackFire(true);
     }
 
     void Tumble() {

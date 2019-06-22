@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class AttackFireP1 : MonoBehaviour {
 
+    private bool canAttackFire;
+
     public float toggleDelay;
     private bool canToggle;
     private bool isMelee;
 
     // 근접 공격
-    public GameObject sword;
+    public GameObject meleeAttack;
+    public float attackTime;
     public float attackDelay;
     private bool canAttack;
 
@@ -22,6 +25,8 @@ public class AttackFireP1 : MonoBehaviour {
     // Start is called before the first frame update
     void Start()
     {
+        canAttackFire = true;
+
         canToggle = true;
         isMelee = false;
 
@@ -34,25 +39,31 @@ public class AttackFireP1 : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift)) {
-            if (canToggle) {
-                StartCoroutine(CanToggle());
-                isMelee = !isMelee;
-            }            
-        }
-
-        if (Input.GetMouseButton(0)) {
-            if (isMelee) {
-                if (canAttack) {
-                    Attack();
-                }
-            } else {
-                if (canFire) {
-                    Fire();
+        if (canAttackFire) {
+            if (Input.GetKeyDown(KeyCode.LeftShift)) {
+                if (canToggle) {
+                    StartCoroutine(CanToggle());
+                    isMelee = !isMelee;
                 }
             }
-            
-        }
+
+            if (Input.GetMouseButton(0)) {
+                if (isMelee) {
+                    if (canAttack) {
+                        StartAttack();
+                    }
+                } else {
+                    if (canFire) {
+                        Fire();
+                    }
+                }
+
+            }
+        }              
+    }
+
+    public void CanAttackFire(bool _bool) {
+        canAttackFire = _bool;
     }
 
     IEnumerator CanToggle() {
@@ -61,16 +72,23 @@ public class AttackFireP1 : MonoBehaviour {
         canToggle = true;
     }
 
-    void Attack() {
+    void StartAttack() {
         StartCoroutine(CanAttack());
-        // TODO - 근접 공격
-        Debug.Log("Attack");
+        StartCoroutine(IsAttacking());
+
+        // TODO - 애니메이션에서 방향 정하고 처리
     }
 
     IEnumerator CanAttack() {
         canAttack = false;
-        yield return new WaitForSeconds(attackDelay);
+        yield return new WaitForSeconds(attackTime + attackDelay);
         canAttack = true;
+    }
+
+    IEnumerator IsAttacking() {
+        GetComponent<MoveTumbleP1>().CanMoveTumble(false);
+        yield return new WaitForSeconds(attackTime);
+        GetComponent<MoveTumbleP1>().CanMoveTumble(true);
     }
 
     void Fire() {
