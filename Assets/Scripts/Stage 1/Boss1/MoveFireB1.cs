@@ -70,8 +70,13 @@ public class MoveFireB1 : MonoBehaviour {
 
     void Fire() {
         StartCoroutine(CanFire());
+        
+        float _range = Random.Range(0, 1f);
+        int _degree = Random.Range(0, 360);
+        Vector3 _randomVector = _range * new Vector3(Mathf.Cos(_degree * Mathf.Deg2Rad), Mathf.Sin(_degree * Mathf.Deg2Rad), 0);
 
-        Vector3 _direction = (player.transform.position - transform.position).normalized;
+        Vector3 _direction = (player.transform.position + _randomVector - transform.position).normalized;
+        
         Instantiate(bullet, transform.position, Quaternion.FromToRotation(Vector3.up, _direction));
     }
 

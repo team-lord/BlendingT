@@ -130,6 +130,7 @@
     <Compile Include="Assets\Scripts\Stage 1\Puzzle Elements\PuzzleBlanket1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Puzzle Elements\PuzzleStartButton1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Puzzle Elements\Sunflower1.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\Smoke1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\SurpriseBox.cs" />
     <Compile Include="Assets\Scripts\Stage 1\SurpriseBoxHealth.cs" />
     <Compile Include="Assets\Scripts\Stage 1\SurpriseBoxShield.cs" />
