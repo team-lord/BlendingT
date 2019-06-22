@@ -57,5 +57,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet2: {fileID: 8463984705783618367, guid: 23bd24cc634476348ac886c5d57a845f, type: 3}
-  delay: 0
-  fallDelay: 0
+  delay: 1
+  fallDelay: 1

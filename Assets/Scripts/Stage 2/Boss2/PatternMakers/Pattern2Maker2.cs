@@ -29,10 +29,11 @@ public class Pattern2Maker2 : MonoBehaviour
 
         boss.GetComponent<MoveB2>().IsMove(false);
         // 보스가 뛰어오르는 애니메이션
+        boss.GetComponent<JumpB2>().Jump();
     }
 
     void CheckCase() {
-        if (GameObject.FindGameObjectsWithTag("EnemyBulletMine") != null) {
+        if (GameObject.FindGameObjectsWithTag("EnemyBulletMine").Length != 0) {
             CheckForceDestroy();
         }
     }
@@ -49,14 +50,16 @@ public class Pattern2Maker2 : MonoBehaviour
 
         if (!isReady) {
             if (time > delay) {
-                boss.transform.position = Vector3.zero;
                 // 보스가 떨어지는 애니메이션
+                boss.GetComponent<JumpB2>().Fall(Vector3.zero);
                 isReady = true;
                 time = 0;
             }
         } else {
-            if(time > fallDelay) {
-                for (int i = 0; i < 6; i++) {
+            if (time > fallDelay)
+            {
+                for (int i = 0; i < 6; i++)
+                {
                     Fire(60 * i);
                 }
                 CheckDestroy();
@@ -65,7 +68,7 @@ public class Pattern2Maker2 : MonoBehaviour
     }
 
     void Fire(int degree) {
-        Instantiate(bullet2, transform.position, Quaternion.FromToRotation(Vector3.up, new Vector3(0, 0, degree)));
+        Instantiate(bullet2, transform.position, Quaternion.Euler(new Vector3(0, 0, degree)));
     }
 
     void CheckDestroy() {

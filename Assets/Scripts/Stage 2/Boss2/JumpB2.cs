@@ -10,10 +10,14 @@ public class JumpB2 : MonoBehaviour
 
     Animator animator;
 
+    GameObject boss;
+
     // Start is called before the first frame update
     void Start()
     {
         isJump = false;
+        boss = GameObject.Find("Boss");
+        animator = boss.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -25,17 +29,24 @@ public class JumpB2 : MonoBehaviour
     public void Jump() {
         isJump = true;
         // TODO - 날기
+        GetComponent<MoveB2>().IsMove(false);
 
-        animator.SetTrigger("jump");
+        GetComponent<CircleCollider2D>().enabled = false;
+
+        animator.SetTrigger("jumpOn");
     }
 
-    public void Fall() {
+    public void Fall(Vector3 _vector3) {
         if (!isJump) {
             return;
         }
-        transform.position = Vector3.zero;
+        transform.position = _vector3;
 
         // TODO - 떨어지기
-        animator.SetTrigger("fall");
+        GetComponent<MoveB2>().IsMove(true);
+
+        GetComponent<CircleCollider2D>().enabled = true;
+
+        animator.SetTrigger("fallOn");
     }
 }

@@ -34,8 +34,7 @@ public class Special0Maker2 : MonoBehaviour
 
         if (!isReady) {
             if (time > fallDelay) {
-                boss.transform.position = Vector3.zero;
-                boss.GetComponent<JumpB2>().Fall();
+                boss.GetComponent<JumpB2>().Fall(new Vector3(0, 15, 0));
                 
                 isReady = true;
             }
