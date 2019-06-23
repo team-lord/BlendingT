@@ -177,7 +177,32 @@
     <Compile Include="Assets\Scripts\Stage 2\Tower\Tower2.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Tower\Towers2.cs" />
     <Reference Include="Unity.Timeline.Editor">
+<<<<<<< HEAD
       <HintPath>C:/Users/User/Desktop/BlendingT/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+=======
+<<<<<<< HEAD
+      <HintPath>C:/Users/뭐시커/Desktop/BlendingT/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro.Editor">
+      <HintPath>C:/Users/뭐시커/Desktop/BlendingT/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.PackageManagerUI.Editor">
+      <HintPath>C:/Users/뭐시커/Desktop/BlendingT/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline">
+      <HintPath>C:/Users/뭐시커/Desktop/BlendingT/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.CollabProxy.Editor">
+      <HintPath>C:/Users/뭐시커/Desktop/BlendingT/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>C:/Users/뭐시커/Desktop/BlendingT/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.DataPrivacy">
+      <HintPath>C:/Users/뭐시커/Desktop/BlendingT/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+=======
+      <HintPath>C:/Users/이재상/Desktop/BlendingT/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+>>>>>>> 2a40452d9a024ecd2e52e0ac64929ad1caf88364
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/User/Desktop/BlendingT/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -195,7 +220,12 @@
       <HintPath>C:/Users/User/Desktop/BlendingT/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
+<<<<<<< HEAD
       <HintPath>C:/Users/User/Desktop/BlendingT/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+=======
+      <HintPath>C:/Users/이재상/Desktop/BlendingT/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+>>>>>>> 059931332d93e1e8f8ce9e21620dc46a3c94d47d
+>>>>>>> 2a40452d9a024ecd2e52e0ac64929ad1caf88364
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.4f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -381,13 +411,31 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.4f1/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
+<<<<<<< HEAD
       <HintPath>C:/Users/User/Desktop/BlendingT/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
+=======
+<<<<<<< HEAD
+      <HintPath>C:/Users/뭐시커/Desktop/BlendingT/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.StandardEvents">
+      <HintPath>C:/Users/뭐시커/Desktop/BlendingT/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.Tracker">
+      <HintPath>C:/Users/뭐시커/Desktop/BlendingT/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+=======
+      <HintPath>C:/Users/이재상/Desktop/BlendingT/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
+>>>>>>> 2a40452d9a024ecd2e52e0ac64929ad1caf88364
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
       <HintPath>C:/Users/User/Desktop/BlendingT/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
+<<<<<<< HEAD
       <HintPath>C:/Users/User/Desktop/BlendingT/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+=======
+      <HintPath>C:/Users/이재상/Desktop/BlendingT/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+>>>>>>> 059931332d93e1e8f8ce9e21620dc46a3c94d47d
+>>>>>>> 2a40452d9a024ecd2e52e0ac64929ad1caf88364
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.4f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
