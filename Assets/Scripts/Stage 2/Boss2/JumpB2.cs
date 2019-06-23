@@ -33,20 +33,32 @@ public class JumpB2 : MonoBehaviour
 
         GetComponent<CircleCollider2D>().enabled = false;
 
-        animator.SetTrigger("jumpOn");
+        animator.SetTrigger("jump");
     }
 
     public void Fall(Vector3 _vector3) {
         if (!isJump) {
             return;
         }
+        isJump = false;
         transform.position = _vector3;
-
-        // TODO - 떨어지기
+        
         GetComponent<MoveB2>().IsMove(true);
 
         GetComponent<CircleCollider2D>().enabled = true;
 
-        animator.SetTrigger("fallOn");
+        animator.SetTrigger("fall");
+    }
+
+    public void Special0Fall(Vector3 _vector3) {
+        if (!isJump) {
+            return;
+        }
+        isJump = false;
+        transform.position = _vector3;
+        
+        GetComponent<CircleCollider2D>().enabled = true;
+
+        animator.SetTrigger("fall");
     }
 }

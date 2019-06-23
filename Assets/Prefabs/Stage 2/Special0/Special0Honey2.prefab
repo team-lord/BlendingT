@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7388084391725325820}
   - component: {fileID: 679575723455065224}
   - component: {fileID: 361893893497299005}
+  - component: {fileID: 934498082095169028}
   m_Layer: 0
   m_Name: Special0Honey2
   m_TagString: Untagged
@@ -95,3 +96,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerBulletHoney: {fileID: 1993636027721273507, guid: 788604a2f5d860f408984c97eb1f18b0,
     type: 3}
+--- !u!95 &934498082095169028
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8955485329338799511}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 598e7975998176e4dab00d3dc2c37479, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -7,11 +7,12 @@ public class PhaseB2 : MonoBehaviour
     public GameObject special0Maker;
     public GameObject special1Maker;
 
+    Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -38,7 +39,6 @@ public class PhaseB2 : MonoBehaviour
         GetComponent<PatternB2>().PatternPhase(true);
         GetComponent<MoveB2>().IsMove(true);
         GetComponent<HealthB2>().Phase(3);
-
 
         GetComponent<PatternB2>().PatternForge(0);
         GetComponent<PatternB2>().PatternForge(1);

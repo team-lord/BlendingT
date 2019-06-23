@@ -5,16 +5,20 @@ using UnityEngine;
 public class PushBAudienceP1 : MonoBehaviour
 {
     private bool isPushed;
-    public float pushedTime;
+    public float pushedTime; // CHECK - Tumble Reverse 재생시간
     public float pushedSpeed;
 
     private Vector3 normalVector;
+
+    Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         isPushed = false;
         normalVector = Vector3.zero;
+
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -31,6 +35,10 @@ public class PushBAudienceP1 : MonoBehaviour
 
     public void PushStart(Vector3 _Vector3) {
         normalVector = _Vector3;
+        animator.SetFloat("normalVectorX", normalVector.x);
+        animator.SetFloat("normalVectorY", normalVector.y);
+
+        animator.SetTrigger("pushed");
         StartCoroutine(IsPushed());
     }
 

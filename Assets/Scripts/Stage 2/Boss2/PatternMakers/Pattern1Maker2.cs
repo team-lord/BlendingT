@@ -24,7 +24,7 @@ public class Pattern1Maker2 : MonoBehaviour
         boss = GameObject.Find("Boss");
 
         animator = boss.GetComponent<Animator>();
-        animator.SetBool("spinOn",true);
+        animator.SetBool("spin",true);
         
     }
 
@@ -53,7 +53,7 @@ public class Pattern1Maker2 : MonoBehaviour
         if (count >= repetition) {
             boss.GetComponent<PatternB2>().PatternEnd();
             Destroy(gameObject);
-            animator.SetBool("spinOn", false);
+            animator.SetBool("spin", false);
         }
     }
 }

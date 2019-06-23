@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 7244437279394999853}
   - component: {fileID: 8189994324542669569}
   - component: {fileID: 5051830909977644345}
+  - component: {fileID: 5210659362725121319}
+  - component: {fileID: 1862606150641590031}
   - component: {fileID: 8046564004183565013}
   - component: {fileID: 8379298648846184298}
   m_Layer: 0
@@ -95,6 +97,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.02
+--- !u!114 &5210659362725121319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718667202295222301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bfbe0ebd6d593c488770adbda34a9af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+--- !u!114 &1862606150641590031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718667202295222301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3d0b6440d7ff824798bd188c58dbf01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!58 &8046564004183565013
 CircleCollider2D:
   m_ObjectHideFlags: 0

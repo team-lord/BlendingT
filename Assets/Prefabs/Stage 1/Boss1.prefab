@@ -137,8 +137,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad95649c35142ca4988f023a40d24e93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phase0MaxHealth: 0
-  phase2MaxHealth: 0
+  phase0MaxHealth: 5
+  phase2MaxHealth: 5
 --- !u!114 &3229234143458249133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,6 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bc70ac17b2778c4ab597272ad72c253, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  smoke: {fileID: 2369796550686099658, guid: 484d0ba8fcd0ad040b5f14a7601f55cc, type: 3}
 --- !u!114 &3307093643530316898
 MonoBehaviour:
   m_ObjectHideFlags: 0

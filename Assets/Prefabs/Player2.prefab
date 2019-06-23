@@ -137,7 +137,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggleDelay: 1
-  meleeAttack: {fileID: 0}
+  meleeAttack: {fileID: 8941066939643958364, guid: 41576f0db8cdbd445a2751c9e5ded6be,
+    type: 3}
   attackTime: 0
   attackDelay: 0
   bullet: {fileID: 1383276255159794600, guid: 0eddcc8fe29fc5e4b8b4e8c756d138bf, type: 3}
@@ -181,9 +182,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f431ee5f037c59c49b0374f824727a4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 6
   tumbleTime: 0.25
-  tumbleSpeed: 5
+  tumbleSpeed: 6
   tumbleDelay: 0.3
 --- !u!95 &6817982065807789045
 Animator:
@@ -195,7 +196,7 @@ Animator:
   m_GameObject: {fileID: 3028074478769885715}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d33d285a9c8cd66408dc0b688fff800b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 656d406bbe7b956409538060b45320fd, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

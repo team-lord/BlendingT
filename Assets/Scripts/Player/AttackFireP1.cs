@@ -76,7 +76,7 @@ public class AttackFireP1 : MonoBehaviour {
         StartCoroutine(CanAttack());
         StartCoroutine(IsAttacking());
 
-        // TODO - 애니메이션에서 방향 정하고 처리
+        Instantiate(meleeAttack, transform.position, Quaternion.identity);
     }
 
     IEnumerator CanAttack() {
