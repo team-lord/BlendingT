@@ -81,7 +81,7 @@ public class HealthB2 : MonoBehaviour {
             // TODO - 이벤트 씬. 피격시 사망. 시간이 흐를시 자비.
         }
 
-        Destroy(collision);
+        Destroy(collision.gameObject);
     }
 
     void CheckAlive() {
@@ -99,7 +99,7 @@ public class HealthB2 : MonoBehaviour {
             animator.SetFloat("phase2Health", phaseHealths[2]);
             if (phaseHealths[2] <= 0) {
                 phaseHealths[2] = 0;
-                Destroy(GameObject.Find("Special0Maker2"));
+                GameObject.Find("Special0Maker2").GetComponent<Special0Maker2>().FireSpecialBullet(true);
                 StartCoroutine(Phase2Mes());
             }
         } else if (phase == 3) {
@@ -127,10 +127,10 @@ public class HealthB2 : MonoBehaviour {
 
     IEnumerator Phase2Mes() {
         isReady = false;
-        // animator.setTrigger("mes");
+        animator.SetTrigger("mes");
         yield return new WaitForSeconds(phase2MesTime);
         isReady = true;
-        // animator.setTrigger("idle");
+        animator.SetTrigger("idle");
         GetComponent<PhaseB2>().Phase3();
     }
 

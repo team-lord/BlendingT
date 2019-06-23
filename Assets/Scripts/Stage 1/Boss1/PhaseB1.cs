@@ -33,6 +33,8 @@ public class PhaseB1 : MonoBehaviour
     }
 
     public void Phase2() {
+        Destroy(GameObject.Find("Puzzle"));
+
         Instantiate(smoke, Vector3.zero, Quaternion.identity);
         transform.position = Vector3.zero;
 

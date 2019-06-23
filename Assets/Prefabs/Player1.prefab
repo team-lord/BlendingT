@@ -152,7 +152,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggleDelay: 1
-  meleeAttack: {fileID: 0}
+  meleeAttack: {fileID: 8941066939643958364, guid: 41576f0db8cdbd445a2751c9e5ded6be,
+    type: 3}
   attackTime: 0
   attackDelay: 0
   bullet: {fileID: 1383276255159794600, guid: 0eddcc8fe29fc5e4b8b4e8c756d138bf, type: 3}

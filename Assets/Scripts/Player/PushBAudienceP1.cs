@@ -10,7 +10,7 @@ public class PushBAudienceP1 : MonoBehaviour
 
     private Vector3 normalVector;
 
-    // Animator animator;
+    Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +18,7 @@ public class PushBAudienceP1 : MonoBehaviour
         isPushed = false;
         normalVector = Vector3.zero;
 
-        // animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -35,10 +35,10 @@ public class PushBAudienceP1 : MonoBehaviour
 
     public void PushStart(Vector3 _Vector3) {
         normalVector = _Vector3;
-        // animator.setFloat("normalVectorX", normalVector.x);
-        // animator.setFloat("normalVectorY", normalVector.y);
+        animator.SetFloat("normalVectorX", normalVector.x);
+        animator.SetFloat("normalVectorY", normalVector.y);
 
-        // animator.setTrigger("reverseTumble");
+        animator.SetTrigger("pushed");
         StartCoroutine(IsPushed());
     }
 

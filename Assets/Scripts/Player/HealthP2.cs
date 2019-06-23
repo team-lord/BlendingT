@@ -56,4 +56,8 @@ public class HealthP2 : MonoBehaviour {
     public void IsInvincible(bool _bool) {
         isInvincible = _bool;
     }
+
+    public bool GetIsInvincible() {
+        return isInvincible;
+    }
 }
