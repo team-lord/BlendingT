@@ -290,7 +290,7 @@ PrefabInstance:
     - target: {fileID: 7824404991978632012, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
       propertyPath: debugPattern
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7824404991978632012, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
@@ -542,6 +542,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245720087855916295, guid: 2e784ce3b90483f478c59b897f3b6584,
+        type: 3}
+      propertyPath: tumbleDelay
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e784ce3b90483f478c59b897f3b6584, type: 3}

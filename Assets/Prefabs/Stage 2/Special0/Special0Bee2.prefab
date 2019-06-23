@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4028431066229135958}
   - component: {fileID: 1550593022288193027}
   - component: {fileID: 4560591356722552463}
+  - component: {fileID: 4600215385432438116}
   m_Layer: 0
   m_Name: Special0Bee2
   m_TagString: Untagged
@@ -136,3 +137,22 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.3
+--- !u!95 &4600215385432438116
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6772576837044684264}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 490c0550b006f594ab0fea6118b0b663, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
