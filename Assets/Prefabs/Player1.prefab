@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggleDelay: 1
-  attackTime: 0.1
+  attackTime: 0.05
   attackDelay: 0.5
   bullet: {fileID: 1383276255159794600, guid: 0eddcc8fe29fc5e4b8b4e8c756d138bf, type: 3}
   fireDelay: 0.2
