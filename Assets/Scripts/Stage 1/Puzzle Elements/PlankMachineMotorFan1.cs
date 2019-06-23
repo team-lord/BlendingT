@@ -19,8 +19,7 @@ public class PlankMachineMotorFan1 : MonoBehaviour
 
         motorFan = GameObject.Find("MotorFan");
         plankMachine = GameObject.Find("PlankMachine");
-
-        isMotorFanOn = true;
+        
         plank = 3;
     }
 
@@ -32,7 +31,7 @@ public class PlankMachineMotorFan1 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if(collision.tag == "PuzzleBall") {
-            // isMotorFanOn = motorFan.GetComponent<MotorFan1>().IsMotorFanOn();
+            isMotorFanOn = motorFan.GetComponent<MotorFan1>().IsMotorFanOn();
             if (!isMotorFanOn) {
                 puzzleBall.GetComponent<PuzzleBallMove1>().PuzzleFail();
             }    

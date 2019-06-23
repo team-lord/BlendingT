@@ -156,6 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   invincibleTime: 2
+  shield: {fileID: 2982987961433162853, guid: 6079bc67c434ac14186519438766b44d, type: 3}
 --- !u!114 &703716484847514956
 MonoBehaviour:
   m_ObjectHideFlags: 0

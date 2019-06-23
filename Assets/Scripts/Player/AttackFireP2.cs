@@ -39,7 +39,7 @@ public class AttackFireP2 : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         if (canAttackFire) {
-            if (Input.GetKeyDown(KeyCode.LeftShift)) {
+            if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift)) {
                 if (canToggle) {
                     StartCoroutine(CanToggle());
                     isMelee = !isMelee;

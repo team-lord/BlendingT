@@ -11,6 +11,7 @@ public class HealthP2 : MonoBehaviour {
     // 피격시 무적 딜레이
     public float invincibleTime;
     private bool isInvincible;
+    public GameObject shield;
 
     // Start is called before the first frame update
     void Start() {
@@ -27,6 +28,7 @@ public class HealthP2 : MonoBehaviour {
     public void Hit() {
         if (!isInvincible) {
             health--;
+            Instantiate(shield, transform.position, Quaternion.identity);
             ChangeHeart();
             
             CheckAlive();

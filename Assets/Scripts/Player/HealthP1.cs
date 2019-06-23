@@ -12,6 +12,8 @@ public class HealthP1 : MonoBehaviour {
     public float invincibleTime;
     private bool isInvincible;
 
+    public GameObject shield;
+
     private GameObject audienceManager;
 
     // Start is called before the first frame update
@@ -31,6 +33,7 @@ public class HealthP1 : MonoBehaviour {
     public void Hit() {
         if (!isInvincible) {
             health--;
+            Instantiate(shield, transform.position, Quaternion.identity);
             audienceManager.GetComponent<AudienceManager1>().PlayerHit();
             ChangeHeart();
 

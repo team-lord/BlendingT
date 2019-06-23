@@ -25,7 +25,7 @@ public class PlankMachineButton1 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.tag == "PlayerBullet") {
-            Destroy(collision);
+            Destroy(collision.gameObject);
             if (isLeft) {
                 GetComponentInParent<PlankMachine1>().ChangePrevious();
             } else {
