@@ -1463,7 +1463,7 @@ PrefabInstance:
     - target: {fileID: 8635578474770150011, guid: b5a4ce52038e1be4c8dbccabd42ff661,
         type: 3}
       propertyPath: attackDelay
-      value: 0.1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8635578474770150011, guid: b5a4ce52038e1be4c8dbccabd42ff661,
         type: 3}
@@ -1484,6 +1484,26 @@ PrefabInstance:
         type: 3}
       propertyPath: pushedSpeed
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 541042175408081461, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 541042175408081461, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 4.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 541042175408081461, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 541042175408081461, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5a4ce52038e1be4c8dbccabd42ff661, type: 3}
@@ -1657,7 +1677,7 @@ PrefabInstance:
     - target: {fileID: 4890725650529264774, guid: dd70ce451ff8a35439816dd1ea4f6f0a,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4168717132860061661, guid: dd70ce451ff8a35439816dd1ea4f6f0a,
         type: 3}

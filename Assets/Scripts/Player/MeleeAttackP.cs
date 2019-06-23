@@ -9,19 +9,25 @@ public class MeleeAttackP : MonoBehaviour
     private GameObject cursor;
     private GameObject player;
 
+    private bool isOdd;
+
+    Vector2 direction;
+
     // Start is called before the first frame update
     void Start()
     {
-        animator = GetComponent<Animator>();   
-
+        animator = GetComponent<Animator>();
+               
         cursor = GameObject.Find("Cursor");
         player = GameObject.Find("Player");
 
-        SetCursorDirection();
+        isOdd = false;
+    }
 
-        animator.SetTrigger("meleeAttack");
-        animator.SetBool("isOdd", !animator.GetBool("isOdd"));
-
+    IEnumerator Location() {
+        transform.localPosition = Vector3.zero;
+        yield return new WaitForSeconds(0.4f);
+        transform.localPosition = new Vector3(0, 64, 0);
     }
 
     // Update is called once per frame
@@ -30,9 +36,19 @@ public class MeleeAttackP : MonoBehaviour
         
     }
 
+    public void AnimationStart() {
+        StartCoroutine(Location());
+
+        SetCursorDirection();
+
+        animator.SetTrigger("meleeAttack");
+        animator.SetBool("isOdd", isOdd);
+        isOdd = !isOdd;
+    }
+
     void SetCursorDirection() {
-        Vector2 _direction = (cursor.transform.position - player.transform.position).normalized;
-        animator.SetFloat("cursorDirectionX", _direction.x);
-        animator.SetFloat("cursorDirectionY", _direction.y);
+        direction = (cursor.transform.position - player.transform.position).normalized;
+        animator.SetFloat("cursorDirectionX", direction.x);
+        animator.SetFloat("cursorDirectionY", direction.y);
     }
 }
