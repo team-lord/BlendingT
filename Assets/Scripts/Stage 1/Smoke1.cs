@@ -8,14 +8,14 @@ public class Smoke1 : MonoBehaviour
 
     public float life;
 
-    // Animator animator;
+    Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         Destroy(gameObject, life);
 
-        // animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
 
         // animator.SetTrigger("start");
     }

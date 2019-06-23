@@ -14,7 +14,7 @@ public class HealthB2 : MonoBehaviour {
 
     private bool isReady;
 
-    // Animator animator;
+    Animator animator;
 
     // Start is called before the first frame update
     void Start() {
@@ -26,7 +26,7 @@ public class HealthB2 : MonoBehaviour {
 
         isReady = true;
 
-        // animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -96,6 +96,7 @@ public class HealthB2 : MonoBehaviour {
                 GetComponent<PhaseB2>().Phase2();
             }
         } else if (phase == 2) {
+            animator.SetFloat("phase2Health", phaseHealths[2]);
             if (phaseHealths[2] <= 0) {
                 phaseHealths[2] = 0;
                 Destroy(GameObject.Find("Special0Maker2"));

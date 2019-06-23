@@ -6,12 +6,12 @@ public class Special0Honey2 : MonoBehaviour
 {
     public GameObject playerBulletHoney;
 
-    // Animator animator;
+    Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
-        // animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
 
         // 계속 움직이는(Loop) 상태가 Default State
     }

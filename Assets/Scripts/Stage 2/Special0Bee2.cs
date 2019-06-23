@@ -7,10 +7,12 @@ public class Special0Bee2 : MonoBehaviour
     public int maxHealth;
     private int health;
 
-    private float time;
-    private float time1;
-    public float delay; // half-period
-    private bool isPositive;
+    private float rotateTime;
+    private float fireTime;
+    public float rotateDelay;
+    public float fireDelay;
+
+    public float moveSpeed;
 
     private GameObject player;
 
@@ -18,48 +20,45 @@ public class Special0Bee2 : MonoBehaviour
 
     public GameObject bullet;
     
-    // Animator animator;
+    Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         health = maxHealth;
-        time = 0;
-        time1 = 0;
-
-        isPositive = true;
+        rotateTime = 0;
+        fireTime = 0;
 
         player = GameObject.Find("Player");
 
-        // animator = GetComponent<Animator>();
-
-        // 계속 날개를 움직이는(Loop) 상태가 Default State
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        time += Time.deltaTime;
-        time1 += Time.deltaTime;
+        rotateTime += Time.deltaTime;
+        fireTime += Time.deltaTime;
 
         Move();
 
-        if(time >= delay) {
-            isPositive = !isPositive;
-            time = 0;
+        if(rotateTime >= rotateDelay) {
+            Rotate();
+            rotateTime = 0;
         }
-        if(time1 >= delay / 4) {
+        if(fireTime >= fireDelay) {
             Fire();
-            time1 = 0;
+            fireTime = 0;
         }
     }
     
     void Move() {
-        if (isPositive) {
-            transform.Translate(new Vector2(2 * Mathf.Cos(2 * time), 2 * Mathf.Sin(2 * time)));
-        } else {
-            transform.Translate(new Vector2(- 2 * Mathf.Cos(2 * time), - 2 * Mathf.Sin(2 * time)));
-        }
+        transform.Translate(Vector3.up * moveSpeed * Time.deltaTime, Space.Self);
+    }
+
+    void Rotate() {
+        int _degree = Random.Range(0, 360);
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, _degree));
     }
 
     void Fire() {
@@ -72,7 +71,7 @@ public class Special0Bee2 : MonoBehaviour
             health--;
             CheckAlive();
         } else if (collision.tag == "PlayerMelee") {
-            // health -=2;
+            health -=2;
             CheckAlive();
         }
     }
