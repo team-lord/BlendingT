@@ -48,7 +48,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
-  delay: 3
+  rotateDelay: 3
+  fireDelay: 1
+  moveSpeed: 5
   honey: {fileID: 8955485329338799511, guid: 5ffa70b727fffaa498470eb33ef742fb, type: 3}
   bullet: {fileID: 2146794848732731192, guid: 014ee998694fa4e428ee7d93db9d3b8e, type: 3}
 --- !u!212 &4028431066229135958
