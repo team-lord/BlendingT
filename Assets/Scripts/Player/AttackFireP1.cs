@@ -11,7 +11,7 @@ public class AttackFireP1 : MonoBehaviour {
     private bool isMelee;
 
     // 근접 공격
-    public GameObject meleeAttack;
+    private GameObject meleeAttack;
     public float attackTime;
     public float attackDelay;
     private bool canAttack;
@@ -30,6 +30,7 @@ public class AttackFireP1 : MonoBehaviour {
         canToggle = true;
         isMelee = false;
 
+        meleeAttack = GameObject.Find("PlayerMeleeAttack");
         canAttack = true;
 
         canFire = true;
@@ -47,7 +48,7 @@ public class AttackFireP1 : MonoBehaviour {
                 }
             }
 
-            if (Input.GetMouseButton(0)) {
+            if (Input.GetMouseButtonDown(0)) {
                 if (isMelee) {
                     if (canAttack) {
                         StartAttack();
@@ -76,7 +77,7 @@ public class AttackFireP1 : MonoBehaviour {
         StartCoroutine(CanAttack());
         StartCoroutine(IsAttacking());
 
-        Instantiate(meleeAttack, transform.position, Quaternion.identity);
+        meleeAttack.GetComponent<MeleeAttackP>().AnimationStart();
     }
 
     IEnumerator CanAttack() {
