@@ -48,17 +48,18 @@ public class AttackFireP1 : MonoBehaviour {
                 }
             }
 
-            if (Input.GetMouseButtonDown(0)) {
-                if (isMelee) {
+            if (isMelee) {
+                if (Input.GetMouseButtonDown(0)) {
                     if (canAttack) {
                         StartAttack();
                     }
-                } else {
+                }
+            } else {
+                if (Input.GetMouseButton(0)) {
                     if (canFire) {
                         Fire();
                     }
                 }
-
             }
         }              
     }
