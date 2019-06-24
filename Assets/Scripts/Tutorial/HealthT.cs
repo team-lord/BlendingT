@@ -7,7 +7,6 @@ public class HealthT : MonoBehaviour {
     // 피격시 무적 딜레이
     public float invincibleTime;
     private bool isInvincible;
-    public GameObject shield;
 
     // Start is called before the first frame update
     void Start()
@@ -23,9 +22,7 @@ public class HealthT : MonoBehaviour {
     public void Hit() {
         if (!isInvincible) {
             transform.Translate(new Vector3(-10, 0, 0));
-
-            Instantiate(shield, transform.position, Quaternion.identity);
-      
+            
             StartCoroutine(IsInvincible());
         }
     }
@@ -38,5 +35,9 @@ public class HealthT : MonoBehaviour {
 
     public void IsInvincible(bool _bool) {
         isInvincible = _bool;
+    }
+
+    public bool GetIsInvincible() {
+        return isInvincible;
     }
 }

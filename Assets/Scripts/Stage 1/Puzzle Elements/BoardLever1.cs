@@ -23,10 +23,11 @@ public class BoardLever1 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (isReady) {
-            if(collision.tag == "PlayerBullet") { // if (collision.tag == "PlayerMelee") {
+            if (collision.tag == "PlayerMelee") {
                 StartCoroutine(Wait());
                 GetComponentInParent<Board1>().Rotate(color);
-                GetComponent<SpriteRenderer>().flipX = !GetComponent<SpriteRenderer>().flipX;
+                float _x = transform.localScale.x;
+                transform.localScale = new Vector3(-_x, 1, 1);
             }
         }
     }
