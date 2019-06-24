@@ -981,8 +981,125 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8635578474770150011, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: bulletFire
+      value: 
+      objectReference: {fileID: 8300000, guid: 3c727761c5a467142b88a03bef4fce24, type: 3}
+    - target: {fileID: 8635578474770150011, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: bulletFireSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0e8a69f911e751542b389b8e4c31a837, type: 3}
+    - target: {fileID: 8635578474770150011, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: meleeAttackSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 43249b57894318f4b94f0f4fea107b30, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5a4ce52038e1be4c8dbccabd42ff661, type: 3}
+--- !u!1 &1032261766 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2137840887892769801, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+    type: 3}
+  m_PrefabInstance: {fileID: 1030369639}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1032261767
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032261766}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1077427191 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4840320590411673150, guid: 4f4a99dd2337e0e48af8710eb3917a96,
@@ -1234,7 +1351,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 1e-45, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1910,7 +2027,7 @@ PrefabInstance:
     - target: {fileID: 2417884461210072600, guid: dd70ce451ff8a35439816dd1ea4f6f0a,
         type: 3}
       propertyPath: debugPattern
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3307093643530316898, guid: dd70ce451ff8a35439816dd1ea4f6f0a,
         type: 3}
