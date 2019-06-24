@@ -21,6 +21,11 @@ public class AttackFireP1 : MonoBehaviour {
     public float fireDelay;
     private bool canFire;
     private GameObject cursor;
+
+    AudioSource myaudio;
+
+    public AudioClip bulletFireSound;
+    public AudioClip meleeAttackSound;
    
     // Start is called before the first frame update
     void Start()
@@ -35,6 +40,8 @@ public class AttackFireP1 : MonoBehaviour {
 
         canFire = true;
         cursor = GameObject.Find("Cursor");
+
+        myaudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -79,6 +86,7 @@ public class AttackFireP1 : MonoBehaviour {
         StartCoroutine(IsAttacking());
 
         meleeAttack.GetComponent<MeleeAttackP>().AnimationStart();
+        myaudio.PlayOneShot(meleeAttackSound);
     }
 
     IEnumerator CanAttack() {
@@ -97,6 +105,7 @@ public class AttackFireP1 : MonoBehaviour {
         StartCoroutine(CanFire());
         Vector3 _direction = (cursor.transform.position - transform.position).normalized;
         Instantiate(bullet, transform.position, Quaternion.FromToRotation(Vector3.up, _direction));
+        myaudio.PlayOneShot(bulletFireSound);
     }
 
     IEnumerator CanFire() {

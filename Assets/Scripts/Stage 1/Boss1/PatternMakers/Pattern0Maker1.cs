@@ -42,14 +42,15 @@ public class Pattern0Maker1 : MonoBehaviour
         animator.SetFloat("cardDirectionY", playerDirection.y);
 
         if (time > delay) {
-            animator.SetTrigger("cardFire");
-            bossAudio.PlayOneShot(cardFireSound);
+            
             // 카드 던지는 애니메이션 시작
             for(int i=0; i<9; i++) {
                 bullet = bullet0s[Random.Range(0, bullet0s.Length)];
 
                 Fire(bullet, -40 + 10 * i);
             }
+            animator.SetTrigger("cardFire");
+            bossAudio.PlayOneShot(cardFireSound);
 
             time = 0;
             count++;
