@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenuScene : MonoBehaviour {
+public class SceneChanger : MonoBehaviour {
     // Start is called before the first frame update
     void Start() {
 
@@ -28,5 +28,9 @@ public class MainMenuScene : MonoBehaviour {
 
     public void Exit() {
         Application.Quit();
+    }
+
+    public void MainMenu() {
+        SceneManager.LoadScene("Main Menu");
     }
 }

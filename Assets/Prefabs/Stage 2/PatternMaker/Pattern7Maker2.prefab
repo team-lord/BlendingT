@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -5007668048012196739}
   m_Layer: 0
   m_Name: Pattern7Maker2
-  m_TagString: Untagged
+  m_TagString: PatternMaker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57,7 +57,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   honeyBullets: {fileID: 1309904043788940614, guid: 53e1aa1009ce0ea49a2721f46615cf9e,
-    type: 3}
-  beeBBullets: {fileID: 155747722636719367, guid: f5e041880778edb499b7cf2c37cfbc5f,
     type: 3}
   range: 20

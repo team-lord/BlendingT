@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -8149510781911539733}
   m_Layer: 0
   m_Name: ForgedPattern7Maker1
-  m_TagString: Untagged
+  m_TagString: PatternMaker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

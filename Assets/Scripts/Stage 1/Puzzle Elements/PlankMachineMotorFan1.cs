@@ -34,6 +34,7 @@ public class PlankMachineMotorFan1 : MonoBehaviour
             isMotorFanOn = motorFan.GetComponent<MotorFan1>().IsMotorFanOn();
             if (!isMotorFanOn) {
                 puzzleBall.GetComponent<PuzzleBallMove1>().PuzzleFail();
+                return;
             }    
             plank = plankMachine.GetComponent<PlankMachine1>().CurrentPlank();
 

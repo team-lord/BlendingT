@@ -43,9 +43,15 @@ public class Arrow1 : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
         if (isReady) {
             if(collision.tag == "PuzzleBall") {
-                isReady = false;
+                StartCoroutine(IsReady());  
                 GetComponentInParent<Arrows1>().Change(index);
             }
         }
+    }
+
+    IEnumerator IsReady() {
+        isReady = false;
+        yield return new WaitForSeconds(2);
+        isReady = true;
     }
 }

@@ -299,8 +299,8 @@ GameObject:
   - component: {fileID: 8563687535591517426}
   - component: {fileID: 7059942689247451770}
   m_Layer: 0
-  m_Name: Towers
-  m_TagString: Untagged
+  m_Name: Special1
+  m_TagString: PatternMaker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

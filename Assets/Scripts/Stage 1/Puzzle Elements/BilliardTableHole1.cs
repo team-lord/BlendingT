@@ -24,10 +24,16 @@ public class BilliardTableHole1 : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
         if (isReady) {
             if (collision.tag == "PuzzleBall") {
-                isReady = false;
-                Destroy(collision.gameObject);
+                StartCoroutine(IsReady());
+                collision.gameObject.transform.position = new Vector3(0, 64, 0);
                 puzzleBall.GetComponent<Rigidbody2D>().gravityScale = 1;
             }
         }
+    }
+
+    IEnumerator IsReady() {
+        isReady = false;
+        yield return new WaitForSeconds(5);
+        isReady = true;
     }
 }

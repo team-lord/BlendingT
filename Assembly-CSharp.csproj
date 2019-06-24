@@ -72,7 +72,6 @@
     <Compile Include="Assets\Scripts\DBPlayer1.cs" />
     <Compile Include="Assets\Scripts\DBPlayer2.cs" />
     <Compile Include="Assets\Scripts\DBWall.cs" />
-    <Compile Include="Assets\Scripts\MainMenuScene.cs" />
     <Compile Include="Assets\Scripts\Player\AttackFireP1.cs" />
     <Compile Include="Assets\Scripts\Player\AttackFireP2.cs" />
     <Compile Include="Assets\Scripts\Player\BlanketP1.cs" />
@@ -83,6 +82,7 @@
     <Compile Include="Assets\Scripts\Player\MoveTumbleP1.cs" />
     <Compile Include="Assets\Scripts\Player\MoveTumbleP2.cs" />
     <Compile Include="Assets\Scripts\Player\PushBAudienceP1.cs" />
+    <Compile Include="Assets\Scripts\SceneChanger.cs" />
     <Compile Include="Assets\Scripts\Shield.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Audience1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\AudienceBulletMove1.cs" />

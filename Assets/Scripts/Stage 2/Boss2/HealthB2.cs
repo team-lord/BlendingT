@@ -41,7 +41,7 @@ public class HealthB2 : MonoBehaviour {
                 phaseHealths[0]--;
                 CheckAlive();
             } else if (collision.tag == "PlayerMelee") {
-                // phaseHealths[0] -= 2;
+                phaseHealths[0] -= 2;
                 CheckAlive();
             }
         } else if (phase == 1) {
@@ -49,7 +49,7 @@ public class HealthB2 : MonoBehaviour {
                 phaseHealths[1]--;
                 CheckAlive();
             } else if (collision.tag == "PlayerMelee") {
-                // phaseHealths[1] -= 2;
+                phaseHealths[1] -= 2;
                 CheckAlive();
             }
         } else if (phase == 2) {
@@ -64,7 +64,7 @@ public class HealthB2 : MonoBehaviour {
                 phaseHealths[3]--;
                 CheckAlive();
             } else if (collision.tag == "PlayerMelee") {
-                // phaseHealths[3] -= 2;
+                phaseHealths[3] -= 2;
                 CheckAlive();
             }
         } else if (phase == 4) {
@@ -72,7 +72,7 @@ public class HealthB2 : MonoBehaviour {
                 phaseHealths[4]--;
                 CheckAlive();
             } else if (collision.tag == "PlayerMelee") {
-                // phaseHealths[4] -= 2;
+                phaseHealths[4] -= 2;
                 CheckAlive();
             }
         } else if (phase == 5) {
@@ -81,7 +81,9 @@ public class HealthB2 : MonoBehaviour {
             // TODO - 이벤트 씬. 피격시 사망. 시간이 흐를시 자비.
         }
 
-        Destroy(collision.gameObject);
+        if (collision.tag == "PlayerBullet") {
+            Destroy(collision.gameObject);
+        }
     }
 
     void CheckAlive() {
@@ -89,11 +91,16 @@ public class HealthB2 : MonoBehaviour {
             if (phaseHealths[0] <= 0) {
                 phaseHealths[0] = 0;
                 GetComponent<PhaseB2>().Phase1();
+                Destroy(GameObject.FindGameObjectWithTag("PatternMaker"));
+
+
             }
         } else if (phase == 1) {
             if (phaseHealths[1] <= 0) {
                 phaseHealths[1] = 0;
                 GetComponent<PhaseB2>().Phase2();
+                Destroy(GameObject.FindGameObjectWithTag("PatternMaker"));
+
             }
         } else if (phase == 2) {
             animator.SetFloat("phase2Health", phaseHealths[2]);
@@ -101,24 +108,33 @@ public class HealthB2 : MonoBehaviour {
                 phaseHealths[2] = 0;
                 GameObject.Find("Special0Maker2").GetComponent<Special0Maker2>().FireSpecialBullet(true);
                 StartCoroutine(Phase2Mes());
+                Destroy(GameObject.FindGameObjectWithTag("PatternMaker"));
+
+
             }
         } else if (phase == 3) {
             if (phaseHealths[3] <= 0) {
                 phaseHealths[3] = 0;
                 GetComponent<PhaseB2>().Phase4();
+                Destroy(GameObject.FindGameObjectWithTag("PatternMaker"));
+
             }
         } else if (phase == 4) {
             if (phaseHealths[4] <= 0) {
                 phaseHealths[4] = 0;
                 GetComponent<PhaseB2>().Phase5();
+                Destroy(GameObject.FindGameObjectWithTag("PatternMaker"));
+
             }
         } else if (phase == 5) {
             // 데모 버전에서는 여기서 끝
-            SceneManager.LoadScene("Clear"); 
+            SceneManager.LoadScene("Main Menu"); 
 
             if (phaseHealths[5] <= 0) {
                 phaseHealths[5] = 0;
                 GetComponent<PhaseB2>().Phase6();
+                Destroy(GameObject.FindGameObjectWithTag("PatternMaker"));
+
             }
         } else if (phase == 6) {
 

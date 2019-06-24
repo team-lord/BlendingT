@@ -14,7 +14,7 @@ public class BilliardTable1 : MonoBehaviour
     void Start()
     {
         for(int i=0; i<7; i++) {
-            originalPosition[i] = balls[i].transform.position;
+            originalPosition[i] = balls[i].transform.localPosition;
         }
         puzzleBall = GameObject.Find("PuzzleBall");
     }
@@ -63,12 +63,13 @@ public class BilliardTable1 : MonoBehaviour
 
     public void Initialize() {
         for (int i = 0; i < 7; i++) {
-            balls[i].transform.position = originalPosition[i];
+            balls[i].transform.localPosition = originalPosition[i];
             balls[i].transform.rotation = Quaternion.identity;
             balls[i].GetComponent<Rigidbody2D>().velocity = Vector3.zero;
             balls[i].GetComponent<Rigidbody2D>().angularVelocity = 0;
             balls[i].GetComponent<Rigidbody2D>().Sleep();
         }
+        GameObject.Find("2ndPuzzleBall").GetComponent<Rigidbody2D>().gravityScale = 0;
     }
 
     IEnumerator GravityFail() {

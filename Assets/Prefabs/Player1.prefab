@@ -117,8 +117,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3505c98531eff946901a291272aa297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pushedTime: 0
-  pushedSpeed: 0
+  pushedTime: 0.4
+  pushedSpeed: 4
 --- !u!50 &5017792400174739193
 Rigidbody2D:
   serializedVersion: 4
@@ -157,6 +157,8 @@ MonoBehaviour:
   attackDelay: 0.5
   bullet: {fileID: 1383276255159794600, guid: 0eddcc8fe29fc5e4b8b4e8c756d138bf, type: 3}
   fireDelay: 0.2
+  bulletFireSound: {fileID: 0}
+  meleeAttackSound: {fileID: 0}
 --- !u!114 &6690072444194126885
 MonoBehaviour:
   m_ObjectHideFlags: 0

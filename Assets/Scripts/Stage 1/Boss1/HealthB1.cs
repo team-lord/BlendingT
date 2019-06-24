@@ -31,24 +31,22 @@ public class HealthB1 : MonoBehaviour
         if(phase == 0) {
             if (collision.tag == "PlayerBullet") {
                 phase0Health--;
-                Destroy(collision);
+                Destroy(collision.gameObject);
 
                 CheckAlive();
             } else if (collision.tag == "PlayerMelee") {
-                // phase0Health -= 2;
-                Destroy(collision);
+                phase0Health -= 2;
 
                 CheckAlive();
             }
         } else if (phase == 2) {
             if (collision.tag == "PlayerBullet") {
                 phase2Health--;
-                Destroy(collision);
+                Destroy(collision.gameObject);
 
                 CheckAlive();
             } else if (collision.tag == "PlayerMelee") {
-                // phase2Health -= 2;
-                Destroy(collision);
+                phase2Health -= 2;
 
                 CheckAlive();
             }
@@ -61,11 +59,16 @@ public class HealthB1 : MonoBehaviour
                 phase0Health = 0;
                 GetComponent<PhaseB1>().Phase1();
                 phase = 2;
+                Destroy(GameObject.FindGameObjectWithTag("PatternMaker"));
+
             }
         } else if (phase == 2) {
             if (phase2Health <= 0) {
                 phase2Health = 0;
                 GetComponent<PhaseB1>().Phase3();
+                Destroy(GameObject.FindGameObjectWithTag("PatternMaker"));
+
+
             }
         }
     }
