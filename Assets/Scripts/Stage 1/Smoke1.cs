@@ -9,6 +9,8 @@ public class Smoke1 : MonoBehaviour
     public float life;
 
     Animator animator;
+    AudioSource myaudio;
+    public AudioClip smokeSound;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +19,11 @@ public class Smoke1 : MonoBehaviour
 
         animator = GetComponent<Animator>();
 
+        myaudio = GetComponent<AudioSource>();
+
         // animator.SetTrigger("start");
+        animator.SetTrigger("smoke");
+        myaudio.PlayOneShot(smokeSound);
     }
 
     // Update is called once per frame

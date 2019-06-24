@@ -18,6 +18,9 @@ public class Pattern0Maker1 : MonoBehaviour
     Animator animator;
     private Vector3 playerDirection;
 
+    public AudioClip cardFireSound;
+    private AudioSource bossAudio;
+
     // Start is called before the first frame update
     void Start() {
         count = 0;
@@ -27,6 +30,7 @@ public class Pattern0Maker1 : MonoBehaviour
         boss = GameObject.Find("Boss");
 
         animator = boss.GetComponent<Animator>();
+        bossAudio = boss.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -39,6 +43,7 @@ public class Pattern0Maker1 : MonoBehaviour
 
         if (time > delay) {
             animator.SetTrigger("cardFire");
+            bossAudio.PlayOneShot(cardFireSound);
             // 카드 던지는 애니메이션 시작
             for(int i=0; i<9; i++) {
                 bullet = bullet0s[Random.Range(0, bullet0s.Length)];
