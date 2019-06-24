@@ -17,8 +17,8 @@ public class DBWall : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if(collision.tag == "Wall") {
+        if (collision.tag == "Wall") {
             Destroy(gameObject);
         }
-    } // laser 때문에 바뀔 여지 있음
+    }
 }

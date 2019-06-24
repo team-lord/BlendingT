@@ -42,7 +42,7 @@ public class MoveTumbleP1 : MonoBehaviour
     void Update()
     { 
         if (canMoveTumble) {
-            if (Input.GetKeyDown(KeyCode.Space)) {
+            if (Input.GetMouseButtonDown(1)) {
                 if (canTumble) {
                     if (h != 0 || v != 0) {
                         StartTumble();

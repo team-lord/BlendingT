@@ -19,6 +19,7 @@ public class DBBlanket : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if(collision.tag == "Blanket") {
+            Debug.Log("Blanketed");
             Destroy(gameObject);
         }
     }

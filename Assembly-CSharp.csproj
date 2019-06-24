@@ -84,6 +84,7 @@
     <Compile Include="Assets\Scripts\Player\PushBAudienceP1.cs" />
     <Compile Include="Assets\Scripts\SceneChanger.cs" />
     <Compile Include="Assets\Scripts\Shield.cs" />
+    <Compile Include="Assets\Scripts\Stage 1.5\BulletMaker12.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Audience1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\AudienceBulletMove1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\AudienceGraph1.cs" />
@@ -179,10 +180,13 @@
     <Compile Include="Assets\Scripts\Stage 2\Tower\Tower2.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Tower\Towers2.cs" />
     <Compile Include="Assets\Scripts\Tutorial\AttackFireT.cs" />
+    <Compile Include="Assets\Scripts\Tutorial\BlanketT.cs" />
+    <Compile Include="Assets\Scripts\Tutorial\CameraMoveT.cs" />
     <Compile Include="Assets\Scripts\Tutorial\DBPlayerT.cs" />
     <Compile Include="Assets\Scripts\Tutorial\HealthT.cs" />
     <Compile Include="Assets\Scripts\Tutorial\LaserT.cs" />
     <Compile Include="Assets\Scripts\Tutorial\MoveTumbleT.cs" />
+    <Compile Include="Assets\Scripts\Tutorial\SceneChangerT.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />

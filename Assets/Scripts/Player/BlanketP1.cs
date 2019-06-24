@@ -20,7 +20,7 @@ public class BlanketP1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(1)) { // 우클릭
+        if (Input.GetKeyDown(KeyCode.Space)) {
             if (canBlanket) {
                 UseBlanket();
                 audienceManager.GetComponent<AudienceManager1>().Blanket();
@@ -30,7 +30,7 @@ public class BlanketP1 : MonoBehaviour
 
     void UseBlanket() {
         canBlanket = false;
-        Instantiate(blanket, transform.position, transform.rotation);
+        Instantiate(blanket, transform.position, Quaternion.identity);
     }
 
     public void GetBlanket() {

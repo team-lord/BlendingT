@@ -18,14 +18,6 @@ public class HealthT : MonoBehaviour {
     void Update() {
 
     }
-
-    public void Hit() {
-        if (!isInvincible) {
-            transform.Translate(new Vector3(-10, 0, 0));
-            
-            StartCoroutine(IsInvincible());
-        }
-    }
     
     IEnumerator IsInvincible() {
         isInvincible = true;

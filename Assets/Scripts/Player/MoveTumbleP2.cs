@@ -39,7 +39,7 @@ public class MoveTumbleP2 : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         if (canMoveTumble) {
-            if (Input.GetKeyDown(KeyCode.Space)) {
+            if (Input.GetMouseButtonDown(1)) {
                 if (canTumble) {
                     if (h != 0 || v != 0) {
                         animator.SetTrigger("startTumble");

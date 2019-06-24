@@ -21,8 +21,8 @@ public class LaserT : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision) {
         if(collision.tag == "Player") {
-            if (player.GetComponent<HealthT>().GetIsInvincible()) {
-
+            if (!player.GetComponent<HealthT>().GetIsInvincible()) {
+                player.transform.position = respawnLocation.transform.position;
             }
         }
     }

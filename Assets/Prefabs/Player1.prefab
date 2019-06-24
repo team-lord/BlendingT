@@ -202,7 +202,7 @@ MonoBehaviour:
   moveSpeed: 6
   tumbleTime: 0.25
   tumbleSpeed: 6
-  tumbleDelay: 0.5
+  tumbleDelay: 0.25
 --- !u!95 &2196487147666163550
 Animator:
   serializedVersion: 3

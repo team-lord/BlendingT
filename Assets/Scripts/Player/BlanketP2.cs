@@ -5,19 +5,15 @@ using UnityEngine;
 public class BlanketP2 : MonoBehaviour {
     public GameObject blanket;
     private bool canBlanket;
-
-    private GameObject audienceManager;
-
+    
     // Start is called before the first frame update
     void Start() {
-        canBlanket = false;
-
-        audienceManager = GameObject.Find("AudienceManager");
+        canBlanket = true;
     }
 
     // Update is called once per frame
     void Update() {
-        if (Input.GetMouseButton(1)) { // 우클릭
+        if (Input.GetKeyDown(KeyCode.Space)) {
             if (canBlanket) {
                 UseBlanket();
             }
@@ -26,7 +22,7 @@ public class BlanketP2 : MonoBehaviour {
 
     void UseBlanket() {
         canBlanket = false;
-        Instantiate(blanket, transform.position, transform.rotation);
+        Instantiate(blanket, transform.position, Quaternion.identity);
     }
 
     public void GetBlanket() {
