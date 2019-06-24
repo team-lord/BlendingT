@@ -9,6 +9,8 @@ public class PlankMachineButton1 : MonoBehaviour
     public Sprite onSprite;
     private Sprite offSprite;
 
+    public GameObject edge;
+
     public float delay; // 버튼이 눌리는 시간
 
     // Start is called before the first frame update
@@ -40,7 +42,10 @@ public class PlankMachineButton1 : MonoBehaviour
 
     IEnumerator WaitChange() {
         GetComponent<SpriteRenderer>().sprite = onSprite;
+        edge.GetComponent<SpriteRenderer>().enabled = false;
         yield return new WaitForSeconds(delay);
         GetComponent<SpriteRenderer>().sprite = offSprite;
+        edge.GetComponent<SpriteRenderer>().enabled = true;
+
     }
 }

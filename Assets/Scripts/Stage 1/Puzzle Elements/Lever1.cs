@@ -8,6 +8,7 @@ public class Lever1 : MonoBehaviour
     public int number;
 
     private bool isReady;
+    private bool isReadyFake;
 
     // Start is called before the first frame update
     void Awake()
@@ -17,6 +18,7 @@ public class Lever1 : MonoBehaviour
 
     void Start() {
         isReady = true;
+        isReadyFake = true;
     }
 
     // Update is called once per frame
@@ -30,17 +32,19 @@ public class Lever1 : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if(collision.tag == "PlayerBullet") { // if(collision.tag == "PlayerMelee") {
+        if(collision.tag == "PlayerMelee") {
             if (isReal) {
                 if (isReady) {
                     StartCoroutine(IsReady());
-                    GetComponent<SpriteRenderer>().flipX = !GetComponent<SpriteRenderer>().flipX;
+                    float _x = transform.localScale.x;
+                    transform.localScale = new Vector3(-_x, 1, 1);
                     GameObject.Find("Bulb").GetComponent<Bulb1>().IsReady();
                 }
             } else {
-                if (isReady) {
+                if (isReadyFake) {
                     StartCoroutine(IsReadyFake());
-                    GetComponent<SpriteRenderer>().flipX = !GetComponent<SpriteRenderer>().flipX;
+                    float _x = transform.localScale.x;
+                    transform.localScale = new Vector3(-_x, 1, 1);
                 }
             }
         }
@@ -57,8 +61,8 @@ public class Lever1 : MonoBehaviour
     }
 
     IEnumerator IsReadyFake() {
-        isReady = false;
+        isReadyFake = false;
         yield return new WaitForSeconds(0.1f);
-        isReady = true;
+        isReadyFake = true;
     }
 }
