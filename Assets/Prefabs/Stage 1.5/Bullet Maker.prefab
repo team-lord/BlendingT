@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2254223589482691768}
   - component: {fileID: 4374328867441247832}
+  - component: {fileID: 7182528915588107198}
   m_Layer: 0
   m_Name: Bullet Maker
   m_TagString: Untagged
@@ -46,3 +47,19 @@ MonoBehaviour:
   bullet: {fileID: 1431915115274442503, guid: ef71608da2b50334ab1ff67c5aabd9c9, type: 3}
   shootUpside: 0
   delay: 0.3
+--- !u!58 &7182528915588107198
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317860309508139194}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.1

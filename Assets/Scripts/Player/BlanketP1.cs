@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BlanketP1 : MonoBehaviour
 {
     public GameObject blanket;
     private bool canBlanket;
+
+    public Image blanketImage;
 
     private GameObject audienceManager;
 
@@ -30,10 +33,12 @@ public class BlanketP1 : MonoBehaviour
 
     void UseBlanket() {
         canBlanket = false;
+        blanketImage.GetComponent<NullifyingCore>().UseBlanket();
         Instantiate(blanket, transform.position, Quaternion.identity);
     }
 
     public void GetBlanket() {
         canBlanket = true;
+        blanketImage.GetComponent<NullifyingCore>().GetBlanket();
     }
 }

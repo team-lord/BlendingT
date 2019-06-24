@@ -47,9 +47,9 @@ public class PhaseB1 : MonoBehaviour
     }
 
     public void Phase3() {
-
         curtain.GetComponent<Curtain1>().Change();
-        SceneManager.LoadScene("Stage 2");
+
+        SceneManager.LoadScene("Main Menu");
 
         // TODO - 이벤트 씬
         // 데모버전 보류
