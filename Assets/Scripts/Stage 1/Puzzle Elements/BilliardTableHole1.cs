@@ -27,6 +27,7 @@ public class BilliardTableHole1 : MonoBehaviour
                 StartCoroutine(IsReady());
                 collision.gameObject.transform.position = new Vector3(0, 64, 0);
                 puzzleBall.GetComponent<Rigidbody2D>().gravityScale = 1;
+                Camera.main.GetComponent<CameraMove1>().WatchPuzzleBall2nd();
             }
         }
     }

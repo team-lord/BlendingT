@@ -46,7 +46,8 @@ public class PuzzleBallMove1 : MonoBehaviour {
             puzzleBall[i].transform.rotation = Quaternion.identity;
             puzzleBall[i].GetComponent<Rigidbody2D>().velocity = Vector3.zero;
             puzzleBall[i].GetComponent<Rigidbody2D>().angularVelocity = 0;
-        }        
+        }
+        Camera.main.GetComponent<CameraMove1>().WatchPlayer();
     }
 
     public void PuzzleFail() {
