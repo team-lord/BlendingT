@@ -35,7 +35,7 @@ public class PuzzleStartButton1 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (isReady) {
-            if (collision.tag == "PlayerBullet") { //if (collision.tag == "PlayerMelee") {
+            if (collision.tag == "PlayerMelee") {
                 isReady = false;
                 GetComponent<SpriteRenderer>().sprite = buttonOn;
                 puzzleBall.GetComponent<Rigidbody2D>().AddForce(200 * Vector2.right);
