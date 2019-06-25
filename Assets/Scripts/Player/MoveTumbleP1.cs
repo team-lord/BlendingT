@@ -55,7 +55,7 @@ public class MoveTumbleP1 : MonoBehaviour
                         StartTumble();
                         animator.SetTrigger("startTumble");
                         myaudio.PlayOneShot(tumbleSound);
-
+                        
                     }
                 }
             }
@@ -122,13 +122,17 @@ public class MoveTumbleP1 : MonoBehaviour
         } else {
             v = 0;
         }
-        
+        if (myaudio.isPlaying == false)
+        {
+            myaudio.Play();
+        }
 
         Correction();
 
         if (h == 0 && v == 0)
         {
             animator.SetBool("isMove", false);
+            myaudio.Stop();
         }
         else
         {

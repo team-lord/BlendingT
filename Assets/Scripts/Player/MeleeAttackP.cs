@@ -12,6 +12,7 @@ public class MeleeAttackP : MonoBehaviour
     private bool isOdd;
 
     Vector2 direction;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +24,7 @@ public class MeleeAttackP : MonoBehaviour
 
         isOdd = false;
     }
-
+    
     IEnumerator Location() {
         transform.localPosition = Vector3.zero;
         animator.SetBool("meleeAttackOn", true);
