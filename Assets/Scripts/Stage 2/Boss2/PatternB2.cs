@@ -28,7 +28,7 @@ public class PatternB2 : MonoBehaviour
 
         patternStart = true;
 
-        patternArray = new int[] {0, 1, 2, 3, 4, 7};
+        patternArray = new int[] {0, 1, 2, 4};
 
         patternPhase = true;
 
@@ -49,9 +49,9 @@ public class PatternB2 : MonoBehaviour
 
     void Pattern() {
         int _number;
-
+        
         do {
-            _number = Random.Range(0, patternArray.Length - 1);
+            _number = Random.Range(0, patternArray.Length);
             
         } while (patternArray[_number] == currentPattern);
 
@@ -59,6 +59,7 @@ public class PatternB2 : MonoBehaviour
         currentPattern = patternArray[_number];
 
         GetComponent<MakeBeeB2>().MakeBee();
+        Debug.Log(currentPattern);
         Instantiate(patternMakers[currentPattern], transform.position, transform.rotation);
         
         //Instantiate(patternMakers[debugPattern], transform.position, transform.rotation);

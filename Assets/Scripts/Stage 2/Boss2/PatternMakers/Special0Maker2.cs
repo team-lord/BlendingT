@@ -17,7 +17,7 @@ public class Special0Maker2 : MonoBehaviour
     public GameObject special0FailBullet;
     public GameObject special0SuccessBullet;
 
-    public GameObject potLocation;
+    public Vector3 potLocation;
 
     // Start is called before the first frame update
     void Start()
@@ -63,11 +63,11 @@ public class Special0Maker2 : MonoBehaviour
 
     public void FireSpecialBullet(bool success) {
         if (success) {
-            Instantiate(special0SuccessBullet, potLocation.transform.position, Quaternion.FromToRotation(Vector3.up, Vector3.left));
+            Instantiate(special0SuccessBullet, potLocation, Quaternion.FromToRotation(Vector3.up, Vector3.left));
             Destroy(gameObject);
         } else {
-            Vector3 _direction = (player.transform.position - potLocation.transform.position).normalized;
-            Instantiate(special0FailBullet, potLocation.transform.position, Quaternion.FromToRotation(Vector3.up, _direction));
+            Vector3 _direction = (player.transform.position - potLocation).normalized;
+            Instantiate(special0FailBullet, potLocation, Quaternion.FromToRotation(Vector3.up, _direction));
         }
     }
 }

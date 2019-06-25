@@ -45,11 +45,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bee: {fileID: 6772576837044684264, guid: de07a1d66b414054b95b9a130eeb27be, type: 3}
-  fallDelay: 0
+  fallDelay: 1
   timeLimit: 60
-  special0FailBullet: {fileID: 0}
-  special0SuccessBullet: {fileID: 0}
-  potLocation: {fileID: 0}
+  special0FailBullet: {fileID: 1718667202295222301, guid: 2a5931ed4ab8157448a307c7110f24f0,
+    type: 3}
+  special0SuccessBullet: {fileID: 2392136418202027734, guid: cb8254605f83a654782f4b08e5cdb95b,
+    type: 3}
+  potLocation: {x: 19.28, y: -0.42, z: 0}
 --- !u!58 &386527145392046875
 CircleCollider2D:
   m_ObjectHideFlags: 0

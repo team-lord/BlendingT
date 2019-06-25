@@ -27,7 +27,7 @@ public class PhaseB2 : MonoBehaviour
     }
 
     public void Phase1() {
-        GetComponent<PatternB2>().PatternArray(new int[] { 0, 1, 4, 2, 6, 5, 8, 3, 7 });
+        GetComponent<PatternB2>().PatternArray(new int[] { 0, 1, 4, 2, 3, 7 });
         GetComponent<HealthB2>().Phase(1);
     }
 
