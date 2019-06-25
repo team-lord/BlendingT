@@ -80,7 +80,7 @@ public class PatternB2 : MonoBehaviour
     public void ForceStart() {
         StartCoroutine(Rest()); // 운이 안좋으면 벌이 네마리 나올 수도 있으므로 잠시 꺼준다
         previousPattern = currentPattern;
-        // animator.SetTrigger("idle");
+        animator.SetTrigger("attackedByBlanket");
         patternStart = true;
     }
 
