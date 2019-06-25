@@ -26,8 +26,10 @@ public class MeleeAttackP : MonoBehaviour
 
     IEnumerator Location() {
         transform.localPosition = Vector3.zero;
-        yield return new WaitForSeconds(0.4f);
+        animator.SetBool("meleeAttackOn", true);
+        yield return new WaitForSeconds(0.15f);
         transform.localPosition = new Vector3(0, 64, 0);
+        animator.SetBool("meleeAttackOn", false);
     }
 
     // Update is called once per frame
@@ -40,8 +42,7 @@ public class MeleeAttackP : MonoBehaviour
         StartCoroutine(Location());
 
         SetCursorDirection();
-
-        animator.SetTrigger("meleeAttack");
+        
         animator.SetBool("isOdd", isOdd);
         isOdd = !isOdd;
     }

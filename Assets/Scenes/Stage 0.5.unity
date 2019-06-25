@@ -853,6 +853,86 @@ PrefabInstance:
       propertyPath: tumbleSpeed
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 7975381043388634307, guid: 77b9f59c4f9b114438726bf105222809,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerMelee
+      objectReference: {fileID: 0}
+    - target: {fileID: 9175285452033964116, guid: 77b9f59c4f9b114438726bf105222809,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerMelee
+      objectReference: {fileID: 0}
+    - target: {fileID: 2851081536937714925, guid: 77b9f59c4f9b114438726bf105222809,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerMelee
+      objectReference: {fileID: 0}
+    - target: {fileID: 319185830875133887, guid: 77b9f59c4f9b114438726bf105222809,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerMelee
+      objectReference: {fileID: 0}
+    - target: {fileID: 7684213661661068430, guid: 77b9f59c4f9b114438726bf105222809,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerMelee
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867517347942988951, guid: 77b9f59c4f9b114438726bf105222809,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerMelee
+      objectReference: {fileID: 0}
+    - target: {fileID: 581931979193520343, guid: 77b9f59c4f9b114438726bf105222809,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerMelee
+      objectReference: {fileID: 0}
+    - target: {fileID: 1283653929583775670, guid: 77b9f59c4f9b114438726bf105222809,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerMelee
+      objectReference: {fileID: 0}
+    - target: {fileID: 6913907749329418046, guid: 77b9f59c4f9b114438726bf105222809,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerMelee
+      objectReference: {fileID: 0}
+    - target: {fileID: 283445755753045020, guid: 77b9f59c4f9b114438726bf105222809,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerMelee
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927657238883973981, guid: 77b9f59c4f9b114438726bf105222809,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerMelee
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308150268509639227, guid: 77b9f59c4f9b114438726bf105222809,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerMelee
+      objectReference: {fileID: 0}
+    - target: {fileID: 509516124032738735, guid: 77b9f59c4f9b114438726bf105222809,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerMelee
+      objectReference: {fileID: 0}
+    - target: {fileID: 2832165833879333729, guid: 77b9f59c4f9b114438726bf105222809,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerMelee
+      objectReference: {fileID: 0}
+    - target: {fileID: 1453180033155142602, guid: 77b9f59c4f9b114438726bf105222809,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerMelee
+      objectReference: {fileID: 0}
+    - target: {fileID: 2672281358195316170, guid: 77b9f59c4f9b114438726bf105222809,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerMelee
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77b9f59c4f9b114438726bf105222809, type: 3}
 --- !u!1 &1933723357

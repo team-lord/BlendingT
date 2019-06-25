@@ -171,9 +171,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04dd8edb74b42be419e59637fc3c4619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 6
+  maxHealth: 600
   invincibleTime: 2
   shield: {fileID: 2982987961433162853, guid: 6079bc67c434ac14186519438766b44d, type: 3}
+  heart: {fileID: 0}
 --- !u!114 &7976742175384873060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,6 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blanket: {fileID: 1943403016015020738, guid: 2a4464f689ce59d4f8756c1757c49619, type: 3}
+  blanketImage: {fileID: 0}
 --- !u!114 &8184690626530226898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,6 +205,8 @@ MonoBehaviour:
   tumbleTime: 0.25
   tumbleSpeed: 6
   tumbleDelay: 0.25
+  tumbleSound: {fileID: 0}
+  moveSound: {fileID: 0}
 --- !u!95 &2196487147666163550
 Animator:
   serializedVersion: 3
