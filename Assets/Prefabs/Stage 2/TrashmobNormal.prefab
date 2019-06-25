@@ -47,13 +47,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5432aa34735a1ec48b7180b7d995c662, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phaseDelay: 1
+  phaseDelay: 10
   bullet: {fileID: 2146794848732731192, guid: 014ee998694fa4e428ee7d93db9d3b8e, type: 3}
   phase0Delay: 1
   phase1Delay: 1
   phase2Delay: 1
-  moveSpeed: 0
-  rotateDelay: 0
+  moveSpeed: 2
+  rotateDelay: 3
 --- !u!114 &6572996987272460331
 MonoBehaviour:
   m_ObjectHideFlags: 0

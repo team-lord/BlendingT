@@ -13,14 +13,12 @@ public class BeeHealth2 : MonoBehaviour
     private float time;
 
     private bool isLethal;
-
-    Animator animator;
+    
     
     // Start is called before the first frame update
     void Start()
     {
         time = 0;
-        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame

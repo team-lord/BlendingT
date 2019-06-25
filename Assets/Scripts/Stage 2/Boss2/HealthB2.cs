@@ -80,7 +80,7 @@ public class HealthB2 : MonoBehaviour {
             // TODO - 이벤트 씬. 피격시 사망. 시간이 흐를시 자비.
         }
 
-        if (collision.tag == "PlayerBullet") {
+        if (collision.tag == "PlayerBullet" || collision.tag == "PlayerBulletHoney") {
             Destroy(collision.gameObject);
         }
     }
@@ -105,7 +105,7 @@ public class HealthB2 : MonoBehaviour {
             animator.SetFloat("phase2Health", phaseHealths[2]);
             if (phaseHealths[2] <= 0) {
                 phaseHealths[2] = 0;
-                GameObject.Find("Special0Maker2").GetComponent<Special0Maker2>().FireSpecialBullet(true);
+                GameObject.FindGameObjectWithTag("PatternMaker").GetComponent<Special0Maker2>().FireSpecialBullet(true);
                 StartCoroutine(Phase2Mes());
                 Destroy(GameObject.FindGameObjectWithTag("PatternMaker"));
             }

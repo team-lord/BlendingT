@@ -77,8 +77,8 @@ public class BeeA2 : MonoBehaviour
                         Vector3 _playerDirection = player.GetComponent<MoveTumbleP2>().MoveDirection();
                         Vector3 _direction = player.transform.position - transform.position;
                         Instantiate(bullet, transform.position, Quaternion.FromToRotation(Vector3.up, _direction.normalized));
-                        Instantiate(bullet, transform.position, Quaternion.FromToRotation(Vector3.up, (_direction + _playerDirection).normalized));
                         Instantiate(bullet, transform.position, Quaternion.FromToRotation(Vector3.up, (_direction + 2 * _playerDirection).normalized));
+                        Instantiate(bullet, transform.position, Quaternion.FromToRotation(Vector3.up, (_direction + 4 * _playerDirection).normalized));
                         time = 0;
                     }
                     break;
@@ -86,12 +86,12 @@ public class BeeA2 : MonoBehaviour
                     if(time > phase2Delay) {
                         Vector3 _playerDirection = player.GetComponent<MoveTumbleP2>().MoveDirection();
                         Vector3 _direction = player.transform.position - transform.position;
+                        Instantiate(bullet, transform.position, Quaternion.FromToRotation(Vector3.up, (_direction - 4 * _playerDirection).normalized));
                         Instantiate(bullet, transform.position, Quaternion.FromToRotation(Vector3.up, (_direction - 2 * _playerDirection).normalized));
-                        Instantiate(bullet, transform.position, Quaternion.FromToRotation(Vector3.up, (_direction - _playerDirection).normalized));
                         Instantiate(bullet, transform.position, Quaternion.FromToRotation(Vector3.up, _direction.normalized));
-                        Instantiate(bullet, transform.position, Quaternion.FromToRotation(Vector3.up, (_direction + _playerDirection).normalized));
-                        Instantiate(bullet, transform.position, Quaternion.FromToRotation(Vector3.up, (_direction + 2 * _playerDirection).normalized));
-                        Instantiate(bullet, transform.position, Quaternion.FromToRotation(Vector3.up, (_direction + 3 * _playerDirection).normalized));
+                        Instantiate(bullet, transform.position, Quaternion.FromToRotation(Vector3.up, (_direction + 2 *_playerDirection).normalized));
+                        Instantiate(bullet, transform.position, Quaternion.FromToRotation(Vector3.up, (_direction + 4 * _playerDirection).normalized));
+                        Instantiate(bullet, transform.position, Quaternion.FromToRotation(Vector3.up, (_direction + 6 * _playerDirection).normalized));
                         time = 0;
                     }
                     break;
@@ -109,8 +109,8 @@ public class BeeA2 : MonoBehaviour
     public void Rotate() {
         int _degree = Random.Range(0, 360);
         direction = new Vector3(Mathf.Cos(_degree * Mathf.Deg2Rad), Mathf.Sin(_degree * Mathf.Deg2Rad), 0).normalized;
-        animator.SetFloat("directionToPlayerX", direction.x);
-        animator.SetFloat("directionToPlayerY", direction.y);
+        animator.SetFloat("directionX", direction.x);
+        animator.SetFloat("directionY", direction.y);
     }
 
     public void IsLethal(bool _bool) {

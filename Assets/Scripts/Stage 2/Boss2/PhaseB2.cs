@@ -36,6 +36,8 @@ public class PhaseB2 : MonoBehaviour
         GetComponent<MoveB2>().IsMove(false);
         GetComponent<HealthB2>().Phase(2);
 
+        animator.SetFloat("phase2Health", 3f);
+
         // 필살기 1
         Instantiate(special0Maker, Vector3.zero, transform.rotation);
         Instantiate(special0Maker, Vector3.zero, transform.rotation);
