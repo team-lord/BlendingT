@@ -106,8 +106,7 @@ public class MoveTumbleP1 : MonoBehaviour
     }
 
     void Tumble() {
-        transform.Translate(h * Vector3.right * tumbleSpeed * Time.deltaTime, Space.World);
-        transform.Translate(v * Vector3.up * tumbleSpeed * Time.deltaTime, Space.World);
+        transform.position += new Vector3(h * tumbleSpeed * Time.deltaTime, v * tumbleSpeed * Time.deltaTime, 0);
     }
 
     void Move() {
