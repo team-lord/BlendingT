@@ -391,7 +391,11 @@ PrefabInstance:
     - target: {fileID: 7824404991978632012, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
       propertyPath: debugPattern
+<<<<<<< HEAD
       value: 7
+=======
+      value: 2
+>>>>>>> 0b995380e7d9c6f08a1b0d79477c51219d6adc49
       objectReference: {fileID: 0}
     - target: {fileID: 7824404991978632012, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
@@ -401,7 +405,7 @@ PrefabInstance:
     - target: {fileID: 7824404991978632012, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
       propertyPath: patternDelay
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7824404991978632012, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
