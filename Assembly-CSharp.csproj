@@ -114,6 +114,7 @@
     <Compile Include="Assets\Scripts\Stage 1\Bullets\Bullet6StickMove1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Bullets\Bullet7Move1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Bullets\PuzzleFail1Move.cs" />
+    <Compile Include="Assets\Scripts\Stage 1\CameraMove1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Curtain1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Laser.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Puzzle Elements\Arrow1.cs" />

@@ -4,17 +4,24 @@ using UnityEngine;
 
 public class DoorT : MonoBehaviour
 {
+    // TODO - 문이 열리는 애니메이션
+    // 닫히는 애니메이션 필요없음
+
     public GameObject leverMelee;
     public GameObject leverBullet;
 
     private bool meleeOn;
     private bool bulletOn;
 
+    // Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
         meleeOn = false;
         bulletOn = false;
+
+        // animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -39,7 +46,6 @@ public class DoorT : MonoBehaviour
     }
 
     void Open() {
-        Debug.Log("Open");
-        // TODO - 문이 열리는 애니메이션
+        // animator.SetTrigger("open");
     }
 }

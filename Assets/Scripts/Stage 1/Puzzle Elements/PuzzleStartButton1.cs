@@ -39,6 +39,7 @@ public class PuzzleStartButton1 : MonoBehaviour
                 isReady = false;
                 GetComponent<SpriteRenderer>().sprite = buttonOn;
                 puzzleBall.GetComponent<Rigidbody2D>().AddForce(200 * Vector2.right);
+                Camera.main.GetComponent<CameraMove1>().WatchPuzzleBall1st();
             }
         }        
     }

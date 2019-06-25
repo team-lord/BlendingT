@@ -49,6 +49,7 @@ public class Arrows1 : MonoBehaviour
                 Debug.Log("Error");
                 break;
         }
+        Camera.main.GetComponent<CameraMove1>().WatchBilliardTable();
         billiardTable.GetComponent<BilliardTable1>().MoveGravity(index);
     }
 }
