@@ -25,6 +25,11 @@ public class MoveTumbleP1 : MonoBehaviour
 
     private GameObject cursor;
 
+    AudioSource myaudio;
+
+    public AudioClip tumbleSound;
+    public AudioClip moveSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,8 +39,10 @@ public class MoveTumbleP1 : MonoBehaviour
         isTumbling = false;
         audienceManager = GameObject.Find("AudienceManager");
         animator = GetComponent<Animator>();
+        myaudio = GetComponent<AudioSource>();
 
         cursor = GameObject.Find("Cursor");
+        
     }
 
     // Update is called once per frame
@@ -46,7 +53,8 @@ public class MoveTumbleP1 : MonoBehaviour
                 if (canTumble) {
                     if (h != 0 || v != 0) {
                         StartTumble();
-                    animator.SetTrigger("startTumble");
+                        animator.SetTrigger("startTumble");
+                        myaudio.PlayOneShot(tumbleSound);
 
                     }
                 }
