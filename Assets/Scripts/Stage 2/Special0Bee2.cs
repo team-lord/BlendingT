@@ -67,6 +67,7 @@ public class Special0Bee2 : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
+
         if(collision.tag == "NearbyWall") {
             transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 180));
         }
@@ -85,5 +86,14 @@ public class Special0Bee2 : MonoBehaviour
             Instantiate(honey, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
+    }
+
+    IEnumerator Destroy() {
+        Vector3 _position = transform.position;
+        GetComponent<SpriteRenderer>().enabled = false;
+        GetComponent<CircleCollider2D>().enabled = false;
+        yield return new WaitForSeconds(1f);
+        Instantiate(honey, _position, Quaternion.identity);
+        Destroy(gameObject);
     }
 }

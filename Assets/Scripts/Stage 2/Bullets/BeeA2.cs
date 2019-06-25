@@ -19,6 +19,11 @@ public class BeeA2 : MonoBehaviour
 
     public float phase2Delay;
 
+    public float moveSpeed;
+    private Vector3 direction;
+    private float rotateTime;
+    public float rotateDelay;
+
     Animator animator;
 
     // 움직이는 것 아직 구현 안 되어있음
@@ -31,6 +36,7 @@ public class BeeA2 : MonoBehaviour
 
         time = 0;
         phaseTime = 0;
+        rotateTime = 0;
         player = GameObject.Find("Player");
         animator = GetComponent<Animator>();
     }
@@ -41,6 +47,14 @@ public class BeeA2 : MonoBehaviour
         if (!isLethal) {
             time += Time.deltaTime;
             phaseTime += Time.deltaTime;
+            rotateTime += Time.deltaTime;
+
+            Move();
+
+            if(rotateTime > rotateDelay) {
+                Rotate();
+                rotateTime = 0;
+            }
 
             if(phaseTime > phaseDelay) {
                 if (phase < 2) {
@@ -86,6 +100,15 @@ public class BeeA2 : MonoBehaviour
                     break;
             }
         }
+    }
+
+    public void Move() {
+        transform.Translate(direction * moveSpeed * Time.deltaTime, Space.World);
+    }
+
+    public void Rotate() {
+        int _degree = Random.Range(0, 360);
+        direction = new Vector3(Mathf.Cos(_degree * Mathf.Deg2Rad), Mathf.Sin(_degree * Mathf.Deg2Rad), 0).normalized;
     }
 
     public void IsLethal(bool _bool) {

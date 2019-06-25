@@ -31,14 +31,13 @@ public class HealthP2 : MonoBehaviour {
 
     public void Hit() {
         if (!isInvincible) {
+            StartCoroutine(IsInvincible());
+
             health--;
             CheckAlive();
 
             Instantiate(shield, transform.position, Quaternion.identity);
             ChangeHeart();
-            
-
-            StartCoroutine(IsInvincible());
         }
     }
 
