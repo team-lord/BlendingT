@@ -442,7 +442,7 @@ PrefabInstance:
     - target: {fileID: 1970104549925559450, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
       propertyPath: phaseMaxHealths.Array.data[0]
-      value: 100
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1970104549925559450, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
