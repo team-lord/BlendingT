@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class HealthP1 : MonoBehaviour {
     
@@ -15,6 +17,8 @@ public class HealthP1 : MonoBehaviour {
     public GameObject shield;
 
     private GameObject audienceManager;
+
+    public Image heart;
 
     // Start is called before the first frame update
     void Start() {
@@ -33,22 +37,25 @@ public class HealthP1 : MonoBehaviour {
     public void Hit() {
         if (!isInvincible) {
             health--;
+            CheckAlive();
+
             Instantiate(shield, transform.position, Quaternion.identity);
             audienceManager.GetComponent<AudienceManager1>().PlayerHit();
             ChangeHeart();
 
-            CheckAlive();
 
             StartCoroutine(IsInvincible());
         }
     }
 
     void ChangeHeart() {
-        // TODO - UI의 하트와 연결       
+        // TODO - UI의 하트와 연결
+        heart.GetComponent<Heart>().ChangeImage();
     }
 
     void CheckAlive() {
         if (health <= 0) {
+            SceneManager.LoadScene("Main Menu");
             // 쓰러지는 애니메이션
             Destroy(gameObject);
             // 씬 처리

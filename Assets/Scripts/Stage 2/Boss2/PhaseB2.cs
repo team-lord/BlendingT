@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PhaseB2 : MonoBehaviour
 {
     public GameObject special0Maker;
     public GameObject special1Maker;
+
+    private GameObject player;
 
     Animator animator;
 
@@ -13,6 +16,8 @@ public class PhaseB2 : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+
+        player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
@@ -44,7 +49,9 @@ public class PhaseB2 : MonoBehaviour
         GetComponent<PatternB2>().PatternForge(1);
 
         GetComponent<MakeBeeB2>().IsReady(true);
-        GetComponent<FireBulletB2>().IsReady(true);        
+        GetComponent<FireBulletB2>().IsReady(true);
+
+        player.GetComponent<BlanketP2>().GetBlanket();
     }
 
     public void Phase4() {
@@ -54,6 +61,9 @@ public class PhaseB2 : MonoBehaviour
     }
 
     public void Phase5() {
+        // 데모 버젼 끝
+        SceneManager.LoadScene("Main Menu");
+
         GetComponent<HealthB2>().Phase(5);
         GetComponent<PatternB2>().PatternPhase(false);
         GetComponent<MoveB2>().IsMove(true);

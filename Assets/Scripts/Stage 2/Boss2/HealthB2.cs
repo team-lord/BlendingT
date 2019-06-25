@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class HealthB2 : MonoBehaviour {
 
@@ -109,8 +108,6 @@ public class HealthB2 : MonoBehaviour {
                 GameObject.Find("Special0Maker2").GetComponent<Special0Maker2>().FireSpecialBullet(true);
                 StartCoroutine(Phase2Mes());
                 Destroy(GameObject.FindGameObjectWithTag("PatternMaker"));
-
-
             }
         } else if (phase == 3) {
             if (phaseHealths[3] <= 0) {
@@ -127,9 +124,6 @@ public class HealthB2 : MonoBehaviour {
 
             }
         } else if (phase == 5) {
-            // 데모 버전에서는 여기서 끝
-            SceneManager.LoadScene("Main Menu"); 
-
             if (phaseHealths[5] <= 0) {
                 phaseHealths[5] = 0;
                 GetComponent<PhaseB2>().Phase6();

@@ -9,8 +9,7 @@ public class BlanketMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Blanket Explode");
-        Destroy(gameObject, 0.1f);
+        Destroy(gameObject, 5f);
         time = 0;
     }
 

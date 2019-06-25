@@ -1,23 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BlanketP2 : MonoBehaviour {
     public GameObject blanket;
     private bool canBlanket;
 
-    private GameObject audienceManager;
+    public Image blanketImage;
 
     // Start is called before the first frame update
     void Start() {
-        canBlanket = false;
-
-        audienceManager = GameObject.Find("AudienceManager");
+        canBlanket = true;
     }
 
     // Update is called once per frame
     void Update() {
-        if (Input.GetMouseButton(1)) { // 우클릭
+        if (Input.GetKeyDown(KeyCode.Space)) {
             if (canBlanket) {
                 UseBlanket();
             }
@@ -26,10 +25,12 @@ public class BlanketP2 : MonoBehaviour {
 
     void UseBlanket() {
         canBlanket = false;
-        Instantiate(blanket, transform.position, transform.rotation);
+        Instantiate(blanket, transform.position, Quaternion.identity);
+        blanketImage.GetComponent<NullifyingCore>().UseBlanket();
     }
 
     public void GetBlanket() {
         canBlanket = true;
+        blanketImage.GetComponent<NullifyingCore>().GetBlanket();
     }
 }

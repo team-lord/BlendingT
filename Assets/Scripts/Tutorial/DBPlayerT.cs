@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DBPlayerT : MonoBehaviour {
+
     private GameObject player;
+    public Vector3 respawnLocation;
 
     // Start is called before the first frame update
     void Start() {
@@ -17,14 +19,10 @@ public class DBPlayerT : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.tag == "Player") {
-            player.GetComponent<HealthT>().Hit();
-            StartCoroutine(Destroy());
+            if (!player.GetComponent<HealthT>().GetIsInvincible()) {
+                player.transform.position = respawnLocation;
+            }
         }
     }
 
-    IEnumerator Destroy() {
-        GetComponent<SpriteRenderer>().enabled = false;
-        yield return new WaitForSeconds(0.1f);
-        Destroy(gameObject);
-    }
 }

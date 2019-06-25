@@ -72,6 +72,8 @@
     <Compile Include="Assets\Scripts\DBPlayer1.cs" />
     <Compile Include="Assets\Scripts\DBPlayer2.cs" />
     <Compile Include="Assets\Scripts\DBWall.cs" />
+    <Compile Include="Assets\Scripts\GUI\Heart.cs" />
+    <Compile Include="Assets\Scripts\GUI\NullifyingCore.cs" />
     <Compile Include="Assets\Scripts\Player\AttackFireP1.cs" />
     <Compile Include="Assets\Scripts\Player\AttackFireP2.cs" />
     <Compile Include="Assets\Scripts\Player\BlanketP1.cs" />
@@ -83,7 +85,9 @@
     <Compile Include="Assets\Scripts\Player\MoveTumbleP2.cs" />
     <Compile Include="Assets\Scripts\Player\PushBAudienceP1.cs" />
     <Compile Include="Assets\Scripts\SceneChanger.cs" />
+    <Compile Include="Assets\Scripts\SceneChangerMainMenu.cs" />
     <Compile Include="Assets\Scripts\Shield.cs" />
+    <Compile Include="Assets\Scripts\Stage 1.5\BulletMaker12.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Audience1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\AudienceBulletMove1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\AudienceGraph1.cs" />
@@ -179,6 +183,8 @@
     <Compile Include="Assets\Scripts\Stage 2\Tower\Tower2.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Tower\Towers2.cs" />
     <Compile Include="Assets\Scripts\Tutorial\AttackFireT.cs" />
+    <Compile Include="Assets\Scripts\Tutorial\BlanketT.cs" />
+    <Compile Include="Assets\Scripts\Tutorial\CameraMoveT.cs" />
     <Compile Include="Assets\Scripts\Tutorial\DBPlayerT.cs" />
     <Compile Include="Assets\Scripts\Tutorial\HealthT.cs" />
     <Compile Include="Assets\Scripts\Tutorial\LaserT.cs" />

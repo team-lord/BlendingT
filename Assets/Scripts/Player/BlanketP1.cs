@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BlanketP1 : MonoBehaviour
 {
     public GameObject blanket;
     private bool canBlanket;
+
+    public Image blanketImage;
 
     private GameObject audienceManager;
 
@@ -20,7 +23,7 @@ public class BlanketP1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(1)) { // 우클릭
+        if (Input.GetKeyDown(KeyCode.Space)) {
             if (canBlanket) {
                 UseBlanket();
                 audienceManager.GetComponent<AudienceManager1>().Blanket();
@@ -30,10 +33,12 @@ public class BlanketP1 : MonoBehaviour
 
     void UseBlanket() {
         canBlanket = false;
-        Instantiate(blanket, transform.position, transform.rotation);
+        blanketImage.GetComponent<NullifyingCore>().UseBlanket();
+        Instantiate(blanket, transform.position, Quaternion.identity);
     }
 
     public void GetBlanket() {
         canBlanket = true;
+        blanketImage.GetComponent<NullifyingCore>().GetBlanket();
     }
 }
