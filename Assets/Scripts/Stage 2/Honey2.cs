@@ -5,11 +5,13 @@ using UnityEngine;
 public class Honey2 : MonoBehaviour
 {
     private GameObject boss;
+    private GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
         boss = GameObject.Find("Boss");
+        player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
@@ -20,7 +22,9 @@ public class Honey2 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if(collision.tag == "Player") {
-            boss.GetComponent<FireBeeAB2>().Fire();
+            if (player.GetComponent<HealthP2>().GetIsInvincible()) {
+                boss.GetComponent<FireBeeAB2>().Fire();
+            }          
 
             /*
             GameObject[] _beeBs = GameObject.FindGameObjectsWithTag("EnemyBeeB");
