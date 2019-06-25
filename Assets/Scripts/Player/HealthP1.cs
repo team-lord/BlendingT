@@ -36,15 +36,14 @@ public class HealthP1 : MonoBehaviour {
     
     public void Hit() {
         if (!isInvincible) {
+            StartCoroutine(IsInvincible());
+
             health--;
             CheckAlive();
 
             Instantiate(shield, transform.position, Quaternion.identity);
             audienceManager.GetComponent<AudienceManager1>().PlayerHit();
             ChangeHeart();
-
-
-            StartCoroutine(IsInvincible());
         }
     }
 

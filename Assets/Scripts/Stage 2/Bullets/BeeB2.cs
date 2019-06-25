@@ -20,6 +20,11 @@ public class BeeB2 : MonoBehaviour
     public GameObject honeyExplosiveBullet;
     public float phase2Delay;
 
+    public float moveSpeed;
+    private Vector3 direction;
+    private float rotateTime;
+    public float rotateDelay;
+
     // 움직이는 것 아직 구현 안 되어있음
 
     // Start is called before the first frame update
@@ -29,6 +34,7 @@ public class BeeB2 : MonoBehaviour
 
         time = 0;
         phaseTime = 0;
+        rotateTime = 0;
         player = GameObject.Find("Player");
     }
 
@@ -44,6 +50,13 @@ public class BeeB2 : MonoBehaviour
                     time = 0;
                     phaseTime = 0;
                 }
+            }
+
+            Move();
+
+            if (rotateTime > rotateDelay) {
+                Rotate();
+                rotateTime = 0;
             }
 
             switch (phase) {
@@ -78,6 +91,15 @@ public class BeeB2 : MonoBehaviour
                     break;
             }
         }
+    }
+
+    public void Move() {
+        transform.Translate(direction * moveSpeed * Time.deltaTime, Space.World);
+    }
+
+    public void Rotate() {
+        int _degree = Random.Range(0, 360);
+        direction = new Vector3(Mathf.Cos(_degree * Mathf.Deg2Rad), Mathf.Sin(_degree * Mathf.Deg2Rad), 0).normalized;
     }
 
     public void IsLethal(bool _bool) {
