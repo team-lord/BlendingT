@@ -1048,6 +1048,11 @@ PrefabInstance:
       propertyPath: tumbleDelay
       value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 8184690626530226898, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: moveSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5f9605f3bd0083245a167972058ff517, type: 3}
     - target: {fileID: 6690072444194126885, guid: b5a4ce52038e1be4c8dbccabd42ff661,
         type: 3}
       propertyPath: heart
@@ -1058,6 +1063,86 @@ PrefabInstance:
       propertyPath: blanketImage
       value: 
       objectReference: {fileID: 241488714}
+    - target: {fileID: 170313143193524521, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerMelee
+      objectReference: {fileID: 0}
+    - target: {fileID: 6567366577110463849, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerMelee
+      objectReference: {fileID: 0}
+    - target: {fileID: 8393960680508886751, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerMelee
+      objectReference: {fileID: 0}
+    - target: {fileID: 5123463173626869364, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerMelee
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513299364407767156, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerMelee
+      objectReference: {fileID: 0}
+    - target: {fileID: 919767183988200064, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerMelee
+      objectReference: {fileID: 0}
+    - target: {fileID: 4819130209948412424, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerMelee
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827527624715712930, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerMelee
+      objectReference: {fileID: 0}
+    - target: {fileID: 2942506297790799587, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerMelee
+      objectReference: {fileID: 0}
+    - target: {fileID: 2341013846017275781, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerMelee
+      objectReference: {fileID: 0}
+    - target: {fileID: 6062587410950782993, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerMelee
+      objectReference: {fileID: 0}
+    - target: {fileID: 3199139682940034538, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerMelee
+      objectReference: {fileID: 0}
+    - target: {fileID: 4440188436856729981, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerMelee
+      objectReference: {fileID: 0}
+    - target: {fileID: 8404168371770016083, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerMelee
+      objectReference: {fileID: 0}
+    - target: {fileID: 6295311843255800321, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerMelee
+      objectReference: {fileID: 0}
+    - target: {fileID: 4148737243826542896, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerMelee
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5a4ce52038e1be4c8dbccabd42ff661, type: 3}
 --- !u!1 &1032261766 stripped
@@ -1076,11 +1161,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 5f9605f3bd0083245a167972058ff517, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1457,7 +1542,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 7e-45, z: 6.324e-42, w: 1.02e-43}
+  m_BoundingSphereOverride: {x: 7.8131e-41, y: 1e-45, z: 9.7e-44, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1907,7 +1992,7 @@ PrefabInstance:
     - target: {fileID: 4890725650529264774, guid: dd70ce451ff8a35439816dd1ea4f6f0a,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4168717132860061661, guid: dd70ce451ff8a35439816dd1ea4f6f0a,
         type: 3}

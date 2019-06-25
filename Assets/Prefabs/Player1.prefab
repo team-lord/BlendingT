@@ -205,7 +205,7 @@ MonoBehaviour:
   tumbleTime: 0.25
   tumbleSpeed: 6
   tumbleDelay: 0.25
-  tumbleSound: {fileID: 0}
+  tumbleSound: {fileID: 8300000, guid: 9e5070d813d4eac479cf2658c4a85d6c, type: 3}
   moveSound: {fileID: 0}
 --- !u!95 &2196487147666163550
 Animator:
