@@ -25,6 +25,8 @@ public class BeeB2 : MonoBehaviour
     private float rotateTime;
     public float rotateDelay;
 
+    Animator animator;
+
     // 움직이는 것 아직 구현 안 되어있음
 
     // Start is called before the first frame update
@@ -36,6 +38,7 @@ public class BeeB2 : MonoBehaviour
         phaseTime = 0;
         rotateTime = 0;
         player = GameObject.Find("Player");
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -71,12 +74,12 @@ public class BeeB2 : MonoBehaviour
                     if (time > phase1Delay) {
                         Vector3 _playerDirection = player.GetComponent<MoveTumbleP2>().MoveDirection();
                         Vector3 _direction = player.transform.position - transform.position;
+                        Instantiate(bullet, transform.position, Quaternion.FromToRotation(Vector3.up, (_direction - 4 * _playerDirection).normalized));
                         Instantiate(bullet, transform.position, Quaternion.FromToRotation(Vector3.up, (_direction - 2 * _playerDirection).normalized));
-                        Instantiate(bullet, transform.position, Quaternion.FromToRotation(Vector3.up, (_direction - _playerDirection).normalized));
                         Instantiate(bullet, transform.position, Quaternion.FromToRotation(Vector3.up, _direction.normalized));
-                        Instantiate(bullet, transform.position, Quaternion.FromToRotation(Vector3.up, (_direction + _playerDirection).normalized));
                         Instantiate(bullet, transform.position, Quaternion.FromToRotation(Vector3.up, (_direction + 2 * _playerDirection).normalized));
-                        Instantiate(bullet, transform.position, Quaternion.FromToRotation(Vector3.up, (_direction + 3 * _playerDirection).normalized));
+                        Instantiate(bullet, transform.position, Quaternion.FromToRotation(Vector3.up, (_direction + 4 * _playerDirection).normalized));
+                        Instantiate(bullet, transform.position, Quaternion.FromToRotation(Vector3.up, (_direction + 6 * _playerDirection).normalized));
                         time = 0;
                     }
                     break;
@@ -100,6 +103,8 @@ public class BeeB2 : MonoBehaviour
     public void Rotate() {
         int _degree = Random.Range(0, 360);
         direction = new Vector3(Mathf.Cos(_degree * Mathf.Deg2Rad), Mathf.Sin(_degree * Mathf.Deg2Rad), 0).normalized;
+        animator.SetFloat("directionX", direction.x);
+        animator.SetFloat("directionY", direction.y);
     }
 
     public void IsLethal(bool _bool) {
@@ -110,11 +115,13 @@ public class BeeB2 : MonoBehaviour
 
         if (_bool) {
             // TODO - 바둥거리는 애니메이션 시작
+            animator.SetBool("mes", true);
         } else {
             if (phase < 2) {
                 phase++;
             }
             // TODO - 바둥거리는 애니메이션 끝
+            animator.SetBool("mes", false);
         }
     }
 }

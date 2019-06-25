@@ -468,7 +468,7 @@ PrefabInstance:
     - target: {fileID: 1970104549925559450, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
       propertyPath: phaseMaxHealths.Array.data[2]
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8443668096482587045, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
@@ -485,7 +485,7 @@ PrefabInstance:
     - target: {fileID: 8443668096482587045, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
       propertyPath: probability
-      value: 0.2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8443668096482587045, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
