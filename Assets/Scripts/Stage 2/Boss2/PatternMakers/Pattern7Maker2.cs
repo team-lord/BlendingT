@@ -31,6 +31,8 @@ public class Pattern7Maker2 : MonoBehaviour
         Vector2 _direction3 = new Vector2(Mathf.Cos(Mathf.Deg2Rad * _degree3), Mathf.Sin(Mathf.Deg2Rad * _degree3));
         Instantiate(honeyBullets, range * _direction3, Quaternion.Euler(new Vector3(0, 0, _degree3 + 90)));
 
+        CheckAlive();
+
     }
 
     // Update is called once per frame

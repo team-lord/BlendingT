@@ -67,6 +67,10 @@ public class Special0Bee2 : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
+        if(collision.tag == "NearbyWall") {
+            transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 180));
+        }
+
         if(collision.tag == "PlayerBullet") {
             health--;
             CheckAlive();

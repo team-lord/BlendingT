@@ -22,6 +22,7 @@ public class Special0Maker2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         boss = GameObject.Find("Boss");
         player = GameObject.Find("Player");
 
@@ -41,7 +42,7 @@ public class Special0Maker2 : MonoBehaviour
     IEnumerator JumpFall() {
         boss.GetComponent<JumpB2>().Jump();
         yield return new WaitForSeconds(fallDelay);
-        boss.GetComponent<JumpB2>().Special0Fall(new Vector3(0, 20, 0));
+        boss.GetComponent<JumpB2>().Special0Fall(new Vector3(20, 0, 0));
         yield return new WaitForSeconds(2f);
         boss.GetComponent<Animator>().SetTrigger("special0"); // 수정 가능성 있음
     }

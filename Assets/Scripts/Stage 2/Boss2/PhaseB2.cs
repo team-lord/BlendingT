@@ -38,6 +38,7 @@ public class PhaseB2 : MonoBehaviour
 
         // 필살기 1
         Instantiate(special0Maker, Vector3.zero, transform.rotation);
+        Instantiate(special0Maker, Vector3.zero, transform.rotation);
     }
 
     public void Phase3() {

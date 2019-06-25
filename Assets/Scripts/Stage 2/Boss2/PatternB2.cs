@@ -19,6 +19,7 @@ public class PatternB2 : MonoBehaviour
 
     private bool patternPhase;
 
+    Animator animator;
 
     // Start is called before the first frame update
     void Start() {
@@ -30,6 +31,8 @@ public class PatternB2 : MonoBehaviour
         patternArray = new int[] {0, 1, 4, 2, 6, 5, 8};
 
         patternPhase = true;
+
+        animator = GetComponent<Animator>();
     }
     // Update is called once per frame
     void Update() {
@@ -77,6 +80,7 @@ public class PatternB2 : MonoBehaviour
     public void ForceStart() {
         StartCoroutine(Rest()); // 운이 안좋으면 벌이 네마리 나올 수도 있으므로 잠시 꺼준다
         previousPattern = currentPattern;
+        // animator.SetTrigger("idle");
         patternStart = true;
     }
 

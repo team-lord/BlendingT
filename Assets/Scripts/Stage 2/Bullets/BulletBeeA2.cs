@@ -57,10 +57,11 @@ public class BulletBeeA2 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.tag == "PlayerBullet") {
+            Destroy(collision.gameObject);
             health--;
             CheckAlive();
         } else if (collision.tag == "PlayerMelee") {
-            // health -= 2;
+            health -= 2;
             CheckAlive();
         }
     }

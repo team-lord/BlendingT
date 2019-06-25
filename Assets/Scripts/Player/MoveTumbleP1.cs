@@ -65,6 +65,7 @@ public class MoveTumbleP1 : MonoBehaviour
 
     void FixedUpdate() {
         if (canMoveTumble) {
+            Debug.Log("Move");
             if (isTumbling) {
                 Tumble();
             } else {
@@ -74,6 +75,9 @@ public class MoveTumbleP1 : MonoBehaviour
     }
 
     public void CanMoveTumble(bool _bool) {
+        if (!_bool) {
+            Debug.Log("cannot move!");
+        }
         canMoveTumble = _bool;
     }
 
