@@ -1032,16 +1032,6 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 43249b57894318f4b94f0f4fea107b30, type: 3}
     - target: {fileID: 8184690626530226898, guid: b5a4ce52038e1be4c8dbccabd42ff661,
         type: 3}
-<<<<<<< HEAD
-      propertyPath: tumbleSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 9e5070d813d4eac479cf2658c4a85d6c, type: 3}
-    - target: {fileID: 541042175408081461, guid: b5a4ce52038e1be4c8dbccabd42ff661,
-        type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 0
-      objectReference: {fileID: 0}
-=======
       propertyPath: tumbleDelay
       value: 0.25
       objectReference: {fileID: 0}
@@ -1055,7 +1045,6 @@ PrefabInstance:
       propertyPath: blanketImage
       value: 
       objectReference: {fileID: 241488714}
->>>>>>> aa876da4348de116929b65a2c15bcb0ab53db68f
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5a4ce52038e1be4c8dbccabd42ff661, type: 3}
 --- !u!1 &1032261766 stripped
