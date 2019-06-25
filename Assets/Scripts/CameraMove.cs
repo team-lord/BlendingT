@@ -24,5 +24,6 @@ public class CameraMove : MonoBehaviour {
 
     public void IsWatchingPlayer(bool _bool) {
         isWatchingPlayer = _bool;
+        Debug.Log(_bool);
     }
 }

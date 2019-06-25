@@ -13,6 +13,8 @@ public class PuzzleBallMove1 : MonoBehaviour {
     private GameObject phonograph;
     private GameObject motorFan;
 
+    private GameObject player;
+
     // Start is called before the first frame update
     void Start() {
 
@@ -27,6 +29,8 @@ public class PuzzleBallMove1 : MonoBehaviour {
         billiardTable = GameObject.Find("BilliardTable");
         phonograph = GameObject.Find("Phonograph");
         motorFan = GameObject.Find("MotorFan");
+
+        player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
@@ -47,6 +51,8 @@ public class PuzzleBallMove1 : MonoBehaviour {
             puzzleBall[i].GetComponent<Rigidbody2D>().velocity = Vector3.zero;
             puzzleBall[i].GetComponent<Rigidbody2D>().angularVelocity = 0;
         }
+        player.GetComponent<MoveTumbleP1>().CanMoveTumble(true);
+        player.GetComponent<AttackFireP1>().CanAttackFire(true);
         Camera.main.GetComponent<CameraMove1>().WatchPlayer();
     }
 

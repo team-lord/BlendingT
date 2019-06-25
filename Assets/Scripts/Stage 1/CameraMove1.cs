@@ -23,7 +23,7 @@ public class CameraMove1 : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         if (watchPuzzleBall1st) {
             transform.position = puzzleBall1st.transform.position + new Vector3(0, 0, -10);
@@ -40,7 +40,7 @@ public class CameraMove1 : MonoBehaviour
 
     public void WatchBilliardTable() {
         watchPuzzleBall1st = false;
-        transform.position = new Vector3(billiardTable.transform.position.x, transform.position.y, -10);
+        transform.position = new Vector3(billiardTable.transform.position.x, 8, -10);
         watchPuzzleBall2nd = false;
     }
 
