@@ -13,11 +13,14 @@ public class BeeHealth2 : MonoBehaviour
     private float time;
 
     private bool isLethal;
+
+    Animator animator;
     
     // Start is called before the first frame update
     void Start()
     {
         time = 0;
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -38,19 +41,16 @@ public class BeeHealth2 : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
         if (isLethal) {
             if(collision.tag == "PlayerMelee") {
-                // TODO - 벌이 맵 바깥으로 도망가는 애니메이션
-                Destroy(collision);
-                // Destroy(gameObject);
+                Destroy(gameObject);
             }
         } else {
             if(collision.tag == "PlayerBullet") {
                 health--;
-                Destroy(collision);
+                Destroy(collision.gameObject);
 
                 CheckAlive();
             } else if (collision.tag == "PlayerMelee") {
-                // health -= 2;
-                Destroy(collision);
+                health -= 2;
                 CheckAlive();
             }
         }
@@ -59,6 +59,7 @@ public class BeeHealth2 : MonoBehaviour
     void CheckAlive() {
         if(health <= 0) {
             isLethal = true;
+
             if (isBeeA) {
                 GetComponent<BeeA2>().IsLethal(true);
             } else {

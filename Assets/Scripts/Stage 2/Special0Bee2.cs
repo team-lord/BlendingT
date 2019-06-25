@@ -84,7 +84,7 @@ public class Special0Bee2 : MonoBehaviour
     void CheckAlive() {
         if (health <=0) {
             Instantiate(honey, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            StartCoroutine(Destroy());
         }
     }
 

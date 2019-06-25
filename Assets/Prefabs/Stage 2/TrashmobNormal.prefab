@@ -52,6 +52,8 @@ MonoBehaviour:
   phase0Delay: 1
   phase1Delay: 1
   phase2Delay: 1
+  moveSpeed: 0
+  rotateDelay: 0
 --- !u!114 &6572996987272460331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,8 +67,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBeeA: 1
-  maxHealth: 5
-  wakeDelay: 1
+  maxHealth: 3
+  wakeDelay: 5
 --- !u!212 &4063921413204755005
 SpriteRenderer:
   m_ObjectHideFlags: 0

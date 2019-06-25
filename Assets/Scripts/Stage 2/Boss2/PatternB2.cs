@@ -59,7 +59,6 @@ public class PatternB2 : MonoBehaviour
         currentPattern = patternArray[_number];
 
         GetComponent<MakeBeeB2>().MakeBee();
-        Debug.Log(currentPattern);
         Instantiate(patternMakers[currentPattern], transform.position, transform.rotation);
         
         //Instantiate(patternMakers[debugPattern], transform.position, transform.rotation);

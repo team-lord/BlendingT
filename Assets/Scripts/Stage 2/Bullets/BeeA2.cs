@@ -109,6 +109,8 @@ public class BeeA2 : MonoBehaviour
     public void Rotate() {
         int _degree = Random.Range(0, 360);
         direction = new Vector3(Mathf.Cos(_degree * Mathf.Deg2Rad), Mathf.Sin(_degree * Mathf.Deg2Rad), 0).normalized;
+        animator.SetFloat("directionToPlayerX", direction.x);
+        animator.SetFloat("directionToPlayerY", direction.y);
     }
 
     public void IsLethal(bool _bool) {
@@ -119,11 +121,14 @@ public class BeeA2 : MonoBehaviour
 
         if (_bool) {
             // TODO - 바둥거리는 애니메이션 시작
+            animator.SetBool("mes",true);
         } else {
             if(phase < 2) {
                 phase++;
             }
             // TODO - 바둥거리는 애니메이션 끝
+            animator.SetBool("mes", false);
+
         }
     }
 }

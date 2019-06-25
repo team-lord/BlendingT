@@ -140,6 +140,7 @@ public class HealthB2 : MonoBehaviour {
         isReady = false;
         animator.SetTrigger("mes");
         yield return new WaitForSeconds(phase2MesTime);
+        Debug.Log("Phase2Mes finish");
         isReady = true;
         animator.SetTrigger("idle");
         GetComponent<PhaseB2>().Phase3();
