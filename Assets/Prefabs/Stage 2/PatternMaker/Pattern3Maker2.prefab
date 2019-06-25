@@ -59,6 +59,6 @@ MonoBehaviour:
   bullet3s:
   - {fileID: 1842941778165274136, guid: 2c0783eec6bcba642ac8ded553ffb02a, type: 3}
   - {fileID: 6136551738744359377, guid: 8ad3550179d23da4ba5aa7a5fbabce67, type: 3}
-  repetition: 0
-  delay: 0
-  angle: 0
+  repetition: 7
+  delay: 0.3
+  angle: 10
