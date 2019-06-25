@@ -15,6 +15,7 @@ TagManager:
   - Blanket
   - PatternMaker
   - PlayerMelee
+  - NearbyWall
   layers:
   - Default
   - TransparentFX

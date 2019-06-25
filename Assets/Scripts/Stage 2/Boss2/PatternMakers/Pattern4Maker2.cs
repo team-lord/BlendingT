@@ -24,7 +24,7 @@ public class Pattern4Maker2 : MonoBehaviour
         time = _direction.magnitude / bullet4s[0].GetComponent<BulletMove>().moveSpeed;
 
         directions[0] = _direction;
-        directions[1] = _direction + playerMovement * time;
+        directions[1] = _direction + 5 * playerMovement * time;
         directions[2] = directions[0] + directions[1];
 
         for(int i=0; i<3; i++) {

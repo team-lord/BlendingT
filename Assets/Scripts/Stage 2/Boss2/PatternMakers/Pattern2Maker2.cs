@@ -68,7 +68,7 @@ public class Pattern2Maker2 : MonoBehaviour
     }
 
     void Fire(int degree) {
-        Instantiate(bullet2, transform.position, Quaternion.Euler(new Vector3(0, 0, degree)));
+        Instantiate(bullet2, Vector3.zero, Quaternion.Euler(new Vector3(0, 0, degree)));
     }
 
     void CheckDestroy() {

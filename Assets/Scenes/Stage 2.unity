@@ -336,12 +336,12 @@ PrefabInstance:
     - target: {fileID: 5434808925137406293, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5434808925137406293, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5434808925137406293, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
@@ -391,7 +391,7 @@ PrefabInstance:
     - target: {fileID: 7824404991978632012, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
       propertyPath: debugPattern
-      value: 2
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7824404991978632012, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
@@ -403,6 +403,12 @@ PrefabInstance:
       propertyPath: patternDelay
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 7824404991978632012, guid: 2eabab2a25314f64bb18ccb22141b941,
+        type: 3}
+      propertyPath: patternMakers.Array.data[4]
+      value: 
+      objectReference: {fileID: 7553094215279441872, guid: 673439fd3d02c6142aecf9d6cb18f01f,
+        type: 3}
     - target: {fileID: 3397415982242047855, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
       propertyPath: m_WasSpriteAssigned
@@ -448,6 +454,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1970104549925559450, guid: 2eabab2a25314f64bb18ccb22141b941,
+        type: 3}
+      propertyPath: phaseMaxHealths.Array.data[1]
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8443668096482587045, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
@@ -1228,7 +1239,7 @@ GameObject:
   - component: {fileID: 2076382096}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Untagged
+  m_TagString: NearbyWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
