@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5780832808269939851}
   - component: {fileID: 4519762086417591931}
   - component: {fileID: -3328506456625933126}
+  - component: {fileID: -3597635681455822345}
   m_Layer: 0
   m_Name: Pattern4Maker2
   m_TagString: PatternMaker
@@ -60,3 +61,19 @@ MonoBehaviour:
   - {fileID: 4311940562734982143, guid: 2606323e553c58444bbbd188141aa6d8, type: 3}
   - {fileID: 4342556716159102264, guid: 028d323ee758ab94bb06b7449c1cdae9, type: 3}
   - {fileID: 3920993706846342187, guid: 60160006b3b73dc439d17f6246e544dd, type: 3}
+--- !u!58 &-3597635681455822345
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5780832808269939850}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1

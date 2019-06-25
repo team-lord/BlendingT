@@ -54,6 +54,7 @@ public class Pattern2Maker2 : MonoBehaviour
                 boss.GetComponent<JumpB2>().Fall(Vector3.zero);
                 isReady = true;
                 time = 0;
+                boss.GetComponent<Animator>().SetTrigger("throw");
             }
         } else {
             if (time > fallDelay)

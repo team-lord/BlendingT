@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6572996987272460331}
   - component: {fileID: 4063921413204755005}
   - component: {fileID: 545684963316956527}
+  - component: {fileID: 2139314449368720198}
   m_Layer: 0
   m_Name: TrashmobNormal
   m_TagString: Untagged
@@ -46,11 +47,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5432aa34735a1ec48b7180b7d995c662, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phaseDelay: 0
+  phaseDelay: 1
   bullet: {fileID: 2146794848732731192, guid: 014ee998694fa4e428ee7d93db9d3b8e, type: 3}
-  phase0Delay: 0
-  phase1Delay: 0
-  phase2Delay: 0
+  phase0Delay: 1
+  phase1Delay: 1
+  phase2Delay: 1
 --- !u!114 &6572996987272460331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,8 +65,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBeeA: 1
-  maxHealth: 0
-  wakeDelay: 0
+  maxHealth: 5
+  wakeDelay: 1
 --- !u!212 &4063921413204755005
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -133,3 +134,43 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!60 &2139314449368720198
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5666408957358147321}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.4, y: 1.44}
+    newSize: {x: 2.4, y: 1.44}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.0914542, y: 0.46809444}
+      - {x: 0.08056923, y: 0.15709186}
+      - {x: 0.13498822, y: 0.045946077}
+      - {x: 0.015636452, y: -0.34661707}
+      - {x: 0.077531725, y: -0.43693388}
+      - {x: 0.09064178, y: -0.5141901}
+      - {x: -0.024526805, y: -0.50143766}
+      - {x: -0.14376256, y: -0.29691085}
+      - {x: -0.20596445, y: 0.011897057}
+      - {x: -0.1414492, y: 0.29072833}
+      - {x: -0.1664086, y: 0.4297133}
+      - {x: -0.15758927, y: 0.53555}
+      - {x: -0.054540575, y: 0.620975}
+      - {x: 0.061391585, y: 0.5857021}
+      - {x: 0.080978066, y: 0.537311}

@@ -19,6 +19,8 @@ public class BeeA2 : MonoBehaviour
 
     public float phase2Delay;
 
+    Animator animator;
+
     // 움직이는 것 아직 구현 안 되어있음
 
     // Start is called before the first frame update
@@ -30,6 +32,7 @@ public class BeeA2 : MonoBehaviour
         time = 0;
         phaseTime = 0;
         player = GameObject.Find("Player");
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame

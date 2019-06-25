@@ -33,6 +33,8 @@ public class JumpB2 : MonoBehaviour
 
         GetComponent<CircleCollider2D>().enabled = false;
 
+        animator.ResetTrigger("throw");
+
         animator.SetTrigger("jump");
     }
 

@@ -28,7 +28,7 @@ public class PatternB2 : MonoBehaviour
 
         patternStart = true;
 
-        patternArray = new int[] {0, 1, 4, 2, 6, 5, 8};
+        patternArray = new int[] {0, 1, 2, 3, 4, 7};
 
         patternPhase = true;
 
@@ -48,10 +48,11 @@ public class PatternB2 : MonoBehaviour
     }
 
     void Pattern() {
-        /*int _number;
+        int _number;
 
         do {
-            _number = Random.Range(0, patternArray.Length);
+            _number = Random.Range(0, patternArray.Length - 1);
+            
         } while (patternArray[_number] == currentPattern);
 
         previousPattern = currentPattern;
@@ -59,8 +60,8 @@ public class PatternB2 : MonoBehaviour
 
         GetComponent<MakeBeeB2>().MakeBee();
         Instantiate(patternMakers[currentPattern], transform.position, transform.rotation);
-        */
-        Instantiate(patternMakers[debugPattern], transform.position, transform.rotation);
+        
+        //Instantiate(patternMakers[debugPattern], transform.position, transform.rotation);
     }
 
     public void PatternEnd() { // patternMaker가 이 함수를 호출
@@ -77,11 +78,25 @@ public class PatternB2 : MonoBehaviour
         patternMakers[number] = forgedPatternMakers[number];
     }
 
+    private bool forceStartIsReady = true;
+
     public void ForceStart() {
-        StartCoroutine(Rest()); // 운이 안좋으면 벌이 네마리 나올 수도 있으므로 잠시 꺼준다
-        previousPattern = currentPattern;
-        animator.SetTrigger("attackedByBlanket");
-        patternStart = true;
+        if (forceStartIsReady) {
+            Debug.Log("ForceStartExecuted");
+            StartCoroutine(ForceStartIsReady());
+            StartCoroutine(Rest()); // 운이 안좋으면 벌이 네마리 나올 수도 있으므로 잠시 꺼준다
+            previousPattern = currentPattern;
+            animator.SetBool("spin", false);
+            animator.SetTrigger("attackedByBlanket");
+            PatternEnd();
+        }
+    }
+
+    IEnumerator ForceStartIsReady()
+    {
+        forceStartIsReady = false;
+        yield return new WaitForSeconds(5f);
+        forceStartIsReady = true;
     }
 
     IEnumerator Rest() {

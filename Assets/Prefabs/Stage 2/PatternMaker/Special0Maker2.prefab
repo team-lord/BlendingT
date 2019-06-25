@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5194144627186040855}
   - component: {fileID: -6327694430053558079}
+  - component: {fileID: 386527145392046875}
   m_Layer: 0
   m_Name: Special0Maker2
   m_TagString: PatternMaker
@@ -49,3 +50,19 @@ MonoBehaviour:
   special0FailBullet: {fileID: 0}
   special0SuccessBullet: {fileID: 0}
   potLocation: {fileID: 0}
+--- !u!58 &386527145392046875
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6602233451319459334}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1

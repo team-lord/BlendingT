@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3967432895975965985}
   - component: {fileID: -4880359610815328102}
   - component: {fileID: -8076690286312375041}
+  - component: {fileID: -9014591191877043198}
   m_Layer: 0
   m_Name: Pattern2Maker2
   m_TagString: PatternMaker
@@ -58,4 +59,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet2: {fileID: 8463984705783618367, guid: 23bd24cc634476348ac886c5d57a845f, type: 3}
   delay: 1
-  fallDelay: 3
+  fallDelay: 1.3
+--- !u!58 &-9014591191877043198
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3967432895975965984}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1

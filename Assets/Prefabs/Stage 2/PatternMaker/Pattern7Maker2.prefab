@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4850480381285084225}
   - component: {fileID: 7753757401466857073}
   - component: {fileID: -5007668048012196739}
+  - component: {fileID: 1627651161703316897}
   m_Layer: 0
   m_Name: Pattern7Maker2
   m_TagString: PatternMaker
@@ -59,3 +60,19 @@ MonoBehaviour:
   honeyBullets: {fileID: 1309904043788940614, guid: 53e1aa1009ce0ea49a2721f46615cf9e,
     type: 3}
   range: 20
+--- !u!58 &1627651161703316897
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4850480381285084224}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1
