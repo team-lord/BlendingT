@@ -37,10 +37,12 @@ public class PuzzleStartButton1 : MonoBehaviour
         if (isReady) {
             if (collision.tag == "PlayerMelee") {
                 isReady = false;
+
                 GetComponent<SpriteRenderer>().sprite = buttonOn;
-                puzzleBall.GetComponent<Rigidbody2D>().AddForce(200 * Vector2.right);
+
+                puzzleBall.GetComponent<Rigidbody2D>().AddForce(180 * Vector2.right);
                 Camera.main.GetComponent<CameraMove1>().WatchPuzzleBall1st();
-                player.GetComponent<MoveTumbleP1>().CanMoveTumble(false);
+                player.GetComponent<MoveTumbleP1>().CanMoveTumble1(false);
                 player.GetComponent<AttackFireP1>().CanAttackFire(false);
             }
         }        

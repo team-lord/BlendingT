@@ -42,6 +42,8 @@ public class Pattern3Maker2 : MonoBehaviour
                 ChangeBullet();
             }
 
+            ChangeBullet();
+
             count++;
             time = 0;
             CheckDestroy();

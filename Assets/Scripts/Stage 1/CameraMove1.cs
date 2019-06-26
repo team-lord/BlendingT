@@ -28,6 +28,7 @@ public class CameraMove1 : MonoBehaviour
         if (watchPuzzleBall1st) {
             transform.position = puzzleBall1st.transform.position + new Vector3(0, 0, -10);
         } else if (watchPuzzleBall2nd) {
+            // if(puzzleBall2nd.activeSelf)
             transform.position = puzzleBall2nd.transform.position + new Vector3(0, 0, -10);
         }
     }

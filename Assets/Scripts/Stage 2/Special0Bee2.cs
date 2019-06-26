@@ -19,7 +19,7 @@ public class Special0Bee2 : MonoBehaviour
     public GameObject honey;
 
     public GameObject bullet;
-    
+
     Animator animator;
 
     // Start is called before the first frame update
@@ -28,28 +28,28 @@ public class Special0Bee2 : MonoBehaviour
         health = maxHealth;
         rotateTime = 0;
         fireTime = 0;
-
         player = GameObject.Find("Player");
 
         animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         rotateTime += Time.deltaTime;
         fireTime += Time.deltaTime;
 
         Move();
 
-        if(rotateTime >= rotateDelay) {
+        if (rotateTime >= rotateDelay) {
             Rotate();
             rotateTime = 0;
         }
-        if(fireTime >= fireDelay) {
+        if (fireTime >= fireDelay) {
             Fire();
             fireTime = 0;
         }
+
+
     }
     
     void Move() {
@@ -67,28 +67,29 @@ public class Special0Bee2 : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
+            if (collision.tag == "NearbyWall") {
+                transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 180));
+            }
 
-        if(collision.tag == "NearbyWall") {
-            transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 180));
-        }
-
-        if(collision.tag == "PlayerBullet") {
-            health--;
-            CheckAlive();
-        } else if (collision.tag == "PlayerMelee") {
-            health -=2;
-            CheckAlive();
-        }
+            if (collision.tag == "PlayerBullet") {
+                health--;
+                CheckAlive();
+            } else if (collision.tag == "PlayerMelee") {
+                health -= 2;
+                CheckAlive();
+            }
+                
     }
 
+
     void CheckAlive() {
-        if (health <=0) {
-            Instantiate(honey, transform.position, Quaternion.identity);
+        if (health <= 0) {
+            // Instantiate(honey, transform.position, Quaternion.identity);
             StartCoroutine(Destroy());
         }
     }
 
-    IEnumerator Destroy() {
+    IEnumerator Destroy() {        
         Vector3 _position = transform.position;
         GetComponent<SpriteRenderer>().enabled = false;
         GetComponent<CircleCollider2D>().enabled = false;

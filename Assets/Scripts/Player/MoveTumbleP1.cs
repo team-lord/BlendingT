@@ -5,6 +5,7 @@ using UnityEngine;
 public class MoveTumbleP1 : MonoBehaviour
 {
     private bool canMoveTumble;
+    private bool canMoveTumble1;
 
     // 이동
     public float moveSpeed;
@@ -34,6 +35,7 @@ public class MoveTumbleP1 : MonoBehaviour
     void Start()
     {
         canMoveTumble = true;
+        canMoveTumble1 = true;
 
         canTumble = true;
         isTumbling = false;
@@ -47,8 +49,9 @@ public class MoveTumbleP1 : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    { 
-        if (canMoveTumble) {
+    {
+        if (canMoveTumble && canMoveTumble1) {
+            
             if (Input.GetMouseButtonDown(1)) {
                 if (canTumble) {
                     if (h != 0 || v != 0) {
@@ -64,8 +67,7 @@ public class MoveTumbleP1 : MonoBehaviour
     }
 
     void FixedUpdate() {
-        if (canMoveTumble) {
-            Debug.Log("Move");
+        if (canMoveTumble && canMoveTumble1) {
             if (isTumbling) {
                 Tumble();
             } else {
@@ -74,10 +76,11 @@ public class MoveTumbleP1 : MonoBehaviour
         }        
     }
 
+    public void CanMoveTumble1(bool _bool) {
+        canMoveTumble1 = _bool;
+    }
+
     public void CanMoveTumble(bool _bool) {
-        if (!_bool) {
-            Debug.Log("cannot move!");
-        }
         canMoveTumble = _bool;
     }
 

@@ -177,11 +177,7 @@ BlendTree:
     m_DirectBlendParameter: directionToPlayerX
     m_Mirror: 0
   m_BlendParameter: directionX
-<<<<<<< HEAD
-  m_BlendParameterY: directionToPlayerY
-=======
   m_BlendParameterY: directionY
->>>>>>> 595aded2ab452791b3bc56c2a8d2f43215fc8d60
   m_MinThreshold: 0
   m_MaxThreshold: 1
   m_UseAutomaticThresholds: 1
@@ -226,40 +222,19 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-<<<<<<< HEAD
-    m_Controller: {fileID: 9100000}
-  - m_Name: directionToPlayerY
-=======
     m_Controller: {fileID: 0}
   - m_Name: directionY
->>>>>>> 595aded2ab452791b3bc56c2a8d2f43215fc8d60
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: mes
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-<<<<<<< HEAD
-    m_Controller: {fileID: 9100000}
-  - m_Name: lastDirectionToPlayerX
-    m_Type: 1
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
-  - m_Name: lastDirectionToPlayerY
-    m_Type: 1
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
-=======
     m_Controller: {fileID: 0}
->>>>>>> 595aded2ab452791b3bc56c2a8d2f43215fc8d60
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer

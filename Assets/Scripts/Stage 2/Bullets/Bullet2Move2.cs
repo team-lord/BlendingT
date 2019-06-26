@@ -61,7 +61,6 @@ public class Bullet2Move2 : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.tag == "Player") {
-            Debug.Log(collision.tag);
             Explode();
         }
     }

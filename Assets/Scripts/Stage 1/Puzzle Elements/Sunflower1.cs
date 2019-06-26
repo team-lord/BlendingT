@@ -32,5 +32,5 @@ public class Sunflower1 : MonoBehaviour
     public void IsReady() {
         isReady = true;
     }
-    
+
 }

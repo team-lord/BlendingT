@@ -27,23 +27,26 @@ public class PhaseB2 : MonoBehaviour
     }
 
     public void Phase1() {
+        Debug.Log("Phase1");
         GetComponent<PatternB2>().PatternArray(new int[] { 0, 1, 4, 2, 3, 7 });
         GetComponent<HealthB2>().Phase(1);
     }
 
     public void Phase2() {
+        Debug.Log("Phase2");
         GetComponent<PatternB2>().PatternPhase(false);
         GetComponent<MoveB2>().IsMove(false);
         GetComponent<HealthB2>().Phase(2);
 
         animator.SetFloat("phase2Health", 3f);
-
+        
         // 필살기 1
         Instantiate(special0Maker, Vector3.zero, transform.rotation);
         Instantiate(special0Maker, Vector3.zero, transform.rotation);
     }
 
     public void Phase3() {
+        Debug.Log("Phase3");
         GetComponent<PatternB2>().PatternPhase(true);
         GetComponent<MoveB2>().IsMove(true);
         GetComponent<HealthB2>().Phase(3);
@@ -58,12 +61,14 @@ public class PhaseB2 : MonoBehaviour
     }
 
     public void Phase4() {
+        Debug.Log("Phase4");
         GetComponent<HealthB2>().Phase(4);
         GetComponent<PatternB2>().PatternForge(4);
         GetComponent<MakeBeeB2>().Forge();
     }
 
     public void Phase5() {
+        Debug.Log("Phase5");
         // 데모 버젼 끝
         SceneManager.LoadScene("Main Menu");
 

@@ -24,7 +24,6 @@ public class Special0Honey2 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if(collision.tag == "PlayerBullet") {
-            Debug.Log("PlayerBulletCollide");
             Instantiate(playerBulletHoney, collision.transform.position, collision.transform.rotation);
             Destroy(gameObject);
             Destroy(collision.gameObject);

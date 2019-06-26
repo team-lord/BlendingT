@@ -7,6 +7,7 @@ public class DBNTumble : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
+
         player = GameObject.Find("Player");
     }
 
@@ -17,8 +18,8 @@ public class DBNTumble : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.tag == "Player") {
-            player.GetComponent<HealthP2>().Hit();
             if (!player.GetComponent<HealthP2>().GetIsInvincible()) {
+                player.GetComponent<HealthP2>().Hit();
                 StartCoroutine(Destroy());
             }
         }
