@@ -6,6 +6,7 @@ public class LeverT : MonoBehaviour
 {
     public bool isMelee;
     private bool isOn;
+    public GameObject door;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,7 @@ public class LeverT : MonoBehaviour
     void Change() {
         isOn = true;
         transform.localScale = new Vector3(-1, 1, 1);
+        door.GetComponent<DoorT>().ChangeMelee(isMelee);
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {

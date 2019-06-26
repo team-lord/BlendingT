@@ -58,7 +58,7 @@ public class Bullet1Move1 : MonoBehaviour {
                 break;
             case 3:
                 time += Time.deltaTime;
-
+                fastMoveSpeed += Time.deltaTime * 2;
                 FastMove();
                 break;
             default:
@@ -72,7 +72,7 @@ public class Bullet1Move1 : MonoBehaviour {
     }
 
     void MakeDirection() {
-        Vector3 _direction = ((player.transform.position + boss.transform.position) / 2 - transform.position).normalized;
+        Vector3 _direction = (((player.transform.position * 2) + (boss.transform.position * 3)) / 5 - transform.position).normalized;
         z = Quaternion.FromToRotation(Vector3.up, _direction).eulerAngles.z;
     }
 

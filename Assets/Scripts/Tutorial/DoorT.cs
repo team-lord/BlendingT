@@ -13,7 +13,7 @@ public class DoorT : MonoBehaviour
     private bool meleeOn;
     private bool bulletOn;
 
-    // Animator animator;
+    Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -21,13 +21,13 @@ public class DoorT : MonoBehaviour
         meleeOn = false;
         bulletOn = false;
 
-        // animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Check();
     }
 
     public void ChangeMelee(bool isMelee) {
@@ -36,7 +36,7 @@ public class DoorT : MonoBehaviour
         } else {
             bulletOn = true;
         }
-        Check();
+        
     }
     
     void Check() {
@@ -46,6 +46,7 @@ public class DoorT : MonoBehaviour
     }
 
     void Open() {
-        // animator.SetTrigger("open");
+        animator.SetTrigger("doorOpen");
+        gameObject.GetComponent<BoxCollider2D>().enabled = false;
     }
 }
