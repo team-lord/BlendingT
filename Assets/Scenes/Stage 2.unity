@@ -1011,7 +1011,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraX: 0
   cameraY: 0
-  cameraZ: 0
+  cameraZ: -10
 --- !u!1 &1094979032
 GameObject:
   m_ObjectHideFlags: 0
