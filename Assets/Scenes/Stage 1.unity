@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -697,6 +697,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b670bcb5307474c4cbee0a4fe044a5fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraX: 0
+  cameraY: 0
+  cameraZ: -10
 --- !u!81 &371707985
 AudioListener:
   m_ObjectHideFlags: 0
@@ -976,7 +979,7 @@ PrefabInstance:
     - target: {fileID: 1670161517945502503, guid: b5a4ce52038e1be4c8dbccabd42ff661,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.87
       objectReference: {fileID: 0}
     - target: {fileID: 1670161517945502503, guid: b5a4ce52038e1be4c8dbccabd42ff661,
         type: 3}
@@ -1781,10 +1784,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rightside
       objectReference: {fileID: 0}
+    - target: {fileID: 505440990913474085, guid: bec35230094f7c147ae523d16f786edd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 505440991179366179, guid: bec35230094f7c147ae523d16f786edd,
         type: 3}
       propertyPath: m_Name
       value: Leftside
+      objectReference: {fileID: 0}
+    - target: {fileID: 505440991179366179, guid: bec35230094f7c147ae523d16f786edd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 505440990913474087, guid: bec35230094f7c147ae523d16f786edd,
         type: 3}
@@ -1797,6 +1810,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3634051992245543457, guid: fcd265119b7bde844b57f0dc5d116025,
         type: 3}
+    - target: {fileID: 505440990913474087, guid: bec35230094f7c147ae523d16f786edd,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 505440991179366189, guid: bec35230094f7c147ae523d16f786edd,
         type: 3}
       propertyPath: normalVector.x
@@ -1808,7 +1826,23 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3634051992245543457, guid: fcd265119b7bde844b57f0dc5d116025,
         type: 3}
+    - target: {fileID: 505440991179366189, guid: bec35230094f7c147ae523d16f786edd,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 505440991759128266, guid: bec35230094f7c147ae523d16f786edd,
+        type: 3}
+      propertyPath: audienceBullet
+      value: 
+      objectReference: {fileID: 3634051992245543457, guid: fcd265119b7bde844b57f0dc5d116025,
+        type: 3}
+    - target: {fileID: 505440991759128266, guid: bec35230094f7c147ae523d16f786edd,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 505440991815283889, guid: bec35230094f7c147ae523d16f786edd,
         type: 3}
       propertyPath: audienceBullet
       value: 
@@ -1816,10 +1850,19 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 505440991815283889, guid: bec35230094f7c147ae523d16f786edd,
         type: 3}
-      propertyPath: audienceBullet
-      value: 
-      objectReference: {fileID: 3634051992245543457, guid: fcd265119b7bde844b57f0dc5d116025,
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 505440991759128264, guid: bec35230094f7c147ae523d16f786edd,
         type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 505440991815283895, guid: bec35230094f7c147ae523d16f786edd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bec35230094f7c147ae523d16f786edd, type: 3}
 --- !u!1001 &4840320591481738697
@@ -2187,7 +2230,7 @@ PrefabInstance:
     - target: {fileID: 4168717132860061661, guid: dd70ce451ff8a35439816dd1ea4f6f0a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 64
+      value: -9.12
       objectReference: {fileID: 0}
     - target: {fileID: 4168717132860061661, guid: dd70ce451ff8a35439816dd1ea4f6f0a,
         type: 3}
