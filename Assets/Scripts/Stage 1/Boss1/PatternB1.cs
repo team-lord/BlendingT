@@ -30,6 +30,8 @@ public class PatternB1 : MonoBehaviour
         currentPattern = -1;
 
         patternStart = true;
+
+        
     }
     // Update is called once per frame
     void Update() {
@@ -49,8 +51,8 @@ public class PatternB1 : MonoBehaviour
     }
 
     void Pattern() {
-        /*
-        int _number;
+        
+        /*int _number;
         do {
             _number = Random.Range(0, patternMakers.Length); // patternMakers.Length == 8
         } while (_number == currentPattern);
@@ -59,12 +61,14 @@ public class PatternB1 : MonoBehaviour
         currentPattern = _number;
 
         if (isPatternForged) {
+            Debug.Log("forged");
             Instantiate(forgedPatternMakers[_number], transform.position, transform.rotation);
         } else {
+            Debug.Log("normal");
             Instantiate(patternMakers[_number], transform.position, transform.rotation);
         }
         */
-        Instantiate(patternMakers[debugPattern], transform.position, transform.rotation);
+        Instantiate(forgedPatternMakers[debugPattern], transform.position, transform.rotation);
 
     }
 
