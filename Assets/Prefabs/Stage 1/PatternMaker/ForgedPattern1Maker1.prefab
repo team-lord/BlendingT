@@ -57,6 +57,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet1: {fileID: 3465809018753230660, guid: 89f6d3de7310e654fa166ab8f5bf3d6a, type: 3}
-  number: 18
+  number: 30
   repetition: 4
   delay: 1.5

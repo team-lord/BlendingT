@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 7059632569454076806}
   - component: {fileID: 1081145178274760722}
   - component: {fileID: 1178172314911150382}
-  - component: {fileID: 8962721807599918081}
   - component: {fileID: -8986700158710487721}
+  - component: {fileID: 2059970213502815794}
   m_Layer: 0
   m_Name: Bullet11
   m_TagString: EnemyBullet
@@ -139,47 +139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7b18f48d4c22b64ab19fc458e6a408c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!60 &8962721807599918081
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 661813102041417958}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.56, y: 0.56}
-    newSize: {x: 0.56, y: 0.56}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.24276155, y: 0.15785696}
-      - {x: 0.03467135, y: 0.1619093}
-      - {x: 0.035971653, y: 0.2426352}
-      - {x: -0.033210225, y: 0.24516062}
-      - {x: -0.04186123, y: 0.15823485}
-      - {x: -0.25477678, y: 0.16020906}
-      - {x: -0.24522582, y: 0.15504082}
-      - {x: -0.112240225, y: -0.0013196617}
-      - {x: -0.043958083, y: 0.0020767376}
-      - {x: -0.00015098229, y: -0.24515298}
-      - {x: 0.03507374, y: -0.24268106}
-      - {x: 0.037834633, y: -0.24002291}
-      - {x: 0.040319186, y: -0.22742678}
-      - {x: 0.038881823, y: -0.0028314274}
-      - {x: 0.11716603, y: 0.0035836697}
-      - {x: 0.12701654, y: 0.0011117309}
 --- !u!50 &-8986700158710487721
 Rigidbody2D:
   serializedVersion: 4
@@ -201,3 +160,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!70 &2059970213502815794
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661813102041417958}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0012402236, y: 0.057050467}
+  m_Size: {x: 0.3243572, y: 0.36156398}
+  m_Direction: 0

@@ -80,17 +80,19 @@ public class Bullet1Move1 : MonoBehaviour {
 
     void Rotate() {
         float _z = transform.rotation.eulerAngles.z;
-        _z += rotatingVelocity;
         if (_z > 360) {
             _z -= 360;
         }
+        _z += rotatingVelocity;
+
         if (_z > z) {
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, z));
             phase = 3;
             time = 0;
-        } else {
+        } else if (_z < z){ 
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, _z));
         }
+
     }
 
     void FastMove() {
