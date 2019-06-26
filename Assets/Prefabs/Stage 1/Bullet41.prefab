@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  angleVelocity: 30
+  angleVelocity: 20
   rotateDelay: 1
 --- !u!114 &7356526900830127417
 MonoBehaviour:
