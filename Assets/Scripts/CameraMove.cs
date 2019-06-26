@@ -12,6 +12,7 @@ public class CameraMove : MonoBehaviour {
     public float cameraZ;
 
     private bool isWatchingPlayer;
+    private bool isWatchingPlayerCenter;
 
     // Start is called before the first frame update
     void Start() {
@@ -19,6 +20,7 @@ public class CameraMove : MonoBehaviour {
         boss = GameObject.Find("Boss");
 
         isWatchingPlayer = true;
+        isWatchingPlayerCenter = false;
     }
 
     // Update is called once per frame
@@ -31,191 +33,10 @@ public class CameraMove : MonoBehaviour {
     */
 
     void LateUpdate()
-    { 
+    {
+
         if (isWatchingPlayer)
         {
-            /*
-            if (boss.transform.position.x >= player.transform.position.x && player.transform.position.x - boss.transform.position.x >= -14 && (player.transform.position.x + boss.transform.position.x) * 0.5 > -18 && (player.transform.position.x + boss.transform.position.x) * 0.5 < 18)
-            {
-                Debug.Log("X1");
-                Camera.main.transform.position = new Vector3((player.transform.position.x + boss.transform.position.x) * 0.5f, player.transform.position.y, cameraZ);
-            }
-            else if (boss.transform.position.x > player.transform.position.x && player.transform.position.x - boss.transform.position.x < -14)
-            {
-                Debug.Log("X2");
-                Camera.main.transform.position = new Vector3(player.transform.position.x + 7, player.transform.position.y, cameraZ);
-            }
-
-            else if (boss.transform.position.x <= player.transform.position.x && player.transform.position.x - boss.transform.position.x < 14 && (player.transform.position.x + boss.transform.position.x) * 0.5 < 18 && (player.transform.position.x + boss.transform.position.x) * 0.5 > -18)
-            {
-                Debug.Log("X3");
-                Camera.main.transform.position = new Vector3((player.transform.position.x + boss.transform.position.x) * 0.5f, player.transform.position.y, cameraZ);
-            }
-
-            else if (boss.transform.position.x <= player.transform.position.x && player.transform.position.x - boss.transform.position.x >= 14)
-            {
-                Debug.Log("X4");
-                Camera.main.transform.position = new Vector3(player.transform.position.x - 7, player.transform.position.y, cameraZ);
-            }
-
-            if (boss.transform.position.x >= player.transform.position.x && player.transform.position.x - boss.transform.position.x >= -14 && (player.transform.position.x + boss.transform.position.x) * 0.5 < -18)
-            {
-                Debug.Log("X5");
-                Camera.main.transform.position = new Vector3(-18, player.transform.position.y, cameraZ);
-            }
-
-            else if (boss.transform.position.x < player.transform.position.x && player.transform.position.x - boss.transform.position.x < 14 && (player.transform.position.x + boss.transform.position.x) * 0.5 > 18)
-            {
-                Debug.Log("X6");
-                Camera.main.transform.position = new Vector3(18, player.transform.position.y, cameraZ);
-            }
-            */
-
-            /*
-            if (boss.transform.position.y >= player.transform.position.y && player.transform.position.y - boss.transform.position.y >= -8 && (player.transform.position.y + boss.transform.position.y) * 0.5 > -18 && (player.transform.position.y + boss.transform.position.y) * 0.5 < 17)
-            {
-                Debug.Log("Y1");
-                Camera.main.transform.position = new Vector3(player.transform.position.x, (player.transform.position.y + boss.transform.position.y) * 0.5f, cameraZ);
-            }
-
-            else if (boss.transform.position.y >= player.transform.position.y && player.transform.position.y - boss.transform.position.y < -8)
-            {
-                Debug.Log("Y2");
-                Camera.main.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 4, cameraZ);
-            }
-
-            else if (boss.transform.position.y < player.transform.position.y && player.transform.position.y - boss.transform.position.y < 8 && (player.transform.position.y + boss.transform.position.y) * 0.5 < 18 && (player.transform.position.y + boss.transform.position.y) * 0.5 > -17)
-            {
-                Debug.Log("Y3");
-                Camera.main.transform.position = new Vector3(player.transform.position.x, (player.transform.position.y + boss.transform.position.y) * 0.5f, cameraZ);
-            }
-
-            else if (boss.transform.position.y < player.transform.position.y && player.transform.position.y - boss.transform.position.y >= 8)
-            {
-                Debug.Log("Y4");
-                Camera.main.transform.position = new Vector3(player.transform.position.x, player.transform.position.y - 4, cameraZ);
-            }
-        
-            if (boss.transform.position.y >= player.transform.position.y && player.transform.position.y - boss.transform.position.y >= -8 && (player.transform.position.y + boss.transform.position.y) * 0.5 < -17)
-            {
-                Debug.Log("Y5");
-                Camera.main.transform.position = new Vector3(player.transform.position.x, -17, cameraZ);
-            }
-
-            else if (boss.transform.position.y < player.transform.position.y && player.transform.position.y - boss.transform.position.y < 8 && (player.transform.position.y + boss.transform.position.y) * 0.5 > 17)
-            {
-                Debug.Log("Y6");
-                Camera.main.transform.position = new Vector3(player.transform.position.x, 17, cameraZ);
-            }
-            */
-
-            /*
-            if (boss.transform.position.x >= player.transform.position.x && player.transform.position.x - boss.transform.position.x >= -14 && (player.transform.position.x + boss.transform.position.x) * 0.5 > -18 && (player.transform.position.x + boss.transform.position.x) * 0.5 < 18 && boss.transform.position.y >= player.transform.position.y && player.transform.position.y - boss.transform.position.y >= -8 && (player.transform.position.y + boss.transform.position.y) * 0.5 > -17 && (player.transform.position.y + boss.transform.position.y) * 0.5 < 17)
-            {
-                Debug.Log("11");
-                Camera.main.transform.position = new Vector3((player.transform.position.x + boss.transform.position.x) * 0.5f, (player.transform.position.y + boss.transform.position.y) * 0.5f, cameraZ);
-            }
-
-            else if (boss.transform.position.x >= player.transform.position.x && player.transform.position.x - boss.transform.position.x >= -14 && (player.transform.position.x + boss.transform.position.x) * 0.5 > -18 && (player.transform.position.x + boss.transform.position.x) * 0.5 < 18 && boss.transform.position.y >= player.transform.position.y && player.transform.position.y - boss.transform.position.y < -8)
-            {
-                Debug.Log("12");
-                Camera.main.transform.position = new Vector3((player.transform.position.x + boss.transform.position.x) * 0.5f, player.transform.position.y + 4, cameraZ);
-            }
-
-            else if (boss.transform.position.x >= player.transform.position.x && player.transform.position.x - boss.transform.position.x >= -14 && (player.transform.position.x + boss.transform.position.x) * 0.5 > -18 && (player.transform.position.x + boss.transform.position.x) * 0.5 < 18 && boss.transform.position.y < player.transform.position.y && player.transform.position.y - boss.transform.position.y < 8 && (player.transform.position.y + boss.transform.position.y) * 0.5 < 17 && (player.transform.position.y + boss.transform.position.y) * 0.5 > -17)
-            {
-                Debug.Log("13");
-                Camera.main.transform.position = new Vector3((player.transform.position.x + boss.transform.position.x) * 0.5f, (player.transform.position.y + boss.transform.position.y) * 0.5f, cameraZ);
-            }
-
-            else if (boss.transform.position.x >= player.transform.position.x && player.transform.position.x - boss.transform.position.x >= -14 && (player.transform.position.x + boss.transform.position.x) * 0.5 > -18 && (player.transform.position.x + boss.transform.position.x) * 0.5 < 18 && boss.transform.position.y < player.transform.position.y && player.transform.position.y - boss.transform.position.y >= 8)
-            {
-                Debug.Log("14");
-                Camera.main.transform.position = new Vector3((player.transform.position.x + boss.transform.position.x) * 0.5f, player.transform.position.y - 4, cameraZ);
-            }
-
-
-
-
-            else if (boss.transform.position.x >= player.transform.position.x && player.transform.position.x - boss.transform.position.x < -14 && boss.transform.position.y >= player.transform.position.y && player.transform.position.y - boss.transform.position.y >= -8 && (player.transform.position.y + boss.transform.position.y) * 0.5 > -17 && (player.transform.position.y + boss.transform.position.y) * 0.5 < 17)
-            {
-                Debug.Log("21");
-                Camera.main.transform.position = new Vector3(player.transform.position.x + 7, (player.transform.position.y + boss.transform.position.y) * 0.5f, cameraZ);
-            }
-
-            else if (boss.transform.position.x >= player.transform.position.x && player.transform.position.x - boss.transform.position.x < -14 && boss.transform.position.y >= player.transform.position.y && player.transform.position.y - boss.transform.position.y < -8)
-            {
-                Debug.Log("22");
-                Camera.main.transform.position = new Vector3(player.transform.position.x + 7, player.transform.position.y + 4, cameraZ);
-            }
-
-            else if (boss.transform.position.x >= player.transform.position.x && player.transform.position.x - boss.transform.position.x < -14 && boss.transform.position.y < player.transform.position.y && player.transform.position.y - boss.transform.position.y < 8 && (player.transform.position.y + boss.transform.position.y) * 0.5 < 17 && (player.transform.position.y + boss.transform.position.y) * 0.5 > -17)
-            {
-                Debug.Log("23");
-                Camera.main.transform.position = new Vector3(player.transform.position.x + 7, (player.transform.position.y + boss.transform.position.y) * 0.5f, cameraZ);
-            }
-
-            else if (boss.transform.position.x >= player.transform.position.x && player.transform.position.x - boss.transform.position.x < -14 && boss.transform.position.y < player.transform.position.y && player.transform.position.y - boss.transform.position.y >= 8)
-            {
-                Debug.Log("24");
-                Camera.main.transform.position = new Vector3(player.transform.position.x + 7, player.transform.position.y - 4, cameraZ);
-            }
-
-
-
-
-
-            else if (boss.transform.position.x < player.transform.position.x && player.transform.position.x - boss.transform.position.x < 14 && (player.transform.position.x + boss.transform.position.x) * 0.5 < 18 && (player.transform.position.x + boss.transform.position.x) * 0.5 > -18 && boss.transform.position.y >= player.transform.position.y && player.transform.position.y - boss.transform.position.y >= -8 && (player.transform.position.y + boss.transform.position.y) * 0.5 > -17 && (player.transform.position.y + boss.transform.position.y) * 0.5 < 17)
-            {
-                Debug.Log("31");
-                Camera.main.transform.position = new Vector3((player.transform.position.x + boss.transform.position.x) * 0.5f, (player.transform.position.y + boss.transform.position.y) * 0.5f, cameraZ);
-            }
-
-            else if (boss.transform.position.x < player.transform.position.x && player.transform.position.x - boss.transform.position.x < 14 && (player.transform.position.x + boss.transform.position.x) * 0.5 < 18 && (player.transform.position.x + boss.transform.position.x) * 0.5 > -18 && boss.transform.position.y >= player.transform.position.y && player.transform.position.y - boss.transform.position.y < -8)
-            {
-                Debug.Log("32");
-                Camera.main.transform.position = new Vector3((player.transform.position.x + boss.transform.position.x) * 0.5f, player.transform.position.y + 4, cameraZ);
-            }
-
-            else if (boss.transform.position.x < player.transform.position.x && player.transform.position.x - boss.transform.position.x < 14 && (player.transform.position.x + boss.transform.position.x) * 0.5 < 18 && (player.transform.position.x + boss.transform.position.x) * 0.5 > -18 && boss.transform.position.y < player.transform.position.y && player.transform.position.y - boss.transform.position.y < 8 && (player.transform.position.y + boss.transform.position.y) * 0.5 < 17 && (player.transform.position.y + boss.transform.position.y) * 0.5 > -17)
-            {
-                Debug.Log("33");
-                Camera.main.transform.position = new Vector3((player.transform.position.x + boss.transform.position.x) * 0.5f, (player.transform.position.y + boss.transform.position.y) * 0.5f, cameraZ);
-            }
-
-            else if (boss.transform.position.x < player.transform.position.x && player.transform.position.x - boss.transform.position.x < 14 && (player.transform.position.x + boss.transform.position.x) * 0.5 < 18 && (player.transform.position.x + boss.transform.position.x) * 0.5 > -18 && boss.transform.position.y < player.transform.position.y && player.transform.position.y - boss.transform.position.y >= 8)
-            {
-                Debug.Log("34");
-                Camera.main.transform.position = new Vector3((player.transform.position.x + boss.transform.position.x) * 0.5f, player.transform.position.y - 4, cameraZ);
-            }
-
-
-
-
-            else if (boss.transform.position.x < player.transform.position.x && player.transform.position.x - boss.transform.position.x >= 14 && boss.transform.position.y >= player.transform.position.y && player.transform.position.y - boss.transform.position.y >= -8 && (player.transform.position.y + boss.transform.position.y) * 0.5 > -17 && (player.transform.position.y + boss.transform.position.y) * 0.5 < 17)
-            {
-                Debug.Log("41");
-                Camera.main.transform.position = new Vector3(player.transform.position.x - 7, (player.transform.position.y + boss.transform.position.y) * 0.5f, cameraZ);
-            }
-
-            else if (boss.transform.position.x < player.transform.position.x && player.transform.position.x - boss.transform.position.x >= 14 && boss.transform.position.y >= player.transform.position.y && player.transform.position.y - boss.transform.position.y < -8)
-            {
-                Debug.Log("42");
-                Camera.main.transform.position = new Vector3(player.transform.position.x - 7, player.transform.position.y + 4, cameraZ);
-            }
-
-            else if (boss.transform.position.x < player.transform.position.x && player.transform.position.x - boss.transform.position.x >= 14 && boss.transform.position.y < player.transform.position.y && player.transform.position.y - boss.transform.position.y < 8 && (player.transform.position.y + boss.transform.position.y) * 0.5 < 17 && (player.transform.position.y + boss.transform.position.y) * 0.5 > -17)
-            {
-                Debug.Log("43");
-                Camera.main.transform.position = new Vector3(player.transform.position.x - 7, (player.transform.position.y + boss.transform.position.y) * 0.5f, cameraZ);
-            }
-
-            else if (boss.transform.position.x < player.transform.position.x && player.transform.position.x - boss.transform.position.x >= 14 && boss.transform.position.y < player.transform.position.y && player.transform.position.y - boss.transform.position.y >= 8)
-            {
-                Debug.Log("44");
-                Camera.main.transform.position = new Vector3(player.transform.position.x - 7, player.transform.position.y - 4, cameraZ);
-            }
-            */
             if (boss.transform.position.x >= player.transform.position.x && player.transform.position.x - boss.transform.position.x >= -14 && (player.transform.position.x + boss.transform.position.x) * 0.5 > -18 && (player.transform.position.x + boss.transform.position.x) * 0.5 < 18 && boss.transform.position.y >= player.transform.position.y && player.transform.position.y - boss.transform.position.y >= -8 && (player.transform.position.y + boss.transform.position.y) * 0.5 > -17 && (player.transform.position.y + boss.transform.position.y) * 0.5 < 17)
             {
                 Debug.Log("11");
@@ -452,12 +273,20 @@ public class CameraMove : MonoBehaviour {
                 Debug.Log("66");
                 Camera.main.transform.position = new Vector3(18, player.transform.position.y, cameraZ);
             }
+        }
 
-
+        else if (isWatchingPlayerCenter)
+        {
+            Camera.main.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -10);
         }
     }
 
     public void IsWatchingPlayer(bool _bool) {
         isWatchingPlayer = _bool;
+    }
+
+    public void IsWatchingPlayerCenter(bool _bool)
+    {
+        isWatchingPlayerCenter = _bool;
     }
 }

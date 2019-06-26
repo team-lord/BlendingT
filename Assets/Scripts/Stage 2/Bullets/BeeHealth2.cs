@@ -36,21 +36,33 @@ public class BeeHealth2 : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) {
-        if (isLethal) {
-            if(collision.tag == "PlayerMelee") {
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (isLethal)
+        {
+            if (collision.tag == "PlayerMelee")
+            {
                 Destroy(gameObject);
             }
-        } else {
-            if(collision.tag == "PlayerBullet") {
+        }
+        else
+        {
+            if (collision.tag == "PlayerBullet")
+            {
                 health--;
                 Destroy(collision.gameObject);
 
                 CheckAlive();
-            } else if (collision.tag == "PlayerMelee") {
+            }
+            else if (collision.tag == "PlayerMelee")
+            {
                 health -= 2;
                 CheckAlive();
             }
+        }
+        if (collision.tag == "NearbyWall")
+        {
+            transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 180));
         }
     }
 
