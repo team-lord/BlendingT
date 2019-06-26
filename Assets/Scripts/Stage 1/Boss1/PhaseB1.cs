@@ -7,6 +7,8 @@ public class PhaseB1 : MonoBehaviour
 {
     public GameObject smoke;
 
+    public GameObject nullifyingCore;
+
     private GameObject curtain;
 
     // Start is called before the first frame update
@@ -56,9 +58,11 @@ public class PhaseB1 : MonoBehaviour
     public void Phase3() {
         curtain.GetComponent<Curtain1>().Change();
 
-        SceneManager.LoadScene("Main Menu");
+        Instantiate(nullifyingCore, transform.position, Quaternion.identity);
+        Instantiate(smoke, transform.position, Quaternion.identity);
 
-        // TODO - 이벤트 씬
-        // 데모버전 보류
+        transform.position = new Vector3(64, 0, 0);
+
+
     }
 }
