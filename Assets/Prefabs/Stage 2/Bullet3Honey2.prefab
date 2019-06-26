@@ -10,10 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1212582902172362376}
   - component: {fileID: -5711869702332391178}
-  - component: {fileID: 6352475160442312264}
   - component: {fileID: -6463009377898096295}
   - component: {fileID: 4452628507847342452}
-  - component: {fileID: 2539935088539038562}
+  - component: {fileID: 8797757076133386031}
   - component: {fileID: -5862862209259049126}
   - component: {fileID: 4785261011822120176}
   - component: {fileID: -8980595137572852382}
@@ -50,18 +49,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5ebd19de8c612a42b5222369ea64bf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6352475160442312264
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6136551738744359377}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a7c115f47780264da0db9c5189bcdc6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &-6463009377898096295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,7 +74,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
---- !u!114 &2539935088539038562
+--- !u!114 &8797757076133386031
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,7 +83,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6136551738744359377}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14c34c9afd0f181468edaba866a99263, type: 3}
+  m_Script: {fileID: 11500000, guid: 59ebd5d1e31fb1b4294802295b575a61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &-5862862209259049126

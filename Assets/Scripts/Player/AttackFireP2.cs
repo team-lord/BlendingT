@@ -77,7 +77,7 @@ public class AttackFireP2 : MonoBehaviour {
         StartCoroutine(CanAttack());
         StartCoroutine(IsAttacking());
 
-        meleeAttack.GetComponent<MeleeAttackP>().AnimationStart();
+        meleeAttack.GetComponent<MeleeAttackP>().Attack();
     }
 
     IEnumerator CanAttack() {
