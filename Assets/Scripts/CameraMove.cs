@@ -23,7 +23,7 @@ public class CameraMove : MonoBehaviour {
 
     // Update is called once per frame
     /*
-    void LateUpdate() { // LateUpdate 한번 써봤음
+    void LateUpdate() {
         if (isWatchingPlayer) {
             Camera.main.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -10);
         }
@@ -31,7 +31,7 @@ public class CameraMove : MonoBehaviour {
     */
 
     void LateUpdate()
-    { // LateUpdate 한번 써봤음
+    { 
         if (isWatchingPlayer)
         {
             /*

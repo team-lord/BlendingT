@@ -337,7 +337,7 @@ PrefabInstance:
     - target: {fileID: 4235409278765724236, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5434808925137406293, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
@@ -1009,6 +1009,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b670bcb5307474c4cbee0a4fe044a5fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraX: 0
+  cameraY: 0
+  cameraZ: 0
 --- !u!1 &1094979032
 GameObject:
   m_ObjectHideFlags: 0
