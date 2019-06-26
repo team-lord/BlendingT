@@ -85,7 +85,7 @@ public class AttackFireP1 : MonoBehaviour {
         StartCoroutine(CanAttack());
         StartCoroutine(IsAttacking());
 
-        meleeAttack.GetComponent<MeleeAttackP>().AnimationStart();
+        meleeAttack.GetComponent<MeleeAttackP>().Attack();
         myaudio.PlayOneShot(meleeAttackSound);
     }
 

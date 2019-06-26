@@ -37,7 +37,7 @@ public class HealthP2 : MonoBehaviour {
             CheckAlive();
 
             Instantiate(shield, transform.position, Quaternion.identity);
-           // ChangeHeart();
+            // ChangeHeart();
         }
     }
 
@@ -67,7 +67,7 @@ public class HealthP2 : MonoBehaviour {
         isInvincible = _bool;
     }
 
-    public bool GetIsInvincible() {
+    public bool GetIsInvincible() {       
         return isInvincible;
     }
 }

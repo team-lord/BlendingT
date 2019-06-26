@@ -13,6 +13,7 @@ public class PhaseB1 : MonoBehaviour
     void Start()
     {
         curtain = GameObject.Find("Curtain");
+
     }
 
     // Update is called once per frame
@@ -30,6 +31,8 @@ public class PhaseB1 : MonoBehaviour
         GetComponent<MoveFireB1>().IsMove(false);
         GetComponent<PatternB1>().IsPatternPhase(false);
         GetComponent<PuzzleB1>().IsPuzzlePhase(true);
+
+        Camera.main.GetComponent<CameraMove1>().WatchPlayer();
     }
 
     public void Phase2() {
@@ -44,6 +47,10 @@ public class PhaseB1 : MonoBehaviour
         GetComponent<PatternB1>().IsPatternPhase(true);
         GetComponent<PuzzleB1>().IsPuzzlePhase(false);
         GetComponent<PatternB1>().PatternForge();
+        Debug.Log("Phase2()");
+
+        Camera.main.GetComponent<CameraMove1>().WatchPlayer();
+
     }
 
     public void Phase3() {
