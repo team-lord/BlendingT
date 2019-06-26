@@ -80,7 +80,6 @@
     <Compile Include="Assets\Scripts\Player\BlanketP2.cs" />
     <Compile Include="Assets\Scripts\Player\HealthP1.cs" />
     <Compile Include="Assets\Scripts\Player\HealthP2.cs" />
-    <Compile Include="Assets\Scripts\Player\MeleeAttack2P.cs" />
     <Compile Include="Assets\Scripts\Player\MeleeAttackP.cs" />
     <Compile Include="Assets\Scripts\Player\MoveTumbleP1.cs" />
     <Compile Include="Assets\Scripts\Player\MoveTumbleP2.cs" />
@@ -174,6 +173,7 @@
     <Compile Include="Assets\Scripts\Stage 2\Bullets\BeeB2.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Bullets\BeeHealth2.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Bullets\Bullet2Move2.cs" />
+    <Compile Include="Assets\Scripts\Stage 2\Bullets\Bullet3Honey2.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Bullets\BulletBeeA2.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Bullets\BulletBeeB2.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Bullets\DBNTumble.cs" />

@@ -22,7 +22,7 @@ public class Honey2 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if(collision.tag == "Player") {
-            if (player.GetComponent<HealthP2>().GetIsInvincible()) {
+            if (!player.GetComponent<HealthP2>().GetIsInvincible()) {
                 boss.GetComponent<FireBeeAB2>().Fire();
             }          
 
