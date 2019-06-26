@@ -397,7 +397,7 @@ PrefabInstance:
     - target: {fileID: 7824404991978632012, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
       propertyPath: debugPattern
-      value: 7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7824404991978632012, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
@@ -1011,7 +1011,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraX: 0
   cameraY: 0
-  cameraZ: 0
+  cameraZ: -10
 --- !u!1 &1094979032
 GameObject:
   m_ObjectHideFlags: 0
@@ -1277,6 +1277,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 246817825}
     m_Modifications:
+    - target: {fileID: 8541277248811950919, guid: 17b616c968996bf41b83b0459835cdbe,
+        type: 3}
+      propertyPath: m_Name
+      value: PlayerMeleeAttack
+      objectReference: {fileID: 0}
     - target: {fileID: 3985454832154785955, guid: 17b616c968996bf41b83b0459835cdbe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1331,11 +1336,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8541277248811950919, guid: 17b616c968996bf41b83b0459835cdbe,
-        type: 3}
-      propertyPath: m_Name
-      value: PlayerMeleeAttack
       objectReference: {fileID: 0}
     - target: {fileID: 1373438582567120369, guid: 17b616c968996bf41b83b0459835cdbe,
         type: 3}
