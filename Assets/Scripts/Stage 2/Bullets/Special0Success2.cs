@@ -28,7 +28,7 @@ public class Special0Success2 : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update() {
+    void FixedUpdate() {
         if (isReady) {
             time += Time.deltaTime;
             if (time > delay) {
@@ -60,6 +60,14 @@ public class Special0Success2 : MonoBehaviour {
 
                 transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
             }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        Debug.Log(collision.tag);
+        if(collision.transform.name == "Boss") {
+            boss.GetComponent<Animator>().SetTrigger("mes");
+            Destroy(gameObject);
         }
     }
 }

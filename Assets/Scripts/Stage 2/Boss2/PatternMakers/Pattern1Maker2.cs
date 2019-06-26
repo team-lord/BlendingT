@@ -15,6 +15,7 @@ public class Pattern1Maker2 : MonoBehaviour
     private GameObject boss;
 
     Animator animator;
+
     // Start is called before the first frame update
     void Start() {
         count = 0;
@@ -24,8 +25,7 @@ public class Pattern1Maker2 : MonoBehaviour
         boss = GameObject.Find("Boss");
 
         animator = boss.GetComponent<Animator>();
-        animator.SetBool("spin",true);
-        
+        animator.SetBool("spin", true);
     }
 
     // Update is called once per frame

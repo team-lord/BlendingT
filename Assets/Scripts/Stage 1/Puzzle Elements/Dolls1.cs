@@ -7,12 +7,16 @@ public class Dolls1 : MonoBehaviour
     public Collider2D[] colliders = new Collider2D[4];
 
     private int currentDoll;
+    private GameObject puzzleBall;
+
+    private bool isReady;
 
     Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
+        puzzleBall = GameObject.Find("2ndPuzzleBall");
 
         currentDoll = 3;
 
@@ -25,6 +29,8 @@ public class Dolls1 : MonoBehaviour
             collider.enabled = false;
         }
         colliders[3].enabled = true;
+
+        isReady = true;
     }
 
     // Update is called once per frame
@@ -43,6 +49,24 @@ public class Dolls1 : MonoBehaviour
         currentDoll = number;
 
         colliders[currentDoll].enabled = true;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if(collision.tag == "PuzzleBall") {
+            if (isReady) {
+                if (currentDoll != 2) {
+                    StartCoroutine(PuzzleFail());
+                }
+            }
+            
+        }
+    }
+
+    IEnumerator PuzzleFail() {
+        isReady = false;
+        yield return new WaitForSeconds(2f);
+        isReady = true;
+        puzzleBall.GetComponent<PuzzleBallMove1>().PuzzleFail();
     }
 
 }

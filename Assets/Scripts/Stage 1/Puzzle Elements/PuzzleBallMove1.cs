@@ -51,7 +51,7 @@ public class PuzzleBallMove1 : MonoBehaviour {
             puzzleBall[i].GetComponent<Rigidbody2D>().velocity = Vector3.zero;
             puzzleBall[i].GetComponent<Rigidbody2D>().angularVelocity = 0;
         }
-        player.GetComponent<MoveTumbleP1>().CanMoveTumble(true);
+        player.GetComponent<MoveTumbleP1>().CanMoveTumble1(true);
         player.GetComponent<AttackFireP1>().CanAttackFire(true);
         Camera.main.GetComponent<CameraMove1>().WatchPlayer();
     }

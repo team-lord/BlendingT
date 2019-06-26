@@ -326,7 +326,7 @@ MonoBehaviour:
     yGrid:
       m_Target: 0
       speed: 2
-      m_Value: 0
+      m_Value: 1
     zGrid:
       m_Target: 0
       speed: 2
@@ -334,18 +334,18 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.040738836, y: 0.053923942, z: -0.0022015844, w: 0.9977132}
     speed: 2
-    m_Value: {x: 0.040738758, y: 0.053923838, z: -0.0022015802, w: 0.9977113}
+    m_Value: {x: 0.019807113, y: 0.01199269, z: -0.0002371741, w: 0.99973184}
   m_Size:
     m_Target: 9.85521
     speed: 2
     m_Value: 9.85521
   m_Ortho:
-    m_Target: 1
+    m_Target: 0
     speed: 2
-    m_Value: 1
+    m_Value: 0
   m_CameraSettings:
     m_Speed: 1
-    m_SpeedNormalized: 0.5
+    m_SpeedNormalized: 0.49748743
     m_SpeedMin: 0.01
     m_SpeedMax: 2
     m_EasingEnabled: 1

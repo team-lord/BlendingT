@@ -46,13 +46,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbf8068a4b8bb1e49bf1412e588bcb1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phaseDelay: 0
+  phaseDelay: 10
   bullet: {fileID: 6136551738744359377, guid: 8ad3550179d23da4ba5aa7a5fbabce67, type: 3}
-  phase0Delay: 0
-  phase1Delay: 0
+  phase0Delay: 1
+  phase1Delay: 1
   honeyExplosiveBullet: {fileID: 1007416687805303645, guid: 3dbd377a006490549b76b3566ea8315e,
     type: 3}
-  phase2Delay: 0
+  phase2Delay: 1
+  moveSpeed: 2
+  rotateDelay: 3
 --- !u!114 &6885606351687896950
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7553094215279441873}
   - component: {fileID: 2191840084156498519}
   - component: {fileID: -2121931869998918716}
+  - component: {fileID: -3099405440416345155}
   m_Layer: 0
   m_Name: ForgedPattern4Maker2
   m_TagString: PatternMaker
@@ -62,3 +63,19 @@ MonoBehaviour:
   - {fileID: 4342556716159102264, guid: 028d323ee758ab94bb06b7449c1cdae9, type: 3}
   - {fileID: 3920993706846342187, guid: 60160006b3b73dc439d17f6246e544dd, type: 3}
   - {fileID: 3920993706846342187, guid: 60160006b3b73dc439d17f6246e544dd, type: 3}
+--- !u!58 &-3099405440416345155
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7553094215279441872}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1

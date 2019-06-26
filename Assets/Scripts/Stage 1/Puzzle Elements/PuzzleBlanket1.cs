@@ -28,6 +28,7 @@ public class PuzzleBlanket1 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if(collision.tag == "PuzzleBall") {
+
             Destroy(collision.gameObject);
 
             animator.SetTrigger("explode");
@@ -37,10 +38,11 @@ public class PuzzleBlanket1 : MonoBehaviour
 
             Instantiate(blanket, transform.position, Quaternion.identity);            
             GameObject.Find("AudienceManager").GetComponent<AudienceManager1>().PuzzleComplete();
-            GameObject.Find("Boss").GetComponent<PhaseB1>().Phase2();
-            player.GetComponent<MoveTumbleP1>().CanMoveTumble(false);
-            player.GetComponent<AttackFireP1>().CanAttackFire(false);
-            Camera.main.GetComponent<CameraMove1>().WatchPlayer();
+            boss.GetComponent<PhaseB1>().Phase2();
+            player.GetComponent<MoveTumbleP1>().CanMoveTumble1(true);
+            player.GetComponent<AttackFireP1>().CanAttackFire(true);
+
+            Camera.main.GetComponent<CameraMove1>().WatchPlayer(); // 얘는 작동함
 
             Destroy(gameObject);
         }

@@ -22,7 +22,7 @@ public class Special0Fail2 : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update() {
+    void FixedUpdate() {
         time += Time.deltaTime;
         if (time > delay) {
             Rotate();

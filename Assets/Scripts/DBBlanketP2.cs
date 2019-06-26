@@ -5,11 +5,13 @@ using UnityEngine;
 public class DBBlanketP2 : MonoBehaviour
 {
     private GameObject boss;
+    private bool isReady;
 
     // Start is called before the first frame update
     void Start()
     {
         boss = GameObject.Find("Boss");
+        isReady = true;
     }
 
     // Update is called once per frame
@@ -20,8 +22,12 @@ public class DBBlanketP2 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if(collision.tag == "Blanket") {
-            boss.GetComponent<PatternB2>().ForceStart();
-            Destroy(gameObject);
+            if (isReady)
+            {
+                isReady = false;
+                boss.GetComponent<PatternB2>().ForceStart();
+                Destroy(gameObject);
+            }
         }        
     }
 }

@@ -54,6 +54,7 @@ public class Pattern2Maker2 : MonoBehaviour
                 boss.GetComponent<JumpB2>().Fall(Vector3.zero);
                 isReady = true;
                 time = 0;
+                boss.GetComponent<Animator>().SetTrigger("throw");
             }
         } else {
             if (time > fallDelay)
@@ -68,7 +69,7 @@ public class Pattern2Maker2 : MonoBehaviour
     }
 
     void Fire(int degree) {
-        Instantiate(bullet2, transform.position, Quaternion.Euler(new Vector3(0, 0, degree)));
+        Instantiate(bullet2, Vector3.zero, Quaternion.Euler(new Vector3(0, 0, degree)));
     }
 
     void CheckDestroy() {
