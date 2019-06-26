@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 10
-  moveSpeed: 4
+  moveSpeed: 5
   delay: 0.02
 --- !u!58 &5188090308395687320
 CircleCollider2D:

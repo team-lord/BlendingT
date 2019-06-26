@@ -113,7 +113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   shield: {fileID: 2169918004525406138, guid: 820c329fced828a42b21263d4412575c, type: 3}
-  shieldDelay: 2
+  shieldDelay: 1
   bullet: {fileID: 8068288318438665347, guid: 3667c71da9d37144a9ca86d84298ad3f, type: 3}
 --- !u!61 &1576850439527142704
 BoxCollider2D:
