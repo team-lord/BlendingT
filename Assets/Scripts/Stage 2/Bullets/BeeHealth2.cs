@@ -60,10 +60,6 @@ public class BeeHealth2 : MonoBehaviour
                 CheckAlive();
             }
         }
-        if (collision.tag == "NearbyWall")
-        {
-            transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 180));
-        }
     }
 
     void CheckAlive() {

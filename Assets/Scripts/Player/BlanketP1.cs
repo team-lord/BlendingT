@@ -38,6 +38,7 @@ public class BlanketP1 : MonoBehaviour
     }
 
     public void GetBlanket() {
+        Debug.Log("GetBlanket");
         canBlanket = true;
         blanketImage.GetComponent<NullifyingCore>().GetBlanket();
     }

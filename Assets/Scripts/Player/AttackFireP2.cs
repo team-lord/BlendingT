@@ -87,9 +87,9 @@ public class AttackFireP2 : MonoBehaviour {
     }
 
     IEnumerator IsAttacking() {
-        GetComponent<MoveTumbleP1>().CanMoveTumble(false);
+        GetComponent<MoveTumbleP2>().CanMoveTumble(false);
         yield return new WaitForSeconds(attackTime);
-        GetComponent<MoveTumbleP1>().CanMoveTumble(true);
+        GetComponent<MoveTumbleP2>().CanMoveTumble(true);
     }
 
 

@@ -1687,6 +1687,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offSprite: {fileID: -7957953806605825063, guid: 6a725f0377f08cc4c8ef6deaefc860dd,
     type: 3}
+  onSprite: {fileID: -517998309603396936, guid: 6a725f0377f08cc4c8ef6deaefc860dd,
+    type: 3}
 --- !u!114 &1707324109
 MonoBehaviour:
   m_ObjectHideFlags: 0

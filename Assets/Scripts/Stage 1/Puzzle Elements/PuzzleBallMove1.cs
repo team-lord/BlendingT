@@ -53,9 +53,9 @@ public class PuzzleBallMove1 : MonoBehaviour {
         }
         player.GetComponent<MoveTumbleP1>().CanMoveTumble1(true);
         player.GetComponent<AttackFireP1>().CanAttackFire(true);
-        Camera.main.GetComponent<CameraMove1>().WatchPlayer();
+        Camera.main.GetComponent<CameraMove1>().WatchPlayerCenter();
     }
-
+                    
     public void PuzzleFail() {
         // 반짝거리는 애니메이션 시작
         StartCoroutine(WaitPuzzleFail());

@@ -6,12 +6,12 @@ using UnityEngine.UI;
 public class NullifyingCore : MonoBehaviour
 {
     public Sprite offSprite;
-    private Sprite onSprite;
+    public Sprite onSprite;
 
     // Start is called before the first frame update
     void Start()
     {
-        onSprite = GetComponent<Image>().sprite;
+
     }
 
     // Update is called once per frame

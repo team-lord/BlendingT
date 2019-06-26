@@ -28,21 +28,25 @@ public class CameraMove1 : MonoBehaviour
         if (watchPuzzleBall1st) {
             transform.position = puzzleBall1st.transform.position + new Vector3(0, 0, -10);
         } else if (watchPuzzleBall2nd) {
-            // if(puzzleBall2nd.activeSelf)
-            transform.position = puzzleBall2nd.transform.position + new Vector3(0, 0, -10);
+            if (GameObject.Find("2ndPuzzleBall") != null) {
+                transform.position = puzzleBall2nd.transform.position + new Vector3(0, 0, -10);
+            }
         }
     }
 
     public void WatchPuzzleBall1st() {
         GetComponent<CameraMove>().IsWatchingPlayer(false);
+        GetComponent<CameraMove>().IsWatchingPlayerCenter(false);
         watchPuzzleBall1st = true;
         watchPuzzleBall2nd = false;
     }
 
     public void WatchBilliardTable() {
+        GetComponent<CameraMove>().IsWatchingPlayer(false);
+        GetComponent<CameraMove>().IsWatchingPlayerCenter(false);
         watchPuzzleBall1st = false;
-        transform.position = new Vector3(billiardTable.transform.position.x, 8, -10);
         watchPuzzleBall2nd = false;
+        transform.position = new Vector3(billiardTable.transform.position.x, 8, -10);
     }
 
     public void WatchPuzzleBall2nd() {
@@ -54,5 +58,11 @@ public class CameraMove1 : MonoBehaviour
         watchPuzzleBall1st = false;
         watchPuzzleBall2nd = false;
         GetComponent<CameraMove>().IsWatchingPlayer(true);        
+    }
+
+    public void WatchPlayerCenter() {
+        watchPuzzleBall1st = false;
+        watchPuzzleBall2nd = false;
+        GetComponent<CameraMove>().IsWatchingPlayerCenter(true);
     }
 }

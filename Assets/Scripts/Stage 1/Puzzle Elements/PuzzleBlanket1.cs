@@ -36,15 +36,23 @@ public class PuzzleBlanket1 : MonoBehaviour
             // PuzzleBall이 깨지는 애니메이션 시작
             // 이후 PuzzleBall Destroy.
 
-            Instantiate(blanket, transform.position, Quaternion.identity);            
+            // Instantiate(blanket, transform.position, Quaternion.identity);            
             GameObject.Find("AudienceManager").GetComponent<AudienceManager1>().PuzzleComplete();
-            boss.GetComponent<PhaseB1>().Phase2();
-            player.GetComponent<MoveTumbleP1>().CanMoveTumble1(true);
-            player.GetComponent<AttackFireP1>().CanAttackFire(true);
 
-            Camera.main.GetComponent<CameraMove1>().WatchPlayer(); // 얘는 작동함
+            StartCoroutine(Phase2());
 
-            Destroy(gameObject);
+            
         }
+    }
+
+    IEnumerator Phase2() {
+        yield return new WaitForSeconds(2f);
+        boss.GetComponent<PhaseB1>().Phase2();
+        player.GetComponent<MoveTumbleP1>().CanMoveTumble1(true);
+        player.GetComponent<AttackFireP1>().CanAttackFire(true);
+
+        Camera.main.GetComponent<CameraMove1>().WatchPlayer();
+
+        Destroy(gameObject);
     }
 }

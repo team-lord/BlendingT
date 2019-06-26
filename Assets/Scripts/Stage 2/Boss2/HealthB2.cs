@@ -138,9 +138,13 @@ public class HealthB2 : MonoBehaviour {
     IEnumerator Phase2Mes() {
         isReady = false;
         animator.SetTrigger("mes");
+        GetComponent<MesHealthB2>().IsMes(true);
         yield return new WaitForSeconds(phase2MesTime);
         isReady = true;
         animator.SetTrigger("idle");
+        GetComponent<MesHealthB2>().IsMes(false);
+        int _damage = GetComponent<MesHealthB2>().Damage();
+        phaseHealths[3] -= _damage;
         GetComponent<PhaseB2>().Phase3();
     }
 

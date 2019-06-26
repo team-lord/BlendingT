@@ -114,14 +114,18 @@ public class BeeB2 : MonoBehaviour
         phaseTime = 0;
 
         if (_bool) {
-            // TODO - 바둥거리는 애니메이션 시작
             animator.SetBool("mes", true);
         } else {
             if (phase < 2) {
                 phase++;
             }
-            // TODO - 바둥거리는 애니메이션 끝
             animator.SetBool("mes", false);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.tag == "NearbyWall") {
+            Rotate();
         }
     }
 }

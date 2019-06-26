@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1670161517945502503}
   - component: {fileID: 9102630325755508474}
   - component: {fileID: 5665803375185897518}
+  - component: {fileID: 8286802743244192055}
   - component: {fileID: 6746503237710295253}
   - component: {fileID: 5017792400174739193}
   - component: {fileID: 8635578474770150011}
@@ -105,6 +106,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.18
+--- !u!114 &8286802743244192055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137840887892769801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c184b539541dd345ae40f532b8198a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blanket: {fileID: 1943403016015020738, guid: 2a4464f689ce59d4f8756c1757c49619, type: 3}
+  blanketImage: {fileID: 0}
 --- !u!114 &6746503237710295253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,11 +248,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1670161517945502503}
     m_Modifications:
-    - target: {fileID: 8541277248811950919, guid: 17b616c968996bf41b83b0459835cdbe,
-        type: 3}
-      propertyPath: m_Name
-      value: PlayerMeleeAttack
-      objectReference: {fileID: 0}
     - target: {fileID: 3985454832154785955, guid: 17b616c968996bf41b83b0459835cdbe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -292,6 +302,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541277248811950919, guid: 17b616c968996bf41b83b0459835cdbe,
+        type: 3}
+      propertyPath: m_Name
+      value: PlayerMeleeAttack
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17b616c968996bf41b83b0459835cdbe, type: 3}

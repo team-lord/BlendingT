@@ -444,7 +444,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &241488713
 RectTransform:
   m_ObjectHideFlags: 0
@@ -477,15 +477,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: -517998309603396936, guid: 6a725f0377f08cc4c8ef6deaefc860dd,
-    type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -515,6 +514,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offSprite: {fileID: -7957953806605825063, guid: 6a725f0377f08cc4c8ef6deaefc860dd,
+    type: 3}
+  onSprite: {fileID: -517998309603396936, guid: 6a725f0377f08cc4c8ef6deaefc860dd,
     type: 3}
 --- !u!1 &248931217
 GameObject:
@@ -1144,6 +1145,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: PlayerMelee
       objectReference: {fileID: 0}
+    - target: {fileID: 8286802743244192055, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: blanketImage
+      value: 
+      objectReference: {fileID: 241488714}
     m_RemovedComponents:
     - {fileID: 7976742175384873060, guid: b5a4ce52038e1be4c8dbccabd42ff661, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b5a4ce52038e1be4c8dbccabd42ff661, type: 3}
@@ -1363,7 +1369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ac9b3c17884f1746b0dd257e2ec3010, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: 
+  sceneName: Keep Blank
 --- !u!4 &1202538772
 Transform:
   m_ObjectHideFlags: 0
@@ -2467,5 +2473,11 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3057610163071284322, guid: dd70ce451ff8a35439816dd1ea4f6f0a,
+        type: 3}
+      propertyPath: nullifyingCore
+      value: 
+      objectReference: {fileID: 7254053519844264650, guid: 4dc666fb50402a440a74b05d18798f57,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd70ce451ff8a35439816dd1ea4f6f0a, type: 3}

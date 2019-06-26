@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class PhaseB2 : MonoBehaviour
 {
+    public GameObject blanket;
+
     public GameObject special0Maker;
     public GameObject special1Maker;
 
@@ -27,13 +29,12 @@ public class PhaseB2 : MonoBehaviour
     }
 
     public void Phase1() {
-        Debug.Log("Phase1");
         GetComponent<PatternB2>().PatternArray(new int[] { 0, 1, 4, 2, 3, 7 });
         GetComponent<HealthB2>().Phase(1);
     }
 
     public void Phase2() {
-        Debug.Log("Phase2");
+        Instantiate(blanket, Vector3.zero, Quaternion.identity);
         GetComponent<PatternB2>().PatternPhase(false);
         GetComponent<MoveB2>().IsMove(false);
         GetComponent<HealthB2>().Phase(2);
@@ -46,7 +47,6 @@ public class PhaseB2 : MonoBehaviour
     }
 
     public void Phase3() {
-        Debug.Log("Phase3");
         GetComponent<PatternB2>().PatternPhase(true);
         GetComponent<MoveB2>().IsMove(true);
         GetComponent<HealthB2>().Phase(3);
@@ -61,15 +61,14 @@ public class PhaseB2 : MonoBehaviour
     }
 
     public void Phase4() {
-        Debug.Log("Phase4");
         GetComponent<HealthB2>().Phase(4);
         GetComponent<PatternB2>().PatternForge(4);
         GetComponent<MakeBeeB2>().Forge();
     }
 
     public void Phase5() {
-        Debug.Log("Phase5");
         // 데모 버젼 끝
+        Instantiate(blanket, Vector3.zero, Quaternion.identity);
         SceneManager.LoadScene("Main Menu");
 
         GetComponent<HealthB2>().Phase(5);

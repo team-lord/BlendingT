@@ -6,14 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class NullifyingCore1 : MonoBehaviour
 {
-    public Image nullifyingCore;
+    private GameObject player;
 
     public GameObject smoke;
+
+    public Sprite blanketPlate;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
@@ -25,9 +27,10 @@ public class NullifyingCore1 : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
         if(collision.tag == "Player") {
             Instantiate(smoke, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            
+            GetComponent<SpriteRenderer>().sprite = blanketPlate;
 
-            nullifyingCore.enabled = true;
+            player.GetComponent<BlanketP1>().GetBlanket();
 
             StartCoroutine(SceneChange());
         }

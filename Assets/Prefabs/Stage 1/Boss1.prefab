@@ -201,6 +201,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smoke: {fileID: 2369796550686099658, guid: 484d0ba8fcd0ad040b5f14a7601f55cc, type: 3}
+  nullifyingCore: {fileID: 7254053519844264650, guid: 4dc666fb50402a440a74b05d18798f57,
+    type: 3}
 --- !u!114 &3307093643530316898
 MonoBehaviour:
   m_ObjectHideFlags: 0
