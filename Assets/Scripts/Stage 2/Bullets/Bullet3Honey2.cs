@@ -34,14 +34,14 @@ public class Bullet3Honey2 : MonoBehaviour
                 _beeBs[i].GetComponent<BulletBeeB2>().Turn();
             }
             */
-
-            player.GetComponent<HealthP2>().Hit();
+            
             StartCoroutine(Destroy());
         }
     }
 
     IEnumerator Destroy() {
         GetComponent<SpriteRenderer>().enabled = false;
+        GetComponent<CircleCollider2D>().enabled = false;
         yield return new WaitForSeconds(0.1f);
         Destroy(gameObject);
     }

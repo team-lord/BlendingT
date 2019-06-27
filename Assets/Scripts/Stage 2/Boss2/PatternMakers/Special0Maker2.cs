@@ -7,8 +7,6 @@ public class Special0Maker2 : MonoBehaviour
     private GameObject boss;
     private GameObject player;
 
-    public GameObject bee;
-
     public float fallDelay;
     private float time;
 
@@ -22,21 +20,11 @@ public class Special0Maker2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         boss = GameObject.Find("Boss");
         player = GameObject.Find("Player");
 
         time = 0;
-
-        for(int i=0; i<6; i++) {
-            MakeBee(60 * i);
-        }
-
         StartCoroutine(JumpFall());
-    }
-
-    void MakeBee(int degree) {
-        Instantiate(bee, boss.transform.position, Quaternion.Euler(new Vector3(0, 0, degree)));
     }
 
     IEnumerator JumpFall() {

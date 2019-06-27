@@ -53,7 +53,7 @@ public class HealthB2 : MonoBehaviour {
             }
         } else if (phase == 2) {
             if (isReady) {
-                if (collision.tag == "PlayerBulletHoney") { // PlayerBulletHoney 확인할 것
+                if (collision.tag == "PlayerBulletHoney") {
                     phaseHealths[2]--;
                     CheckAlive();
                 }

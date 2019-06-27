@@ -11,15 +11,14 @@ public class JumpB2 : MonoBehaviour
     Animator bossAnimator;
     Animator shadowAnimator;
 
-    GameObject boss;
     GameObject shadow;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         isJump = false;
-        boss = GameObject.Find("Boss");
-        bossAnimator = boss.GetComponent<Animator>();
+
+        bossAnimator = GetComponent<Animator>();
         shadow = GameObject.Find("Shadow");
         shadowAnimator = shadow.GetComponent<Animator>();
     }
@@ -32,15 +31,19 @@ public class JumpB2 : MonoBehaviour
 
     public void Jump() {
         isJump = true;
-        // TODO - 날기
-        GetComponent<MoveB2>().IsMove(false);
-
-        GetComponent<CircleCollider2D>().enabled = false;
-
-        bossAnimator.ResetTrigger("throw");
-
-        bossAnimator.SetTrigger("jump");
+        animator.SetTrigger("jump");
         shadowAnimator.SetTrigger("shadowOff");
+        StartCoroutine(JumpCollider());
+    }
+
+    IEnumerator JumpCollider() {
+        GetComponent<CircleCollider2D>().enabled = false;
+        GetComponent<MoveB2>().IsMove(false);        
+        Debug.Log(false);
+        yield return new WaitForSeconds(0.6f);
+        transform.position = new Vector3(64, 0, 0);
+        GetComponent<CircleCollider2D>().enabled = true;
+        Debug.Log(true);
     }
 
     public void Fall(Vector3 _vector3) {
@@ -50,9 +53,7 @@ public class JumpB2 : MonoBehaviour
         isJump = false;
         transform.position = _vector3;
         
-        //GetComponent<MoveB2>().IsMove(true);
-
-        GetComponent<CircleCollider2D>().enabled = true;
+        GetComponent<MoveB2>().IsMove(true);
 
         bossAnimator.SetTrigger("fall");
         shadowAnimator.SetTrigger("shadowOn");
@@ -64,8 +65,6 @@ public class JumpB2 : MonoBehaviour
         }
         isJump = false;
         transform.position = _vector3;
-        
-        GetComponent<CircleCollider2D>().enabled = true;
 
         bossAnimator.SetTrigger("fall");
         shadowAnimator.SetTrigger("shadowOn");
