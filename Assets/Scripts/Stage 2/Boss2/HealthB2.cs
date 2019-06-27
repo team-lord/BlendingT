@@ -30,7 +30,7 @@ public class HealthB2 : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-
+        Debug.Log(phase);
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
@@ -131,7 +131,9 @@ public class HealthB2 : MonoBehaviour {
     }
 
     IEnumerator Phase2Mes() {
+
         isReady = false;
+        yield return new WaitForSeconds(2.85f);
         animator.SetTrigger("mes");
         GetComponent<MesHealthB2>().IsMes(true);
         yield return new WaitForSeconds(phase2MesTime);

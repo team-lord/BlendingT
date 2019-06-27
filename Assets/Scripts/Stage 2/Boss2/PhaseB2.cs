@@ -13,14 +13,18 @@ public class PhaseB2 : MonoBehaviour
 
     Animator animator;
 
+
+    private void Awake()
+    {
+        transform.GetChild(1).gameObject.SetActive(false);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
 
         player = GameObject.Find("Player");
-
-        transform.GetChild(1).gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -48,6 +52,7 @@ public class PhaseB2 : MonoBehaviour
 
     public void Phase3() {
         GetComponent<PatternB2>().PatternPhase(true);
+        GetComponent<PatternB2>().ForcePatternStart();
         GetComponent<MoveB2>().IsMove(true);
         GetComponent<HealthB2>().Phase(3);
 

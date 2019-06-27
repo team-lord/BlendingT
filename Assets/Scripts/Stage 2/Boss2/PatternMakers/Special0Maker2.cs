@@ -20,6 +20,8 @@ public class Special0Maker2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        transform.position = Vector3.zero;
+
         boss = GameObject.Find("Boss");
         player = GameObject.Find("Player");
 

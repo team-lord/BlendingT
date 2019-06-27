@@ -13,6 +13,9 @@ public class ForgedPattern1Maker2 : MonoBehaviour {
     private GameObject player;
     private GameObject boss;
 
+    Animator animator;
+
+
     // Start is called before the first frame update
     void Start() {
         count = 0;
@@ -20,6 +23,10 @@ public class ForgedPattern1Maker2 : MonoBehaviour {
 
         player = GameObject.Find("Player");
         boss = GameObject.Find("Boss");
+
+        animator = boss.GetComponent<Animator>();
+        animator.SetBool("spin", true);
+
     }
 
     // Update is called once per frame
@@ -46,6 +53,8 @@ public class ForgedPattern1Maker2 : MonoBehaviour {
         if (count >= repetition) {
             boss.GetComponent<PatternB2>().PatternEnd();
             Destroy(gameObject);
+            animator.SetBool("spin", false);
+
         }
     }
 }

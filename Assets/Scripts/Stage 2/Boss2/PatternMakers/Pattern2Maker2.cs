@@ -16,6 +16,8 @@ public class Pattern2Maker2 : MonoBehaviour
     private bool isReady;
     private bool isReady2;
 
+    private bool checkCase;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +26,12 @@ public class Pattern2Maker2 : MonoBehaviour
         player = GameObject.Find("Player");
         boss = GameObject.Find("Boss");
 
-        CheckCase();
+        checkCase = GameObject.FindGameObjectsWithTag("EnemyBulletMine").Length != 0;
+        if (checkCase)
+        {
+            CheckForceDestroy();
+            return;
+        }        
 
         isReady = false;
         isReady2 = true;

@@ -39,17 +39,16 @@ public class JumpB2 : MonoBehaviour
     IEnumerator JumpCollider() {
         GetComponent<CircleCollider2D>().enabled = false;
         GetComponent<MoveB2>().IsMove(false);        
-        Debug.Log(false);
         yield return new WaitForSeconds(0.6f);
         transform.position = new Vector3(64, 0, 0);
         GetComponent<CircleCollider2D>().enabled = true;
-        Debug.Log(true);
     }
 
     public void Fall(Vector3 _vector3) {
         if (!isJump) {
             return;
         }
+
         isJump = false;
         transform.position = _vector3;
         
