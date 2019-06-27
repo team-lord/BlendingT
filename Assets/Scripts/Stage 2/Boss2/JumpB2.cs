@@ -8,16 +8,20 @@ public class JumpB2 : MonoBehaviour
 
     private bool isJump;
 
-    Animator animator;
+    Animator bossAnimator;
+    Animator shadowAnimator;
 
     GameObject boss;
+    GameObject shadow;
 
     // Start is called before the first frame update
     void Start()
     {
         isJump = false;
         boss = GameObject.Find("Boss");
-        animator = boss.GetComponent<Animator>();
+        bossAnimator = boss.GetComponent<Animator>();
+        shadow = GameObject.Find("Shadow");
+        shadowAnimator = shadow.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -33,9 +37,10 @@ public class JumpB2 : MonoBehaviour
 
         GetComponent<CircleCollider2D>().enabled = false;
 
-        animator.ResetTrigger("throw");
+        bossAnimator.ResetTrigger("throw");
 
-        animator.SetTrigger("jump");
+        bossAnimator.SetTrigger("jump");
+        shadowAnimator.SetTrigger("shadowOff");
     }
 
     public void Fall(Vector3 _vector3) {
@@ -49,7 +54,8 @@ public class JumpB2 : MonoBehaviour
 
         GetComponent<CircleCollider2D>().enabled = true;
 
-        animator.SetTrigger("fall");
+        bossAnimator.SetTrigger("fall");
+        shadowAnimator.SetTrigger("shadowOn");
     }
 
     public void Special0Fall(Vector3 _vector3) {
@@ -61,7 +67,8 @@ public class JumpB2 : MonoBehaviour
         
         GetComponent<CircleCollider2D>().enabled = true;
 
-        animator.SetTrigger("fall");
+        bossAnimator.SetTrigger("fall");
+        shadowAnimator.SetTrigger("shadowOn");
     }
 
 }
