@@ -31,7 +31,7 @@ public class JumpB2 : MonoBehaviour
 
     public void Jump() {
         isJump = true;
-        animator.SetTrigger("jump");
+        bossAnimator.SetTrigger("jump");
         shadowAnimator.SetTrigger("shadowOff");
         StartCoroutine(JumpCollider());
     }

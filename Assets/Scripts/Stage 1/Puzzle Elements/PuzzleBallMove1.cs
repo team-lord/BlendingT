@@ -13,6 +13,8 @@ public class PuzzleBallMove1 : MonoBehaviour {
     private GameObject phonograph;
     private GameObject motorFan;
 
+    private GameObject flower;
+
     private GameObject player;
 
     // Start is called before the first frame update
@@ -30,6 +32,9 @@ public class PuzzleBallMove1 : MonoBehaviour {
         phonograph = GameObject.Find("Phonograph");
         motorFan = GameObject.Find("MotorFan");
 
+        flower = GameObject.Find("Flower");
+        flower.GetComponent<PolygonCollider2D>().enabled = false;
+
         player = GameObject.Find("Player");
     }
 
@@ -45,7 +50,9 @@ public class PuzzleBallMove1 : MonoBehaviour {
     public void Initialize() {
         billiardTable.GetComponent<BilliardTable1>().Initialize();
         puzzleButton.GetComponent<PuzzleStartButton1>().Initialize();
-        for(int i=0; i<2; i++) {
+        flower.GetComponent<PolygonCollider2D>().enabled = false;
+
+        for (int i=0; i<2; i++) {
             puzzleBall[i].transform.localPosition = localPosition[i];
             puzzleBall[i].transform.rotation = Quaternion.identity;
             puzzleBall[i].GetComponent<Rigidbody2D>().velocity = Vector3.zero;
