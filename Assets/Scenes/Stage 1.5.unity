@@ -452,6 +452,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8744325944345579100, guid: 77b9f59c4f9b114438726bf105222809,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 8744325944345579100, guid: 77b9f59c4f9b114438726bf105222809,
+        type: 3}
+      propertyPath: tumbleSpeed
+      value: 200
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77b9f59c4f9b114438726bf105222809, type: 3}
 --- !u!1 &181710724 stripped
@@ -540,7 +550,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 68, y: 60}
+  m_SizeDelta: {x: 68, y: 68}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &405306147
 MonoBehaviour:
@@ -555,12 +565,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   images:
-  - {fileID: -4031094179166907523, guid: 942686d748851ff4e9c7f9eb922551f2, type: 3}
-  - {fileID: 5546958616740524299, guid: 942686d748851ff4e9c7f9eb922551f2, type: 3}
-  - {fileID: 2309896351881654512, guid: 942686d748851ff4e9c7f9eb922551f2, type: 3}
-  - {fileID: 615023859997206797, guid: 942686d748851ff4e9c7f9eb922551f2, type: 3}
-  - {fileID: 516283494600122218, guid: 942686d748851ff4e9c7f9eb922551f2, type: 3}
-  - {fileID: 4606908045521496030, guid: 942686d748851ff4e9c7f9eb922551f2, type: 3}
+  - {fileID: -2204519082939242443, guid: 692e894d60c0ac245b3ee9679677b11a, type: 3}
+  - {fileID: 1099552113435073771, guid: 692e894d60c0ac245b3ee9679677b11a, type: 3}
+  - {fileID: -825371803602724520, guid: 692e894d60c0ac245b3ee9679677b11a, type: 3}
+  - {fileID: 385199861125206807, guid: 692e894d60c0ac245b3ee9679677b11a, type: 3}
+  - {fileID: 8654855381167333878, guid: 692e894d60c0ac245b3ee9679677b11a, type: 3}
+  - {fileID: 2428403318985984633, guid: 692e894d60c0ac245b3ee9679677b11a, type: 3}
 --- !u!114 &405306148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -581,7 +591,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 4606908045521496030, guid: 942686d748851ff4e9c7f9eb922551f2,
+  m_Sprite: {fileID: 2428403318985984633, guid: 692e894d60c0ac245b3ee9679677b11a,
     type: 3}
   m_Type: 2
   m_PreserveAspect: 0
@@ -1671,7 +1681,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 80, y: 0}
-  m_SizeDelta: {x: 60, y: 60}
+  m_SizeDelta: {x: 68, y: 68}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1707324108
 MonoBehaviour:
@@ -1685,9 +1695,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ffc36faf39d974f8d5e4ec4cc7c6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offSprite: {fileID: -7957953806605825063, guid: 6a725f0377f08cc4c8ef6deaefc860dd,
+  offSprite: {fileID: 7423079488581237032, guid: f8866fa257609904fadfe852f29d897c,
     type: 3}
-  onSprite: {fileID: -517998309603396936, guid: 6a725f0377f08cc4c8ef6deaefc860dd,
+  onSprite: {fileID: -5198654017577297029, guid: f8866fa257609904fadfe852f29d897c,
     type: 3}
 --- !u!114 &1707324109
 MonoBehaviour:
@@ -1709,7 +1719,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: -517998309603396936, guid: 6a725f0377f08cc4c8ef6deaefc860dd,
+  m_Sprite: {fileID: -5198654017577297029, guid: f8866fa257609904fadfe852f29d897c,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
