@@ -45,7 +45,7 @@ public class JumpB2 : MonoBehaviour
         isJump = false;
         transform.position = _vector3;
         
-        GetComponent<MoveB2>().IsMove(true);
+        //GetComponent<MoveB2>().IsMove(true);
 
         GetComponent<CircleCollider2D>().enabled = true;
 
@@ -63,4 +63,5 @@ public class JumpB2 : MonoBehaviour
 
         animator.SetTrigger("fall");
     }
+
 }

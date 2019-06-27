@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 8410641470155248433}
   - component: {fileID: -4511294588123719449}
   - component: {fileID: 50819326121836028}
-  - component: {fileID: 5325831157764210812}
   - component: {fileID: 5510959690330670349}
+  - component: {fileID: 3332886231863218620}
+  - component: {fileID: 4281670897564957093}
   m_Layer: 0
   m_Name: HoneyExplosiveBullet2
   m_TagString: Untagged
@@ -46,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e696e3df3519d544bf306ca5ec020cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delay: 0.5
   bullet: {fileID: 2146794848732731192, guid: 014ee998694fa4e428ee7d93db9d3b8e, type: 3}
   honeyFloor: {fileID: 1244035188023316807, guid: d3af86be546268a4a98a4fe966e1a82e,
     type: 3}
@@ -86,53 +88,18 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 67473faa2fdb98c42b6629b15fb7c0f0, type: 3}
+  m_Sprite: {fileID: 3652881735837890503, guid: 67473faa2fdb98c42b6629b15fb7c0f0,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.56, y: 1.28}
+  m_Size: {x: 1.28, y: 3.84}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &5325831157764210812
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1007416687805303645}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.56, y: 1.28}
-    newSize: {x: 2.56, y: 1.28}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.04, y: 0.32}
-      - {x: 0.28, y: -0.08}
-      - {x: 0.28, y: -0.14}
-      - {x: 0.28, y: -0.2}
-      - {x: 0.16, y: -0.36}
-      - {x: 0.08, y: -0.4}
-      - {x: -0.08, y: -0.4}
-      - {x: -0.16, y: -0.36}
-      - {x: -0.28, y: -0.2}
-      - {x: -0.28, y: -0.08}
-      - {x: -0.04, y: 0.32}
 --- !u!50 &5510959690330670349
 Rigidbody2D:
   serializedVersion: 4
@@ -154,3 +121,55 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &3332886231863218620
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007416687805303645}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a408746ca31027b42840e59fc74822ab, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!60 &4281670897564957093
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007416687805303645}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.28, y: 3.84}
+    newSize: {x: 1.28, y: 3.84}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.07192245, y: -1.6825601}
+      - {x: 0.084038764, y: -1.6810721}
+      - {x: 0.28340584, y: -1.4644731}
+      - {x: 0.28787446, y: -1.3653234}
+      - {x: 0.04638186, y: -0.95085025}
+      - {x: -0.04276832, y: -0.9546811}
+      - {x: -0.2753235, y: -1.3559659}
+      - {x: -0.28085506, y: -1.4740527}

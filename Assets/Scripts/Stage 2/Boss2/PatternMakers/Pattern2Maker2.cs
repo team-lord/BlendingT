@@ -14,6 +14,7 @@ public class Pattern2Maker2 : MonoBehaviour
     private GameObject boss;
 
     private bool isReady;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -63,6 +64,7 @@ public class Pattern2Maker2 : MonoBehaviour
                 {
                     Fire(60 * i);
                 }
+                boss.GetComponent<MoveB2>().IsMove(true);
                 CheckDestroy();
             }            
         }        
