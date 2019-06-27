@@ -114,15 +114,14 @@ GameObject:
   - component: {fileID: 9042872130895254101}
   - component: {fileID: 5072788503666927563}
   - component: {fileID: 1168176110234124655}
-  - component: {fileID: 5969921058991468797}
   - component: {fileID: 1970104549925559450}
   - component: {fileID: 8443668096482587045}
   - component: {fileID: 1615748284076872091}
   - component: {fileID: 7824404991978632012}
+  - component: {fileID: 2882629312097400984}
   - component: {fileID: 712006566693851933}
   - component: {fileID: 8232100012273836292}
   - component: {fileID: 8622415816455705514}
-  - component: {fileID: 3890790402877634227}
   m_Layer: 0
   m_Name: Boss2
   m_TagString: Untagged
@@ -261,18 +260,6 @@ MonoBehaviour:
   honeyBullet: {fileID: 6136551738744359377, guid: 8ad3550179d23da4ba5aa7a5fbabce67,
     type: 3}
   delay: 1
---- !u!114 &5969921058991468797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4235409278765724236}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eba5d440b05b0b544b2cc7964540fefe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1970104549925559450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -352,6 +339,18 @@ MonoBehaviour:
   - {fileID: 1366849618513934455, guid: 3b1af67b78e3ee4438b583c34bcea202, type: 3}
   - {fileID: 4850480381285084224, guid: 290b9e4db8b7e2341abea0f47af77801, type: 3}
   - {fileID: 3277570823926607876, guid: 23e84ccf2c35be04ea4460ad2d89dd0d, type: 3}
+--- !u!114 &2882629312097400984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4235409278765724236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eba5d440b05b0b544b2cc7964540fefe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &712006566693851933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,8 +364,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blanket: {fileID: 1943403016015020738, guid: 2a4464f689ce59d4f8756c1757c49619, type: 3}
-  special0Maker: {fileID: 6602233451319459334, guid: fa83a1becb3a7a047b928dfcef6fe476,
-    type: 3}
   special1Maker: {fileID: 8563687535591517425, guid: 324b265f3ad8d83448cb9c6936833ce0,
     type: 3}
 --- !u!114 &8232100012273836292
@@ -393,25 +390,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05189af9f29e05b4c935f48c97f5421d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &3890790402877634227
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4235409278765724236}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 880bf9844a8d59049bfde0f818519ed2, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &3583832283737759797
 PrefabInstance:
   m_ObjectHideFlags: 0

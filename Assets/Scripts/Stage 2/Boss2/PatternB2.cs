@@ -28,7 +28,7 @@ public class PatternB2 : MonoBehaviour
 
         patternStart = true;
 
-        patternArray = new int[] {0, 1, 2, 4};
+        patternArray = new int[] {0, 2};
 
         patternPhase = true;
 
@@ -49,7 +49,7 @@ public class PatternB2 : MonoBehaviour
 
     void Pattern() {
         int _number;
-        /*
+        
         do {
             _number = Random.Range(0, patternArray.Length);
             
@@ -60,8 +60,8 @@ public class PatternB2 : MonoBehaviour
 
         GetComponent<MakeBeeB2>().MakeBee();
         Instantiate(patternMakers[currentPattern], transform.position, transform.rotation);
-        */
-        Instantiate(patternMakers[debugPattern], transform.position, transform.rotation);
+        
+        //Instantiate(patternMakers[debugPattern], transform.position, transform.rotation);
     }
 
     public void PatternEnd() { // patternMaker가 이 함수를 호출
@@ -71,6 +71,11 @@ public class PatternB2 : MonoBehaviour
     IEnumerator PatternStart() {
         GetComponent<MoveB2>().IsMove(true);
         yield return new WaitForSeconds(patternDelay);
+        patternStart = true;
+    }
+
+    public void ForcePatternStart()
+    {
         patternStart = true;
     }
 
