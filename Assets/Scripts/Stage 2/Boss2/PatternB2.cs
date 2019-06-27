@@ -49,8 +49,8 @@ public class PatternB2 : MonoBehaviour
 
     void Pattern() {
         int _number;
-        
-        /*do {
+        /*
+        do {
             _number = Random.Range(0, patternArray.Length);
             
         } while (patternArray[_number] == currentPattern);

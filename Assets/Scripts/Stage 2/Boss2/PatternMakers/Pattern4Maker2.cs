@@ -35,7 +35,7 @@ public class Pattern4Maker2 : MonoBehaviour
     }
 
     void Fire(int i) {
-        Instantiate(bullet4s[i], transform.position, Quaternion.FromToRotation(Vector3.up, directions[i].normalized)); // 사실 normalized는 의미없음
+        Instantiate(bullet4s[i], transform.position, Quaternion.FromToRotation(Vector3.up, directions[i].normalized));
     }
 
     // Update is called once per frame

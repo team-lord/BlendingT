@@ -6,8 +6,7 @@ using UnityEngine.SceneManagement;
 public class PhaseB2 : MonoBehaviour
 {
     public GameObject blanket;
-
-    public GameObject special0Maker;
+    
     public GameObject special1Maker;
 
     private GameObject player;
@@ -20,6 +19,8 @@ public class PhaseB2 : MonoBehaviour
         animator = GetComponent<Animator>();
 
         player = GameObject.Find("Player");
+
+        transform.GetChild(1).gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -42,9 +43,7 @@ public class PhaseB2 : MonoBehaviour
 
         animator.SetFloat("phase2Health", 3f);
         
-        // 필살기 1
-        Instantiate(special0Maker, Vector3.zero, transform.rotation);
-        Instantiate(special0Maker, Vector3.zero, transform.rotation);
+        transform.GetChild(1).gameObject.SetActive(true);
     }
 
     public void Phase3() {
