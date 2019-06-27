@@ -86,6 +86,10 @@ public class MoveTumbleP1 : MonoBehaviour
 
     public void CanMoveTumble(bool _bool) {
         canMoveTumble = _bool;
+        if (!_bool)
+        {
+            GetComponent<Rigidbody2D>().velocity = new Vector3(0,0,0);
+        }
     }
 
     void StartTumble() {

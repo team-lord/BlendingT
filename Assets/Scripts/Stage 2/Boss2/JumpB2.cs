@@ -13,7 +13,6 @@ public class JumpB2 : MonoBehaviour
 
     GameObject shadow;
 
-
     void Start()
     {
         isJump = false;
@@ -26,13 +25,13 @@ public class JumpB2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void Jump() {
         isJump = true;
-        animator.SetTrigger("jump");
-        shadowAnimator.SetTrigger("shadowOff");
+        // bossAnimator.SetTrigger("jump");
+        // shadowAnimator.SetTrigger("shadowOff");
         StartCoroutine(JumpCollider());
     }
 
