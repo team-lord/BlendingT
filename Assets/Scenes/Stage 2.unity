@@ -519,6 +519,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1943403016015020738, guid: 2a4464f689ce59d4f8756c1757c49619,
         type: 3}
+    - target: {fileID: 712006566693851933, guid: 2eabab2a25314f64bb18ccb22141b941,
+        type: 3}
+      propertyPath: special0Maker
+      value: 
+      objectReference: {fileID: 6602233451319459334, guid: fa83a1becb3a7a047b928dfcef6fe476,
+        type: 3}
     - target: {fileID: 8622415816455705514, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
       propertyPath: m_Enabled
@@ -533,6 +539,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_UpdateMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5660859026978208623, guid: 2eabab2a25314f64bb18ccb22141b941,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1000000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5660859026978208623, guid: 2eabab2a25314f64bb18ccb22141b941,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7648110667057913395, guid: 2eabab2a25314f64bb18ccb22141b941,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2eabab2a25314f64bb18ccb22141b941, type: 3}
@@ -1214,11 +1235,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 246817825}
     m_Modifications:
-    - target: {fileID: 8541277248811950919, guid: 17b616c968996bf41b83b0459835cdbe,
-        type: 3}
-      propertyPath: m_Name
-      value: PlayerMeleeAttack
-      objectReference: {fileID: 0}
     - target: {fileID: 3985454832154785955, guid: 17b616c968996bf41b83b0459835cdbe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1273,6 +1289,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541277248811950919, guid: 17b616c968996bf41b83b0459835cdbe,
+        type: 3}
+      propertyPath: m_Name
+      value: PlayerMeleeAttack
       objectReference: {fileID: 0}
     - target: {fileID: 1373438582567120369, guid: 17b616c968996bf41b83b0459835cdbe,
         type: 3}

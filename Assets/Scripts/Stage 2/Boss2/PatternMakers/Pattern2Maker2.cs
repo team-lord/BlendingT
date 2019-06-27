@@ -14,6 +14,7 @@ public class Pattern2Maker2 : MonoBehaviour
     private GameObject boss;
 
     private bool isReady;
+    private bool isReady2;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,7 @@ public class Pattern2Maker2 : MonoBehaviour
         CheckCase();
 
         isReady = false;
+        isReady2 = true;
 
         boss.GetComponent<MoveB2>().IsMove(false);
         // 보스가 뛰어오르는 애니메이션
@@ -49,13 +51,13 @@ public class Pattern2Maker2 : MonoBehaviour
         time += Time.deltaTime;
 
         if (!isReady) {
-            if (time > delay) {
-                // 보스가 떨어지는 애니메이션
-                boss.GetComponent<JumpB2>().Fall(Vector3.zero);
-                isReady = true;
-                time = 0;
-                boss.GetComponent<Animator>().SetTrigger("throw");
-            }
+            if (isReady2) {
+                if (time > delay) {
+                    // 보스가 떨어지는 애니메이션
+                    boss.GetComponent<JumpB2>().Fall(Vector3.zero);
+                    StartCoroutine(Stop());
+                }
+            }            
         } else {
             if (time > fallDelay)
             {
@@ -66,6 +68,17 @@ public class Pattern2Maker2 : MonoBehaviour
                 CheckDestroy();
             }            
         }        
+    }
+
+    IEnumerator Stop() {
+        boss.GetComponent<MoveB2>().IsMove(false);
+        boss.GetComponent<Animator>().SetTrigger("throw");
+
+        isReady2 = false;
+        yield return new WaitForSeconds(2);
+        boss.GetComponent<MoveB2>().IsMove(true);
+        isReady = true;
+        time = 0;
     }
 
     void Fire(int degree) {
