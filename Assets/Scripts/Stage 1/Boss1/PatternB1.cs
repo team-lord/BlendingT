@@ -20,6 +20,12 @@ public class PatternB1 : MonoBehaviour
     public GameObject[] patternMakers = new GameObject[8];
     public GameObject[] forgedPatternMakers = new GameObject[8];
 
+    private int[] patternArray;
+
+    Animator animator;
+
+    private int _number;
+
     // Start is called before the first frame update
     void Start() {
         isPatternPhase = true;
@@ -31,7 +37,9 @@ public class PatternB1 : MonoBehaviour
 
         patternStart = true;
 
-        
+        patternArray = new int[] { 0, 1, 2, 3, 4, 7 };
+
+        animator = GetComponent<Animator>();
     }
     // Update is called once per frame
     void Update() {
@@ -52,29 +60,35 @@ public class PatternB1 : MonoBehaviour
 
     void Pattern() {
         
-        /*int _number;
+        
         do {
-            _number = Random.Range(0, patternMakers.Length); // patternMakers.Length == 8
-        } while (_number == currentPattern);
+            _number = Random.Range(0, patternArray.Length); 
+        } while (patternArray[_number] == currentPattern);
 
         previousPattern = currentPattern;
-        currentPattern = _number;
+        currentPattern = patternArray[_number];
 
         if (isPatternForged) {
-            Debug.Log("forged");
-            Instantiate(forgedPatternMakers[_number], transform.position, transform.rotation);
+            Instantiate(forgedPatternMakers[currentPattern], transform.position, transform.rotation);
         } else {
-            Debug.Log("normal");
-            Instantiate(patternMakers[_number], transform.position, transform.rotation);
+            Instantiate(patternMakers[currentPattern], transform.position, transform.rotation);
         }
-        */
-        Instantiate(forgedPatternMakers[debugPattern], transform.position, transform.rotation);
+        
+        //Instantiate(forgedPatternMakers[debugPattern], transform.position, transform.rotation);
 
     }
 
     public void PatternEnd() { // patternMaker가 이 함수를 호출
-        GetComponent<MoveFireB1>().IsMove(true);
-        StartCoroutine(PatternStart());
+        if(_number == 0) //보스의 cardFire애니메이션이 자연스럽지 못해서 만들어놓음 문제있으면 자세한건 이재상한테 물어보셈
+        {
+            StartCoroutine(ForCardFireSmooth());
+        }
+        else
+        {
+            GetComponent<MoveFireB1>().IsMove(true);
+            StartCoroutine(PatternStart());
+        }
+        
     }
 
     IEnumerator PatternStart() {
@@ -89,5 +103,12 @@ public class PatternB1 : MonoBehaviour
     public void ForceStart() { // 강제로 패턴을 다시 시작할 때 호출 ex) surpriseBox가 아직 존재
         currentPattern = previousPattern;
         patternStart = true;
+    }
+    IEnumerator ForCardFireSmooth() //보스의 cardFire애니메이션이 자연스럽지 못해서 만들어놓음 문제있으면 자세한건 이재상한테 물어보셈
+    {
+        yield return new WaitForSeconds(0.5f);
+        animator.SetBool("cardFire", false);
+        GetComponent<MoveFireB1>().IsMove(true);
+        StartCoroutine(PatternStart());
     }
 }

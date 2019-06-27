@@ -1214,11 +1214,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 246817825}
     m_Modifications:
-    - target: {fileID: 8541277248811950919, guid: 17b616c968996bf41b83b0459835cdbe,
-        type: 3}
-      propertyPath: m_Name
-      value: PlayerMeleeAttack
-      objectReference: {fileID: 0}
     - target: {fileID: 3985454832154785955, guid: 17b616c968996bf41b83b0459835cdbe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1273,6 +1268,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541277248811950919, guid: 17b616c968996bf41b83b0459835cdbe,
+        type: 3}
+      propertyPath: m_Name
+      value: PlayerMeleeAttack
       objectReference: {fileID: 0}
     - target: {fileID: 1373438582567120369, guid: 17b616c968996bf41b83b0459835cdbe,
         type: 3}

@@ -42,6 +42,7 @@ public class PhaseB1 : MonoBehaviour
     public void Phase2() {
         Destroy(GameObject.Find("Puzzle"));
 
+        Instantiate(blanket, Vector3.zero, Quaternion.identity);
         Instantiate(smoke, Vector3.zero, Quaternion.identity);
         transform.position = Vector3.zero;
 
@@ -57,6 +58,7 @@ public class PhaseB1 : MonoBehaviour
     }
 
     public void Phase3() {
+        Instantiate(blanket, Vector3.zero, Quaternion.identity);
         Camera.main.GetComponent<CameraMove1>().WatchPlayerCenter();
 
         GetComponent<MoveFireB1>().IsMove(false);

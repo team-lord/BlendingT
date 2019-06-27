@@ -26,11 +26,14 @@ public class NullifyingCore1 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if(collision.tag == "Player") {
+            StartCoroutine(PlayAnimationGetBlanket());
             Instantiate(smoke, transform.position, Quaternion.identity);
             
             GetComponent<SpriteRenderer>().sprite = blanketPlate;
 
             player.GetComponent<BlanketP1>().GetBlanket();
+
+            gameObject.GetComponent<CircleCollider2D>().enabled = false;
 
             StartCoroutine(SceneChange());
         }
@@ -39,5 +42,12 @@ public class NullifyingCore1 : MonoBehaviour
     IEnumerator SceneChange() {
         yield return new WaitForSeconds(5f);
         SceneManager.LoadScene("Main Menu");
+    }
+
+    IEnumerator PlayAnimationGetBlanket()
+    {
+        player.GetComponent<MoveTumbleP1>().CanMoveTumble(false);
+        yield return new WaitForSeconds(1.4f);
+        player.GetComponent<MoveTumbleP1>().CanMoveTumble(true);
     }
 }

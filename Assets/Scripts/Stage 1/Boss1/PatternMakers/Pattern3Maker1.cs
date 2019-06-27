@@ -13,7 +13,8 @@ public class Pattern3Maker1 : MonoBehaviour
     private float time;
 
     private GameObject player;
-    private GameObject boss;    
+    private GameObject boss;
+    
 
     // Start is called before the first frame update
     void Start()

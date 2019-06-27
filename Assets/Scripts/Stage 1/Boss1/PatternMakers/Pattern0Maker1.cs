@@ -31,6 +31,7 @@ public class Pattern0Maker1 : MonoBehaviour
 
         animator = boss.GetComponent<Animator>();
         bossAudio = boss.GetComponent<AudioSource>();
+        animator.SetBool("cardFire", true);
     }
 
     // Update is called once per frame
@@ -49,7 +50,6 @@ public class Pattern0Maker1 : MonoBehaviour
 
                 Fire(bullet, -40 + 10 * i);
             }
-            animator.SetTrigger("cardFire");
             bossAudio.PlayOneShot(cardFireSound);
 
             time = 0;
@@ -71,7 +71,7 @@ public class Pattern0Maker1 : MonoBehaviour
         if (count >= repetition) {
             boss.GetComponent<PatternB1>().PatternEnd();
             Destroy(gameObject);
+            
         }
     }
-
 }

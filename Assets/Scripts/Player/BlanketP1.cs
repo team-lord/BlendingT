@@ -12,12 +12,16 @@ public class BlanketP1 : MonoBehaviour
 
     private GameObject audienceManager;
 
+    Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
         canBlanket = false;
 
         audienceManager = GameObject.Find("AudienceManager");
+
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -39,6 +43,7 @@ public class BlanketP1 : MonoBehaviour
 
     public void GetBlanket() {
         Debug.Log("GetBlanket");
+        animator.SetTrigger("getBlanket");
         canBlanket = true;
         blanketImage.GetComponent<NullifyingCore>().GetBlanket();
     }

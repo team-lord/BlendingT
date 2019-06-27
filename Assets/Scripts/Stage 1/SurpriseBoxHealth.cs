@@ -27,6 +27,10 @@ public class SurpriseBoxHealth : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.tag == "Blanket")
+        {
+            Destroy(gameObject);
+        }
 
         if (isVulnerable) {
             if (collision.tag == "PlayerBullet") {
