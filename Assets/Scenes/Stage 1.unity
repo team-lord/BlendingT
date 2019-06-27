@@ -1055,6 +1055,16 @@ PrefabInstance:
       propertyPath: moveSound
       value: 
       objectReference: {fileID: 8300000, guid: 5f9605f3bd0083245a167972058ff517, type: 3}
+    - target: {fileID: 8184690626530226898, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 8184690626530226898, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: tumbleSpeed
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 6690072444194126885, guid: b5a4ce52038e1be4c8dbccabd42ff661,
         type: 3}
       propertyPath: heart
@@ -2456,7 +2466,7 @@ PrefabInstance:
     - target: {fileID: 2417884461210072600, guid: dd70ce451ff8a35439816dd1ea4f6f0a,
         type: 3}
       propertyPath: debugPattern
-      value: 1
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3307093643530316898, guid: dd70ce451ff8a35439816dd1ea4f6f0a,
         type: 3}
@@ -2485,5 +2495,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1943403016015020738, guid: 2a4464f689ce59d4f8756c1757c49619,
         type: 3}
+    - target: {fileID: 3966418244489354947, guid: dd70ce451ff8a35439816dd1ea4f6f0a,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1000000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd70ce451ff8a35439816dd1ea4f6f0a, type: 3}

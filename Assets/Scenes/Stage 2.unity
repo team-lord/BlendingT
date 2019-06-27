@@ -872,12 +872,12 @@ PrefabInstance:
     - target: {fileID: 5245720087855916295, guid: 2e784ce3b90483f478c59b897f3b6584,
         type: 3}
       propertyPath: tumbleSpeed
-      value: 6
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 5245720087855916295, guid: 2e784ce3b90483f478c59b897f3b6584,
         type: 3}
       propertyPath: moveSpeed
-      value: 6
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 4927763103399916976, guid: 2e784ce3b90483f478c59b897f3b6584,
         type: 3}
@@ -1214,6 +1214,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 246817825}
     m_Modifications:
+    - target: {fileID: 8541277248811950919, guid: 17b616c968996bf41b83b0459835cdbe,
+        type: 3}
+      propertyPath: m_Name
+      value: PlayerMeleeAttack
+      objectReference: {fileID: 0}
     - target: {fileID: 3985454832154785955, guid: 17b616c968996bf41b83b0459835cdbe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1268,11 +1273,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8541277248811950919, guid: 17b616c968996bf41b83b0459835cdbe,
-        type: 3}
-      propertyPath: m_Name
-      value: PlayerMeleeAttack
       objectReference: {fileID: 0}
     - target: {fileID: 1373438582567120369, guid: 17b616c968996bf41b83b0459835cdbe,
         type: 3}
@@ -1408,7 +1408,7 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0.6
+  m_EdgeRadius: 0.4
   m_Points:
   - {x: -10.642638, y: 20.317389}
   - {x: -25.23259, y: 0.42953312}

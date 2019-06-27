@@ -13,6 +13,8 @@ public class MoveTumbleP1 : MonoBehaviour
     private float h;
     private float v;
 
+    private Rigidbody2D rb2D;
+
     // 구르기
     private bool canTumble;
     public float tumbleTime;
@@ -44,7 +46,9 @@ public class MoveTumbleP1 : MonoBehaviour
         myaudio = GetComponent<AudioSource>();
 
         cursor = GameObject.Find("Cursor");
-        
+
+        rb2D = GetComponent<Rigidbody2D>();
+
     }
 
     // Update is called once per frame
@@ -109,7 +113,8 @@ public class MoveTumbleP1 : MonoBehaviour
     }
 
     void Tumble() {
-        transform.position += new Vector3(h * tumbleSpeed * Time.deltaTime, v * tumbleSpeed * Time.deltaTime, 0);
+        //transform.position += new Vector3(h * tumbleSpeed * Time.deltaTime, v * tumbleSpeed * Time.deltaTime, 0);
+        rb2D.velocity = new Vector3(h * tumbleSpeed * Time.deltaTime, v * tumbleSpeed * Time.deltaTime, 0);
     }
 
     void Move() {
@@ -147,8 +152,10 @@ public class MoveTumbleP1 : MonoBehaviour
             animator.SetFloat("lastMoveDirectionY", v);
         }
 
-        transform.Translate(h * Vector3.right * moveSpeed * Time.deltaTime, Space.World);
-        transform.Translate(v * Vector3.up * moveSpeed * Time.deltaTime, Space.World);
+        //transform.Translate(h * Vector3.right * moveSpeed * Time.deltaTime, Space.World);
+        //transform.Translate(v * Vector3.up * moveSpeed * Time.deltaTime, Space.World);
+
+        rb2D.velocity = new Vector3(h * moveSpeed * Time.deltaTime, v * moveSpeed * Time.deltaTime, 0);
     }
 
     void Correction() {
