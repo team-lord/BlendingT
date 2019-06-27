@@ -39,9 +39,11 @@ public class MakeBeeB2 : MonoBehaviour
 
     public void IsReady(bool _bool) {
         isReady = _bool;
+        Debug.Log(_bool);
     }
 
     public void Forge() {
         isForged = true;
+        Debug.Log("Forged");
     }
 }

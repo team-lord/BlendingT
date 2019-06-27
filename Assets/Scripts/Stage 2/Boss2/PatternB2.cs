@@ -88,7 +88,6 @@ public class PatternB2 : MonoBehaviour
     public void ForceStart() {
         if (forceStartIsReady) {
             StartCoroutine(ForceStartIsReady());
-            StartCoroutine(Rest()); // 운이 안좋으면 벌이 네마리 나올 수도 있으므로 잠시 꺼준다
             previousPattern = currentPattern;
             animator.SetBool("spin", false);
             animator.SetTrigger("attackedByBlanket");
@@ -101,12 +100,6 @@ public class PatternB2 : MonoBehaviour
         forceStartIsReady = false;
         yield return new WaitForSeconds(5f);
         forceStartIsReady = true;
-    }
-
-    IEnumerator Rest() {
-        GetComponent<MakeBeeB2>().IsReady(false);
-        yield return new WaitForSeconds(0.1f);
-        GetComponent<MakeBeeB2>().IsReady(true);
     }
 
     public void PatternArray(int[] array) {

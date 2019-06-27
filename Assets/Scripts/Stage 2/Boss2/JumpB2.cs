@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JumpB2 : MonoBehaviour
-{
+public class JumpB2 : MonoBehaviour {
     // 애니메이션 전용
 
     private bool isJump;
@@ -14,8 +13,7 @@ public class JumpB2 : MonoBehaviour
     GameObject shadow;
 
 
-    void Start()
-    {
+    void Start() {
         isJump = false;
 
         bossAnimator = GetComponent<Animator>();
@@ -24,9 +22,8 @@ public class JumpB2 : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
+    void Update() {
+
     }
 
     public void Jump() {
@@ -38,10 +35,11 @@ public class JumpB2 : MonoBehaviour
 
     IEnumerator JumpCollider() {
         GetComponent<CircleCollider2D>().enabled = false;
-        GetComponent<MoveB2>().IsMove(false);        
+        GetComponent<MoveB2>().IsMove(false);
         yield return new WaitForSeconds(0.6f);
         transform.position = new Vector3(64, 0, 0);
         GetComponent<CircleCollider2D>().enabled = true;
+        Camera.main.GetComponent<CameraMove2>().WatchPlayerCenter();
     }
 
     public void Fall(Vector3 _vector3) {
@@ -51,7 +49,9 @@ public class JumpB2 : MonoBehaviour
 
         isJump = false;
         transform.position = _vector3;
-        
+
+        Camera.main.GetComponent<CameraMove2>().WatchPlayer();
+
         GetComponent<MoveB2>().IsMove(true);
 
         bossAnimator.SetTrigger("fall");
@@ -64,6 +64,8 @@ public class JumpB2 : MonoBehaviour
         }
         isJump = false;
         transform.position = _vector3;
+
+        Camera.main.GetComponent<CameraMove2>().WatchPlayer();
 
         bossAnimator.SetTrigger("fall");
         shadowAnimator.SetTrigger("shadowOn");
