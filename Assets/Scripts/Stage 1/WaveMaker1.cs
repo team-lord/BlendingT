@@ -40,7 +40,7 @@ public class WaveMaker1 : MonoBehaviour
     public void Fire() {
         animator.SetTrigger("change");
         Instantiate(wave, transform.position, Quaternion.identity);
-        myaudio.PlayOneShot(bellRing);
+        myaudio.Play();
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {

@@ -47,6 +47,5 @@ public class DoorT : MonoBehaviour
 
     void Open() {
         animator.SetTrigger("doorOpen");
-        gameObject.GetComponent<EdgeCollider2D>().enabled = false;
     }
 }

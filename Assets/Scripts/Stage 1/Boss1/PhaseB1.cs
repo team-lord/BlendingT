@@ -26,7 +26,7 @@ public class PhaseB1 : MonoBehaviour
     }
 
     public void Phase1() {
-        Instantiate(blanket, Vector3.zero, Quaternion.identity);
+        //Instantiate(blanket, Vector3.zero, Quaternion.identity);
         Instantiate(smoke, transform.position, Quaternion.identity);
         transform.position = new Vector3(64, 0, 0);
 
@@ -42,7 +42,7 @@ public class PhaseB1 : MonoBehaviour
     public void Phase2() {
         Destroy(GameObject.Find("Puzzle"));
 
-        Instantiate(blanket, Vector3.zero, Quaternion.identity);
+        //Instantiate(blanket, Vector3.zero, Quaternion.identity);
         Instantiate(smoke, Vector3.zero, Quaternion.identity);
         transform.position = Vector3.zero;
 
