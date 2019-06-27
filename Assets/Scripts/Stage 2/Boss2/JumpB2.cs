@@ -46,7 +46,7 @@ public class JumpB2 : MonoBehaviour
         isJump = false;
         transform.position = _vector3;
         
-        GetComponent<MoveB2>().IsMove(true);
+        //GetComponent<MoveB2>().IsMove(true);
 
         animator.SetTrigger("fall");
     }
@@ -60,4 +60,5 @@ public class JumpB2 : MonoBehaviour
 
         animator.SetTrigger("fall");
     }
+
 }

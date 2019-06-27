@@ -50,7 +50,7 @@ public class PatternB2 : MonoBehaviour
     void Pattern() {
         int _number;
         
-        do {
+        /*do {
             _number = Random.Range(0, patternArray.Length);
             
         } while (patternArray[_number] == currentPattern);
@@ -60,8 +60,8 @@ public class PatternB2 : MonoBehaviour
 
         GetComponent<MakeBeeB2>().MakeBee();
         Instantiate(patternMakers[currentPattern], transform.position, transform.rotation);
-        
-        //Instantiate(patternMakers[debugPattern], transform.position, transform.rotation);
+        */
+        Instantiate(patternMakers[debugPattern], transform.position, transform.rotation);
     }
 
     public void PatternEnd() { // patternMaker가 이 함수를 호출

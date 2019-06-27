@@ -38,7 +38,7 @@ public class HoneyExplosiveBullet2 : MonoBehaviour
         animator.SetTrigger("jump"); // 확인
         yield return new WaitForSeconds(delay);
         transform.position = target;
-        animator.SetTrigger("fall"); // 확인
+        //animator.SetTrigger("fall"); // 확인
         StartCoroutine(Explode());
     }
 
