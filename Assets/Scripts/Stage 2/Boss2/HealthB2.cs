@@ -30,7 +30,7 @@ public class HealthB2 : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        Debug.Log(phase);
+        // Debug.Log(phase);
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
@@ -95,7 +95,6 @@ public class HealthB2 : MonoBehaviour {
             if (phaseHealths[1] <= 0) {
                 phaseHealths[1] = 0;
                 GetComponent<PhaseB2>().Phase2();
-                Destroy(GameObject.FindGameObjectWithTag("PatternMaker")); // 작동 하나?
 
             }
         } else if (phase == 2) {

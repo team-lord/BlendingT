@@ -44,6 +44,5 @@ public class MakeBeeB2 : MonoBehaviour
 
     public void Forge() {
         isForged = true;
-        Debug.Log("Forged");
     }
 }

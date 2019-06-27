@@ -42,7 +42,6 @@ public class BlanketP1 : MonoBehaviour
     }
 
     public void GetBlanket() {
-        Debug.Log("GetBlanket");
         animator.SetTrigger("getBlanket");
         canBlanket = true;
         blanketImage.GetComponent<NullifyingCore>().GetBlanket();

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AttackFireP1 : MonoBehaviour {
 
@@ -26,6 +27,8 @@ public class AttackFireP1 : MonoBehaviour {
 
     public AudioClip bulletFireSound;
     public AudioClip meleeAttackSound;
+
+    public Image attackCore;
    
     // Start is called before the first frame update
     void Start()
@@ -52,6 +55,11 @@ public class AttackFireP1 : MonoBehaviour {
                 if (canToggle) {
                     StartCoroutine(CanToggle());
                     isMelee = !isMelee;
+                    if (isMelee) {
+                        attackCore.GetComponent<AttackCore>().Melee();
+                    } else {
+                        attackCore.GetComponent<AttackCore>().Range();
+                    }
                 }
             }
 

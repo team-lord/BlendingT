@@ -20,7 +20,6 @@ public class Special0Maker2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = Vector3.zero;
 
         boss = GameObject.Find("Boss");
         player = GameObject.Find("Player");
@@ -40,6 +39,8 @@ public class Special0Maker2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.localPosition = new Vector3(-20, 0, 0);
+        
         time += Time.deltaTime;
         
         if (time > timeLimit) { // 시간 초과

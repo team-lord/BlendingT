@@ -21,6 +21,7 @@ public class NullifyingCore : MonoBehaviour
     }
 
     public void GetBlanket() {
+        GetComponent<Image>().color = Color.white;
         GetComponent<Image>().sprite = onSprite;
     }
 

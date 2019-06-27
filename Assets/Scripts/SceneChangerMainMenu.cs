@@ -17,6 +17,8 @@ public class SceneChangerMainMenu : MonoBehaviour {
                 Exit();
             } else if (SceneManager.GetActiveScene().name.Equals("Credit")) {
                 MainMenu();
+            } else if (SceneManager.GetActiveScene().name.Equals("Game Over")) {
+                MainMenu();
             }
         }
     }
