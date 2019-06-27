@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4927763103399916976}
   - component: {fileID: 703716484847514956}
   - component: {fileID: 5245720087855916295}
+  - component: {fileID: 8302814479756043448}
   - component: {fileID: 6817982065807789045}
   m_Layer: 0
   m_Name: Player2
@@ -142,6 +143,7 @@ MonoBehaviour:
   attackDelay: 0.5
   bullet: {fileID: 1383276255159794600, guid: 0eddcc8fe29fc5e4b8b4e8c756d138bf, type: 3}
   fireDelay: 0.2
+  attackCore: {fileID: 0}
 --- !u!114 &4927763103399916976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,6 +190,19 @@ MonoBehaviour:
   tumbleTime: 0.25
   tumbleSpeed: 6
   tumbleDelay: 0.25
+--- !u!114 &8302814479756043448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3028074478769885715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4888ff9ae6bf536469e895e0842e3a3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levitationCore: {fileID: 0}
 --- !u!95 &6817982065807789045
 Animator:
   serializedVersion: 3
@@ -214,6 +229,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2342813302306706749}
     m_Modifications:
+    - target: {fileID: 8541277248811950919, guid: 17b616c968996bf41b83b0459835cdbe,
+        type: 3}
+      propertyPath: m_Name
+      value: PlayerMeleeAttack
+      objectReference: {fileID: 0}
     - target: {fileID: 3985454832154785955, guid: 17b616c968996bf41b83b0459835cdbe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -268,11 +288,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8541277248811950919, guid: 17b616c968996bf41b83b0459835cdbe,
-        type: 3}
-      propertyPath: m_Name
-      value: PlayerMeleeAttack
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17b616c968996bf41b83b0459835cdbe, type: 3}

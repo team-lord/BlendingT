@@ -22,19 +22,11 @@ public class Bullet3Honey2 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.tag == "Player") {
-            if (!player.GetComponent<HealthP2>().GetIsInvincible()) {
+            if (!player.GetComponent<HealthP2>().GetIsHoneyInvincible()) {
+                player.GetComponent<HealthP2>().HoneyHit();
                 boss.GetComponent<FireBeeAB2>().Fire();
             }
 
-            /*
-            GameObject[] _beeBs = GameObject.FindGameObjectsWithTag("EnemyBeeB");
-            Debug.Log(_beeBs.Length);
-            
-            for(int i=0; i<_beeBs.Length; i++) {
-                _beeBs[i].GetComponent<BulletBeeB2>().Turn();
-            }
-            */
-            
             StartCoroutine(Destroy());
         }
     }

@@ -16,12 +16,15 @@ public class HealthP2 : MonoBehaviour {
     public GameObject shield;
 
     public Image heart;
-    
+
+    private bool isHoneyInvincible;
+
     // Start is called before the first frame update
     void Start() {
         health = maxHealth;
 
         isInvincible = false;
+        isHoneyInvincible = false;
     }
 
     // Update is called once per frame
@@ -41,8 +44,11 @@ public class HealthP2 : MonoBehaviour {
         }
     }
 
-    void ChangeHeart() {
-        // TODO - UI의 하트와 연결       
+    public void HoneyHit() {
+        StartCoroutine(IsHoneyInvincible());
+    }
+
+    void ChangeHeart() {      
         heart.GetComponent<Heart>().ChangeImage();
 
     }
@@ -63,6 +69,12 @@ public class HealthP2 : MonoBehaviour {
         isInvincible = false;
     }
 
+    IEnumerator IsHoneyInvincible() {
+        isHoneyInvincible = true;
+        yield return new WaitForSeconds(invincibleTime);
+        isHoneyInvincible = false;
+    }
+
     public void IsInvincible(bool _bool) {
         isInvincible = _bool;
     }
@@ -70,4 +82,14 @@ public class HealthP2 : MonoBehaviour {
     public bool GetIsInvincible() {       
         return isInvincible;
     }
+
+    public void IsHoneyInvincible(bool _bool) {
+        isHoneyInvincible = _bool;
+    }
+
+    public bool GetIsHoneyInvincible() {
+        Debug.Log("Get");
+        return isHoneyInvincible;
+    }
+
 }

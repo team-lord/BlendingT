@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AttackFireT : MonoBehaviour {
 
@@ -21,6 +22,8 @@ public class AttackFireT : MonoBehaviour {
     public float fireDelay;
     private bool canFire;
     private GameObject cursor;
+
+    public Image attackCore;
 
     // Start is called before the first frame update
     void Start() {
@@ -43,6 +46,11 @@ public class AttackFireT : MonoBehaviour {
                 if (canToggle) {
                     StartCoroutine(CanToggle());
                     isMelee = !isMelee;
+                    if (isMelee) {
+                        attackCore.GetComponent<AttackCore>().Melee();
+                    } else {
+                        attackCore.GetComponent<AttackCore>().Range();
+                    }
                 }
             }
 

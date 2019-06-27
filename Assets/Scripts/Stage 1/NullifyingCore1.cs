@@ -47,6 +47,7 @@ public class NullifyingCore1 : MonoBehaviour
     IEnumerator PlayAnimationGetBlanket()
     {
         player.GetComponent<MoveTumbleP1>().CanMoveTumble(false);
+        player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         yield return new WaitForSeconds(1.4f);
         player.GetComponent<MoveTumbleP1>().CanMoveTumble(true);
     }

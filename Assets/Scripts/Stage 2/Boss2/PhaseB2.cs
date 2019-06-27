@@ -13,6 +13,7 @@ public class PhaseB2 : MonoBehaviour
 
     Animator animator;
 
+    public GameObject levitationCore;
 
     private void Awake()
     {
@@ -40,13 +41,17 @@ public class PhaseB2 : MonoBehaviour
 
     public void Phase2() {
         animator.SetBool("spin", false);
+
         Instantiate(blanket, Vector3.zero, Quaternion.identity);
+
         GetComponent<PatternB2>().PatternPhase(false);
+
         GetComponent<MoveB2>().IsMove(false);
+
         GetComponent<HealthB2>().Phase(2);
 
         animator.SetFloat("phase2Health", 3f);
-        
+
         transform.GetChild(1).gameObject.SetActive(true);
     }
 
@@ -72,9 +77,22 @@ public class PhaseB2 : MonoBehaviour
     }
 
     public void Phase5() {
-        // 데모 버젼 끝
+
         Instantiate(blanket, Vector3.zero, Quaternion.identity);
-        SceneManager.LoadScene("Main Menu");
+        Camera.main.GetComponent<CameraMove2>().WatchPlayerCenter();
+
+        GetComponent<MoveB2>().IsMove(false);
+        GetComponent<PatternB2>().PatternPhase(false);
+
+        Instantiate(levitationCore, transform.position, Quaternion.identity);
+
+        transform.position = new Vector3(64, 0, 0);
+
+
+        // 데모 버젼 끝
+
+        /*
+        Instantiate(blanket, Vector3.zero, Quaternion.identity);
 
         GetComponent<HealthB2>().Phase(5);
         GetComponent<PatternB2>().PatternPhase(false);
@@ -85,6 +103,8 @@ public class PhaseB2 : MonoBehaviour
         // 필살기 2
 
         Instantiate(special1Maker, Vector3.zero, transform.rotation);
+
+        */
     }
 
     public void Phase6() {
