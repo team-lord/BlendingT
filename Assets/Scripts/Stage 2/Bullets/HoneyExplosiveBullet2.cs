@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HoneyExplosiveBullet2 : MonoBehaviour
 {
-    // TODO 
+    // TODO - 꼭 확인
     /* 처음 시작하면 플레이어의 위치를 찾아서 날아간다
      * 터지면서 6방향으로 꿀 탄알을 날림
      * 터진 자리에 꿀 웅덩이를 남김 - 꿀 웅덩이는 Honey2
@@ -12,10 +12,14 @@ public class HoneyExplosiveBullet2 : MonoBehaviour
 
     private GameObject player;
     private Vector3 target;
+    
+    public float delay; // 몇초 후에 떨어지기 시작?
 
     public GameObject bullet;
     public GameObject honeyFloor;
     private bool isReady;
+
+    Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -25,23 +29,31 @@ public class HoneyExplosiveBullet2 : MonoBehaviour
 
         isReady = false;
 
-        // 날아가는 애니메이션 시작
-        // 애니메이션이 끝나면 isReady = true;
+        animator = GetComponent<Animator>();
+        
+        StartCoroutine(Fall());
+    }
+
+    IEnumerator Fall() { // 애니메이션 보스처럼 구현하면 됨
+        animator.SetTrigger("jump"); // 확인
+        yield return new WaitForSeconds(delay);
+        transform.position = target;
+        animator.SetTrigger("fall"); // 확인
+        StartCoroutine(Explode());
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isReady) {
-            Explode();
-        }
+
     }
 
-    void Explode() {
+    IEnumerator Explode() {
+        yield return new WaitForSeconds(0.2f);
         for(int i=0; i<6; i++) {
             Fire(60 * i);
         }
-        Instantiate(honeyFloor, transform.position, transform.rotation);
+        Instantiate(honeyFloor, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 

@@ -24,9 +24,11 @@ public class BeeA2 : MonoBehaviour
     private float rotateTime;
     public float rotateDelay;
 
-    Animator animator;
+    public int maxHealth;
+    private int health;
+    public float wakeDelay;
 
-    // 움직이는 것 아직 구현 안 되어있음
+    Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +40,9 @@ public class BeeA2 : MonoBehaviour
         phaseTime = 0;
         rotateTime = 0;
         player = GameObject.Find("Player");
+
+        health = maxHealth;
+
         animator = GetComponent<Animator>();
     }
 
@@ -46,7 +51,6 @@ public class BeeA2 : MonoBehaviour
     {
         if (!isLethal) {
             time += Time.deltaTime;
-            phaseTime += Time.deltaTime;
             rotateTime += Time.deltaTime;
 
             Move();
@@ -56,13 +60,13 @@ public class BeeA2 : MonoBehaviour
                 rotateTime = 0;
             }
 
-            if(phaseTime > phaseDelay) {
-                if (phase < 2) {
+            if (phase < 2) {
+                phaseTime += Time.deltaTime;
+                if (phaseTime > phaseDelay) {
                     phase++;
-                    time = 0;
                     phaseTime = 0;
                 }
-            }
+            }           
 
             switch (phase) {
                 case 0:
@@ -99,11 +103,22 @@ public class BeeA2 : MonoBehaviour
                     Debug.Log("Error");
                     break;
             }
+        } else {
+            time += Time.deltaTime;
+            if (time > wakeDelay) { // 부활
+                animator.SetBool("mes", false);
+                health = maxHealth / 2;
+                isLethal = false;
+                time = 0;
+                if (phase < 2) {
+                    phase++;
+                }
+            }
         }
     }
 
     public void Move() {
-        transform.Translate(direction * moveSpeed * Time.deltaTime, Space.World);
+        transform.position += direction * moveSpeed * Time.deltaTime;
     }
 
     public void Rotate() {
@@ -113,29 +128,42 @@ public class BeeA2 : MonoBehaviour
         animator.SetFloat("directionY", direction.y);
     }
 
-    public void IsLethal(bool _bool) {
-        isLethal = _bool;
-
-        time = 0;
-        phaseTime = 0;
-
-        if (_bool) {
-            animator.SetBool("mes",true);
-        } else {
-            if(phase < 2) {
-                phase++;
-            }
-            animator.SetBool("mes", false);
-
-        }
-    }
-
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.tag == "NearbyWall") {
-            Debug.Log(collision.tag);
-            Rotate();
+            Back();
+            rotateTime = 0;
+        }
+
+        if (isLethal) {
+            if (collision.tag == "PlayerMelee") {
+                Destroy(gameObject);
+            }
+        } else {
+            if (collision.tag == "PlayerBullet") {
+                health--;
+                Destroy(collision.gameObject);
+
+                CheckAlive();
+            } else if (collision.tag == "PlayerMelee") {
+                health -= 2;
+                CheckAlive();
+            }
         }
     }
     
-        
+    void Back() {
+        direction = Quaternion.Euler(new Vector3(0, 0, 180)) * direction;
+    }
+
+    void CheckAlive() {
+        if (health <= 0) {
+            animator.SetBool("mes", true);
+            isLethal = true;
+            health = 0;
+            time = 0;
+            rotateTime = 0;
+            phaseTime = 0;
+        }
+    }
+
 }

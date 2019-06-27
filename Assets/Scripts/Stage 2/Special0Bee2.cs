@@ -67,29 +67,29 @@ public class Special0Bee2 : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-            if (collision.tag == "NearbyWall") {
-                transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 180));
-            }
+        if (collision.tag == "NearbyWall") {
+            transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 180));
+        }
+        if (collision.tag == "PlayerBullet") {
+            Destroy(collision.gameObject);
+            health--;
+            CheckAlive();
+        } else if (collision.tag == "PlayerMelee") {
+            health -= 2;
+            CheckAlive();
+        }
 
-            if (collision.tag == "PlayerBullet") {
-                health--;
-                CheckAlive();
-            } else if (collision.tag == "PlayerMelee") {
-                health -= 2;
-                CheckAlive();
-            }
-                
     }
 
 
     void CheckAlive() {
         if (health <= 0) {
-            // Instantiate(honey, transform.position, Quaternion.identity);
             StartCoroutine(Destroy());
         }
     }
 
-    IEnumerator Destroy() {        
+    IEnumerator Destroy() {
+        fireTime = -1;
         Vector3 _position = transform.position;
         GetComponent<SpriteRenderer>().enabled = false;
         GetComponent<CircleCollider2D>().enabled = false;

@@ -90,15 +90,12 @@ public class HealthB2 : MonoBehaviour {
             if (phaseHealths[0] <= 0) {
                 phaseHealths[0] = 0;
                 GetComponent<PhaseB2>().Phase1();
-                Destroy(GameObject.FindGameObjectWithTag("PatternMaker"));
-
-
             }
         } else if (phase == 1) {
             if (phaseHealths[1] <= 0) {
                 phaseHealths[1] = 0;
                 GetComponent<PhaseB2>().Phase2();
-                Destroy(GameObject.FindGameObjectWithTag("PatternMaker"));
+                Destroy(GameObject.FindGameObjectWithTag("PatternMaker")); // 작동 하나?
 
             }
         } else if (phase == 2) {
@@ -113,8 +110,6 @@ public class HealthB2 : MonoBehaviour {
             if (phaseHealths[3] <= 0) {
                 phaseHealths[3] = 0;
                 GetComponent<PhaseB2>().Phase4();
-                Destroy(GameObject.FindGameObjectWithTag("PatternMaker"));
-
             }
         } else if (phase == 4) {
             if (phaseHealths[4] <= 0) {

@@ -120,6 +120,7 @@ GameObject:
   - component: {fileID: 1615748284076872091}
   - component: {fileID: 7824404991978632012}
   - component: {fileID: 712006566693851933}
+  - component: {fileID: 8232100012273836292}
   - component: {fileID: 8622415816455705514}
   - component: {fileID: 3890790402877634227}
   m_Layer: 0
@@ -283,7 +284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 147e0dbf5506b4e499c0e9e2548a2afa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phaseMaxHealths: 02000000020000000200000002000000020000000200000002000000
+  phaseMaxHealths: 02000000020000000200000032000000020000000200000002000000
   phase2MesTime: 0
 --- !u!114 &8443668096482587045
 MonoBehaviour:
@@ -362,10 +363,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e095a101b2e449b46aaaca03ecb33726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blanket: {fileID: 1943403016015020738, guid: 2a4464f689ce59d4f8756c1757c49619, type: 3}
   special0Maker: {fileID: 6602233451319459334, guid: fa83a1becb3a7a047b928dfcef6fe476,
     type: 3}
   special1Maker: {fileID: 8563687535591517425, guid: 324b265f3ad8d83448cb9c6936833ce0,
     type: 3}
+--- !u!114 &8232100012273836292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4235409278765724236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b6b6a4fd8f90a74bb41c2219055d8b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8622415816455705514
 MonoBehaviour:
   m_ObjectHideFlags: 0

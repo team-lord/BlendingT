@@ -34,6 +34,7 @@ public class PhaseB2 : MonoBehaviour
     }
 
     public void Phase2() {
+        animator.SetBool("spin", false);
         Instantiate(blanket, Vector3.zero, Quaternion.identity);
         GetComponent<PatternB2>().PatternPhase(false);
         GetComponent<MoveB2>().IsMove(false);

@@ -64,9 +64,9 @@ public class Special0Success2 : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        Debug.Log(collision.tag);
         if(collision.transform.name == "Boss") {
-            boss.GetComponent<Animator>().SetTrigger("mes");
+            // boss.GetComponent<Animator>().SetTrigger("mes");
+            // GetComponent<MesHealthB2>().IsMes(true);
             Destroy(gameObject);
         }
     }

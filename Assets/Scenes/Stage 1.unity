@@ -2479,5 +2479,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7254053519844264650, guid: 4dc666fb50402a440a74b05d18798f57,
         type: 3}
+    - target: {fileID: 3057610163071284322, guid: dd70ce451ff8a35439816dd1ea4f6f0a,
+        type: 3}
+      propertyPath: blanket
+      value: 
+      objectReference: {fileID: 1943403016015020738, guid: 2a4464f689ce59d4f8756c1757c49619,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd70ce451ff8a35439816dd1ea4f6f0a, type: 3}

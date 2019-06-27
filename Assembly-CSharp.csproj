@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\BlanketMove.cs" />
     <Compile Include="Assets\Scripts\BulletMove.cs" />
     <Compile Include="Assets\Scripts\CameraMove.cs" />
+    <Compile Include="Assets\Scripts\CorePlate.cs" />
     <Compile Include="Assets\Scripts\Cursor.cs" />
     <Compile Include="Assets\Scripts\DBBlanket.cs" />
     <Compile Include="Assets\Scripts\DBBlanketP1.cs" />
@@ -84,9 +85,9 @@
     <Compile Include="Assets\Scripts\Player\MoveTumbleP1.cs" />
     <Compile Include="Assets\Scripts\Player\MoveTumbleP2.cs" />
     <Compile Include="Assets\Scripts\Player\PushBAudienceP1.cs" />
+    <Compile Include="Assets\Scripts\Player\Shield.cs" />
     <Compile Include="Assets\Scripts\SceneChanger.cs" />
     <Compile Include="Assets\Scripts\SceneChangerMainMenu.cs" />
-    <Compile Include="Assets\Scripts\Shield.cs" />
     <Compile Include="Assets\Scripts\Stage 1.5\BulletMaker12.cs" />
     <Compile Include="Assets\Scripts\Stage 1\Audience1.cs" />
     <Compile Include="Assets\Scripts\Stage 1\AudienceBulletMove1.cs" />
@@ -173,7 +174,6 @@
     <Compile Include="Assets\Scripts\Stage 2\Boss2\SweepB2.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Bullets\BeeA2.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Bullets\BeeB2.cs" />
-    <Compile Include="Assets\Scripts\Stage 2\Bullets\BeeHealth2.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Bullets\Bullet2Move2.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Bullets\Bullet3Honey2.cs" />
     <Compile Include="Assets\Scripts\Stage 2\Bullets\BulletBeeA2.cs" />
