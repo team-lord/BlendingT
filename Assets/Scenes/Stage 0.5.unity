@@ -475,8 +475,8 @@ GameObject:
   - component: {fileID: 799471378}
   - component: {fileID: 799471377}
   - component: {fileID: 799471376}
-  - component: {fileID: 799471375}
   - component: {fileID: 799471379}
+  - component: {fileID: 799471375}
   m_Layer: 0
   m_Name: LeverMelee
   m_TagString: Untagged
@@ -484,8 +484,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &799471375
-BoxCollider2D:
+--- !u!58 &799471375
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -497,19 +497,9 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
-    newSize: {x: 1.28, y: 1.28}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0.46, y: 0.26}
   serializedVersion: 2
-  m_Size: {x: 0.48, y: 0.4}
-  m_EdgeRadius: 0
+  m_Radius: 0.17
 --- !u!50 &799471376
 Rigidbody2D:
   serializedVersion: 4
@@ -1256,7 +1246,7 @@ PrefabInstance:
     - target: {fileID: 1434610418348870415, guid: 77b9f59c4f9b114438726bf105222809,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20
+      value: -25
       objectReference: {fileID: 0}
     - target: {fileID: 1434610418348870415, guid: 77b9f59c4f9b114438726bf105222809,
         type: 3}
@@ -1512,8 +1502,8 @@ GameObject:
   - component: {fileID: 1992418746}
   - component: {fileID: 1992418745}
   - component: {fileID: 1992418744}
-  - component: {fileID: 1992418743}
   - component: {fileID: 1992418742}
+  - component: {fileID: 1992418743}
   m_Layer: 0
   m_Name: LeverBullet
   m_TagString: Untagged
@@ -1535,8 +1525,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMelee: 0
   door: {fileID: 778232110}
---- !u!61 &1992418743
-BoxCollider2D:
+--- !u!58 &1992418743
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1548,19 +1538,9 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
-    newSize: {x: 1.28, y: 1.28}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0.46, y: 0.26}
   serializedVersion: 2
-  m_Size: {x: 0.48, y: 0.4}
-  m_EdgeRadius: 0
+  m_Radius: 0.17
 --- !u!50 &1992418744
 Rigidbody2D:
   serializedVersion: 4
@@ -1862,7 +1842,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 33ce8963db44f284084796ad0af697c3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8cd8510b3c9a6914185528442c61b3c3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
