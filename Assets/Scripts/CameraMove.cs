@@ -34,7 +34,6 @@ public class CameraMove : MonoBehaviour {
 
     void LateUpdate()
     {
-
         if (isWatchingPlayer)
         {
             if (boss.transform.position.x >= player.transform.position.x)

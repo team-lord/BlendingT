@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3837469430584481666}
   - component: {fileID: 4676002891300817609}
+  - component: {fileID: 8295897394308953487}
   m_Layer: 0
   m_Name: Switch_Melee-export
   m_TagString: Untagged
@@ -79,6 +80,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8295897394308953487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4512337066747577921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0f6bba420e64b74c839dc1597c727c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yOffset: 0
 --- !u!1 &9113851938420453891
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,6 +106,8 @@ GameObject:
   - component: {fileID: 6424771522222936584}
   - component: {fileID: 8909792401763942948}
   - component: {fileID: 3890443987833901292}
+  - component: {fileID: 9043793780960174333}
+  - component: {fileID: 8524332582916796855}
   m_Layer: 0
   m_Name: BulbLever1
   m_TagString: Untagged
@@ -212,3 +228,42 @@ CircleCollider2D:
   m_Offset: {x: 0.46, y: 0.26}
   serializedVersion: 2
   m_Radius: 0.17
+--- !u!61 &9043793780960174333
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9113851938420453891}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.00002336502, y: 0.12165663}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.28, y: 1.28}
+    newSize: {x: 1.28, y: 1.28}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.47040725, y: 0.15390354}
+  m_EdgeRadius: 0
+--- !u!114 &8524332582916796855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9113851938420453891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0f6bba420e64b74c839dc1597c727c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yOffset: 0

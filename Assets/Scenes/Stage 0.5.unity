@@ -477,6 +477,8 @@ GameObject:
   - component: {fileID: 799471376}
   - component: {fileID: 799471379}
   - component: {fileID: 799471375}
+  - component: {fileID: 799471380}
+  - component: {fileID: 799471381}
   m_Layer: 0
   m_Name: LeverMelee
   m_TagString: Untagged
@@ -577,7 +579,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 799471374}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.96, y: -3.8, z: 0}
+  m_LocalPosition: {x: 20.96, y: -4.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2111742888}
@@ -598,6 +600,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMelee: 1
   door: {fileID: 778232110}
+--- !u!114 &799471380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799471374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0f6bba420e64b74c839dc1597c727c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yOffset: 0
+--- !u!61 &799471381
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799471374}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0003080368, y: 0.040053487}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.28, y: 1.28}
+    newSize: {x: 1.28, y: 1.28}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.47930717, y: 0.24094558}
+  m_EdgeRadius: 0
 --- !u!1001 &853794358
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -776,6 +817,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1073883165}
   - component: {fileID: 1073883164}
+  - component: {fileID: 1073883166}
   m_Layer: 0
   m_Name: Wall_D
   m_TagString: Untagged
@@ -845,6 +887,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1073883166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073883163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0f6bba420e64b74c839dc1597c727c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yOffset: 0
 --- !u!1 &1094985130
 GameObject:
   m_ObjectHideFlags: 0
@@ -1147,6 +1202,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1370797168 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1416756502635288414, guid: 77b9f59c4f9b114438726bf105222809,
+    type: 3}
+  m_PrefabInstance: {fileID: 1877019649}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1370797169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370797168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0f6bba420e64b74c839dc1597c727c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yOffset: 0
 --- !u!1 &1481910595
 GameObject:
   m_ObjectHideFlags: 0
@@ -1157,6 +1231,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1481910597}
   - component: {fileID: 1481910596}
+  - component: {fileID: 1481910598}
   m_Layer: 0
   m_Name: Map_0.5
   m_TagString: Untagged
@@ -1226,6 +1301,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1481910598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481910595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0f6bba420e64b74c839dc1597c727c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yOffset: -100000
 --- !u!1001 &1877019649
 PrefabInstance:
   m_ObjectHideFlags: 0
