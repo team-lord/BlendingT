@@ -14,6 +14,8 @@ public class PuzzleStartButton1 : MonoBehaviour
     public Sprite buttonOn;
     private Sprite buttonOff;
 
+    private GameObject flower;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,8 @@ public class PuzzleStartButton1 : MonoBehaviour
         boss = GameObject.Find("Boss");
 
         buttonOff = GetComponent<SpriteRenderer>().sprite;
+
+        flower = GameObject.Find("Flower");
     }
 
     // Update is called once per frame
@@ -39,6 +43,9 @@ public class PuzzleStartButton1 : MonoBehaviour
                 isReady = false;
 
                 GetComponent<SpriteRenderer>().sprite = buttonOn;
+
+                flower.GetComponent<PolygonCollider2D>().enabled = true;
+
 
                 puzzleBall.GetComponent<Rigidbody2D>().AddForce(180 * Vector2.right);
                 Camera.main.GetComponent<CameraMove1>().WatchPuzzleBall1st();
