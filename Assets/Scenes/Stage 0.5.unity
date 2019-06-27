@@ -320,8 +320,8 @@ GameObject:
   - component: {fileID: 778232111}
   - component: {fileID: 778232113}
   - component: {fileID: 778232114}
-  - component: {fileID: 778232115}
   - component: {fileID: 778232116}
+  - component: {fileID: 778232117}
   m_Layer: 0
   m_Name: Door
   m_TagString: Wall
@@ -425,32 +425,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!61 &778232115
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778232110}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 2.0757184, y: -1.46}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 1}
-    oldSize: {x: 0.24, y: 2.92}
-    newSize: {x: 0.24, y: 2.92}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 4.3914366, y: 2.92}
-  m_EdgeRadius: 0
 --- !u!50 &778232116
 Rigidbody2D:
   serializedVersion: 4
@@ -472,6 +446,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!68 &778232117
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778232110}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0.2
+  m_Points:
+  - {x: -0.12010002, y: -1.7863624}
+  - {x: -0.10779762, y: -3.341256}
 --- !u!1 &799471374
 GameObject:
   m_ObjectHideFlags: 0
@@ -1077,8 +1069,8 @@ EdgeCollider2D:
   - {x: 9.599716, y: 0.26620758}
   - {x: 9.592521, y: 3.4378533}
   - {x: 21.603682, y: 3.441506}
-  - {x: 21.6, y: 3.2}
-  - {x: 21.593666, y: 0.27712983}
+  - {x: 21.965403, y: 3.478266}
+  - {x: 21.989904, y: 0.35495037}
   - {x: 28.79341, y: 0.26484233}
 --- !u!4 &1207604046
 Transform:
@@ -1131,8 +1123,15 @@ EdgeCollider2D:
   - {x: -0.5, y: 0}
   - {x: 0.39733315, y: -1.144496}
   - {x: 3.3090878, y: -1.7623317}
+  - {x: 3.7820263, y: -2.0979295}
   - {x: 2.168724, y: -1.6527071}
+  - {x: 2.0875492, y: -1.8505158}
+  - {x: 2.8302212, y: -1.9956586}
+  - {x: 4.2013016, y: -2.0882113}
+  - {x: 3.8093128, y: -2.1088803}
   - {x: 1.3800011, y: -1.4846377}
+  - {x: 1.9783401, y: -1.8293417}
+  - {x: 1.1034317, y: -1.5362335}
   - {x: -0.34324455, y: -0.64543533}
   - {x: -0.96533203, y: 0.0704577}
   - {x: -1.1489391, y: 0.49887586}
