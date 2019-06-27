@@ -452,6 +452,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8744325944345579100, guid: 77b9f59c4f9b114438726bf105222809,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 8744325944345579100, guid: 77b9f59c4f9b114438726bf105222809,
+        type: 3}
+      propertyPath: tumbleSpeed
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1497561180721962064, guid: 77b9f59c4f9b114438726bf105222809,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.24
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77b9f59c4f9b114438726bf105222809, type: 3}
 --- !u!1 &181710724 stripped
@@ -540,7 +555,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 68, y: 60}
+  m_SizeDelta: {x: 68, y: 68}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &405306147
 MonoBehaviour:
@@ -555,12 +570,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   images:
-  - {fileID: -4031094179166907523, guid: 942686d748851ff4e9c7f9eb922551f2, type: 3}
-  - {fileID: 5546958616740524299, guid: 942686d748851ff4e9c7f9eb922551f2, type: 3}
-  - {fileID: 2309896351881654512, guid: 942686d748851ff4e9c7f9eb922551f2, type: 3}
-  - {fileID: 615023859997206797, guid: 942686d748851ff4e9c7f9eb922551f2, type: 3}
-  - {fileID: 516283494600122218, guid: 942686d748851ff4e9c7f9eb922551f2, type: 3}
-  - {fileID: 4606908045521496030, guid: 942686d748851ff4e9c7f9eb922551f2, type: 3}
+  - {fileID: -2204519082939242443, guid: 692e894d60c0ac245b3ee9679677b11a, type: 3}
+  - {fileID: 1099552113435073771, guid: 692e894d60c0ac245b3ee9679677b11a, type: 3}
+  - {fileID: -825371803602724520, guid: 692e894d60c0ac245b3ee9679677b11a, type: 3}
+  - {fileID: 385199861125206807, guid: 692e894d60c0ac245b3ee9679677b11a, type: 3}
+  - {fileID: 8654855381167333878, guid: 692e894d60c0ac245b3ee9679677b11a, type: 3}
+  - {fileID: 2428403318985984633, guid: 692e894d60c0ac245b3ee9679677b11a, type: 3}
 --- !u!114 &405306148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -581,7 +596,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 4606908045521496030, guid: 942686d748851ff4e9c7f9eb922551f2,
+  m_Sprite: {fileID: 2428403318985984633, guid: 692e894d60c0ac245b3ee9679677b11a,
     type: 3}
   m_Type: 2
   m_PreserveAspect: 0
@@ -855,7 +870,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.7, y: 0.5}
+  m_Offset: {x: 2.7, y: 0.47955894}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -866,7 +881,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 10}
+  m_Size: {x: 0.5, y: 10.940258}
   m_EdgeRadius: 0
 --- !u!50 &720274253
 Rigidbody2D:
@@ -910,7 +925,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 720274251}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: -0.5, z: 0}
+  m_LocalPosition: {x: 5.97, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1145,32 +1160,28 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0.1
   m_Points:
-  - {x: 12.95751, y: -5.2519817}
-  - {x: 12.99032, y: 5.573073}
-  - {x: 9.814235, y: 5.632846}
-  - {x: 9.808037, y: 5.6462283}
-  - {x: 9.824005, y: 5.6355453}
-  - {x: 9.805973, y: 5.629634}
-  - {x: 5.0301194, y: 4.1140337}
-  - {x: 4.768639, y: 4.1824293}
-  - {x: 4.7718887, y: 4.1820755}
-  - {x: 3.9949932, y: 4.197432}
-  - {x: 3.9880402, y: 3.766636}
-  - {x: -1.774851, y: 3.8137197}
-  - {x: -2.1463127, y: 4.1229715}
-  - {x: -12.946963, y: 4.1138973}
-  - {x: -12.994812, y: -4.0184727}
-  - {x: -2.038879, y: -3.9988117}
-  - {x: -1.8318887, y: -4.1709027}
-  - {x: -1.201497, y: -4.17552}
-  - {x: -1.2083863, y: -3.7021616}
-  - {x: 4.749442, y: -3.688631}
-  - {x: 4.7751074, y: -4.0492697}
-  - {x: 5.0652885, y: -4.0032845}
-  - {x: 5.2624097, y: -4.044209}
-  - {x: 8.799558, y: -5.23462}
-  - {x: 8.789363, y: -5.215686}
-  - {x: 12.941372, y: -5.258075}
+  - {x: 13.00246, y: -5.2818923}
+  - {x: 13.006017, y: 5.674669}
+  - {x: 9.801895, y: 5.666114}
+  - {x: 5.109031, y: 4.0873423}
+  - {x: 4.9326224, y: 4.053096}
+  - {x: 4.7653494, y: 4.213807}
+  - {x: 3.8339865, y: 4.217345}
+  - {x: 3.8398564, y: 3.880579}
+  - {x: -1.8273394, y: 3.8845909}
+  - {x: -2.128873, y: 4.180534}
+  - {x: -13.001341, y: 4.2011557}
+  - {x: -13.007467, y: -4.1029196}
+  - {x: -2.0292797, y: -4.097924}
+  - {x: -1.8861511, y: -4.261874}
+  - {x: -0.9950246, y: -4.2572484}
+  - {x: -1.0097437, y: -3.7223601}
+  - {x: 4.6608515, y: -3.6798823}
+  - {x: 4.7640266, y: -4.157755}
+  - {x: 4.9501357, y: -4.0977063}
+  - {x: 5.1604376, y: -4.1021686}
+  - {x: 8.789052, y: -5.332394}
+  - {x: 12.997474, y: -5.3406568}
 --- !u!4 &1438624869
 Transform:
   m_ObjectHideFlags: 0
@@ -1671,7 +1682,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 80, y: 0}
-  m_SizeDelta: {x: 60, y: 60}
+  m_SizeDelta: {x: 68, y: 68}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1707324108
 MonoBehaviour:
@@ -1685,9 +1696,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ffc36faf39d974f8d5e4ec4cc7c6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offSprite: {fileID: -7957953806605825063, guid: 6a725f0377f08cc4c8ef6deaefc860dd,
+  offSprite: {fileID: 7423079488581237032, guid: f8866fa257609904fadfe852f29d897c,
     type: 3}
-  onSprite: {fileID: -517998309603396936, guid: 6a725f0377f08cc4c8ef6deaefc860dd,
+  onSprite: {fileID: -5198654017577297029, guid: f8866fa257609904fadfe852f29d897c,
     type: 3}
 --- !u!114 &1707324109
 MonoBehaviour:
@@ -1709,7 +1720,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: -517998309603396936, guid: 6a725f0377f08cc4c8ef6deaefc860dd,
+  m_Sprite: {fileID: -5198654017577297029, guid: f8866fa257609904fadfe852f29d897c,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
