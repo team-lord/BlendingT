@@ -30,11 +30,10 @@ public class HealthB2 : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        // Debug.Log(phase);
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-
         if (phase == 0) {
             if (collision.tag == "PlayerBullet") {
                 phaseHealths[0]--;
