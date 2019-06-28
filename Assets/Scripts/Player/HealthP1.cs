@@ -48,16 +48,12 @@ public class HealthP1 : MonoBehaviour {
     }
 
     void ChangeHeart() {
-        // TODO - UI의 하트와 연결
         heart.GetComponent<Heart>().ChangeImage();
     }
 
     void CheckAlive() {
         if (health <= 0) {
-            SceneManager.LoadScene("Main Menu");
-            // 쓰러지는 애니메이션
-            Destroy(gameObject);
-            // 씬 처리
+            SceneManager.LoadScene("Game Over");
         }
     }
 

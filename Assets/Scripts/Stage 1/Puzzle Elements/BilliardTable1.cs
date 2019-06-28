@@ -56,9 +56,6 @@ public class BilliardTable1 : MonoBehaviour
                 }
                 break;
         }
-        if(index != 1) {
-            StartCoroutine(GravityFail());
-        }
     }
 
     public void Initialize() {
@@ -71,10 +68,5 @@ public class BilliardTable1 : MonoBehaviour
         }
         GameObject.Find("2ndPuzzleBall").GetComponent<Rigidbody2D>().gravityScale = 0;
     }
-
-    IEnumerator GravityFail() {
-        // puzzleBall 이 사라지는 애니메이션 시작
-        yield return new WaitForSeconds(2f);
-        GameObject.Find("PuzzleBall").GetComponent<PuzzleBallMove1>().PuzzleFail();
-    }
+    
 }

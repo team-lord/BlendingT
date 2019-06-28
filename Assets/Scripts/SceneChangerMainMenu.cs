@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneChangerMainMenu : MonoBehaviour {
+    
     // Start is called before the first frame update
     void Start() {
 
@@ -24,10 +25,14 @@ public class SceneChangerMainMenu : MonoBehaviour {
     }
 
     public void Stage1() {
+        PlayerPrefs.SetString("retryScene", "Stage 1");
+        PlayerPrefs.Save();
         SceneManager.LoadScene("Stage 0.5");
     }
 
     public void Stage2() {
+        PlayerPrefs.SetString("retryScene", "Stage 2");
+        PlayerPrefs.Save();
         SceneManager.LoadScene("Stage 1.5");
     }
 

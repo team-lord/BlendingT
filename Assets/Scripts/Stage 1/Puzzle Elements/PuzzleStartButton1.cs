@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PuzzleStartButton1 : MonoBehaviour
 {
@@ -44,8 +42,7 @@ public class PuzzleStartButton1 : MonoBehaviour
     {
         if (isDoingPuzzle) {
             if (Input.GetKeyDown(KeyCode.R)) {
-                // 리셋
-                isDoingPuzzle = false;
+                Retry();
             }
         }
     }
@@ -69,6 +66,11 @@ public class PuzzleStartButton1 : MonoBehaviour
             }
         }        
     }
+    
+    public void Retry() {
+        puzzleBall.GetComponent<PuzzleBallMove1>().PuzzleFail();
+        isDoingPuzzle = false;
+    }
 
     public void Initialize() {
         isReady = true;
@@ -76,7 +78,9 @@ public class PuzzleStartButton1 : MonoBehaviour
         GetComponent<SpriteRenderer>().sprite = buttonOff;
     }
 
+    /*
     public void IsDoingPuzzle(bool _bool) {
         isDoingPuzzle = _bool;
     }
+    */
 }
