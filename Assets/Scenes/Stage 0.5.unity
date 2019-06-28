@@ -1430,6 +1430,21 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 250
       objectReference: {fileID: 0}
+    - target: {fileID: 1497561180721962064, guid: 77b9f59c4f9b114438726bf105222809,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 5005221225266211933, guid: 77b9f59c4f9b114438726bf105222809,
+        type: 3}
+      propertyPath: attackCore
+      value: 
+      objectReference: {fileID: 1473272477}
+    - target: {fileID: 5005221225266211933, guid: 77b9f59c4f9b114438726bf105222809,
+        type: 3}
+      propertyPath: attackTime
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 7975381043388634307, guid: 77b9f59c4f9b114438726bf105222809,
         type: 3}
       propertyPath: m_TagString
@@ -1509,21 +1524,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: PlayerMelee
-      objectReference: {fileID: 0}
-    - target: {fileID: 1497561180721962064, guid: 77b9f59c4f9b114438726bf105222809,
-        type: 3}
-      propertyPath: m_Radius
-      value: 0.24
-      objectReference: {fileID: 0}
-    - target: {fileID: 5005221225266211933, guid: 77b9f59c4f9b114438726bf105222809,
-        type: 3}
-      propertyPath: attackCore
-      value: 
-      objectReference: {fileID: 1473272477}
-    - target: {fileID: 5005221225266211933, guid: 77b9f59c4f9b114438726bf105222809,
-        type: 3}
-      propertyPath: attackTime
-      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77b9f59c4f9b114438726bf105222809, type: 3}
