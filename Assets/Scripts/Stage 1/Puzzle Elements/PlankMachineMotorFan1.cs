@@ -51,8 +51,7 @@ public class PlankMachineMotorFan1 : MonoBehaviour
                     Debug.Log("Error");
                     break;
             }
-
-            Destroy(gameObject);
+            
         }
     }
 }

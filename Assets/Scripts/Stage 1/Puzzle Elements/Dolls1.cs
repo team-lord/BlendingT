@@ -49,17 +49,6 @@ public class Dolls1 : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) {
-        if(collision.tag == "PuzzleBall") {
-            if (isReady) {
-                if (currentDoll != 2) {
-                    StartCoroutine(PuzzleFail());
-                }
-            }
-            
-        }
-    }
-
     public void PuzzleStart() {
         colliders[currentDoll].enabled = true;
     }
@@ -67,13 +56,6 @@ public class Dolls1 : MonoBehaviour
     public void Initialize() {
         colliders[currentDoll].enabled = false;
         colliders[4].enabled = true;
-    }
-
-    IEnumerator PuzzleFail() {
-        isReady = false;
-        yield return new WaitForSeconds(2f);
-        isReady = true;
-        puzzleBall.GetComponent<PuzzleBallMove1>().PuzzleFail();
     }
 
 }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2273850814616542892}
   - component: {fileID: -4158172838098819099}
   - component: {fileID: 8176178455188049598}
+  - component: {fileID: 1784530928907003096}
   m_Layer: 0
   m_Name: Pattern7Maker1
   m_TagString: PatternMaker
@@ -66,6 +67,19 @@ MonoBehaviour:
   - {fileID: 119284943337642333}
   - {fileID: 3258276053507938698}
   life: 2
+--- !u!114 &1784530928907003096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142934265401104276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e48476f6c8a5d6c4b8de8e4891b04edb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 7
 --- !u!1001 &656283785318956561
 PrefabInstance:
   m_ObjectHideFlags: 0

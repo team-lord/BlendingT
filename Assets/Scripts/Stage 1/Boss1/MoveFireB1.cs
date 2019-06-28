@@ -23,11 +23,13 @@ public class MoveFireB1 : MonoBehaviour {
     Animator animator;
 
     private bool isMove1;
+    private bool isMove2;
 
     // Start is called before the first frame update
     void Start() {
         isMove = true;
         isMove1 = true;
+        isMove2 = true;
 
         player = GameObject.Find("Player");
 
@@ -44,7 +46,7 @@ public class MoveFireB1 : MonoBehaviour {
 
     // Update is called once per frame
     void FixedUpdate() {
-        if (isMove && isMove1) {
+        if (isMove && isMove1 && isMove2) {
             time += Time.deltaTime;
             if (time > changeDirectionDelay) {
                 ChangeDirection();
@@ -67,8 +69,14 @@ public class MoveFireB1 : MonoBehaviour {
         MoveCheck();
     }
 
+    public void IsMove2(bool _bool)
+    {
+        isMove2 = _bool;
+        MoveCheck();
+    }
+
     public void MoveCheck() {
-        if (isMove && isMove1) {
+        if (isMove && isMove1 && isMove2) {
             animator.SetBool("isBossMove", true);
         } else {
             animator.SetBool("isBossMove", false);

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1182527856200541545}
   - component: {fileID: -1147945404454719129}
   - component: {fileID: 3807688064547113449}
+  - component: {fileID: 4926873212577915366}
   m_Layer: 0
   m_Name: Pattern5Maker1
   m_TagString: PatternMaker
@@ -60,3 +61,16 @@ MonoBehaviour:
   delay: 0.5
   echo: {fileID: 6286786225540415485, guid: ed56b2e287b726145b62d7bb372b0f46, type: 3}
   echoDelay: 3
+--- !u!114 &4926873212577915366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678295062387342881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e48476f6c8a5d6c4b8de8e4891b04edb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 5
