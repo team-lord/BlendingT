@@ -29,10 +29,10 @@ public class CurtainLayer : MonoBehaviour
 
         //layer = centerBottom.y + yOffset;
         if (player.transform.position.y >= 0)
-            layer = -16860;
+            layer = 168;
 
         else
-            layer = 16860;
+            layer = -168;
 
         rend.sortingOrder = -(int)(layer * 100);
 

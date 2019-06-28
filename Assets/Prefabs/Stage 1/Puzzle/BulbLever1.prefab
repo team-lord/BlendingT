@@ -108,6 +108,7 @@ GameObject:
   - component: {fileID: 3890443987833901292}
   - component: {fileID: 9043793780960174333}
   - component: {fileID: 8524332582916796855}
+  - component: {fileID: 2810255110894764676}
   m_Layer: 0
   m_Name: BulbLever1
   m_TagString: Untagged
@@ -267,3 +268,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yOffset: 0.05
+--- !u!61 &2810255110894764676
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9113851938420453891}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0012423247, y: 0.058924586}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.28, y: 1.28}
+    newSize: {x: 1.28, y: 1.28}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.47802517, y: 0.27724808}
+  m_EdgeRadius: 0
