@@ -41,9 +41,7 @@ public class Pattern3Maker2 : MonoBehaviour
                 Fire((i - 3) * angle);
                 ChangeBullet();
             }
-
-            ChangeBullet();
-
+            
             count++;
             time = 0;
             CheckDestroy();
