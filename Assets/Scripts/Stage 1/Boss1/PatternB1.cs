@@ -46,7 +46,7 @@ public class PatternB1 : MonoBehaviour
         if (isPatternPhase) {
             if (patternStart) {
                 patternStart = false;
-                GetComponent<MoveFireB1>().IsMove(false);
+                GetComponent<MoveFireB1>().IsMove1(false);
 
                 Pattern();
             }
@@ -85,7 +85,7 @@ public class PatternB1 : MonoBehaviour
         }
         else
         {
-            GetComponent<MoveFireB1>().IsMove(true);
+            GetComponent<MoveFireB1>().IsMove1(true);
             StartCoroutine(PatternStart());
         }
         
@@ -108,7 +108,7 @@ public class PatternB1 : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         animator.SetBool("cardFire", false);
-        GetComponent<MoveFireB1>().IsMove(true);
+        GetComponent<MoveFireB1>().IsMove1(true);
         StartCoroutine(PatternStart());
     }
 }

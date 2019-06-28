@@ -46,7 +46,7 @@ public class PhaseB2 : MonoBehaviour
 
         GetComponent<PatternB2>().PatternPhase(false);
 
-        GetComponent<MoveB2>().IsMove(false);
+        GetComponent<MoveB2>().IsMove1(false);
 
         GetComponent<HealthB2>().Phase(2);
 
@@ -58,7 +58,7 @@ public class PhaseB2 : MonoBehaviour
     public void Phase3() {
         GetComponent<PatternB2>().PatternPhase(true);
         GetComponent<PatternB2>().ForcePatternStart();
-        GetComponent<MoveB2>().IsMove(true);
+        GetComponent<MoveB2>().IsMove1(true);
         GetComponent<HealthB2>().Phase(3);
 
         GetComponent<PatternB2>().PatternForge(0);
@@ -81,7 +81,7 @@ public class PhaseB2 : MonoBehaviour
         Instantiate(blanket, Vector3.zero, Quaternion.identity);
         Camera.main.GetComponent<CameraMove2>().WatchPlayerCenter();
 
-        GetComponent<MoveB2>().IsMove(false);
+        GetComponent<MoveB2>().IsMove1(false);
         GetComponent<PatternB2>().PatternPhase(false);
 
         Instantiate(levitationCore, transform.position, Quaternion.identity);

@@ -69,7 +69,7 @@ public class PatternB2 : MonoBehaviour
     }
 
     IEnumerator PatternStart() {
-        GetComponent<MoveB2>().IsMove(true);
+        GetComponent<MoveB2>().IsMove1(true);
         yield return new WaitForSeconds(patternDelay);
         patternStart = true;
     }

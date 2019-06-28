@@ -32,7 +32,7 @@ public class PhaseB1 : MonoBehaviour
 
         curtain.GetComponent<Curtain1>().Change();
 
-        GetComponent<MoveFireB1>().IsMove(false);
+        GetComponent<MoveFireB1>().IsMove1(false);
         GetComponent<PatternB1>().IsPatternPhase(false);
         GetComponent<PuzzleB1>().IsPuzzlePhase(true);
 
@@ -48,7 +48,7 @@ public class PhaseB1 : MonoBehaviour
 
         curtain.GetComponent<Curtain1>().Change();
 
-        GetComponent<MoveFireB1>().IsMove(true);
+        GetComponent<MoveFireB1>().IsMove1(true);
         GetComponent<PatternB1>().IsPatternPhase(true);
         GetComponent<PuzzleB1>().IsPuzzlePhase(false);
         GetComponent<PatternB1>().PatternForge();
@@ -61,7 +61,7 @@ public class PhaseB1 : MonoBehaviour
         Instantiate(blanket, Vector3.zero, Quaternion.identity);
         Camera.main.GetComponent<CameraMove1>().WatchPlayerCenter();
 
-        GetComponent<MoveFireB1>().IsMove(false);
+        GetComponent<MoveFireB1>().IsMove1(false);
         GetComponent<PatternB1>().IsPatternPhase(false);
 
         curtain.GetComponent<Curtain1>().Change();

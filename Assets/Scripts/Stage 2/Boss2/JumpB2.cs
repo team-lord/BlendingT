@@ -35,7 +35,7 @@ public class JumpB2 : MonoBehaviour {
 
     IEnumerator JumpCollider() {
         GetComponent<CircleCollider2D>().enabled = false;
-        GetComponent<MoveB2>().IsMove(false);
+        GetComponent<MoveB2>().IsMove1(false);
         yield return new WaitForSeconds(0.6f);
         transform.position = new Vector3(64, 0, 0);
         GetComponent<CircleCollider2D>().enabled = true;
@@ -52,7 +52,7 @@ public class JumpB2 : MonoBehaviour {
 
         Camera.main.GetComponent<CameraMove2>().WatchPlayer();
 
-        GetComponent<MoveB2>().IsMove(true);
+        GetComponent<MoveB2>().IsMove1(true);
 
         bossAnimator.SetTrigger("fall");
         shadowAnimator.SetTrigger("shadowOn");
@@ -66,6 +66,8 @@ public class JumpB2 : MonoBehaviour {
         transform.position = _vector3;
 
         Camera.main.GetComponent<CameraMove2>().WatchPlayer();
+
+        GetComponent<MoveB2>().IsMove1(true);
 
         bossAnimator.SetTrigger("fall");
         shadowAnimator.SetTrigger("shadowOn");

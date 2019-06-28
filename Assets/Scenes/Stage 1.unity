@@ -1039,9 +1039,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-<<<<<<< HEAD
---- !u!1 &582099147 stripped
-=======
 --- !u!1 &522967746
 GameObject:
   m_ObjectHideFlags: 0
@@ -1132,7 +1129,6 @@ CanvasRenderer:
   m_GameObject: {fileID: 522967746}
   m_CullTransparentMesh: 0
 --- !u!1 &827187584 stripped
->>>>>>> 2885f1a84ad23d60079cfee047ce253a5fafeb9e
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5026135683412801644, guid: 4f4a99dd2337e0e48af8710eb3917a96,
     type: 3}
@@ -1308,12 +1304,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2105059958988615071, guid: f4dcdff4ef82e3447965f3bb3920ac50,
         type: 3}
-<<<<<<< HEAD
-      propertyPath: m_Name
-      value: Pillar (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6915752504286367966, guid: f4dcdff4ef82e3447965f3bb3920ac50,
-=======
       propertyPath: meleeAttackSound
       value: 
       objectReference: {fileID: 8300000, guid: 43249b57894318f4b94f0f4fea107b30, type: 3}
@@ -1323,7 +1313,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 522967749}
     - target: {fileID: 8184690626530226898, guid: b5a4ce52038e1be4c8dbccabd42ff661,
->>>>>>> 2885f1a84ad23d60079cfee047ce253a5fafeb9e
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.326

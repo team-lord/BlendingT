@@ -8,6 +8,7 @@ public class MoveB2 : MonoBehaviour {
 
     public float moveSpeed;
     private bool isMove;
+    private bool isMove1;
 
     private float time;
     public float changeDirectionDelay;
@@ -21,6 +22,7 @@ public class MoveB2 : MonoBehaviour {
     // Start is called before the first frame update
     void Start() {
         isMove = true;
+        isMove1 = true;
 
         player = GameObject.Find("Player");
 
@@ -29,7 +31,7 @@ public class MoveB2 : MonoBehaviour {
     
     // Update is called once per frame
     void FixedUpdate() {
-        if (isMove) {
+        if (isMove && isMove1) {
             time += Time.deltaTime;
             if (time > changeDirectionDelay) {
                 ChangeDirection();
@@ -41,6 +43,10 @@ public class MoveB2 : MonoBehaviour {
 
     public void IsMove(bool _bool) {
         isMove = _bool;
+    }
+
+    public void IsMove1(bool _bool) {
+        isMove1 = _bool;
     }
 
     void Move() {
