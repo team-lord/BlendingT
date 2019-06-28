@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CurtainLayer : MonoBehaviour
 {
-    public float yOffset;
 
     private GameObject player;
 
