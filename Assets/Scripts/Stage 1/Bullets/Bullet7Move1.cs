@@ -30,6 +30,7 @@ public class Bullet7Move1 : MonoBehaviour {
         transform.localScale = new Vector3(scale, scale, 0);
 
         if(time > 2f) {
+            player.GetComponent<AttackFireP1>().CanAttackFire(true);
             Destroy(gameObject);
         }
     }
@@ -37,7 +38,8 @@ public class Bullet7Move1 : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision) {
         if (isReady) {
             if (collision.tag == "Player") {
-                StartCoroutine(Petrify());
+                //StartCoroutine(Petrify());
+                player.GetComponent<AttackFireP1>().CanAttackFire(false);
                 isReady = false;
             }
         }

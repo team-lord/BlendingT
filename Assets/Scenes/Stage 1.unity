@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -788,11 +788,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 80908798}
     m_Modifications:
-    - target: {fileID: 1598213532683792956, guid: 806a6d949ad496d49b7889a8a7379e78,
-        type: 3}
-      propertyPath: m_Name
-      value: Plank5
-      objectReference: {fileID: 0}
     - target: {fileID: 5095543391422589771, guid: 806a6d949ad496d49b7889a8a7379e78,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -847,6 +842,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598213532683792956, guid: 806a6d949ad496d49b7889a8a7379e78,
+        type: 3}
+      propertyPath: m_Name
+      value: Plank5
       objectReference: {fileID: 0}
     - target: {fileID: 47277985177201167, guid: 806a6d949ad496d49b7889a8a7379e78,
         type: 3}
@@ -2634,11 +2634,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 80908798}
     m_Modifications:
-    - target: {fileID: 1598213532683792956, guid: 806a6d949ad496d49b7889a8a7379e78,
-        type: 3}
-      propertyPath: m_Name
-      value: Plank4
-      objectReference: {fileID: 0}
     - target: {fileID: 5095543391422589771, guid: 806a6d949ad496d49b7889a8a7379e78,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2698,6 +2693,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.x
       value: 7.0452924
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598213532683792956, guid: 806a6d949ad496d49b7889a8a7379e78,
+        type: 3}
+      propertyPath: m_Name
+      value: Plank4
       objectReference: {fileID: 0}
     - target: {fileID: 47277985177201167, guid: 806a6d949ad496d49b7889a8a7379e78,
         type: 3}
@@ -2874,7 +2874,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0.00016901353, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 4e-45, z: -1.582028e+27, w: 1.9827168e+14}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -5867,7 +5867,7 @@ PrefabInstance:
     - target: {fileID: 2417884461210072600, guid: dd70ce451ff8a35439816dd1ea4f6f0a,
         type: 3}
       propertyPath: debugPattern
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3307093643530316898, guid: dd70ce451ff8a35439816dd1ea4f6f0a,
         type: 3}

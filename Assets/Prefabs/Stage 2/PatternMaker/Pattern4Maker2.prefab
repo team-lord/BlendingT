@@ -61,6 +61,8 @@ MonoBehaviour:
   - {fileID: 4311940562734982143, guid: 2606323e553c58444bbbd188141aa6d8, type: 3}
   - {fileID: 4342556716159102264, guid: 028d323ee758ab94bb06b7449c1cdae9, type: 3}
   - {fileID: 3920993706846342187, guid: 60160006b3b73dc439d17f6246e544dd, type: 3}
+  maxFire: 5
+  fireDelay: 0.5
 --- !u!58 &-3597635681455822345
 CircleCollider2D:
   m_ObjectHideFlags: 0

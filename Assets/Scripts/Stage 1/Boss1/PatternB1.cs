@@ -37,7 +37,7 @@ public class PatternB1 : MonoBehaviour
 
         patternStart = true;
 
-        patternArray = new int[] { 0, /*1, 2, 3, 4,*/ 7 };
+        patternArray = new int[] { 0, 1, 2, 3, 4, 7 };
 
         animator = GetComponent<Animator>();
     }
@@ -74,7 +74,7 @@ public class PatternB1 : MonoBehaviour
             Instantiate(patternMakers[currentPattern], transform.position, transform.rotation);
         }
         
-        //Instantiate(forgedPatternMakers[debugPattern], transform.position, transform.rotation);
+        //Instantiate(patternMakers[debugPattern], transform.position, transform.rotation);
 
     }
 
