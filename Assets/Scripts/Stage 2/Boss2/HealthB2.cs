@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthB2 : MonoBehaviour {
 
@@ -12,6 +13,8 @@ public class HealthB2 : MonoBehaviour {
     public float phase2MesTime;
 
     private bool isReady;
+
+    public Text health;
 
     Animator animator;
 
@@ -26,6 +29,8 @@ public class HealthB2 : MonoBehaviour {
         isReady = true;
 
         animator = GetComponent<Animator>();
+
+        health.text = (phaseHealths[0] + phaseHealths[1]).ToString();
     }
 
     // Update is called once per frame
@@ -86,35 +91,38 @@ public class HealthB2 : MonoBehaviour {
 
     void CheckAlive() {
         if (phase == 0) {
+            ChangeHeart01();
             if (phaseHealths[0] <= 0) {
-                phaseHealths[0] = 0;
                 GetComponent<PhaseB2>().Phase1();
             }
         } else if (phase == 1) {
+            ChangeHeart01();
             if (phaseHealths[1] <= 0) {
                 phaseHealths[1] = 0;
                 GetComponent<PhaseB2>().Phase2();
-
+                health.text = phaseHealths[2].ToString();
             }
         } else if (phase == 2) {
             animator.SetFloat("phase2Health", phaseHealths[2]);
+            ChangeHeart2();
             if (phaseHealths[2] <= 0) {
                 phaseHealths[2] = 0;
                 GameObject.FindGameObjectWithTag("PatternMaker").GetComponent<Special0Maker2>().FireSpecialBullet(true);
                 StartCoroutine(Phase2Mes());
                 Destroy(GameObject.FindGameObjectWithTag("PatternMaker"));
+                health.text = (phaseHealths[3]+phaseHealths[4]).ToString();
             }
         } else if (phase == 3) {
+            ChangeHeart34();
             if (phaseHealths[3] <= 0) {
-                phaseHealths[3] = 0;
                 GetComponent<PhaseB2>().Phase4();
             }
         } else if (phase == 4) {
+            ChangeHeart34();
             if (phaseHealths[4] <= 0) {
                 phaseHealths[4] = 0;
                 GetComponent<PhaseB2>().Phase5();
                 Destroy(GameObject.FindGameObjectWithTag("PatternMaker"));
-
             }
         } else if (phase == 5) {
             if (phaseHealths[5] <= 0) {
@@ -129,7 +137,6 @@ public class HealthB2 : MonoBehaviour {
     }
 
     IEnumerator Phase2Mes() {
-
         isReady = false;
         yield return new WaitForSeconds(2.85f);
         animator.SetTrigger("mes");
@@ -138,12 +145,27 @@ public class HealthB2 : MonoBehaviour {
         isReady = true;
         animator.SetTrigger("idle");
         GetComponent<MesHealthB2>().IsMes(false);
-        int _damage = GetComponent<MesHealthB2>().Damage();
-        phaseHealths[3] -= _damage;
         GetComponent<PhaseB2>().Phase3();
     }
 
     public void Phase(int i) {
         phase = i;
+    }
+
+    void ChangeHeart01() {
+        health.text = (phaseHealths[0]+phaseHealths[1]).ToString();
+    }
+
+    void ChangeHeart2() {
+        health.text = phaseHealths[2].ToString();
+    }
+
+    void ChangeHeart34() {
+        health.text = (phaseHealths[3] + phaseHealths[4]).ToString();
+    }
+
+    public void Phase3MesHealth(int damage) {
+        phaseHealths[3] -= damage;
+        ChangeHeart34();
     }
 }

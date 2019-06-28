@@ -5,13 +5,11 @@ using UnityEngine;
 public class MesHealthB2 : MonoBehaviour
 {
     private bool isMes;
-    private int damage;
 
     // Start is called before the first frame update
     void Start()
     {
         isMes = false;
-        damage = 0;
     }
 
     // Update is called once per frame
@@ -23,19 +21,19 @@ public class MesHealthB2 : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
         if (isMes) {
             if(collision.tag == "PlayerBullet") {
-                damage++;
+                GiveDamage(1);
                 Destroy(collision.gameObject);
             } else if(collision.tag == "PlayerMelee") {
-                damage += 2;
+                GiveDamage(2);
             }
         }
     }
 
+    void GiveDamage(int damage) {
+        GetComponent<HealthB2>().Phase3MesHealth(damage);
+    }
+
     public void IsMes(bool _bool) {
         isMes = _bool;
-    }
-    
-    public int Damage() {
-        return damage;
     }
 }
