@@ -17,10 +17,15 @@ public class CameraMove2 : MonoBehaviour
     }
 
     public void WatchPlayer() {
+        Debug.Log("who");
         GetComponent<CameraMove>().IsWatchingPlayer(true);
     }
 
     public void WatchPlayerCenter() {
         GetComponent<CameraMove>().IsWatchingPlayerCenter(true);
+    }
+
+    public void WatchRight() {
+        GetComponent<CameraMove>().IsWatchingRight(true);
     }
 }

@@ -11,11 +11,13 @@ public class PhaseB1 : MonoBehaviour
     public GameObject nullifyingCore;
 
     private GameObject curtain;
+    private GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
         curtain = GameObject.Find("Curtain");
+        player = GameObject.Find("Player");
 
     }
 
@@ -26,6 +28,13 @@ public class PhaseB1 : MonoBehaviour
     }
 
     public void Phase1() {
+        player.transform.position = Vector3.zero;
+
+        GameObject[] playerBullets = GameObject.FindGameObjectsWithTag("PlayerBullet");
+        foreach (GameObject playerBullet in playerBullets) {
+            Destroy(playerBullet);
+        }
+
         GameObject[] boxes = GameObject.FindGameObjectsWithTag("SurpriseBox");
         foreach(GameObject box in boxes) {
             Destroy(box);

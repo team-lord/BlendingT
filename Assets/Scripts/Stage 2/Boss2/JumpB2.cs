@@ -70,8 +70,6 @@ public class JumpB2 : MonoBehaviour {
         isJump = false;
         transform.position = _vector3;
 
-        Camera.main.GetComponent<CameraMove2>().WatchPlayer();
-
         GetComponent<MoveB2>().IsMove1(true);
 
         bossAnimator.SetTrigger("fall");

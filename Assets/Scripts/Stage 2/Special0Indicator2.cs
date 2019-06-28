@@ -29,10 +29,10 @@ public class Special0Indicator2 : MonoBehaviour
         if (isReady) {
             transform.position = player.transform.position;
 
-            direction = (player.transform.position - boss.transform.position).normalized;
+            direction = (boss.transform.position - player.transform.position).normalized;
             transform.rotation = Quaternion.FromToRotation(Vector3.up, direction);
 
-            transform.Translate(transform.up);
+            transform.Translate(Vector3.up, Space.Self);
         }       
     }
 

@@ -664,6 +664,7 @@ void LateUpdate()
         if (isWatchingPlayer)
         {
             isWatchingPlayerCenter = false;
+            isWatchingRight = false;
         }
     }
 
@@ -673,6 +674,15 @@ void LateUpdate()
         if (isWatchingPlayerCenter)
         {
             isWatchingPlayer = false;
+            isWatchingRight = false;
+        }
+    }
+
+    public void IsWatchingRight(bool _bool) {
+        isWatchingRight = _bool;
+        if (isWatchingRight) {
+            isWatchingPlayer = false;
+            isWatchingPlayerCenter = false;
         }
     }
 }

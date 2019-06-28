@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 712006566693851933}
   - component: {fileID: 8232100012273836292}
   - component: {fileID: 8622415816455705514}
-  - component: {fileID: 867396267819357182}
+  - component: {fileID: 5219950358933407714}
   - component: {fileID: 8691046035640512974}
   m_Layer: 0
   m_Name: Boss2
@@ -353,6 +353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eba5d440b05b0b544b2cc7964540fefe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpSound: {fileID: 0}
 --- !u!114 &712006566693851933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -393,7 +394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05189af9f29e05b4c935f48c97f5421d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &867396267819357182
+--- !u!95 &5219950358933407714
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0

@@ -22,7 +22,7 @@ public class Heart : MonoBehaviour
 
     public void ChangeImage() {
         health--;
-        if (health <= 0) {
+        if (health > 0) {
             GetComponent<Image>().sprite = images[health - 1];
         }
     }

@@ -42,6 +42,8 @@ public class PhaseB2 : MonoBehaviour
     public void Phase2() {
         animator.SetBool("spin", false);
 
+        StartCoroutine(Phase2CameraWalk());
+
         Instantiate(blanket, Vector3.zero, Quaternion.identity);
 
         GetComponent<PatternB2>().PatternPhase(false);
@@ -53,6 +55,12 @@ public class PhaseB2 : MonoBehaviour
         animator.SetFloat("phase2Health", 3f);
 
         transform.GetChild(1).gameObject.SetActive(true);
+    }
+
+    IEnumerator Phase2CameraWalk() {
+        Camera.main.GetComponent<CameraMove2>().WatchRight();
+        yield return new WaitForSeconds(1f);
+        Camera.main.GetComponent<CameraMove2>().WatchPlayerCenter();
     }
 
     public void Phase3() {

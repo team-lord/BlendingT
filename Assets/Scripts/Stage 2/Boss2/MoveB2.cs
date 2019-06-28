@@ -66,6 +66,7 @@ public class MoveB2 : MonoBehaviour {
     void LookPlayer()
     {
         directionToPlayer = (player.transform.position - transform.position).normalized;
+        Debug.Log(directionToPlayer);
         animator.SetFloat("directionToPlayerX", directionToPlayer.x);
         animator.SetFloat("directionToPlayerY", directionToPlayer.y);
     }
