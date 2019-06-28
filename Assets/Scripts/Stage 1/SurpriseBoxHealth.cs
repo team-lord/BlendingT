@@ -39,7 +39,7 @@ public class SurpriseBoxHealth : MonoBehaviour
 
                 CheckAlive();
             } else if (collision.tag == "PlayerMelee") {
-                // health -= 2;
+                health -= 2;
 
                 CheckAlive();
             }

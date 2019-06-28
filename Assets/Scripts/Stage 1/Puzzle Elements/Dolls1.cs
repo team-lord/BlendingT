@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Dolls1 : MonoBehaviour
 {
-    public Collider2D[] colliders = new Collider2D[4];
+    public Collider2D[] colliders = new Collider2D[5];
 
     private int currentDoll;
     private GameObject puzzleBall;
@@ -28,7 +28,7 @@ public class Dolls1 : MonoBehaviour
         foreach(Collider2D collider in colliders) {
             collider.enabled = false;
         }
-        colliders[3].enabled = true;
+        colliders[4].enabled = true;
 
         isReady = true;
     }
@@ -40,15 +40,13 @@ public class Dolls1 : MonoBehaviour
     }
         
     public void Change(int number) {
-        colliders[currentDoll].enabled = false;
 
         animator.SetFloat("next", number);
         animator.SetTrigger("on");
         animator.SetFloat("current", number);
 
         currentDoll = number;
-
-        colliders[currentDoll].enabled = true;
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
@@ -60,6 +58,15 @@ public class Dolls1 : MonoBehaviour
             }
             
         }
+    }
+
+    public void PuzzleStart() {
+        colliders[currentDoll].enabled = true;
+    }
+
+    public void Initialize() {
+        colliders[currentDoll].enabled = false;
+        colliders[4].enabled = true;
     }
 
     IEnumerator PuzzleFail() {

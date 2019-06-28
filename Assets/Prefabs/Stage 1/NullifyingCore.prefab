@@ -94,7 +94,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f092fa28aa2bc48a4554e0a5751ee8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nullifyingCore: {fileID: 0}
   smoke: {fileID: 2369796550686099658, guid: 484d0ba8fcd0ad040b5f14a7601f55cc, type: 3}
   blanketPlate: {fileID: 21300000, guid: 65efc03bee9ca724fb18d3ee94db9fee, type: 3}
 --- !u!58 &3253420234594183294

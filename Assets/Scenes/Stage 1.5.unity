@@ -456,12 +456,12 @@ PrefabInstance:
     - target: {fileID: 8744325944345579100, guid: 77b9f59c4f9b114438726bf105222809,
         type: 3}
       propertyPath: moveSpeed
-      value: 200
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 8744325944345579100, guid: 77b9f59c4f9b114438726bf105222809,
         type: 3}
       propertyPath: tumbleSpeed
-      value: 200
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 1497561180721962064, guid: 77b9f59c4f9b114438726bf105222809,
         type: 3}
