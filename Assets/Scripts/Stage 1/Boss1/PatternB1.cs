@@ -76,7 +76,6 @@ public class PatternB1 : MonoBehaviour
         */
         Instantiate(patternMakers[debugPattern], transform.position, transform.rotation);
 
-
     }
 
     public void PatternEnd() { // patternMaker가 이 함수를 호출
