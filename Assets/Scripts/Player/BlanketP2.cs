@@ -28,7 +28,8 @@ public class BlanketP2 : MonoBehaviour {
     void UseBlanket() {
         canBlanket = false;
         Instantiate(blanket, transform.position, Quaternion.identity);
-        usingNullifyingCore.GetComponent<UsingNullifyingCoreP>().UseNullyfingCore();
+        usingNullifyingCore.GetComponent<UsingNullifyingCoreP>().UseNullifyingCore();
+        usingNullifyingCore.GetComponent<UsingNullifyingCoreP>().NullifyingCoreUsingSound();
         blanketImage.GetComponent<NullifyingCore>().UseBlanket();
     }
 

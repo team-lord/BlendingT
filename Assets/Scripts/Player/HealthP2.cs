@@ -40,7 +40,7 @@ public class HealthP2 : MonoBehaviour {
             CheckAlive();
 
             Instantiate(shield, transform.position, Quaternion.identity);
-            // ChangeHeart();
+            ChangeHeart();
         }
     }
 
