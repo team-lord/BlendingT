@@ -22,6 +22,8 @@ public class Heart : MonoBehaviour
 
     public void ChangeImage() {
         health--;
-        GetComponent<Image>().sprite = images[health - 1];      
+        if (health <= 0) {
+            GetComponent<Image>().sprite = images[health - 1];
+        }
     }
 }

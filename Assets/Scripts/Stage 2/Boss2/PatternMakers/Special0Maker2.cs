@@ -17,15 +17,18 @@ public class Special0Maker2 : MonoBehaviour
 
     public Vector3 potLocation;
 
+    public GameObject indicator;
+
     // Start is called before the first frame update
     void Start()
     {
-
         boss = GameObject.Find("Boss");
         player = GameObject.Find("Player");
 
         time = 0;
         StartCoroutine(JumpFall());
+
+        indicator.GetComponent<Special0Indicator2>().IndicatorOn();
     }
 
     IEnumerator JumpFall() {
@@ -60,5 +63,6 @@ public class Special0Maker2 : MonoBehaviour
             Vector3 _direction = (player.transform.position - potLocation).normalized;
             Instantiate(special0FailBullet, potLocation, Quaternion.FromToRotation(Vector3.up, _direction));
         }
+        indicator.GetComponent<Special0Indicator2>().IndicatorOff();
     }
 }

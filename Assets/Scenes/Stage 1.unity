@@ -984,6 +984,8 @@ PrefabInstance:
     m_Modifications:
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     - target: {fileID: 1598213532683792956, guid: 806a6d949ad496d49b7889a8a7379e78,
         type: 3}
       propertyPath: m_Name
@@ -1000,6 +1002,7 @@ PrefabInstance:
       value: Wall
       objectReference: {fileID: 0}
 >>>>>>> f2a8709fb341d6354b2cfd5c5a499c64935c4285
+>>>>>>> 944c2efcc736aadc79bc3b350848a2694c95170f
     - target: {fileID: 5095543391422589771, guid: 806a6d949ad496d49b7889a8a7379e78,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1054,6 +1057,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598213532683792956, guid: 806a6d949ad496d49b7889a8a7379e78,
+        type: 3}
+      propertyPath: m_Name
+      value: Plank5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598213532683792956, guid: 806a6d949ad496d49b7889a8a7379e78,
+        type: 3}
+      propertyPath: m_Name
+      value: Plank5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598213532683792956, guid: 806a6d949ad496d49b7889a8a7379e78,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 1598213532683792956, guid: 806a6d949ad496d49b7889a8a7379e78,
         type: 3}
@@ -2915,6 +2933,8 @@ PrefabInstance:
     m_Modifications:
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     - target: {fileID: 1598213532683792956, guid: 806a6d949ad496d49b7889a8a7379e78,
         type: 3}
       propertyPath: m_Name
@@ -2931,6 +2951,7 @@ PrefabInstance:
       value: Wall
       objectReference: {fileID: 0}
 >>>>>>> f2a8709fb341d6354b2cfd5c5a499c64935c4285
+>>>>>>> 944c2efcc736aadc79bc3b350848a2694c95170f
     - target: {fileID: 5095543391422589771, guid: 806a6d949ad496d49b7889a8a7379e78,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2990,6 +3011,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.x
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598213532683792956, guid: 806a6d949ad496d49b7889a8a7379e78,
+        type: 3}
+      propertyPath: m_Name
+      value: Plank4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598213532683792956, guid: 806a6d949ad496d49b7889a8a7379e78,
+        type: 3}
+      propertyPath: m_Name
+      value: Plank4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598213532683792956, guid: 806a6d949ad496d49b7889a8a7379e78,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 1598213532683792956, guid: 806a6d949ad496d49b7889a8a7379e78,
         type: 3}
