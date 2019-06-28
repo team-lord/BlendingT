@@ -73,7 +73,7 @@ public class PatternB1 : MonoBehaviour
         } else {
             Instantiate(patternMakers[currentPattern], transform.position, transform.rotation);
         }
-        
+
         //Instantiate(patternMakers[debugPattern], transform.position, transform.rotation);
 
     }
