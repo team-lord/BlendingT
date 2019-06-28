@@ -40,7 +40,7 @@ public class HealthP2 : MonoBehaviour {
             CheckAlive();
 
             Instantiate(shield, transform.position, Quaternion.identity);
-            // ChangeHeart();
+            ChangeHeart();
         }
     }
 
@@ -55,11 +55,7 @@ public class HealthP2 : MonoBehaviour {
 
     void CheckAlive() {
         if (health <= 0) {
-            SceneManager.LoadScene("Main Menu");
-
-            // 쓰러지는 애니메이션
-            Destroy(gameObject);
-            // 씬 처리
+            SceneManager.LoadScene("Game Over");
         }
     }
 

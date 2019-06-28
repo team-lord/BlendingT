@@ -21,7 +21,10 @@ public class MoveTumbleP2 : MonoBehaviour {
     public float tumbleDelay;
     private bool isTumbling;
 
+    public AudioClip tumble;
+
     Animator animator;
+    AudioSource audio;
 
     GameObject cursor;
     Vector3 cursorDirection;
@@ -38,6 +41,8 @@ public class MoveTumbleP2 : MonoBehaviour {
         cursor = GameObject.Find("Cursor");
 
         rb2D = GetComponent<Rigidbody2D>();
+
+        audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -48,6 +53,7 @@ public class MoveTumbleP2 : MonoBehaviour {
                     if (h != 0 || v != 0) {
                         animator.SetTrigger("startTumble");
                         StartTumble();
+                        audio.PlayOneShot(tumble);
                     }
                 }
             }
@@ -114,14 +120,19 @@ public class MoveTumbleP2 : MonoBehaviour {
         
 
         Correction();
-        
-        if( h==0 && v==0 )
+
+        if (h == 0 && v == 0)
         {
             animator.SetBool("isMove", false);
+            audio.Stop();
         }
         else
         {
             animator.SetBool("isMove", true);
+            if (audio.isPlaying == false)
+            {
+                audio.Play();
+            }
             animator.SetFloat("lastMoveDirectionX", h);
             animator.SetFloat("lastMoveDirectionY", v);
         }

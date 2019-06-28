@@ -13,6 +13,7 @@ public class AttackFireP2 : MonoBehaviour {
 
     // 근접 공격
     private GameObject meleeAttack;
+    private GameObject rangeAttackSoundBox;
     public float attackTime;
     public float attackDelay;
     private bool canAttack;
@@ -33,6 +34,7 @@ public class AttackFireP2 : MonoBehaviour {
         isMelee = false;
 
         meleeAttack = GameObject.Find("PlayerMeleeAttack");
+        rangeAttackSoundBox = GameObject.Find("RangeAttackSoundBox");
         canAttack = true;
 
         canFire = true;
@@ -86,6 +88,7 @@ public class AttackFireP2 : MonoBehaviour {
         StartCoroutine(IsAttacking());
 
         meleeAttack.GetComponent<MeleeAttackP>().Attack();
+        meleeAttack.GetComponent<MeleeAttackP>().MeleeAttackSoundPlay();
     }
 
     IEnumerator CanAttack() {
@@ -106,6 +109,7 @@ public class AttackFireP2 : MonoBehaviour {
         StartCoroutine(CanFire());
         Vector3 _direction = (cursor.transform.position - transform.position).normalized;
         Instantiate(bullet, transform.position, Quaternion.FromToRotation(Vector3.up, _direction));
+        rangeAttackSoundBox.GetComponent<RangeAttackSoundBoxP>().RangeAttackSoundPlay();
     }
 
     IEnumerator CanFire() {

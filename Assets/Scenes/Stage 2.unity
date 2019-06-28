@@ -482,7 +482,7 @@ PrefabInstance:
     - target: {fileID: 7824404991978632012, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
       propertyPath: debugPattern
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7824404991978632012, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
@@ -1113,7 +1113,7 @@ PrefabInstance:
     - target: {fileID: 4927763103399916976, guid: 2e784ce3b90483f478c59b897f3b6584,
         type: 3}
       propertyPath: maxHealth
-      value: 600
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 703716484847514956, guid: 2e784ce3b90483f478c59b897f3b6584,
         type: 3}
