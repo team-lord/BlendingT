@@ -60,7 +60,7 @@ public class PatternB1 : MonoBehaviour
 
     void Pattern() {
         
-        
+       /* 
         do {
             _number = Random.Range(0, patternArray.Length); 
         } while (patternArray[_number] == currentPattern);
@@ -73,8 +73,13 @@ public class PatternB1 : MonoBehaviour
         } else {
             Instantiate(patternMakers[currentPattern], transform.position, transform.rotation);
         }
+<<<<<<< HEAD
 
         //Instantiate(patternMakers[debugPattern], transform.position, transform.rotation);
+=======
+        */
+        Instantiate(patternMakers[debugPattern], transform.position, transform.rotation);
+>>>>>>> 490b89b01f386461767769b5fa7840bb94b0ad78
 
     }
 

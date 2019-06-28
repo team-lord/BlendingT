@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7560695094093359433}
   - component: {fileID: -1534406963739253085}
-  - component: {fileID: 103072798185403163}
+  - component: {fileID: 4325582592752277956}
   m_Layer: 0
   m_Name: ForgedPattern2Maker1
   m_TagString: PatternMaker
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 691b227dfbe90194a880d47556a40ea1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &103072798185403163
+--- !u!114 &4325582592752277956
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -53,9 +53,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2903147420377588981}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aeddb802f3004dc4f83793c375ef8bc2, type: 3}
+  m_Script: {fileID: 11500000, guid: 9ea37338d2798b546b700f1b8bfb3baa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   surpriseBox: {fileID: 3999101307238757942, guid: 10ae58c1d79851c46b8aae99903ab998,
     type: 3}
-  triangleRange: 13
+  range: 13

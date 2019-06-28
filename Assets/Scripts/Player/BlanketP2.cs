@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class BlanketP2 : MonoBehaviour {
     public GameObject blanket;
+    private GameObject usingNullifyingCore;
     private bool canBlanket;
 
     public Image blanketImage;
@@ -12,6 +13,7 @@ public class BlanketP2 : MonoBehaviour {
     // Start is called before the first frame update
     void Start() {
         canBlanket = true;
+        usingNullifyingCore = GameObject.Find("UsingNullifyingCore");
     }
 
     // Update is called once per frame
@@ -26,6 +28,7 @@ public class BlanketP2 : MonoBehaviour {
     void UseBlanket() {
         canBlanket = false;
         Instantiate(blanket, transform.position, Quaternion.identity);
+        usingNullifyingCore.GetComponent<UsingNullifyingCoreP>().UseNullyfingCore();
         blanketImage.GetComponent<NullifyingCore>().UseBlanket();
     }
 

@@ -8,8 +8,8 @@ public class Pattern2Maker1 : MonoBehaviour
 
     public GameObject surpriseBox;
 
-    public float triangleRange;
-
+    public float range;
+    
     private Vector3 upLocation;
     private Vector3 downLeftLocation;
     private Vector3 downRightLocation;
@@ -24,14 +24,14 @@ public class Pattern2Maker1 : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+        
+        upLocation = new Vector3(0, range, 0);
+        downLeftLocation = new Vector3(range * Mathf.Sqrt(3) / 2, -range / 2, 0);
+        downRightLocation = new Vector3(-range * Mathf.Sqrt(3) / 2, -range / 2, 0);
 
-        upLocation = new Vector3(0, triangleRange, 0);
-        downLeftLocation = new Vector3(triangleRange * Mathf.Sqrt(3) / 2, -triangleRange / 2, 0);
-        downRightLocation = new Vector3(-triangleRange * Mathf.Sqrt(3) / 2, -triangleRange / 2, 0);
-
-        Instantiate(surpriseBox, upLocation, transform.rotation);
-        Instantiate(surpriseBox, downLeftLocation, transform.rotation);
-        Instantiate(surpriseBox, downRightLocation, transform.rotation);
+        Instantiate(surpriseBox, upLocation, Quaternion.identity);
+        Instantiate(surpriseBox, downLeftLocation, Quaternion.identity);
+        Instantiate(surpriseBox, downRightLocation, Quaternion.identity);
     }
 
     // Update is called once per frame

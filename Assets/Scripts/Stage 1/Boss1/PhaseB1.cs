@@ -26,6 +26,11 @@ public class PhaseB1 : MonoBehaviour
     }
 
     public void Phase1() {
+        GameObject[] boxes = GameObject.FindGameObjectsWithTag("SurpriseBox");
+        foreach(GameObject box in boxes) {
+            Destroy(box);
+        }
+
         //Instantiate(blanket, Vector3.zero, Quaternion.identity);
         Instantiate(smoke, transform.position, Quaternion.identity);
         transform.position = new Vector3(64, 0, 0);

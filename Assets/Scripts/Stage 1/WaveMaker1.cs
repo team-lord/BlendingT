@@ -44,7 +44,6 @@ public class WaveMaker1 : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        Debug.Log("Error");
         if(collision.tag== "Wall") {
             Destroy(gameObject);
         }
