@@ -15,6 +15,10 @@ public class PuzzleStartButton1 : MonoBehaviour
     private Sprite buttonOff;
 
     private GameObject flower;
+    private GameObject plankMachine;
+    private GameObject dolls;
+
+    private bool isDoingPuzzle;
 
     // Start is called before the first frame update
     void Start()
@@ -29,23 +33,34 @@ public class PuzzleStartButton1 : MonoBehaviour
         buttonOff = GetComponent<SpriteRenderer>().sprite;
 
         flower = GameObject.Find("Flower");
+        plankMachine = GameObject.Find("PlankMachine");
+        dolls = GameObject.Find("Dolls");
+
+        isDoingPuzzle = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (isDoingPuzzle) {
+            if (Input.GetKeyDown(KeyCode.R)) {
+                // 리셋
+                isDoingPuzzle = false;
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (isReady) {
             if (collision.tag == "PlayerMelee") {
                 isReady = false;
+                isDoingPuzzle = true;
 
                 GetComponent<SpriteRenderer>().sprite = buttonOn;
 
                 flower.GetComponent<PolygonCollider2D>().enabled = true;
-
+                plankMachine.GetComponent<PolygonCollider2D>().enabled = true;
+                dolls.GetComponent<Dolls1>().PuzzleStart();
 
                 puzzleBall.GetComponent<Rigidbody2D>().AddForce(180 * Vector2.right);
                 Camera.main.GetComponent<CameraMove1>().WatchPuzzleBall1st();
@@ -57,6 +72,11 @@ public class PuzzleStartButton1 : MonoBehaviour
 
     public void Initialize() {
         isReady = true;
+        isDoingPuzzle = false;
         GetComponent<SpriteRenderer>().sprite = buttonOff;
+    }
+
+    public void IsDoingPuzzle(bool _bool) {
+        isDoingPuzzle = _bool;
     }
 }

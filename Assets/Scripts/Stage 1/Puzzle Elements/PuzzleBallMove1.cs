@@ -13,6 +13,9 @@ public class PuzzleBallMove1 : MonoBehaviour {
     private GameObject phonograph;
     private GameObject motorFan;
 
+    private GameObject plankMachine;
+    private GameObject dolls;
+
     private GameObject flower;
 
     private GameObject player;
@@ -32,8 +35,15 @@ public class PuzzleBallMove1 : MonoBehaviour {
         phonograph = GameObject.Find("Phonograph");
         motorFan = GameObject.Find("MotorFan");
 
+
         flower = GameObject.Find("Flower");
         flower.GetComponent<PolygonCollider2D>().enabled = false;
+
+        plankMachine = GameObject.Find("PlankMachine");
+        plankMachine.GetComponent<PolygonCollider2D>().enabled = false;
+
+        dolls = GameObject.Find("Dolls");
+
 
         player = GameObject.Find("Player");
     }
@@ -51,6 +61,8 @@ public class PuzzleBallMove1 : MonoBehaviour {
         billiardTable.GetComponent<BilliardTable1>().Initialize();
         puzzleButton.GetComponent<PuzzleStartButton1>().Initialize();
         flower.GetComponent<PolygonCollider2D>().enabled = false;
+        plankMachine.GetComponent<PolygonCollider2D>().enabled = false;
+        dolls.GetComponent<Dolls1>().Initialize();
 
         for (int i=0; i<2; i++) {
             puzzleBall[i].transform.localPosition = localPosition[i];
