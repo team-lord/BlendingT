@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 3978527535734339106}
   - component: {fileID: 7212626695360699200}
   - component: {fileID: 47277985177201167}
+  - component: {fileID: 246715157110152560}
   m_Layer: 0
-  m_Name: Plank
+  m_Name: Plank1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -115,7 +116,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.11}
+  m_Offset: {x: 0, y: 0.11590244}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -126,5 +127,18 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.84, y: 0.22}
+  m_Size: {x: 1.84, y: 0.22000024}
   m_EdgeRadius: 0
+--- !u!114 &246715157110152560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1598213532683792956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0f6bba420e64b74c839dc1597c727c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yOffset: 0
