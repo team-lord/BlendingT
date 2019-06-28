@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7560695094093359433}
   - component: {fileID: -1534406963739253085}
   - component: {fileID: 4325582592752277956}
+  - component: {fileID: 7404317978003195314}
   m_Layer: 0
   m_Name: ForgedPattern2Maker1
   m_TagString: PatternMaker
@@ -59,3 +60,16 @@ MonoBehaviour:
   surpriseBox: {fileID: 3999101307238757942, guid: 10ae58c1d79851c46b8aae99903ab998,
     type: 3}
   range: 13
+--- !u!114 &7404317978003195314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2903147420377588981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e48476f6c8a5d6c4b8de8e4891b04edb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 2

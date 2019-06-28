@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1988126378452365415}
   - component: {fileID: 1426221130544491395}
   - component: {fileID: 3263853871385939206}
+  - component: {fileID: 7774531921442673387}
   m_Layer: 0
   m_Name: IdleBullet
   m_TagString: EnemyBullet
@@ -109,3 +110,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.24
+--- !u!114 &7774531921442673387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507791027336151324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5ebd19de8c612a42b5222369ea64bf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

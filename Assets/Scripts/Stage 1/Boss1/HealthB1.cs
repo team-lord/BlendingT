@@ -63,17 +63,20 @@ public class HealthB1 : MonoBehaviour
             ChangeHeart0();
             if (phase0Health <= 0) {
                 phase0Health = 0;
+                GetComponent<PatternB1>().PatternEnd();
+                Destroy(GameObject.FindGameObjectWithTag("PatternMaker"));
                 GetComponent<PhaseB1>().Phase1();
                 phase = 2;
-                Destroy(GameObject.FindGameObjectWithTag("PatternMaker"));
+                
                 health.text = "";
             }
         } else if (phase == 2) {
             ChangeHeart2();
             if (phase2Health <= 0) {
                 phase2Health = 0;
-                GetComponent<PhaseB1>().Phase3();
+                GetComponent<PatternB1>().PatternEnd();
                 Destroy(GameObject.FindGameObjectWithTag("PatternMaker"));
+                GetComponent<PhaseB1>().Phase3();
             }
         }
     }

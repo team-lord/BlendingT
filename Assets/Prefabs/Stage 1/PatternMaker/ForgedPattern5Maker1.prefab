@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4790733828020170255}
   - component: {fileID: 8436588477858659187}
   - component: {fileID: 4747038784118078917}
+  - component: {fileID: 5937366441560654698}
   m_Layer: 0
   m_Name: ForgedPattern5Maker1
   m_TagString: PatternMaker
@@ -60,3 +61,16 @@ MonoBehaviour:
   delay: 0.5
   echo: {fileID: 6286786225540415485, guid: ed56b2e287b726145b62d7bb372b0f46, type: 3}
   echoDelay: 0.5
+--- !u!114 &5937366441560654698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205734136711570355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e48476f6c8a5d6c4b8de8e4891b04edb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 5

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2144252798154990100}
   - component: {fileID: -2031689870369898623}
   - component: {fileID: -8149510781911539733}
+  - component: {fileID: 817637762297414857}
   m_Layer: 0
   m_Name: ForgedPattern7Maker1
   m_TagString: PatternMaker
@@ -62,3 +63,16 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   life: 0
+--- !u!114 &817637762297414857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6730378527622950824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e48476f6c8a5d6c4b8de8e4891b04edb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 7
