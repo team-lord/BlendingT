@@ -21,6 +21,8 @@ public class MoveTumbleT : MonoBehaviour {
     private bool isTumbling;
 
     Animator animator;
+    AudioSource audio;
+    public AudioClip tumbleSound;
 
     private GameObject cursor;
 
@@ -31,6 +33,7 @@ public class MoveTumbleT : MonoBehaviour {
         canTumble = true;
         isTumbling = false;
         animator = GetComponent<Animator>();
+        audio = GetComponent<AudioSource>();
 
         cursor = GameObject.Find("Cursor");
 
@@ -45,7 +48,7 @@ public class MoveTumbleT : MonoBehaviour {
                     if (h != 0 || v != 0) {
                         StartTumble();
                         animator.SetTrigger("startTumble");
-
+                        audio.PlayOneShot(tumbleSound);
                     }
                 }
             }
@@ -113,10 +116,18 @@ public class MoveTumbleT : MonoBehaviour {
 
         Correction();
 
-        if (h == 0 && v == 0) {
+        if (h == 0 && v == 0)
+        {
             animator.SetBool("isMove", false);
-        } else {
+            audio.Stop();
+        }
+        else
+        {
             animator.SetBool("isMove", true);
+            if (audio.isPlaying == false)
+            {
+                audio.Play();
+            }
             animator.SetFloat("lastMoveDirectionX", h);
             animator.SetFloat("lastMoveDirectionY", v);
         }

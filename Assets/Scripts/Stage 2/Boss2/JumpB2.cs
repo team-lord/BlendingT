@@ -10,6 +10,9 @@ public class JumpB2 : MonoBehaviour {
     Animator bossAnimator;
     Animator shadowAnimator;
 
+    AudioSource audio;
+    public AudioClip jumpSound;
+
     GameObject shadow;
 
 
@@ -19,6 +22,7 @@ public class JumpB2 : MonoBehaviour {
         bossAnimator = GetComponent<Animator>();
         shadow = GameObject.Find("Shadow");
         shadowAnimator = shadow.GetComponent<Animator>();
+        audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -30,6 +34,7 @@ public class JumpB2 : MonoBehaviour {
         isJump = true;
         bossAnimator.SetTrigger("jump");
         shadowAnimator.SetTrigger("shadowOff");
+        audio.PlayOneShot(jumpSound);
         StartCoroutine(JumpCollider());
     }
 

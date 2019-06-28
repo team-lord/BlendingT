@@ -10,6 +10,13 @@ public class Lever1 : MonoBehaviour
     private bool isReady;
     private bool isReadyFake;
 
+    public AudioClip normalButtonSound;
+    public AudioClip specialButtonSound;
+    
+    private GameObject buttonSoundBox;
+
+    AudioSource audio;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -19,6 +26,8 @@ public class Lever1 : MonoBehaviour
     void Start() {
         isReady = true;
         isReadyFake = true;
+        buttonSoundBox = GameObject.Find("ButtonSoundBox");
+        audio = buttonSoundBox.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -39,12 +48,14 @@ public class Lever1 : MonoBehaviour
                     float _x = transform.localScale.x;
                     transform.localScale = new Vector3(-_x, 1, 1);
                     GameObject.Find("Bulb").GetComponent<Bulb1>().IsReady();
+                    audio.PlayOneShot(specialButtonSound);
                 }
             } else {
                 if (isReadyFake) {
                     StartCoroutine(IsReadyFake());
                     float _x = transform.localScale.x;
                     transform.localScale = new Vector3(-_x, 1, 1);
+                    audio.PlayOneShot(normalButtonSound);
                 }
             }
         }

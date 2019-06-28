@@ -63,6 +63,7 @@ public class PuzzleStartButton1 : MonoBehaviour
                 Camera.main.GetComponent<CameraMove1>().WatchPuzzleBall1st();
                 player.GetComponent<MoveTumbleP1>().CanMoveTumble1(false);
                 player.GetComponent<AttackFireP1>().CanAttackFire(false);
+                player.GetComponent<AudioSource>().Stop();
             }
         }        
     }

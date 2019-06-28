@@ -9,10 +9,16 @@ public class BoardLever1 : MonoBehaviour
 
     private bool isReady;
 
+    public AudioClip buttonSound;
+    AudioSource soundBoxAudio;
+    GameObject buttonSoundBox;
+
     // Start is called before the first frame update
     void Start()
     {
         isReady = true;
+        buttonSoundBox = GameObject.Find("ButtonSoundBox");
+        soundBoxAudio = buttonSoundBox.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -28,6 +34,7 @@ public class BoardLever1 : MonoBehaviour
                 GetComponentInParent<Board1>().Rotate(color);
                 float _x = transform.localScale.x;
                 transform.localScale = new Vector3(-_x, 1, 1);
+                soundBoxAudio.PlayOneShot(buttonSound);
             }
         }
     }

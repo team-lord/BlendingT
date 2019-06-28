@@ -661,6 +661,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 64
       objectReference: {fileID: 0}
+    - target: {fileID: 2478212956020527957, guid: 2eabab2a25314f64bb18ccb22141b941,
+        type: 3}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 69d0a79c6d005cd49be9100fb5156302, type: 3}
     m_RemovedComponents:
     - {fileID: 5969921058991468797, guid: 2eabab2a25314f64bb18ccb22141b941, type: 3}
     - {fileID: 3890790402877634227, guid: 2eabab2a25314f64bb18ccb22141b941, type: 3}

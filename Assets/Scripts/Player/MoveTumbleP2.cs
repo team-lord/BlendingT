@@ -21,7 +21,7 @@ public class MoveTumbleP2 : MonoBehaviour {
     public float tumbleDelay;
     private bool isTumbling;
 
-    public AudioClip tumble;
+    public AudioClip tumbleSound;
 
     Animator animator;
     AudioSource audio;
@@ -53,7 +53,7 @@ public class MoveTumbleP2 : MonoBehaviour {
                     if (h != 0 || v != 0) {
                         animator.SetTrigger("startTumble");
                         StartTumble();
-                        audio.PlayOneShot(tumble);
+                        audio.PlayOneShot(tumbleSound);
                     }
                 }
             }
