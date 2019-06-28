@@ -9,6 +9,7 @@ public class MoveB2 : MonoBehaviour {
     public float moveSpeed;
     private bool isMove;
     private bool isMove1;
+    private bool isMove2;
 
     private float time;
     public float changeDirectionDelay;
@@ -23,6 +24,7 @@ public class MoveB2 : MonoBehaviour {
     void Start() {
         isMove = true;
         isMove1 = true;
+        isMove2 = true;
 
         player = GameObject.Find("Player");
 
@@ -31,7 +33,7 @@ public class MoveB2 : MonoBehaviour {
     
     // Update is called once per frame
     void FixedUpdate() {
-        if (isMove && isMove1) {
+        if (isMove && isMove1 && isMove2) {
             time += Time.deltaTime;
             if (time > changeDirectionDelay) {
                 ChangeDirection();
@@ -47,6 +49,10 @@ public class MoveB2 : MonoBehaviour {
 
     public void IsMove1(bool _bool) {
         isMove1 = _bool;
+    }
+
+    public void IsMove2(bool _bool) {
+        isMove2 = _bool;
     }
 
     void Move() {
