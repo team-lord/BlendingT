@@ -12,6 +12,7 @@ public class MeleeAttackP : MonoBehaviour
     private Vector2[] directions = { new Vector2(1, 0), new Vector2(0.707f, 0.707f), new Vector2(0, 1), new Vector2(-0.707f, 0.707f), new Vector2(-1, 0), new Vector2(-0.707f, -0.707f), new Vector2(0, -1), new Vector2(0.707f, -0.707f) };
 
     Animator animator;
+    AudioSource audio;
 
     // Start is called before the first frame update
     void Start() {
@@ -21,6 +22,7 @@ public class MeleeAttackP : MonoBehaviour
         isOdd = false;
 
         animator = GetComponent<Animator>();
+        audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -57,5 +59,10 @@ public class MeleeAttackP : MonoBehaviour
         yield return new WaitForSeconds(0.15f);
         transform.localPosition = new Vector3(0, 64, 0);
         animator.SetBool("meleeAttackOn", false);
+    }
+
+    public void MeleeAttackSoundPlay()
+    {
+        audio.Play();
     }
 }

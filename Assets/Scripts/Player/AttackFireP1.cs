@@ -14,6 +14,7 @@ public class AttackFireP1 : MonoBehaviour {
 
     // 근접 공격
     private GameObject meleeAttack;
+    private GameObject rangeAttackSoundBox;
     public float attackTime;
     public float attackDelay;
     private bool canAttack;
@@ -24,10 +25,6 @@ public class AttackFireP1 : MonoBehaviour {
     private bool canFire;
     private GameObject cursor;
 
-    AudioSource myaudio;
-
-    public AudioClip bulletFireSound;
-    public AudioClip meleeAttackSound;
 
     public Image attackCore;
    
@@ -41,12 +38,11 @@ public class AttackFireP1 : MonoBehaviour {
         isMelee = false;
 
         meleeAttack = GameObject.Find("PlayerMeleeAttack");
+        rangeAttackSoundBox = GameObject.Find("RangeAttackSoundBox");
         canAttack = true;
 
         canFire = true;
         cursor = GameObject.Find("Cursor");
-
-        myaudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -96,7 +92,7 @@ public class AttackFireP1 : MonoBehaviour {
         StartCoroutine(IsAttacking());
 
         meleeAttack.GetComponent<MeleeAttackP>().Attack();
-        myaudio.PlayOneShot(meleeAttackSound);
+        meleeAttack.GetComponent<MeleeAttackP>().MeleeAttackSoundPlay();
     }
 
     IEnumerator CanAttack() {
@@ -116,7 +112,7 @@ public class AttackFireP1 : MonoBehaviour {
         StartCoroutine(CanFire());
         Vector3 _direction = (cursor.transform.position - transform.position).normalized;
         Instantiate(bullet, transform.position, Quaternion.FromToRotation(Vector3.up, _direction));
-        myaudio.PlayOneShot(bulletFireSound);
+        rangeAttackSoundBox.GetComponent<RangeAttackSoundBoxP>().RangeAttackSoundPlay();
     }
 
     IEnumerator CanFire() {

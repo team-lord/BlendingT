@@ -31,7 +31,6 @@ public class MoveTumbleP1 : MonoBehaviour
     AudioSource myaudio;
 
     public AudioClip tumbleSound;
-    public AudioClip moveSound;
 
     // Start is called before the first frame update
     void Start()
@@ -133,12 +132,8 @@ public class MoveTumbleP1 : MonoBehaviour
         } else {
             v = 0;
         }
-        if (myaudio.isPlaying == false)
-        {
-            myaudio.Play();
-        }
 
-        Correction();
+        Correction();    
 
         if (h == 0 && v == 0)
         {
@@ -148,6 +143,10 @@ public class MoveTumbleP1 : MonoBehaviour
         else
         {
             animator.SetBool("isMove", true);
+            if (myaudio.isPlaying == false)
+            {
+                myaudio.Play();
+            }
             animator.SetFloat("lastMoveDirectionX", h);
             animator.SetFloat("lastMoveDirectionY", v);
         }
