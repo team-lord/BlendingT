@@ -8,13 +8,20 @@ public class LevitationCore2 : MonoBehaviour
 {
     private GameObject player;
 
-    public Sprite corePlate;
-
     public Image levitationCore;
+
+    Animator playerAnimator;
+    Animator animator;
 
     // Start is called before the first frame update
     void Start() {
         player = GameObject.Find("Player");
+
+        animator = GetComponent<Animator>();
+
+        playerAnimator = player.GetComponent<Animator>();
+
+        StartCoroutine(BecomingLevitationCore());
     }
 
     // Update is called once per frame
@@ -26,7 +33,7 @@ public class LevitationCore2 : MonoBehaviour
         if (collision.tag == "Player") {
             StartCoroutine(PlayAnimationGetCore());
 
-            GetComponent<SpriteRenderer>().sprite = corePlate;
+            animator.SetTrigger("playerGetCore");
 
             // player.GetComponent<BlanketP2>().GetBlanket();
             player.GetComponent<LevitationP2>().GetLevitationCore();
@@ -45,7 +52,15 @@ public class LevitationCore2 : MonoBehaviour
     IEnumerator PlayAnimationGetCore() {
         player.GetComponent<MoveTumbleP2>().CanMoveTumble(false);
         player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        yield return new WaitForSeconds(1.4f);
+        playerAnimator.SetTrigger("getLevitation");
+        yield return new WaitForSeconds(1f);
         player.GetComponent<MoveTumbleP2>().CanMoveTumble(true);
+    }
+
+    IEnumerator BecomingLevitationCore()
+    {
+        GetComponent<CircleCollider2D>().enabled = false;
+        yield return new WaitForSeconds(0.6f);
+        GetComponent<CircleCollider2D>().enabled = true;
     }
 }

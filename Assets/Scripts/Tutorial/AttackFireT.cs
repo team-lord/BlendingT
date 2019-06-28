@@ -95,6 +95,7 @@ public class AttackFireT : MonoBehaviour {
 
     IEnumerator IsAttacking() {
         GetComponent<MoveTumbleT>().CanMoveTumble(false);
+        GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
         yield return new WaitForSeconds(attackTime);
         GetComponent<MoveTumbleT>().CanMoveTumble(true);
     }

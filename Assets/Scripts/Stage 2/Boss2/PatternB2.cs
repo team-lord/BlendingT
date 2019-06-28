@@ -28,7 +28,7 @@ public class PatternB2 : MonoBehaviour
 
         patternStart = true;
 
-        patternArray = new int[] {0, 2};
+        patternArray = new int[] {0, 1, 2, 3, 4, 7};
 
         patternPhase = true;
 
@@ -69,6 +69,7 @@ public class PatternB2 : MonoBehaviour
     }
 
     IEnumerator PatternStart() {
+        GetComponent<MoveB2>().IsMove(true);
         GetComponent<MoveB2>().IsMove1(true);
         yield return new WaitForSeconds(patternDelay);
         patternStart = true;

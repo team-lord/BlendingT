@@ -6,12 +6,13 @@ public class Pattern2Maker2 : MonoBehaviour
 {
     public GameObject bullet2; // bulletMine
 
-    public float delay; // 올라가서 떨어질 때까지의 Delay
-    public float fallDelay; // 떨어지기 시작해서 지면에 닿을 때까지의 Delay: 즉 떨어지는 애니메이션에 걸리는 시간
+    public float throwDelay; // throw 애니메이션 재생시간 
+    public float ballFallDelay; // 공이 떨어지는데 걸리는 시간
     private float time;
 
     private GameObject player;
     private GameObject boss;
+    public GameObject ball;
 
     private bool isReady;
     private bool isReady2;
@@ -37,8 +38,7 @@ public class Pattern2Maker2 : MonoBehaviour
         isReady2 = true;
 
         boss.GetComponent<MoveB2>().IsMove(false);
-        // 보스가 뛰어오르는 애니메이션
-        boss.GetComponent<JumpB2>().Jump();
+        boss.GetComponent<Animator>().SetTrigger("throw");
     }
 
     void CheckCase() {
@@ -59,35 +59,26 @@ public class Pattern2Maker2 : MonoBehaviour
 
         if (!isReady) {
             if (isReady2) {
-                if (time > delay) {
-                    // 보스가 떨어지는 애니메이션
-                    boss.GetComponent<JumpB2>().Fall(Vector3.zero);
-                    StartCoroutine(Stop());
+                if (time > throwDelay) {
+                    Instantiate(ball,new Vector3 (0,0,0), ball.transform.rotation);
+                    isReady2 = false;
+                    boss.GetComponent<MoveB2>().IsMove(true);
+                    isReady = true;
+                    time = 0;
                 }
             }            
-        } else {
-            if (time > fallDelay)
+        } else {//throw가 끝난 후 
+            if (time > ballFallDelay)
             {
                 for (int i = 0; i < 6; i++)
                 {
                     Fire(60 * i);
                 }
-                boss.GetComponent<MoveB2>().IsMove(true);
                 CheckDestroy();
             }            
         }        
     }
 
-    IEnumerator Stop() {
-        boss.GetComponent<MoveB2>().IsMove(false);
-        boss.GetComponent<Animator>().SetTrigger("throw");
-
-        isReady2 = false;
-        yield return new WaitForSeconds(2);
-        boss.GetComponent<MoveB2>().IsMove(true);
-        isReady = true;
-        time = 0;
-    }
 
     void Fire(int degree) {
         Instantiate(bullet2, Vector3.zero, Quaternion.Euler(new Vector3(0, 0, degree)));

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2579900848520648541}
   - component: {fileID: 2579900848520648542}
   - component: {fileID: 2579900848520648543}
+  - component: {fileID: 3595814280538379650}
   m_Layer: 0
   m_Name: LevitationCore
   m_TagString: Untagged
@@ -135,3 +136,22 @@ MonoBehaviour:
   corePlate: {fileID: 7227840534234709079, guid: 22ea0f9533d5d6d4c880199a8a15ff3a,
     type: 3}
   levitationCore: {fileID: 0}
+--- !u!95 &3595814280538379650
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2579900848520648528}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ef6b0c2a6b9598c4884d5b0f0e5b15a2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

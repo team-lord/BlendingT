@@ -58,9 +58,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet2: {fileID: 8463984705783618367, guid: 23bd24cc634476348ac886c5d57a845f, type: 3}
-  delay: 1
-  fallDelay: 1.5
-  delayAfterFall: 0.8
+  throwDelay: 0.85
+  ballFallDelay: 0.5
+  ball: {fileID: 4843916810368759727, guid: 33f9e5d692c9d81419023ed5add67945, type: 3}
 --- !u!58 &-9014591191877043198
 CircleCollider2D:
   m_ObjectHideFlags: 0
