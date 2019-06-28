@@ -58,5 +58,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet4: {fileID: 436673565432355089, guid: 41e069cf79920b24c87620f2aba1b559, type: 3}
   repetition: 5
-  delay: 0.6
+  delay: 0.5
   patternTime: 8

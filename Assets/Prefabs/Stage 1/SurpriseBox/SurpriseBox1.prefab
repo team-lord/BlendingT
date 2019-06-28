@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30f0f521331cb1541a0dc4bdfed0bb49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 5
+  maxHealth: 3
   shield: {fileID: 2169918004525406138, guid: 820c329fced828a42b21263d4412575c, type: 3}
   shieldDelay: 1
   bullet: {fileID: 8068288318438665347, guid: 3667c71da9d37144a9ca86d84298ad3f, type: 3}

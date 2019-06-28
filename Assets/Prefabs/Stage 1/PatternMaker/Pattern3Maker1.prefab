@@ -60,4 +60,4 @@ MonoBehaviour:
   bullet3Follow: {fileID: 561628072747199281, guid: b0768e1ac6166234fb16d617df4934b9,
     type: 3}
   repetition: 6
-  delay: 1
+  delay: 0.8

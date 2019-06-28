@@ -37,8 +37,8 @@ public class Pattern3Maker2 : MonoBehaviour
         time += Time.deltaTime;
 
         if(time > delay) {
-            for(int i=0; i<6; i++) {
-                Fire((i - 2.5f) * angle);
+            for(int i=0; i<7; i++) {
+                Fire((i - 3) * angle);
                 ChangeBullet();
             }
 
