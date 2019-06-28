@@ -36,7 +36,65 @@ public class CameraMove : MonoBehaviour {
     {
         if (isWatchingPlayer)
         {
-            if (boss.transform.position.x >= player.transform.position.x)
+            //{
+                if (player.transform.position.x >= -20 && player.transform.position.x < 20)
+                {
+                    if (player.transform.position.y >= -18 && player.transform.position.y < 18)
+                    {
+                        Camera.main.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, cameraZ);
+                    }
+
+                    else if (player.transform.position.y < -18)
+                    {
+                        Camera.main.transform.position = new Vector3(player.transform.position.x, -18, cameraZ);
+                    }
+
+                    else
+                    {
+                        Camera.main.transform.position = new Vector3(player.transform.position.x, 18, cameraZ);
+                    }
+                }
+
+                else if (player.transform.position.x < -20)
+                {
+                    if (player.transform.position.y >= -18 && player.transform.position.y < 18)
+                    {
+                        Camera.main.transform.position = new Vector3(-20, player.transform.position.y, cameraZ);
+                    }
+
+                    else if (player.transform.position.y < -18)
+                    {
+                        Camera.main.transform.position = new Vector3(-20, -18, cameraZ);
+                    }
+
+                    else
+                    {
+                        Camera.main.transform.position = new Vector3(-20, 18, cameraZ);
+                    }
+                }
+
+                else
+                {
+                    if (player.transform.position.y >= -18 && player.transform.position.y < 18)
+                    {
+                        Camera.main.transform.position = new Vector3(20, player.transform.position.y, cameraZ);
+                    }
+
+                    else if (player.transform.position.y < -18)
+                    {
+                        Camera.main.transform.position = new Vector3(20, -18, cameraZ);
+                    }
+
+                    else
+                    {
+                        Camera.main.transform.position = new Vector3(20, 18, cameraZ);
+                    }
+                }
+            }
+        //}
+
+        /*
+        if (boss.transform.position.x >= player.transform.position.x)
             {//x1572
                 if(boss.transform.position.y >= player.transform.position.y)
                 {//y1572
@@ -529,11 +587,64 @@ public class CameraMove : MonoBehaviour {
                     }
                 }
             }
-        }
+            */
+        //}
 
         else if (isWatchingPlayerCenter)
         {
-            Camera.main.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, cameraZ);
+            if (player.transform.position.x >= -20 && player.transform.position.x < 20)
+            {
+                if (player.transform.position.y >= -18 && player.transform.position.y < 18)
+                {
+                    Camera.main.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, cameraZ);
+                }
+
+                else if (player.transform.position.y < -18)
+                {
+                    Camera.main.transform.position = new Vector3(player.transform.position.x, -18, cameraZ);
+                }
+
+                else
+                {
+                    Camera.main.transform.position = new Vector3(player.transform.position.x, 18, cameraZ);
+                }
+            }
+
+            else if (player.transform.position.x < -20)
+            {
+                if (player.transform.position.y >= -18 && player.transform.position.y < 18)
+                {
+                    Camera.main.transform.position = new Vector3(-20, player.transform.position.y, cameraZ);
+                }
+
+                else if (player.transform.position.y < -18)
+                {
+                    Camera.main.transform.position = new Vector3(-20, -18, cameraZ);
+                }
+
+                else
+                {
+                    Camera.main.transform.position = new Vector3(-20, 18, cameraZ);
+                }
+            }
+
+            else
+            {
+                if (player.transform.position.y >= -18 && player.transform.position.y < 18)
+                {
+                    Camera.main.transform.position = new Vector3(20, player.transform.position.y, cameraZ);
+                }
+
+                else if (player.transform.position.y < -18)
+                {
+                    Camera.main.transform.position = new Vector3(20, -18, cameraZ);
+                }
+
+                else
+                {
+                    Camera.main.transform.position = new Vector3(player.transform.position.x, 18, cameraZ);
+                }
+            }
         }
     }
 
