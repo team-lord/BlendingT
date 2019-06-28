@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class AttackFireP1 : MonoBehaviour {
 
     private bool canAttackFire;
+    private bool canAttackFire1;
 
     public float toggleDelay;
     private bool canToggle;
@@ -34,6 +35,7 @@ public class AttackFireP1 : MonoBehaviour {
     void Start()
     {
         canAttackFire = true;
+        canAttackFire1 = true;
 
         canToggle = true;
         isMelee = false;
@@ -50,7 +52,7 @@ public class AttackFireP1 : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (canAttackFire) {
+        if (canAttackFire && canAttackFire1) {
             if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift)) {
                 if (canToggle) {
                     StartCoroutine(CanToggle());
@@ -121,6 +123,16 @@ public class AttackFireP1 : MonoBehaviour {
         canFire = false;
         yield return new WaitForSeconds(fireDelay);
         canFire = true;
+    }
+    
+    public void Petrify(float time) {
+        StartCoroutine(CPetrify(time));
+    }
+
+    IEnumerator CPetrify(float time) {
+        canAttackFire1 = false;
+        yield return new WaitForSeconds(time);
+        canAttackFire1 = true;
     }
 
 }

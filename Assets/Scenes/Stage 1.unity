@@ -1486,6 +1486,16 @@ PrefabInstance:
       propertyPath: meleeAttackSound
       value: 
       objectReference: {fileID: 8300000, guid: 43249b57894318f4b94f0f4fea107b30, type: 3}
+    - target: {fileID: 8635578474770150011, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: attackCore
+      value: 
+      objectReference: {fileID: 522967749}
+    - target: {fileID: 8184690626530226898, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.326
+      objectReference: {fileID: 0}
     - target: {fileID: 6915752504286367966, guid: f4dcdff4ef82e3447965f3bb3920ac50,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -1570,16 +1580,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.x
       value: 0.27002335
-      objectReference: {fileID: 0}
-    - target: {fileID: 8635578474770150011, guid: b5a4ce52038e1be4c8dbccabd42ff661,
-        type: 3}
-      propertyPath: attackCore
-      value: 
-      objectReference: {fileID: 522967749}
-    - target: {fileID: 8184690626530226898, guid: b5a4ce52038e1be4c8dbccabd42ff661,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -10.326
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4dcdff4ef82e3447965f3bb3920ac50, type: 3}
@@ -1779,46 +1779,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 8635578474770150011, guid: b5a4ce52038e1be4c8dbccabd42ff661,
-        type: 3}
-      propertyPath: bulletFire
-      value: 
-      objectReference: {fileID: 8300000, guid: 3c727761c5a467142b88a03bef4fce24, type: 3}
-    - target: {fileID: 8635578474770150011, guid: b5a4ce52038e1be4c8dbccabd42ff661,
-        type: 3}
-      propertyPath: bulletFireSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 0e8a69f911e751542b389b8e4c31a837, type: 3}
-    - target: {fileID: 8635578474770150011, guid: b5a4ce52038e1be4c8dbccabd42ff661,
-        type: 3}
-      propertyPath: meleeAttackSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 43249b57894318f4b94f0f4fea107b30, type: 3}
-    - target: {fileID: 8635578474770150011, guid: b5a4ce52038e1be4c8dbccabd42ff661,
-        type: 3}
-      propertyPath: attackCore
-      value: 
-      objectReference: {fileID: 522967749}
-    - target: {fileID: 8184690626530226898, guid: b5a4ce52038e1be4c8dbccabd42ff661,
-        type: 3}
-      propertyPath: tumbleDelay
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 8184690626530226898, guid: b5a4ce52038e1be4c8dbccabd42ff661,
-        type: 3}
-      propertyPath: moveSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 5f9605f3bd0083245a167972058ff517, type: 3}
-    - target: {fileID: 8184690626530226898, guid: b5a4ce52038e1be4c8dbccabd42ff661,
-        type: 3}
-      propertyPath: moveSpeed
-      value: 250
-      objectReference: {fileID: 0}
-    - target: {fileID: 8184690626530226898, guid: b5a4ce52038e1be4c8dbccabd42ff661,
-        type: 3}
-      propertyPath: tumbleSpeed
-      value: 250
-      objectReference: {fileID: 0}
     - target: {fileID: 1670161517945502503, guid: b5a4ce52038e1be4c8dbccabd42ff661,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1874,6 +1834,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8286802743244192055, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: blanketImage
+      value: 
+      objectReference: {fileID: 241488714}
+    - target: {fileID: 8635578474770150011, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: bulletFire
+      value: 
+      objectReference: {fileID: 8300000, guid: 3c727761c5a467142b88a03bef4fce24, type: 3}
+    - target: {fileID: 8635578474770150011, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: bulletFireSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0e8a69f911e751542b389b8e4c31a837, type: 3}
+    - target: {fileID: 8635578474770150011, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: meleeAttackSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 43249b57894318f4b94f0f4fea107b30, type: 3}
+    - target: {fileID: 8635578474770150011, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: attackCore
+      value: 
+      objectReference: {fileID: 522967749}
     - target: {fileID: 6690072444194126885, guid: b5a4ce52038e1be4c8dbccabd42ff661,
         type: 3}
       propertyPath: heart
@@ -1884,6 +1869,26 @@ PrefabInstance:
       propertyPath: blanketImage
       value: 
       objectReference: {fileID: 241488714}
+    - target: {fileID: 8184690626530226898, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: tumbleDelay
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8184690626530226898, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: moveSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5f9605f3bd0083245a167972058ff517, type: 3}
+    - target: {fileID: 8184690626530226898, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 8184690626530226898, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: tumbleSpeed
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 170313143193524521, guid: b5a4ce52038e1be4c8dbccabd42ff661,
         type: 3}
       propertyPath: m_TagString
@@ -1964,11 +1969,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: PlayerMelee
       objectReference: {fileID: 0}
-    - target: {fileID: 8286802743244192055, guid: b5a4ce52038e1be4c8dbccabd42ff661,
-        type: 3}
-      propertyPath: blanketImage
-      value: 
-      objectReference: {fileID: 241488714}
     m_RemovedComponents:
     - {fileID: 7976742175384873060, guid: b5a4ce52038e1be4c8dbccabd42ff661, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b5a4ce52038e1be4c8dbccabd42ff661, type: 3}
@@ -6169,7 +6169,7 @@ PrefabInstance:
     - target: {fileID: 2417884461210072600, guid: dd70ce451ff8a35439816dd1ea4f6f0a,
         type: 3}
       propertyPath: debugPattern
-      value: 7
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3307093643530316898, guid: dd70ce451ff8a35439816dd1ea4f6f0a,
         type: 3}
