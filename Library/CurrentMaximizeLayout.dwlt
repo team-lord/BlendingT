@@ -264,7 +264,7 @@ MonoBehaviour:
   - {fileID: 9}
   - {fileID: 10}
   m_Selected: 0
-  m_LastSelected: 2
+  m_LastSelected: 1
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -296,7 +296,7 @@ MonoBehaviour:
   m_Gizmos: 1
   m_SceneIsLit: 0
   m_SceneLighting: 1
-  m_2DMode: 1
+  m_2DMode: 0
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
@@ -324,28 +324,28 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
     yGrid:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    zGrid:
       m_Target: 1
       speed: 2
       m_Value: 1
+    zGrid:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
   m_Rotation:
-    m_Target: {x: 0, y: 0, z: 0, w: 1}
+    m_Target: {x: 0.007809531, y: -0.004505114, z: 0.00003514363, w: 0.9999613}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0, w: 1}
+    m_Value: {x: 0.007809516, y: -0.004505106, z: 0.000035143563, w: 0.9999594}
   m_Size:
     m_Target: 35.13755
     speed: 2
     m_Value: 35.13755
   m_Ortho:
-    m_Target: 1
+    m_Target: 0
     speed: 2
-    m_Value: 1
+    m_Value: 0
   m_CameraSettings:
     m_Speed: 1
-    m_SpeedNormalized: 0.5
+    m_SpeedNormalized: 0.49748743
     m_SpeedMin: 0.01
     m_SpeedMax: 2
     m_EasingEnabled: 1
@@ -499,12 +499,12 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
-    - e00: 1
+    - e00: 0.6157895
       e01: 0
       e02: 0
       e03: 42
       e10: 0
-      e11: 1
+      e11: 0.6157895
       e12: 0
       e13: 31.5
       e20: 0
@@ -515,12 +515,12 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
-    - e00: 1
+    - e00: 0.69222224
       e01: 0
       e02: 0
       e03: 274
       e10: 0
-      e11: 1
+      e11: 0.69222224
       e12: 0
       e13: 224.5
       e20: 0
@@ -563,12 +563,12 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
-    - e00: 1
+    - e00: 0.88064706
       e01: 0
       e02: 0
       e03: 36
       e10: 0
-      e11: 1
+      e11: 0.88064706
       e12: 0
       e13: 177
       e20: 0
@@ -611,12 +611,12 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
-    - e00: 1
+    - e00: 0.59090906
       e01: 0
       e02: 0
       e03: 30
       e10: 0
-      e11: 1
+      e11: 0.59090906
       e12: 0
       e13: 203
       e20: 0
@@ -851,12 +851,12 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
-    - e00: 1
+    - e00: 0.9129922
       e01: 0
       e02: 0
       e03: 56
       e10: 0
-      e11: 1
+      e11: 0.9129922
       e12: 0
       e13: 30
       e20: 0
@@ -883,12 +883,12 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
-    - e00: 1
+    - e00: 0.58525926
       e01: 0
       e02: 0
       e03: 30
       e10: 0
-      e11: 1
+      e11: 0.58525926
       e12: 0
       e13: 24
       e20: 0
@@ -899,14 +899,126 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
-    - e00: 1
+    - e00: 0.6157895
       e01: 0
       e02: 0
       e03: 25
       e10: 0
-      e11: 1
+      e11: 0.6157895
       e12: 0
-      e13: 23
+      e13: 91.13158
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 0.609375
+      e01: 0
+      e02: 0
+      e03: -15.46875
+      e10: 0
+      e11: 0.609375
+      e12: 0
+      e13: 172.01562
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 0.6673684
+      e01: 0
+      e02: 0
+      e03: -18.368408
+      e10: 0
+      e11: 0.6673684
+      e12: 0
+      e13: 200.1
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 0.6673684
+      e01: 0
+      e02: 0
+      e03: -18.368408
+      e10: 0
+      e11: 0.6673684
+      e12: 0
+      e13: 200.1
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 0.6157895
+      e01: 0
+      e02: 0
+      e03: -15.789459
+      e10: 0
+      e11: 0.6157895
+      e12: 0
+      e13: 14.5
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 1.3573047
+      e01: 0
+      e02: 0
+      e03: -48.794373
+      e10: 0
+      e11: 1.3573047
+      e12: 0
+      e13: -19.491135
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 1.0695215
+      e01: 0
+      e02: 0
+      e03: -121.6351
+      e10: 0
+      e11: 1.0695215
+      e12: 0
+      e13: -140.72989
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 0.6030928
+      e01: 0
+      e02: 0
+      e03: -15.154633
+      e10: 0
+      e11: 0.6030928
+      e12: 0
+      e13: 80.97423
       e20: 0
       e21: 0
       e22: 1
@@ -1235,6 +1347,38 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
+    - e00: 0.6916501
+      e01: 0
+      e02: 0
+      e03: 136.57127
+      e10: 0
+      e11: 0.6916501
+      e12: 0
+      e13: 9.463635
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 0.6157895
+      e01: 0
+      e02: 0
+      e03: -15.789459
+      e10: 0
+      e11: 0.6157895
+      e12: 0
+      e13: 100.36842
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
     - e00: 1
       e01: 0
       e02: 0
@@ -1262,7 +1406,7 @@ MonoBehaviour:
   stateMachineGraphGUI: {fileID: 0}
   blendTreeGraph: {fileID: 0}
   blendTreeGraphGUI: {fileID: 0}
-  m_AutoLiveLink: 1
+  m_AutoLiveLink: 0
   m_MiniTool: 0
   m_LockTracker:
     m_IsLocked: 0

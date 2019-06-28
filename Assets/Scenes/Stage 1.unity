@@ -1052,6 +1052,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1598213532683792956, guid: 806a6d949ad496d49b7889a8a7379e78,
+        type: 3}
+      propertyPath: m_Name
+      value: Plank5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598213532683792956, guid: 806a6d949ad496d49b7889a8a7379e78,
+        type: 3}
+      propertyPath: m_Name
+      value: Plank5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598213532683792956, guid: 806a6d949ad496d49b7889a8a7379e78,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 47277985177201167, guid: 806a6d949ad496d49b7889a8a7379e78,
         type: 3}
       propertyPath: m_Offset.y
@@ -1481,7 +1496,7 @@ PrefabInstance:
     - target: {fileID: 6915752504286367966, guid: f4dcdff4ef82e3447965f3bb3920ac50,
         type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 6915752504286367966, guid: f4dcdff4ef82e3447965f3bb3920ac50,
         type: 3}
@@ -1585,7 +1600,7 @@ PrefabInstance:
     - target: {fileID: 6915752504286367966, guid: f4dcdff4ef82e3447965f3bb3920ac50,
         type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6915752504286367966, guid: f4dcdff4ef82e3447965f3bb3920ac50,
         type: 3}
@@ -1745,7 +1760,7 @@ PrefabInstance:
     - target: {fileID: 6915752504286367966, guid: f4dcdff4ef82e3447965f3bb3920ac50,
         type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 6915752504286367966, guid: f4dcdff4ef82e3447965f3bb3920ac50,
         type: 3}
@@ -1996,7 +2011,7 @@ PrefabInstance:
     - target: {fileID: 1147824921525264408, guid: f09ad738cc209274a863759f2e169e36,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 5
+      value: 32767
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f09ad738cc209274a863759f2e169e36, type: 3}
@@ -2136,6 +2151,11 @@ PrefabInstance:
       propertyPath: heart
       value: 
       objectReference: {fileID: 123060334}
+    - target: {fileID: 6690072444194126885, guid: b5a4ce52038e1be4c8dbccabd42ff661,
+        type: 3}
+      propertyPath: maxHealth
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7976742175384873060, guid: b5a4ce52038e1be4c8dbccabd42ff661,
         type: 3}
       propertyPath: blanketImage
@@ -2590,7 +2610,7 @@ PrefabInstance:
     - target: {fileID: 6915752504286367966, guid: f4dcdff4ef82e3447965f3bb3920ac50,
         type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 6915752504286367966, guid: f4dcdff4ef82e3447965f3bb3920ac50,
         type: 3}
@@ -2885,6 +2905,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.x
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598213532683792956, guid: 806a6d949ad496d49b7889a8a7379e78,
+        type: 3}
+      propertyPath: m_Name
+      value: Plank4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598213532683792956, guid: 806a6d949ad496d49b7889a8a7379e78,
+        type: 3}
+      propertyPath: m_Name
+      value: Plank4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598213532683792956, guid: 806a6d949ad496d49b7889a8a7379e78,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 47277985177201167, guid: 806a6d949ad496d49b7889a8a7379e78,
         type: 3}
