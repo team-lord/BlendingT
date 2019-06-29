@@ -22,6 +22,8 @@ public class Special0Bee2 : MonoBehaviour
 
     Animator animator;
 
+    private bool isReady;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +33,8 @@ public class Special0Bee2 : MonoBehaviour
         player = GameObject.Find("Player");
 
         animator = GetComponent<Animator>();
+
+        isReady = false;
     }
 
     // Update is called once per frame
@@ -44,10 +48,23 @@ public class Special0Bee2 : MonoBehaviour
             Rotate();
             rotateTime = 0;
         }
-        if (fireTime >= fireDelay) {
-            Fire();
-            fireTime = 0;
+
+        if (!isReady)
+        {
+            if(fireTime > 1.5f)
+            {
+                isReady = true;
+                fireTime = 0;
+            }
+        } else
+        {
+            if (fireTime >= fireDelay)
+            {
+                Fire();
+                fireTime = 0;
+            }
         }
+
 
 
     }

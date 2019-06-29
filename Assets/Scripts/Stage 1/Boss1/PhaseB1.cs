@@ -28,6 +28,9 @@ public class PhaseB1 : MonoBehaviour
     private GameObject platformStart;
     AudioSource platformStartaudio;
 
+    GameObject old;
+    AudioSource oldaudio;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,6 +52,9 @@ public class PhaseB1 : MonoBehaviour
         platformStart = GameObject.Find("PlatformStart");
         platformStartaudio = platformStart.GetComponent<AudioSource>();
 
+        old = GameObject.Find("Old");
+        oldaudio = old.GetComponent<AudioSource>();
+
         StartCoroutine(PlatformStartOff());
     }
 
@@ -60,8 +66,8 @@ public class PhaseB1 : MonoBehaviour
 
     public void Phase1() {
 
-        player.transform.position = Vector3.zero;
-        StartCoroutine(ChangeBGM(platformAaudio, platformBaudio));
+        player.transform.position = new Vector3(-12, 12, 0);
+        //StartCoroutine(ChangeBGM(platformAaudio, platformBaudio));
 
         GameObject[] enemyBullets = GameObject.FindGameObjectsWithTag("EnemyBullet");
         foreach (GameObject enemyBullet in enemyBullets) {
@@ -93,7 +99,7 @@ public class PhaseB1 : MonoBehaviour
 
     public void Phase2() {
         
-        StartCoroutine(ChangeBGM(platformBaudio, platformCaudio));
+        //StartCoroutine(ChangeBGM(oldaudio, platformCaudio));
 
         //Instantiate(blanket, Vector3.zero, Quaternion.identity);
         Instantiate(smoke, Vector3.zero, Quaternion.identity);

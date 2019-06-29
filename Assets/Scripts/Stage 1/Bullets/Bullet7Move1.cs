@@ -23,6 +23,7 @@ public class Bullet7Move1 : MonoBehaviour {
     
     // Update is called once per frame
     void Update() {
+        
         time += Time.deltaTime;
         
         scale = 24 * Mathf.Pow(time / 2 - 0.5f, 3) - 2 * time + 3;
@@ -33,13 +34,18 @@ public class Bullet7Move1 : MonoBehaviour {
             
             Destroy(gameObject);
         }
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (isReady) {
             if (collision.tag == "Player") {
-                player.GetComponent<AttackFireP1>().Petrify(petrifyTime);
-                isReady = false;
+                if (!player.GetComponent<HealthP1>().GetIsInvincible())
+                {
+                    player.GetComponent<AttackFireP1>().Petrify(petrifyTime);
+                    isReady = false;
+                }
+                
             }
         }
     }

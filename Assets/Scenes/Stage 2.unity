@@ -651,12 +651,12 @@ PrefabInstance:
     - target: {fileID: 1970104549925559450, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
       propertyPath: phaseMaxHealths.Array.data[2]
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1970104549925559450, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
       propertyPath: phaseMaxHealths.Array.data[3]
-      value: 1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1970104549925559450, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
@@ -666,8 +666,13 @@ PrefabInstance:
     - target: {fileID: 1970104549925559450, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
       propertyPath: phaseMaxHealths.Array.data[4]
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 1970104549925559450, guid: 2eabab2a25314f64bb18ccb22141b941,
+        type: 3}
+      propertyPath: hitHoney
+      value: 
+      objectReference: {fileID: 8300000, guid: c63e136c1fea5404d99c60b44ec7a97a, type: 3}
     - target: {fileID: 8443668096482587045, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
       propertyPath: trashmobHoney
@@ -875,7 +880,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &335450889
 AudioSource:
   m_ObjectHideFlags: 0

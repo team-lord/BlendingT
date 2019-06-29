@@ -17,6 +17,8 @@ public class HealthB2 : MonoBehaviour {
     public Text health;
 
     Animator animator;
+    AudioSource audio;
+    public AudioClip hitHoney;
 
     // Start is called before the first frame update
     void Start() {
@@ -31,6 +33,7 @@ public class HealthB2 : MonoBehaviour {
         animator = GetComponent<Animator>();
 
         health.text = (phaseHealths[0] + phaseHealths[1]).ToString();
+        audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -58,6 +61,7 @@ public class HealthB2 : MonoBehaviour {
         } else if (phase == 2) {
             if (isReady) {
                 if (collision.tag == "PlayerBulletHoney") {
+                    audio.PlayOneShot(hitHoney);
                     phaseHealths[2]--;
                     CheckAlive();
                 }
