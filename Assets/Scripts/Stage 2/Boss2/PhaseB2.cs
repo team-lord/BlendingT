@@ -42,6 +42,16 @@ public class PhaseB2 : MonoBehaviour
     public void Phase2() {
         animator.SetBool("spin", false);
 
+        GameObject[] enemyBullets = GameObject.FindGameObjectsWithTag("EnemyBullet");
+        foreach (GameObject enemyBullet in enemyBullets) {
+            Destroy(enemyBullet);
+        }
+
+        GameObject[] playerBullets = GameObject.FindGameObjectsWithTag("PlayerBullet");
+        foreach (GameObject playerBullet in playerBullets) {
+            Destroy(playerBullet);
+        }
+
         StartCoroutine(Phase2CameraWalk());
 
         Instantiate(blanket, Vector3.zero, Quaternion.identity);
@@ -64,6 +74,8 @@ public class PhaseB2 : MonoBehaviour
     }
 
     public void Phase3() {
+        GetComponent<PatternB2>().CPatternStart();
+
         GetComponent<PatternB2>().PatternPhase(true);
         GetComponent<PatternB2>().ForcePatternStart();
         GetComponent<MoveB2>().IsMove1(true);
@@ -85,14 +97,15 @@ public class PhaseB2 : MonoBehaviour
     }
 
     public void Phase5() {
-
+        GetComponent<HealthB2>().Phase(5);
+        
         Instantiate(blanket, Vector3.zero, Quaternion.identity);
         Camera.main.GetComponent<CameraMove2>().WatchPlayerCenter();
 
         GetComponent<MoveB2>().IsMove1(false);
         GetComponent<PatternB2>().PatternPhase(false);
 
-        Instantiate(levitationCore, transform.position, Quaternion.identity);
+        Instantiate(levitationCore, transform.position, Quaternion.identity); // 끝
 
         transform.position = new Vector3(64, 0, 0);
 

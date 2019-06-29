@@ -40,7 +40,10 @@ public class PuzzleBlanket1 : MonoBehaviour
             // PuzzleBall이 깨지는 애니메이션 시작
             // 이후 PuzzleBall Destroy.
 
-            Instantiate(blanket, transform.position, Quaternion.identity);            
+            Instantiate(blanket, transform.position, Quaternion.identity);
+
+            GameObject.Find("Puzzle").transform.position = new Vector3(64, 0, 0);
+
             GameObject.Find("AudienceManager").GetComponent<AudienceManager1>().PuzzleComplete();
 
             StartCoroutine(Phase2());

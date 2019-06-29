@@ -63,6 +63,11 @@ public class PhaseB1 : MonoBehaviour
         player.transform.position = Vector3.zero;
         StartCoroutine(ChangeBGM(platformAaudio, platformBaudio));
 
+        GameObject[] enemyBullets = GameObject.FindGameObjectsWithTag("EnemyBullet");
+        foreach (GameObject enemyBullet in enemyBullets) {
+            Destroy(enemyBullet);
+        }
+
         GameObject[] playerBullets = GameObject.FindGameObjectsWithTag("PlayerBullet");
         foreach (GameObject playerBullet in playerBullets) {
             Destroy(playerBullet);
@@ -88,7 +93,6 @@ public class PhaseB1 : MonoBehaviour
 
     public void Phase2() {
         
-        Destroy(GameObject.Find("Puzzle"));
         StartCoroutine(ChangeBGM(platformBaudio, platformCaudio));
 
         //Instantiate(blanket, Vector3.zero, Quaternion.identity);
@@ -96,6 +100,8 @@ public class PhaseB1 : MonoBehaviour
         transform.position = Vector3.zero;
 
         curtain.GetComponent<Curtain1>().Change();
+
+        GetComponent<PatternB1>().CPatternStart();
 
         GetComponent<MoveFireB1>().IsMove2(true);
         GetComponent<PatternB1>().IsPatternPhase(true);

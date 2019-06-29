@@ -68,6 +68,11 @@ public class PatternB2 : MonoBehaviour
         StartCoroutine(PatternStart());
     }
 
+    public void CPatternStart() {
+        patternStart = false;
+        StartCoroutine(PatternStart());
+    }
+
     IEnumerator PatternStart() {
         GetComponent<MoveB2>().IsMove(true);
         GetComponent<MoveB2>().IsMove1(true);

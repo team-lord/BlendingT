@@ -44,7 +44,7 @@ public class JumpB2 : MonoBehaviour {
         yield return new WaitForSeconds(0.6f);
         transform.position = new Vector3(64, 0, 0);
         GetComponent<CircleCollider2D>().enabled = true;
-        Camera.main.GetComponent<CameraMove2>().WatchPlayerCenter();
+        // Camera.main.GetComponent<CameraMove2>().WatchPlayerCenter();
     }
 
     public void Fall(Vector3 _vector3) {
@@ -55,7 +55,7 @@ public class JumpB2 : MonoBehaviour {
         isJump = false;
         transform.position = _vector3;
 
-        Camera.main.GetComponent<CameraMove2>().WatchPlayer();
+        // Camera.main.GetComponent<CameraMove2>().WatchPlayer();
 
         GetComponent<MoveB2>().IsMove2(true);
 
@@ -70,7 +70,7 @@ public class JumpB2 : MonoBehaviour {
         isJump = false;
         transform.position = _vector3;
 
-        Camera.main.GetComponent<CameraMove2>().WatchPlayer();
+        // Camera.main.GetComponent<CameraMove2>().WatchPlayer();
 
         GetComponent<MoveB2>().IsMove2(true);
 
