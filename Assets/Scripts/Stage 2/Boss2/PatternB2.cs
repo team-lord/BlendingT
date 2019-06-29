@@ -26,7 +26,8 @@ public class PatternB2 : MonoBehaviour
         previousPattern = -1;
         currentPattern = -1;
 
-        patternStart = true;
+        patternStart = false;
+        StartCoroutine(PatternStart());
 
         patternArray = new int[] {0, 1, 2, 3, 4, 7};
 
