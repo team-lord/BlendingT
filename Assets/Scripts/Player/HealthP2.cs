@@ -84,7 +84,6 @@ public class HealthP2 : MonoBehaviour {
     }
 
     public bool GetIsHoneyInvincible() {
-        Debug.Log("Get");
         return isHoneyInvincible;
     }
 

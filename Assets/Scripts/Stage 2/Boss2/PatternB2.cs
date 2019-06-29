@@ -29,7 +29,7 @@ public class PatternB2 : MonoBehaviour
         patternStart = false;
         StartCoroutine(PatternStart());
 
-        patternArray = new int[] {0, 1, 2, 3, 4, 7};
+        patternArray = new int[] {0, 1, 2, 4};
 
         patternPhase = true;
 

@@ -585,7 +585,7 @@ PrefabInstance:
     - target: {fileID: 7824404991978632012, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
       propertyPath: patternDelay
-      value: 8
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3397415982242047855, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
@@ -602,6 +602,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FlipY
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3397415982242047855, guid: 2eabab2a25314f64bb18ccb22141b941,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 32767
       objectReference: {fileID: 0}
     - target: {fileID: 1168176110234124655, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
@@ -631,7 +636,7 @@ PrefabInstance:
     - target: {fileID: 1970104549925559450, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
       propertyPath: phaseMaxHealths.Array.data[0]
-      value: 100
+      value: 333
       objectReference: {fileID: 0}
     - target: {fileID: 1970104549925559450, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
@@ -641,7 +646,7 @@ PrefabInstance:
     - target: {fileID: 1970104549925559450, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
       propertyPath: phaseMaxHealths.Array.data[1]
-      value: 100
+      value: 333
       objectReference: {fileID: 0}
     - target: {fileID: 1970104549925559450, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
@@ -656,7 +661,7 @@ PrefabInstance:
     - target: {fileID: 1970104549925559450, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
       propertyPath: phaseMaxHealths.Array.data[3]
-      value: 100
+      value: 333
       objectReference: {fileID: 0}
     - target: {fileID: 1970104549925559450, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
@@ -666,7 +671,7 @@ PrefabInstance:
     - target: {fileID: 1970104549925559450, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
       propertyPath: phaseMaxHealths.Array.data[4]
-      value: 100
+      value: 333
       objectReference: {fileID: 0}
     - target: {fileID: 1970104549925559450, guid: 2eabab2a25314f64bb18ccb22141b941,
         type: 3}
@@ -1339,6 +1344,11 @@ PrefabInstance:
       propertyPath: moveSpeedStorage
       value: 250
       objectReference: {fileID: 0}
+    - target: {fileID: 5245720087855916295, guid: 2e784ce3b90483f478c59b897f3b6584,
+        type: 3}
+      propertyPath: tumbleSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 9e5070d813d4eac479cf2658c4a85d6c, type: 3}
     - target: {fileID: 4927763103399916976, guid: 2e784ce3b90483f478c59b897f3b6584,
         type: 3}
       propertyPath: heart
@@ -1347,7 +1357,7 @@ PrefabInstance:
     - target: {fileID: 4927763103399916976, guid: 2e784ce3b90483f478c59b897f3b6584,
         type: 3}
       propertyPath: maxHealth
-      value: 20
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 703716484847514956, guid: 2e784ce3b90483f478c59b897f3b6584,
         type: 3}
