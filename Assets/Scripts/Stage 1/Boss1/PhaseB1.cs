@@ -115,7 +115,9 @@ public class PhaseB1 : MonoBehaviour
 
     public void Phase3() {
         //Instantiate(blanket, Vector3.zero, Quaternion.identity);
-        Camera.main.GetComponent<CameraMove1>().WatchPlayerCenter();
+        // Camera.main.GetComponent<CameraMove1>().WatchPlayerCenter();
+
+        StartCoroutine(Phase3Camera());
 
         GetComponent<MoveFireB1>().IsMove2(false);
         GetComponent<PatternB1>().IsPatternPhase(false);
@@ -129,6 +131,13 @@ public class PhaseB1 : MonoBehaviour
 
 
     }
+
+    IEnumerator Phase3Camera() {
+        Camera.main.GetComponent<CameraMove1>().WatchCore(transform.position);
+        yield return new WaitForSeconds(2f);
+        Camera.main.GetComponent<CameraMove1>().WatchPlayerCenter();
+    }
+    
 
     IEnumerator PlatformStartOff()
     {

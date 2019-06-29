@@ -17,7 +17,6 @@ public class CameraMove2 : MonoBehaviour
     }
 
     public void WatchPlayer() {
-        Debug.Log("who");
         GetComponent<CameraMove>().IsWatchingPlayer(true);
     }
 
@@ -27,5 +26,9 @@ public class CameraMove2 : MonoBehaviour
 
     public void WatchRight() {
         GetComponent<CameraMove>().IsWatchingRight(true);
+    }
+
+    public void WatchCore(Vector3 position) {
+        GetComponent<CameraMove>().IsWatchingCore(true, position);
     }
 }

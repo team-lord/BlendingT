@@ -68,6 +68,8 @@ public class PhaseB2 : MonoBehaviour
     }
 
     IEnumerator Phase2CameraWalk() {
+        Camera.main.GetComponent<CameraMove2>().WatchPlayerCenter();
+        yield return new WaitForSeconds(1f);
         Camera.main.GetComponent<CameraMove2>().WatchRight();
         yield return new WaitForSeconds(1f);
         Camera.main.GetComponent<CameraMove2>().WatchPlayerCenter();
@@ -100,7 +102,8 @@ public class PhaseB2 : MonoBehaviour
         GetComponent<HealthB2>().Phase(5);
         
         Instantiate(blanket, Vector3.zero, Quaternion.identity);
-        Camera.main.GetComponent<CameraMove2>().WatchPlayerCenter();
+        StartCoroutine(Phase5Camera());
+        // Camera.main.GetComponent<CameraMove2>().WatchPlayerCenter();
 
         GetComponent<MoveB2>().IsMove1(false);
         GetComponent<PatternB2>().PatternPhase(false);
@@ -126,6 +129,12 @@ public class PhaseB2 : MonoBehaviour
         Instantiate(special1Maker, Vector3.zero, transform.rotation);
 
         */
+    }
+
+    IEnumerator Phase5Camera() {
+        Camera.main.GetComponent<CameraMove2>().WatchCore(transform.position);
+        yield return new WaitForSeconds(2f);
+        Camera.main.GetComponent<CameraMove2>().WatchPlayerCenter();
     }
 
     public void Phase6() {

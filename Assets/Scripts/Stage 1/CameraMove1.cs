@@ -65,4 +65,8 @@ public class CameraMove1 : MonoBehaviour
         watchPuzzleBall2nd = false;
         GetComponent<CameraMove>().IsWatchingPlayerCenter(true);
     }
+
+    public void WatchCore(Vector3 position) {
+        GetComponent<CameraMove>().IsWatchingCore(true, position);
+    }
 }

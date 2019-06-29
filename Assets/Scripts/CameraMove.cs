@@ -654,9 +654,14 @@ void LateUpdate()
         else if (isWatchingRight)
         {
             Camera.main.transform.position = new Vector3(18, 0, cameraZ);
+        } else if(isWatchingCore) {
+            Camera.main.transform.position = new Vector3(corePosition.x, corePosition.y, cameraZ);
         }
 
     }
+
+    private bool isWatchingCore = false;
+    private Vector3 corePosition;
 
     public void IsWatchingPlayer(bool _bool)
     {
@@ -665,6 +670,7 @@ void LateUpdate()
         {
             isWatchingPlayerCenter = false;
             isWatchingRight = false;
+            isWatchingCore = false;
         }
     }
 
@@ -675,6 +681,7 @@ void LateUpdate()
         {
             isWatchingPlayer = false;
             isWatchingRight = false;
+            isWatchingCore = false;
         }
     }
 
@@ -683,6 +690,18 @@ void LateUpdate()
         if (isWatchingRight) {
             isWatchingPlayer = false;
             isWatchingPlayerCenter = false;
+            isWatchingCore = false;
+        }
+    }
+
+    public void IsWatchingCore(bool _bool, Vector3 position) {
+        isWatchingCore = _bool;
+        if (_bool) {
+            isWatchingPlayer = false;
+            isWatchingPlayerCenter = false;
+            isWatchingRight = false;
+
+            corePosition = position;
         }
     }
 }
