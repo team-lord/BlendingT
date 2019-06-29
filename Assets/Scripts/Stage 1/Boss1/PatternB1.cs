@@ -60,7 +60,7 @@ public class PatternB1 : MonoBehaviour
     }
 
     void Pattern() {
-        /*
+        
        
         do {
             _number = Random.Range(0, patternArray.Length); 
@@ -74,8 +74,8 @@ public class PatternB1 : MonoBehaviour
         } else {
             Instantiate(patternMakers[currentPattern], transform.position, transform.rotation);
         }
-        */
-       Instantiate(patternMakers[debugPattern], transform.position, transform.rotation);
+       
+       // Instantiate(patternMakers[debugPattern], transform.position, transform.rotation);
        //Instantiate(forgedPatternMakers[debugPattern], transform.position, transform.rotation);
 
     }
