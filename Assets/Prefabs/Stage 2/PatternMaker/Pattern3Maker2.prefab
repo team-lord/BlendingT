@@ -60,8 +60,8 @@ MonoBehaviour:
   bullet3s:
   - {fileID: 1842941778165274136, guid: 2c0783eec6bcba642ac8ded553ffb02a, type: 3}
   - {fileID: 6136551738744359377, guid: 8ad3550179d23da4ba5aa7a5fbabce67, type: 3}
-  repetition: 6
-  delay: 0.5
+  repetition: 12
+  delay: 0.25
   angle: 8
 --- !u!58 &7777960381341709501
 CircleCollider2D:

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8225,7 +8225,7 @@ PrefabInstance:
     - target: {fileID: 3302246326409267444, guid: dd70ce451ff8a35439816dd1ea4f6f0a,
         type: 3}
       propertyPath: phase2MaxHealth
-      value: 1000
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3302246326409267444, guid: dd70ce451ff8a35439816dd1ea4f6f0a,
         type: 3}
