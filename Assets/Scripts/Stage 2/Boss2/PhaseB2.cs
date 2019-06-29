@@ -76,6 +76,8 @@ public class PhaseB2 : MonoBehaviour
     }
 
     public void Phase3() {
+        Camera.main.GetComponent<CameraMove2>().WatchPlayer();
+
         GetComponent<PatternB2>().CPatternStart();
 
         GetComponent<PatternB2>().PatternPhase(true);

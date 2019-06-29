@@ -150,6 +150,7 @@ public class HealthB2 : MonoBehaviour {
         animator.SetTrigger("idle");
         GetComponent<MesHealthB2>().IsMes(false);
         GetComponent<PhaseB2>().Phase3();
+        GetComponent<PatternB2>().CPatternStart();
     }
 
     public void Phase(int i) {

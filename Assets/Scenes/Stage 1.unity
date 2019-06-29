@@ -616,11 +616,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1077427192}
-<<<<<<< HEAD
   m_RootOrder: 21
-=======
-  m_RootOrder: 25
->>>>>>> 6494717c13ff9416a61fba950c818a93e9572ea6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!68 &157448415
 EdgeCollider2D:
@@ -2619,14 +2615,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: IdleBullet (8)
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-=======
-    - target: {fileID: 1507791027336151324, guid: b5d9d235dfe858142a24b21b865232aa,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
->>>>>>> 6494717c13ff9416a61fba950c818a93e9572ea6
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5d9d235dfe858142a24b21b865232aa, type: 3}
 --- !u!1 &960605865 stripped
@@ -3502,11 +3490,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1077427192}
-<<<<<<< HEAD
   m_RootOrder: 20
-=======
-  m_RootOrder: 21
->>>>>>> 6494717c13ff9416a61fba950c818a93e9572ea6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1548339334
 SpriteRenderer:
@@ -4569,14 +4553,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: IdleBullet (7)
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-=======
-    - target: {fileID: 1507791027336151324, guid: b5d9d235dfe858142a24b21b865232aa,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
->>>>>>> 6494717c13ff9416a61fba950c818a93e9572ea6
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5d9d235dfe858142a24b21b865232aa, type: 3}
 --- !u!1 &2020465816
@@ -5310,11 +5286,7 @@ PrefabInstance:
     - target: {fileID: 7363564043833440867, guid: 4f4a99dd2337e0e48af8710eb3917a96,
         type: 3}
       propertyPath: m_RootOrder
-<<<<<<< HEAD
       value: 7
-=======
-      value: 9
->>>>>>> 6494717c13ff9416a61fba950c818a93e9572ea6
       objectReference: {fileID: 0}
     - target: {fileID: 7607126918385897939, guid: 4f4a99dd2337e0e48af8710eb3917a96,
         type: 3}
@@ -5439,11 +5411,7 @@ PrefabInstance:
     - target: {fileID: 954436649641085443, guid: 4f4a99dd2337e0e48af8710eb3917a96,
         type: 3}
       propertyPath: m_RootOrder
-<<<<<<< HEAD
       value: 7
-=======
-      value: 8
->>>>>>> 6494717c13ff9416a61fba950c818a93e9572ea6
       objectReference: {fileID: 0}
     - target: {fileID: 9085237735442929687, guid: 4f4a99dd2337e0e48af8710eb3917a96,
         type: 3}
