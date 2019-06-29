@@ -134,8 +134,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 6
-  moveSpeed: 4.2
-  delay: 0.02
+  moveSpeed: 4.5
+  delay: 0.01
 --- !u!58 &5188090308395687320
 CircleCollider2D:
   m_ObjectHideFlags: 0
