@@ -91,6 +91,11 @@ public class PatternB1 : MonoBehaviour
         
     }
 
+    public void CPatternStart() {
+        patternStart = false;
+        StartCoroutine(PatternStart());
+    }
+
     IEnumerator PatternStart() {
         yield return new WaitForSeconds(patternDelay);
         patternStart = true;
@@ -104,6 +109,7 @@ public class PatternB1 : MonoBehaviour
         currentPattern = previousPattern;
         patternStart = true;
     }
+
     IEnumerator ForCardFireSmooth() //보스의 cardFire애니메이션이 자연스럽지 못해서 만들어놓음 문제있으면 자세한건 이재상한테 물어보셈
     {
         yield return new WaitForSeconds(0.5f);

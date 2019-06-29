@@ -99,8 +99,11 @@ public class HealthB2 : MonoBehaviour {
             ChangeHeart01();
             if (phaseHealths[1] <= 0) {
                 phaseHealths[1] = 0;
-                GetComponent<PhaseB2>().Phase2();
                 health.text = phaseHealths[2].ToString();
+                GetComponent<PatternB2>().PatternEnd();
+                Destroy(GameObject.FindGameObjectWithTag("PatternMaker"));
+                GetComponent<PhaseB2>().Phase2();
+
             }
         } else if (phase == 2) {
             animator.SetFloat("phase2Health", phaseHealths[2]);
@@ -121,8 +124,9 @@ public class HealthB2 : MonoBehaviour {
             ChangeHeart34();
             if (phaseHealths[4] <= 0) {
                 phaseHealths[4] = 0;
-                GetComponent<PhaseB2>().Phase5();
+                GetComponent<PatternB2>().PatternEnd();
                 Destroy(GameObject.FindGameObjectWithTag("PatternMaker"));
+                GetComponent<PhaseB2>().Phase5();
             }
         } else if (phase == 5) {
             if (phaseHealths[5] <= 0) {

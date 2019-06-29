@@ -276,6 +276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   phaseMaxHealths: 02000000020000000200000032000000020000000200000002000000
   phase2MesTime: 5
+  health: {fileID: 0}
 --- !u!114 &8443668096482587045
 MonoBehaviour:
   m_ObjectHideFlags: 0

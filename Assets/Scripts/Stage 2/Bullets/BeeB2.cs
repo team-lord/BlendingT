@@ -130,7 +130,7 @@ public class BeeB2 : MonoBehaviour {
         }
 
         if (isLethal) {
-            if (collision.tag == "PlayerMelee") {
+            if (collision.tag == "PlayerBullet") {
                 Destroy(gameObject);
             }
         } else {

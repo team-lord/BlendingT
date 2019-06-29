@@ -31,6 +31,7 @@ public class PuzzleB1 : MonoBehaviour
             if (isReady) {
                 isReady = false;
                 GameObject.Find("Puzzle").transform.Translate(new Vector3(-60, 0, 0));
+                GameObject.Find("PuzzleBlanket").transform.position = new Vector3(-7.74f, -12.68f);
             }
             time += Time.deltaTime;
             if(time > deductionDelay) {

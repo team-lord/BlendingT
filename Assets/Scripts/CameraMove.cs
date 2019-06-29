@@ -314,7 +314,7 @@ void LateUpdate()
 
                     else
                     {//x2
-                        if (player.transform.position.y - boss.transform.position.y >= -8)
+                        if (player.transform.position.y - boss.transform.position.y < 8)
                         {//y368
                             if ((player.transform.position.y + boss.transform.position.y) * 0.5f < 17 && (player.transform.position.y + boss.transform.position.y) * 0.5f >= -17)
                             {
