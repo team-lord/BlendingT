@@ -16,6 +16,7 @@ TagManager:
   - PatternMaker
   - PlayerMelee
   - NearbyWall
+  - TrashMob
   layers:
   - Default
   - TransparentFX

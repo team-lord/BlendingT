@@ -67,7 +67,7 @@ public class PhaseB1 : MonoBehaviour
     public void Phase1() {
 
         player.transform.position = new Vector3(-12, 12, 0);
-        //StartCoroutine(ChangeBGM(platformAaudio, platformBaudio));
+        StartCoroutine(ChangeBGM(platformAaudio, platformBaudio));
 
         GameObject[] enemyBullets = GameObject.FindGameObjectsWithTag("EnemyBullet");
         foreach (GameObject enemyBullet in enemyBullets) {
@@ -99,7 +99,7 @@ public class PhaseB1 : MonoBehaviour
 
     public void Phase2() {
         
-        //StartCoroutine(ChangeBGM(oldaudio, platformCaudio));
+        StartCoroutine(ChangeBGM(oldaudio, platformCaudio));
 
         //Instantiate(blanket, Vector3.zero, Quaternion.identity);
         Instantiate(smoke, Vector3.zero, Quaternion.identity);
@@ -122,6 +122,24 @@ public class PhaseB1 : MonoBehaviour
     public void Phase3() {
         //Instantiate(blanket, Vector3.zero, Quaternion.identity);
         // Camera.main.GetComponent<CameraMove1>().WatchPlayerCenter();
+
+        GameObject[] enemyBullets = GameObject.FindGameObjectsWithTag("EnemyBullet");
+        foreach (GameObject enemyBullet in enemyBullets)
+        {
+            Destroy(enemyBullet);
+        }
+
+        GameObject[] playerBullets = GameObject.FindGameObjectsWithTag("PlayerBullet");
+        foreach (GameObject playerBullet in playerBullets)
+        {
+            Destroy(playerBullet);
+        }
+
+        GameObject[] boxes = GameObject.FindGameObjectsWithTag("SurpriseBox");
+        foreach (GameObject box in boxes)
+        {
+            Destroy(box);
+        }
 
         StartCoroutine(Phase3Camera());
 

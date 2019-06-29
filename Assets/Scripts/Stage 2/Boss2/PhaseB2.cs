@@ -52,6 +52,12 @@ public class PhaseB2 : MonoBehaviour
             Destroy(playerBullet);
         }
 
+        GameObject[] mines = GameObject.FindGameObjectsWithTag("EnemyBulletMine");
+        foreach (GameObject mine in mines)
+        {
+            Destroy(mine);
+        }
+
         StartCoroutine(Phase2CameraWalk());
 
         Instantiate(blanket, Vector3.zero, Quaternion.identity);
@@ -101,6 +107,31 @@ public class PhaseB2 : MonoBehaviour
     }
 
     public void Phase5() {
+
+        GameObject[] enemyBullets = GameObject.FindGameObjectsWithTag("EnemyBullet");
+        foreach (GameObject enemyBullet in enemyBullets)
+        {
+            Destroy(enemyBullet);
+        }
+
+        GameObject[] playerBullets = GameObject.FindGameObjectsWithTag("PlayerBullet");
+        foreach (GameObject playerBullet in playerBullets)
+        {
+            Destroy(playerBullet);
+        }
+
+        GameObject[] mines = GameObject.FindGameObjectsWithTag("EnemyBulletMine");
+        foreach (GameObject mine in mines)
+        {
+            Destroy(mine);
+        }
+
+        GameObject[] bees = GameObject.FindGameObjectsWithTag("TrashMob");
+        foreach (GameObject bee in bees)
+        {
+            Destroy(bee);
+        }
+
         GetComponent<HealthB2>().Phase(5);
         
         Instantiate(blanket, Vector3.zero, Quaternion.identity);
@@ -110,10 +141,13 @@ public class PhaseB2 : MonoBehaviour
         GetComponent<MoveB2>().IsMove1(false);
         GetComponent<PatternB2>().PatternPhase(false);
 
+        StartCoroutine(Death());
+
+        /*
         Instantiate(levitationCore, transform.position, Quaternion.identity); // 끝
 
         transform.position = new Vector3(64, 0, 0);
-
+        */
 
         // 데모 버젼 끝
 
@@ -142,5 +176,15 @@ public class PhaseB2 : MonoBehaviour
     public void Phase6() {
         GetComponent<HealthB2>().Phase(6);
         // TODO - 이벤트 씬
+    }
+
+    IEnumerator Death()
+    {
+        animator.SetTrigger("death");
+        yield return new WaitForSeconds(0.6f);
+
+        Instantiate(levitationCore, new Vector3(transform.position.x, transform.position.y - 1f,0), Quaternion.identity); // 끝
+
+        transform.position = new Vector3(64, 0, 0);
     }
 }

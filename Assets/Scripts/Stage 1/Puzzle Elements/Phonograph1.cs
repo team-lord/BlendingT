@@ -42,7 +42,7 @@ public class Phonograph1 : MonoBehaviour
         old = GameObject.Find("Old");
         oldaudio = old.GetComponent<AudioSource>();
 
-       // animator.GetComponent<Animator>();
+       //animator.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -70,7 +70,7 @@ public class Phonograph1 : MonoBehaviour
             animator.SetBool("phonographPlay", true);
         }
         */
-        /*
+        
         switch (currentNumber)
         {
             case 0:
@@ -86,9 +86,9 @@ public class Phonograph1 : MonoBehaviour
                 StartCoroutine(ChangeBGM(oldaudio, platformBaudio));
                 break;
         }
-        */
+        
     }
-    /*
+    
     IEnumerator ChangeBGM(AudioSource offAudio, AudioSource onAudio)
     {
         offAudio.volume = 0.9f;
@@ -113,5 +113,5 @@ public class Phonograph1 : MonoBehaviour
         offAudio.Stop();
         offAudio.volume = 1;
     }
-    */
+    
 }

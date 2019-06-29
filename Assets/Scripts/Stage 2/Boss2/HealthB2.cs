@@ -106,6 +106,7 @@ public class HealthB2 : MonoBehaviour {
                 health.text = phaseHealths[2].ToString();
                 GetComponent<PatternB2>().PatternEnd();
                 Destroy(GameObject.FindGameObjectWithTag("PatternMaker"));
+                
                 GetComponent<PhaseB2>().Phase2();
 
             }
@@ -130,6 +131,7 @@ public class HealthB2 : MonoBehaviour {
                 phaseHealths[4] = 0;
                 GetComponent<PatternB2>().PatternEnd();
                 Destroy(GameObject.FindGameObjectWithTag("PatternMaker"));
+                
                 GetComponent<PhaseB2>().Phase5();
             }
         } else if (phase == 5) {
