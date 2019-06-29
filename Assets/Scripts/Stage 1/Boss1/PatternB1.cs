@@ -75,6 +75,7 @@ public class PatternB1 : MonoBehaviour
         }
         */
        Instantiate(patternMakers[debugPattern], transform.position, transform.rotation);
+       //Instantiate(forgedPatternMakers[debugPattern], transform.position, transform.rotation);
 
     }
 

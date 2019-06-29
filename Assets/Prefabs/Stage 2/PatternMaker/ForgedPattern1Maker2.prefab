@@ -58,8 +58,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet1: {fileID: 3957080246522646180, guid: b6a9c42d458592246bb538641778b16e, type: 3}
-  repetition: 30
-  delay: 0.05
+  repetition: 40
+  delay: 0.08
 --- !u!58 &-6507657945204296924
 CircleCollider2D:
   m_ObjectHideFlags: 0
