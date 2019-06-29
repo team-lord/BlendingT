@@ -60,6 +60,7 @@ MonoBehaviour:
   surpriseBox: {fileID: 3999101307238757942, guid: 10ae58c1d79851c46b8aae99903ab998,
     type: 3}
   range: 13
+  becomingSurpriseBox: {fileID: 8300000, guid: 26ef6f01f2f2e1e4784df56746a8d5be, type: 3}
 --- !u!114 &-8009350068140288013
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -14,15 +14,25 @@ public class Pattern2Maker1 : MonoBehaviour
     private Vector3 downLeftLocation;
     private Vector3 downRightLocation;
 
+    AudioSource bossAudio;
+    public 
+    AudioClip becomingSurpriseBox;
+
     // Start is called before the first frame update
     void Start()
     {
         boss = GameObject.Find("Boss");
+        bossAudio = boss.GetComponent<AudioSource>();
+       
 
         if (GameObject.FindGameObjectsWithTag("SurpriseBox").Length != 0){
             boss.GetComponent<PatternB1>().ForceStart();
             Destroy(gameObject);
             return;
+        }
+        else
+        {
+            bossAudio.PlayOneShot(becomingSurpriseBox);
         }
         
         upLocation = new Vector3(0, range, 0);

@@ -7,6 +7,8 @@ public class Phonograph1 : MonoBehaviour
     private GameObject dolls;
 
     private int currentNumber; // 0, 1, 2, 3: Off
+
+    //Animator animator;
     
     // Start is called before the first frame update
 
@@ -15,12 +17,14 @@ public class Phonograph1 : MonoBehaviour
         dolls = GameObject.Find("Dolls");
 
         currentNumber = 3;
+
+       // animator.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     public void Change() {
@@ -32,6 +36,15 @@ public class Phonograph1 : MonoBehaviour
         }
 
         dolls.GetComponent<Dolls1>().Change(currentNumber);
-        
+        /*
+        if(currentNumber == 3)
+        {
+            animator.SetBool("phonographPlay", false);
+        }
+        else
+        {
+            animator.SetBool("phonographPlay", true);
+        }
+        */
     }
 }

@@ -11,6 +11,9 @@ public class Pattern7Maker1 : MonoBehaviour {
     private float time;
     public float life;
 
+    AudioSource bossAudio;
+    public AudioClip becomingWaveMaker;
+
     // Start is called before the first frame update
     void Start() {
         player = GameObject.Find("Player");
@@ -19,6 +22,8 @@ public class Pattern7Maker1 : MonoBehaviour {
         time = 0;
 
         transform.position = player.transform.position;
+
+        boss.GetComponent<AudioSource>().PlayOneShot(becomingWaveMaker);
         
         // 7번 패턴임을 알려주는 효과음
     }
